@@ -1,0 +1,114 @@
+/* servicenav */
+ul#servicenav {
+    height: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+ul#servicenav li {
+    float: right;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 4px 0 0 12px;
+}
+
+ul#servicenav li em.activ {
+    color: #fff;
+}
+
+ul#servicenav li a {
+    color: #ccc;
+}
+
+ul#servicenav li a:hover {
+    color: #e79928;
+}
+
+ul#servicenav li a.login, ul#servicenav li a.logout, ul#servicenav li a.kontakt, ul#servicenav li a.tellafriend {
+    padding-right: 20px;
+}
+
+ul#servicenav li a.login, ul#servicenav li a.logout {
+    padding-left: 12px;
+    background: url(../images/kopfico.png) no-repeat left -1px;
+}
+
+ul#servicenav li a.tellafriend {
+    padding-left: 20px;
+    background: url(../images/kopfico.png) no-repeat left -21px;
+}
+
+ul#servicenav li a.kontakt {
+    padding-left: 17px;
+    background: url(../images/kopfico.png) no-repeat left -42px;
+}
+
+.section-admin #content 
+{
+	background-image: none;
+}
+
+#admincontent 
+{
+	height:auto;
+	margin:0 auto;
+	text-align:left;
+	width:930px;
+	padding: 15px;
+}
+
+#admincontent tr
+{
+	padding; 3px;
+}
+
+#blocks td.region 
+{
+	font-size: 12px;
+	padding: 3px;
+}
+
+#admincontent 
+{
+	font-size: 12px;
+}
+
+#admincontent a:link, #admincontent a:visited
+{
+	color: #a57f57
+}
+
+#admincontent a:hover, #admincontent a:active
+{
+	color: #f5af77
+}
+
+#admincontent dl dd 
+{
+	margin:0 0 0.5em 1.5em;
+}
+
+#admincontent table
+{
+	margin:1em 0;
+	width:100%;
+	background-color: #f0f0f0;
+}
+
+#admincontent tr.even
+{
+	background-color: #f9de9c;
+	border-color: #ffffff;
+}
+
+#admincontent tr.odd 
+{
+	background-color: #ffeeac;
+	border-color: #ffffff;
+}
+
+#admincontent tr.drag-previous
+{
+	background-color: #f9c852;
+}
