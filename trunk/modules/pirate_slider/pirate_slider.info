@@ -1,0 +1,6 @@
+; $Id: pirate_slider Exp $
+name = Pirate Slider
+description = Get the slider on the frontpage
+core = 6.x
+package = Pirate Modules
+version = 1.x-dev

@@ -1,0 +1,64 @@
+/*
+	jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
+	Copyright (c) 2009 Niall Doherty
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+*/
+
+/* Insignificant stuff, for demo purposes */
+
+	.panel h2.title { margin-bottom: 10px }
+	noscript div { background: #ddd; display: block; float:left; height:270px; margin:0; width:592px; z-index: 20; position: absolute;}
+	noscript div p { padding: 20px; font-size: 1.2em; text-align: left;}
+	noscript div ol li { padding: 10px 20px; font-size: 1.2em; text-align: left; list-style-type: disc; list-style-position: inside; }
+
+	.coda-slider-wrapper {display: block; float:left; height:270px; margin:0; width:592px;}
+	.coda-slider { background: #eee; }
+	
+	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+	.coda-slider-no-js .coda-slider { height: 200px; overflow: auto !important; padding-right: 20px }
+	
+	/* Change the width of the entire slider (without dynamic arrows) */
+	.coda-slider, .coda-slider .panel { width: 592px; height: 270px; } 
+	
+	/* Change margin and width of the slider (with dynamic arrows) */
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { margin: 0; padding: 0; }
+	
+	/* Arrow styling */
+	.coda-nav-left a, .coda-nav-right a { width: 12px; height: 246px; background: url(../images/sliderleft_n.png) no-repeat center center;}
+	.coda-nav-right a {background: url(../images/sliderright_n.png) no-repeat center center;}
+	.coda-nav-right a:hover {background: url(../images/sliderright_h.png) no-repeat center center;}
+	.coda-nav-left a:hover {background: url(../images/sliderleft_h.png) no-repeat center center;}
+	
+	/* Tab nav */
+	
+	/* Panel padding */
+	.coda-slider .panel-wrapper {width: 566px; height: 246px; text-align: left;}
+	.coda-slider .panel-wrapper h2 {color: #f3cf2d; padding: 140px 0 0 20px; line-height: 1em; }
+	.coda-slider .panel-wrapper h1 {color: #fff; padding: 0 0 0 20px; font-size: 3em; }
+	.coda-slider .panel-wrapper p {color: #fff; padding: 0 0 0 20px; font-size: 1.4em;}
+	.coda-slider .panel-wrapper a {display: inline; background: url(../images/slideratag_n.png) no-repeat center center;}
+	.coda-slider .panel-wrapper a:hover {display: inline; background: url(../images/slideratag_h.png) no-repeat center center;}
+	
+	/* Preloader */
+	.coda-slider p.loading { padding: 110px 20px 0 20px; text-align: center; color: #934105; }
+
+	/* Tabbed nav */
+	.coda-nav ul { clear: both; display: block; margin: auto; overflow: hidden; text-align: center; }
+	.coda-nav ul li { display: block; float: left; height: 12px;  width: 10px; }
+	.coda-nav ul li a { display: block; width: 18px; height: 12px; text-decoration: none; background: url(../images/slider_ico_point_n.png) no-repeat center center;}
+	.coda-nav ul li a:hover {background: url(../images/slider_ico_point_a.png) no-repeat center center;}
+	.coda-nav ul li a.current {background: url(../images/slider_ico_point_h.png) no-repeat center center;}
+	
+	/* Miscellaneous */
+	.coda-slider { float: left; overflow: hidden; position: relative; border: 1px solid #b54e0e; height: 244px; width: 566px; }
+	.coda-slider .panel { display: block; float: left; height: 244px;}
+	.coda-slider .panel-container { position: relative; float: left;
+	background-color: #000;
+}
+	.coda-nav-left, .coda-nav-right { float: left; width: 12px; height:244px; overflow: hidden;}
+	.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none }
+	
+	 .coda-slider .panel-wrapper.slider1 {background: url(../files/slider1.jpg) no-repeat top left;}
+	 .coda-slider .panel-wrapper.slider2 {background: url(../files/slider2.jpg) no-repeat top left;}
+	 .coda-slider .panel-wrapper.slider3 {background: url(../files/slider3.jpg) no-repeat top left;}
+	 .coda-slider .panel-wrapper.slider4 {background: url(../files/slider4.jpg) no-repeat top left;}
