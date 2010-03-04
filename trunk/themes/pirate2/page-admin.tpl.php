@@ -88,25 +88,25 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body class="<?php print $body_classes; ?>">
+<body class="<?php print $body_classes; ?>" onload="initPage();">
 	<div id="decortop">
         	<div id="topwrapper">
-			<div id="interlinks">
-				<?php print $interlink ?>
-	                </div>
-        	        <ul id="servicenav">
-				<li title="English"><a href="http://stage.pirateparty.ch">en</a></li>
-                		<li title="Italiano"><a href="http://stage.partitopirata.ch">it</a></li>
-				<li title="Français"><a href="http://stage.partipirate.ch">fr</a></li>
-                		<li title="Deutsch"><a href="http://stage.piratenpartei.ch">de</a></li>
-
-	                    	<li><a href="/kontaktformular" class="kontakt"><?php print $conttext ?></a></li>
-        	            	<?php if ($logged_in) { ?>
-					<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes'=>array('class'=>'logout'))); ?></li>
-        	        	<?php } else { ?>
-                 	   		<li title="Login"><a href="/user" class="login">Login</a></li>
-		                <?php } ?>
-        	        </ul>
+			<table><tr><td id="servicenavleft">
+				<?php print $servicenavleft ?>
+	                </td>
+			<td id="servicenavright">
+				<?php print $servicenavright ?>
+	       	        </td>
+			<td id="servicenavfix">
+				<ul>
+		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
+       				            	<?php if ($logged_in) { ?>
+						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class'=>'logout'))); ?></li>
+        	       			<?php } else { ?>
+	               	   			<li title="Login"><a href="<?php print $base_path ?>/user" class="login">Login</a></li>
+			                <?php } ?>
+				</ul>
+	       	        </td></tr></table>
             	</div>
         </div>
 	<div id="decormid">

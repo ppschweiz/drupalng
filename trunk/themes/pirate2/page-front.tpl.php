@@ -91,22 +91,22 @@
 <body class="<?php print $body_classes; ?>" onload="initPage();">
 	<div id="decortop">
         	<div id="topwrapper">
-			<div id="interlinks">
-				<?php print $interlink ?>
-	                </div>
-        	        <ul id="servicenav">
-				<li title="English"><a href="http://stage.pirateparty.ch">en</a></li>
-                		<li title="Italiano"><a href="http://stage.partitopirata.ch">it</a></li>
-				<li title="Français"><a href="http://stage.partipirate.ch">fr</a></li>
-                		<li title="Deutsch"><a href="http://stage.piratenpartei.ch">de</a></li>
-
-	                    	<li><a href="/kontaktformular" class="kontakt"><?php print $conttext ?></a></li>
-        	            	<?php if ($logged_in) { ?>
-					<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes'=>array('class'=>'logout'))); ?></li>
-        	        	<?php } else { ?>
-                 	   		<li title="Login"><a href="/user" class="login">Login</a></li>
-		                <?php } ?>
-        	        </ul>
+			<table><tr><td id="servicenavleft">
+				<?php print $servicenavleft ?>
+	                </td>
+			<td id="servicenavright">
+				<?php print $servicenavright ?>
+	       	        </td>
+			<td id="servicenavfix">
+				<ul>
+		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
+       				            	<?php if ($logged_in) { ?>
+						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class'=>'logout'))); ?></li>
+        	       			<?php } else { ?>
+	               	   			<li title="Login"><?php print l(t('Login'), 'user', array('attributes' => array('class'=>'login'))); ?></li>
+			                <?php } ?>
+				</ul>
+	       	        </td></tr></table>
             	</div>
         </div>
 	<div id="decormid">
@@ -125,84 +125,32 @@
 				<?php if ($slider) { ?>
 					<?php print $slider ?>
 				<?php } else { ?>
-					<div class="slider-wrapper"></div>
+					<div class="slider-wrapper">Place "Pirate Slider Block" here</div>
 				<?php } ?>
 				<ul id="actionbutton">
-					<li><a href="#"><img alt="Mitmachen bei den Piraten" src="<?php print path_to_theme(TRUE); ?>/images/acbutton_de_mitmach.png">
-						<span class="headone">Jetzt mitmachen!</span><span class="headtwo">Werde auch du ein Pirat.</span></a></li>
-					<li><a href="#"><img alt="Jetzt mitmachen" src="<?php print path_to_theme(TRUE); ?>/images/acbutton_de_werbe.png">
-						<span class="headone">Werbematerial</span><span class="headtwo">Piraten - an die Kanonen!</span></a></li>
-					<li><a href="#"><img alt="Spenden" src="<?php print path_to_theme(TRUE); ?>/images/acbutton_de_spende.png">
-						<span class="headone">Unterstütze uns ...</span><span class="headtwo">...mit deiner Spende.</span></a></li>
+					<?php if ($actionbutton) { ?>
+						<?php print $actionbutton ?>
+					<?php } else { ?>                                        
+						<li>Place "Pirate Actionbutton Front Block" here<a></a><li>
+					<?php } ?>
 				</ul>		
 			</div>
 			<div id="navigation">
 				<div class="navwrapper">
-					<ul id="hnavkont">
-						<li class="navhome"><a class="link" href="<?php print $front_page; ?>"></a>
-							<a href="javascript:void(0);" class="up" id="navklapbut" onclick="navDoIt($(this));"></a>
-						</li>
-						<li class="navakt"><a href="in_blog.html"><span class="link">Aktuell</span></a></li>
-						<li class="navpos"><a href="in_blog_detail.html"><span class="link">Positionen</span></a></li>
-						<li class="navpar"><a href="in_content.html"><span class="link">Partei</span></a></li>
-						<li class="navmed"><a href="in_formular.html"><span class="link">Medien</span></a></li>
-						<li class="navmit"><a href="#"><span class="link">Mitmachen</span></a></li>
-					</ul>
-					<ul id="subnavklapp">
-						<li class="navhome"></li>
-						<li class="navakt">
-							<ul class="subnav">
-								<li><a href="#">Communiqués</a></li>
-								<li><a href="#">Politblog</a></li>
-								<li><a href="#">Termine/Events</a></li>
-							</ul>
-						</li>
-						<li class="navpos">
-							<ul class="subnav">
-								<li><a href="#">Parteiprogramm</a></li>
-								<li><a href="#">Themen</a></li>
-								<li><a href="#">Positionspapiere</a></li>
-								<li><a href="#">Vorstösse</a></li>
-							</ul>
-						</li>
-						<li class="navpar">
-							<ul class="subnav">
-								<li><a href="#">Organe</a></li>
-								<li><a href="#">Statuten</a></li>
-								<li><a href="#">Netzwerk</a></li>
-								<li><a href="#">Beitritt</a></li>
-								<li><a href="#">Spenden</a></li>
-							</ul>
-						</li>
-						<li class="navmed">
-							<ul class="subnav">
-								<li><a href="#">Pressdienst</a></li>
-								<li><a href="#">Bilder</a></li>
-								<li><a href="#">Downloads</a></li>
-								<li><a href="#">Pressespiegel</a></li>
-							</ul>
-						</li>
-						<li class="navmit">
-							<ul class="subnav">
-								<li><a href="">Mitmachen</a></li>
-								<li><a href="">Community</a></li>
-								<li class="extern"><a href="#">Forum</a></li>
-								<li class="extern"><a href="#">Wiki</a></li>
-							</ul>
-						</li>
-					</ul>
-					<div class="clear"></div>
+					<?php if ($primary_links) { ?>						
+						<?php print theme('piratenavi', menu_tree_all_data(variable_get('menu_primary_links_source', 'primary-links'))); ?>
+					<?php } ?>
 				</div>	
 			</div>	
 			<div id="content">
 				<div id="contcom">
-					<div class="kopf"><a class="goto" href="#"></a><a class="rss" href="#"></a><h1>Communiqués</h1></div>
+					<?php print $content_left?>
 				</div>
 				<div id="contblog">
-					<div class="kopf"><a class="goto" href="#"></a><a class="rss" href="#"></a><h1>Politblog</h1></div>
+					<?php print $content_center ?>
 				</div>
 				<div id="contevents">
-					<div class="kopf"><a class="goto" href="#"></a><a class="rss" href="#"></a><h1>Termine/Events</h1></div>
+					<?php print $content_right ?>
 				</div>		
 				<ul id="contbuttons">
 					<li class="butpirates"><a href="#"></a></li>

@@ -6,6 +6,14 @@
  * Add sensible messages styling.
  */
 
+  #admincontent div.messages,
+  #admincontent div.status,
+  #admincontent div.warning,
+  #admincontent div.error
+  {
+    width: 90%;
+  }
+
   div.messages, /* Important messages (status, warning, and error) for the user */
   div.status,
   div.warning,

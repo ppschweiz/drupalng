@@ -62,35 +62,6 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
-
-/*
- * Add any conditional stylesheets you will need for this sub-theme.
- *
- * To add stylesheets that ALWAYS need to be included, you should add them to
- * your .info file instead. Only use this section if you are including
- * stylesheets based on certain conditions.
- */
-/* -- Delete this line if you want to use and modify this code
-// Example: optionally add a fixed width CSS file.
-if (theme_get_setting('pirate2_fixed')) {
-  drupal_add_css(path_to_theme() . '/layout-fixed.css', 'theme', 'all');
-}
-// */
-
-
-/**
- * Implementation of HOOK_theme().
- */
-function pirate2_theme(&$existing, $type, $theme, $path) {
-  $hooks = zen_theme($existing, $type, $theme, $path);
-  // Add your theme hooks like this:
-  /*
-  $hooks['hook_name_here'] = array( // Details go here );
-  */
-  // @TODO: Needs detailed comments. Patches welcome!
-  return $hooks;
-}
-
 /**
  * Override or insert variables into all templates.
  *
@@ -150,6 +121,27 @@ function pirate2_preprocess_block(&$vars, $hook) {
 // *** Implementation ***
 
 /**
+ * Implementation of HOOK_theme().
+ */
+function pirate2_theme(&$existing, $type, $theme, $path) 
+{
+	$hooks = zen_theme($existing, $type, $theme, $path);
+  
+	$hooks['piratenavi'] =  array(
+		'template' => 'piratenavi',
+		'arguments' => array('menu' => NULL)
+	);
+
+	$hooks['piratesubnavi'] =  array(
+		'template' => 'piratesubnavi',
+		'arguments' => array('menu' => NULL)
+	);
+
+	return $hooks;
+}
+
+
+/**
  * Override or insert variables into the comment templates.
  *
  * @param $vars
@@ -186,16 +178,120 @@ function pirate2_preprocess_search_theme_form(&$vars, $hook)
 }
 
 /**
- * Theme override for theme_menu_item()
+ * Theme override for theme_menu_item
  */
-function pirate2_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
-  $class = ($menu ? 'expanded' : ($has_children ? 'collapsed' : 'leaf'));
-  if (!empty($extra_class)) {
-    $class .= ' '. $extra_class;
-  }
-  if ($in_active_trail) {
-    $class .= ' active-trail';
-  }
-  return '<li class="'. $class .'">'. $link . $menu ."</li>\n";
+function pirate2_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) 
+{
+	$class = ($menu ? 'expanded' : ($has_children ? 'collapsed' : 'leaf'));
+	if (!empty($extra_class)) {
+		$class .= ' '. $extra_class;
+	}
+	if ($in_active_trail) {
+		$class .= ' active-trail';
+	}
+	
+	// Add unique identifier
+	static $item_id = 0;
+	$item_id += 1;
+	$id .= ' ' . 'menu-item-custom-id-' . $item_id;
+
+	// Add semi-unique class
+	$class .= ' ' . preg_replace("/[^a-zA-Z0-9]/", "", strip_tags($link));
+ 
+	return '<li class="'. $class .'" id="' . $id . '">'. $link . $menu ."</li>\n";
+
+}
+
+/**
+ * Theme override for theme_menu_item_link
+ */
+function pirate2_menu_item_link($link) 
+{
+	if (empty($link['localized_options'])) {
+		$link['localized_options'] = array();
+	}
+
+	// If an item is a LOCAL TASK, render it as a tab
+	if ($link['type'] & MENU_IS_LOCAL_TASK) {
+		$link['title'] = '<span class="tab">' . check_plain($link['title']) . '</span>';
+		$link['localized_options']['html'] = TRUE;
+	} else {
+
+	}
+
+	return l($link['title'], $link['href'], $link['localized_options']);
+}
+
+/**
+ * Theme override for theme_menu_item_tree
+ */
+function pirate2_menu_tree($tree) 
+{
+	return '<ul class="menu">'. $tree .'</ul>';
+}
+
+/**
+ * Theme override for theme_breadcrumb
+ */
+function pirate2_breadcrumb($breadcrumb) {
+	$breadcrumb_separator = "<em> / </em>";
+
+	$html = '<div class="contbodykopf"><div class="kopf"><div id="breadcrumb">';
+	array_shift($breadcrumb);
+	$html.= l('', $front_page, array('attributes' => array('class'=>'home')));
+	$html.= $breadcrumb_separator;
+
+	if (count($breadcrumb) > 0) 
+	{
+        	$html.= implode($breadcrumb_separator, $breadcrumb);
+		$html.= $breadcrumb_separator;
+	}
+
+        $html.= drupal_get_title();
+	$html.= '</div></div></div>';
+
+	return $html;
+}
+
+function pirateparty_preprocess_node(&$vars)
+{
+}
+
+
+function pirate2_preprocess_node(&$vars, $hook) 
+{
+	// Special classes for nodes
+	$classes = array('node');
+	if ($vars['sticky']) {
+		$classes[] = 'sticky';
+	}
+	if (!$vars['status']) {
+		$classes[] = 'node-unpublished';
+		$vars['unpublished'] = TRUE;
+	}
+	else 
+	{
+		$vars['unpublished'] = FALSE;
+	}
+	if ($vars['uid'] && $vars['uid'] == $GLOBALS['user']->uid) {
+		$classes[] = 'node-mine'; // Node is authored by current user.
+	}
+	if ($vars['teaser']) {
+		$classes[] = 'node-teaser'; // Node is displayed as teaser.
+	}
+	
+	// Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
+	$classes[] = zen_id_safe('node-type-' . $vars['type']);
+	$vars['classes'] = implode(' ', $classes); // Concatenate with spaces
+
+	if ($vars['type'] == 'event')
+	{
+
+        }
+	else
+	{
+		$vars['month'] = date('M',$vars['created']).'.';
+		$vars['day'] = date('j',$vars['created']).'.';
+	}
 }
 

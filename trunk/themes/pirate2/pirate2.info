@@ -21,12 +21,16 @@ stylesheets[all][]   = css/messages.css
 stylesheets[all][]   = css/block-editing.css
 stylesheets[all][]   = css/pirate2.css
 stylesheets[all][]   = css/additional.css
+stylesheets[all][]   = css/coda-slider-2.0.css
 stylesheets[print][] = css/print.css
 ; stylesheets[all][] = wireframes.css
 
 ; Dont use zen from the base theme
 stylesheets[all][]   = zen.css
+stylesheets[all][]   = html-elements.css
 stylesheets[all][]   = tabs.css
+stylesheets[all][]   = messages.css
+;stylesheets[all][]   = block-editing.css
 
   ; Set the conditional stylesheets that are processed by IE.
   ; conditional-stylesheets[if IE][all][] = ie.css
@@ -43,8 +47,10 @@ scripts[] = js/navscript.js
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
 
-regions[interlink]      = Navigation Interlinks
+regions[servicenavleft] = Service Navigation Left (Interlinks)
+regions[servicenavright]= Service Navigation Right (Languages)
 regions[slider]         = Slider Region (Frontpage)
+regions[actionbutton]   = Actionbutton Region (Frontpage)
 regions[content_left]   = Content Main
 regions[content_center] = Content Center (Frontpage)
 regions[content_right]  = Right Column

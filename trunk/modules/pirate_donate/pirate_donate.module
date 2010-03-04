@@ -1,0 +1,51 @@
+<?php
+// $Id:  pirate_donate module Exp $
+
+function pirate_donate_menu() 
+{
+  $items['admin/pirate/donate'] = array(
+    'title' => 'Donations',
+    'description' => 'Configure Donation Block.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pirate_donate_admin'),
+    'access arguments' => array('administer site configuration'),
+  );
+
+  return $items;
+}
+
+function pirate_donate_admin() 
+{
+
+}
+
+// Template
+function pirate_donate_theme($op = 'list', $delta = 0) 
+{
+  return array(
+    'pirate_donate' => array(
+      'template' => 'pirate_donate',
+      'arguments' => array('slides' => NULL),
+    ),
+  );
+}
+
+// Block
+function pirate_donate_block($op = 'list', $delta = 0) 
+{
+
+  if ($op == "list") 
+  {
+    $block = array();
+    $block[0]["info"] = t('Pirate Donate Block');
+    return $block;
+  } 
+
+  if ($op == 'view') 
+  { 
+    $block = array();
+    $block['content'] = t("Donations");
+    $block['content'] = theme("pirate_donate", NULL);
+    return $block;
+  }
+} 

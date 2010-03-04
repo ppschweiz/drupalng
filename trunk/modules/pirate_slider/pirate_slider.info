@@ -4,3 +4,4 @@ description = Get the slider on the frontpage
 core = 6.x
 package = Pirate Modules
 version = 1.x-dev
+dependencies[] = pirate_base

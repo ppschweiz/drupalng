@@ -1,47 +1,80 @@
-/* servicenav */
-ul#servicenav {
-    height: 20px;
-    overflow: hidden;
-    margin: 0 auto;
-}
 
-ul#servicenav li {
-    float: right;
-    color: #ccc;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 4px 0 0 12px;
-}
+/* @group servicenav */
+	#topwrapper 
+	{ 
+		width: 960px; 
+		margin: auto;
+	}
+	#topwrapper table
+	{ 
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		background-color: transparent;
+	}
+	
+	#topwrapper h1
+	{
+		display: none;
+	}
 
-ul#servicenav li em.activ {
-    color: #fff;
-}
+	#topwrapper ul
+	{
+		margin: 0;
+	}
 
-ul#servicenav li a {
-    color: #ccc;
-}
+	#topwrapper li {
+		color: #ccc; 
+		text-transform: uppercase; 
+		letter-spacing: 1px; 
+		margin: 4px 2px 2px 12px;
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+	}
 
-ul#servicenav li a:hover {
-    color: #e79928;
-}
+	#topwrapper li a {
+		color: #cccccc;
+		padding-bottom: 7px;
+	}
 
-ul#servicenav li a.login, ul#servicenav li a.logout, ul#servicenav li a.kontakt, ul#servicenav li a.tellafriend {
-    padding-right: 20px;
-}
+	#topwrapper li a:hover {
+		color: #e79928;
+	}
 
-ul#servicenav li a.login, ul#servicenav li a.logout {
-    padding-left: 12px;
-    background: url(../images/kopfico.png) no-repeat left -1px;
-}
+	#topwrapper li a.login, #topwrapper li a.logout {
+		padding-left: 12px;
+		background: url(../images/kopfico.png) no-repeat left -1px;
+	}
 
-ul#servicenav li a.tellafriend {
-    padding-left: 20px;
-    background: url(../images/kopfico.png) no-repeat left -21px;
-}
+	#topwrapper li a.tellafriend {
+		padding-left: 20px;
+		background: url(../images/kopfico.png) no-repeat left -21px;
+	}
 
-ul#servicenav li a.kontakt {
-    padding-left: 17px;
-    background: url(../images/kopfico.png) no-repeat left -42px;
+	#topwrapper li a.kontakt {
+	    padding-left: 17px;
+	    background: url(../images/kopfico.png) no-repeat left -42px;
+	}
+	
+	#servicenavleft li, #servicenavfix, #servicenavright
+	{
+		float: right;
+	}
+
+	#servicenavleft, #servicenavfix li, #servicenavright li
+	{
+		float: left;
+	}
+/* @end */
+
+
+.tabs-wrapper
+{
+	width:960px; 
+	margin: auto; 
+	padding-top: 20px; 
+	background-color: transparent;
 }
 
 .section-admin #content 
@@ -74,35 +107,39 @@ ul#servicenav li a.kontakt {
 	font-size: 12px;
 }
 
-#admincontent a:link, #admincontent a:visited
+#admincontent a:link, #admincontent a:visited,
+fieldset a:link, fieldset a:visited,
+#content a:link, #content a:visited
 {
 	color: #a57f57
 }
 
-#admincontent a:hover, #admincontent a:active
+#admincontent a:hover, #admincontent a:active,
+fieldset a:hover, fieldset a:active,
+#content a:hover, #content a:active
 {
 	color: #f5af77
 }
 
-#admincontent dl dd 
+dl dd 
 {
 	margin:0 0 0.5em 1.5em;
 }
 
-#admincontent table
+table
 {
 	margin:1em 0;
 	width:100%;
 	background-color: #f0f0f0;
 }
 
-#admincontent tr.even
+tr.even
 {
 	background-color: #f9de9c;
 	border-color: #ffffff;
 }
 
-#admincontent tr.odd 
+tr.odd 
 {
 	background-color: #ffeeac;
 	border-color: #ffffff;
@@ -112,3 +149,19 @@ ul#servicenav li a.kontakt {
 {
 	background-color: #f9c852;
 }
+
+fieldset
+{
+	border: 1px #ccaa55 solid;
+	background-color: #ffffdd;
+        padding: 10px;
+	margin: 5px;
+}
+
+fieldset.collapsed
+{
+        padding: 0px;
+	border: 3px #ffcc99 solid;
+	background-color: #ffffff;
+}
+

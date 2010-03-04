@@ -1,0 +1,62 @@
+<?php
+// $Id:  pirate_actionbutton module Exp $
+
+function pirate_actionbutton_menu() 
+{
+	$items['admin/pirate/actionbutton'] = array(
+		'title' => 'Actionbutton',
+		'description' => 'Configure Actionbutton Blocks.',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('pirate_actionbutton_admin'),
+		'access arguments' => array('administer site configuration'),
+	);
+
+	return $items;
+}
+
+function pirate_actionbutton_admin() 
+{
+
+}
+
+// Template
+function pirate_actionbutton_theme($op = 'list', $delta = 0) 
+{
+	return array(
+		'pirate_actionbutton_front' => array(
+			'template' => 'pirate_actionbutton_front',
+			'arguments' => array('actionbuttons' => NULL),
+		),
+		'pirate_actionbutton_side' => array(
+			'template' => 'pirate_actionbutton_side',
+			'arguments' => array('actionbuttons' => NULL),
+		),
+	);
+}
+
+// Block
+function pirate_actionbutton_block($op = 'list', $delta = 0) 
+{
+
+	if ($op == "list") 
+	{
+		$block = array();
+		$block[0]["info"] = t('Pirate Actionbutton Front Block');
+		$block[1]["info"] = t('Pirate Actionbutton Site Block');
+		return $block;
+	} 
+
+	if ($op == 'view')
+	{
+		$block = array();
+		if ($delta == 0) 
+		{
+			$block['content'] = theme("pirate_actionbutton_front", NULL);
+		}
+		if ($delta == 1) 
+		{
+			$block['content'] = theme("pirate_actionbutton_side", NULL);
+		}
+		return $block;
+	}
+} 

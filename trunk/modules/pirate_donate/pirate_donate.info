@@ -1,0 +1,7 @@
+; $Id: pirate_donate Exp $
+name = Pirate Donate Block
+description = Show a Block with current donation Status
+core = 6.x
+package = Pirate Modules
+version = 1.x-dev
+dependencies[] = pirate_base

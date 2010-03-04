@@ -6,7 +6,7 @@
 	@font-face { font-family: 'Aller'; src: url('../fonts/allerlight.ttf') ; font-weight:normal;}
 	@font-face { font-family: 'Aller'; src: url('../fonts/aller.ttf') ; font-weight: bold;}html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p,blockquote,fieldset,input {margin: 0; padding: 0;}
 	h1,h2,h3,h4,h5,h6,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal;}
-	ul,ol {list-style: none;}
+	ul,ol { list-style-image:none; list-style-position:outside; list-style-type:none; }
 	fieldset,img {border: none;}
 	caption,th {text-align: left;}
 	table {border-collapse: collapse; border-spacing: 0;}body {font-family: Aller, "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif; font-size: 10px; text-align: center; color: #000; margin: 0; padding: 0; background: #d78215;}
@@ -42,18 +42,6 @@
 	ul#servicenav li {float: right; color: #ccc; text-transform: uppercase; letter-spacing: 1px;margin:4px 0 0 12px;}
 	ul#servicenav li em.activ {color: #fff;}
 	ul#servicenav li a {color: #ccc;}ul#servicenav li a:hover {color: #e79928;}ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafriend {padding-right:20px;}
-/* @end */
-
-/* @group interlinks */
-	#block-menu-menu-interlinks h2 { display: none; }
-	#block-menu-menu-interlinks ul { margin: 0; }
-	#block-menu-menu-interlinks li.leaf { list-style-image:none; list-style-position:outside; list-style-type:none; }
-	#block-menu-menu-interlinks { height:20px; float: left; }
-	#block-menu-menu-interlinks li { color:#CCCCCC; float:right; letter-spacing:1px; margin:4px 0 0 12px; text-transform:uppercase; }
-	#block-menu-menu-interlinks li a:hover { color:#E79928; }
-	#block-menu-menu-interlinks li a { color:#CCCCCC; }
-	#block-menu-menu-interlinks li.active { color: #fff; }
-	#topwrapper { width: 960px; margin: auto;}
 /* @end */
 
 /* @group blockconfig */
@@ -140,7 +128,6 @@
 	#content .kopf a.rss { float: right; width: 22px; height: 28px; display: block; background: url(../images/contkopf-rss.png) no-repeat left -116px;}
 	#content .kopf a.rss:hover { float: right; width: 22px; height: 28px; display: block; background: url(../images/contkopf-rss.png) no-repeat left -34px;}
 
-	#content ul  { height: 200px; overflow:hidden; }
 	#contevents ul  { height: 120px; overflow:hidden; }
 	#content ul li.cotermin {width: 60px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin-o.png) no-repeat center top; margin-top: 6px;}
 	#content ul li.cotermin h4 {color: #fff;}
@@ -209,11 +196,11 @@
 	#content .kopf {height: 28px;}
 	#content .contbody { width: 675px; height: auto; float: left; margin: 12px 0 0 15px; overflow: hidden;}
 	#content #contsite { width: 270px; margin-right: 0; float: left;}
-	#content .contbodykopf #breadcrump { color:#9E9E9E; display:block; font-size:1.1em; left:12px; letter-spacing:1px; position:relative; text-transform:uppercase; top:7px; width:70%; }
-	#content .contbodykopf #breadcrump a { color:#9E9E9E; display:inline; }
-	#content .contbodykopf #breadcrump a.home { color:#9E9E9E; display:block; float: left; width: 12px; height: 12px; background: url(../images/ico_breadcrump.png) no-repeat center center;}
+	#content .contbodykopf #breadcrumb { color:#9E9E9E; display:block; font-size:1.1em; left:12px; letter-spacing:1px; position:relative; text-transform:uppercase; top:7px; width:70%; }
+	#content .contbodykopf #breadcrumb a { color:#9E9E9E; display:inline; }
+	#content .contbodykopf #breadcrumb a.home { color:#9E9E9E; display:block; float: left; width: 12px; height: 12px; background: url(../images/ico_breadcrump.png) no-repeat center center;}
 	#content .contbody.detail {margin-bottom:12px;}
-	#content .contbodykopf #breadcrump em { padding: 0 4px; }
+	#content .contbodykopf #breadcrumb em { padding: 0 4px; }
 	#content .contbody ul {width: auto; height: auto;}
 	#content .contbody ul li.cotermin {width: 65px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin_big_o.png) no-repeat left top; margin-top: 6px;}
 	#content .contbody.detail ul li.cotermin {width: 65px; height: 80px; background: url(../images/termin-grey.png) no-repeat 4px top; margin: 6px 0 0 0px;}
@@ -256,24 +243,16 @@
 	#content .contbody .contnorm .quote p {font-style: normal;}
 
 	/* @group site */
-		#content #contsite ul.cosubnav {width: 270px; height: auto; margin: 20px 0 ;}
-		#content #contsite ul.cosubnav ul {width: 270px; height: auto; margin: 0 ;}
-		#content #contsite ul.cosubnav li {width: 260px; height: 29px; margin:0 0 0 10px; background-image: none; border-top: 1px solid #f2eadf; float: none;}
-		#content #contsite ul.cosubnav li.end {display: block; width: 260px; height: 1px; border: none; margin: 0 0 0 10px; background-color: #f2eadf; font-size: 0.01em; overflow: hidden;}
-		#content #contsite ul.cosubnav li.aktiv {width: 270px; min-height: 30px; margin: 0; background: url(../images/subnav_bgaktiv.png) no-repeat left top; border: none; overflow: visible;}
-		#content #contsite ul.cosubnav li.aktiv p {display: block; padding: 4px 0 6px 30px; color: #825f45;}
-		#content #contsite ul.cosubnav li a {display: block; color: #b6a083; width: 260px; height: 29px; font-size: 1.2em;}
-		#content #contsite ul.cosubnav li a em {display: block; padding: 6px 0 0 20px;}
-		#content #contsite ul.cosubnav li a:hover {color: #825f45;}
-		#content #contsite ul.cosubnav li:hover {background-color: #f2eadf;}
-		#content #contsite ul.cosubnav li.aktiv:hover, #content #contsite ul.cosubnav li.start:hover {background-color: transparent;}
-		#content #contsite ul.cosubnav hr {display: block; width: 259px; height: 1px; border: none; margin: 0 0 0 11px; background-color: #f2eadf; font-size: 0.01em; overflow: hidden;}
-		#content #contsite ul.cosubnav ul li {width: 230px; height: 29px; margin:0 0 0 30px; background-image: none; border-top: 1px dotted #f2eadf; float: none;}
-		#content #contsite ul.cosubnav ul li.aktiv {width: 270px; min-height: 30px; margin: 0; background: none; border: none; overflow: visible;}
-		#content #contsite ul.cosubnav ul li.aktiv p {display: block; padding: 5px 0 4px 50px; color: #825f45;border: none;}
-		#content #contsite ul.cosubnav ul li a {display: block; color: #b6a083; width: 260px; height: 29px; font-size: 1.2em;}
-		#content #contsite ul.cosubnav ul li a em {display: block; padding: 6px 0 0 20px;}
-		#content #contsite ul.cosubnav ul hr {display: block; width: 229px; height: 1px; border: none; margin: 0 0 0 31px; border-top: 1px dotted #f2eadf; font-size: 0.01em; overflow: hidden; background-color: transparent;}
+		#content #contsite ul.cosubnav {width: 270px; height: auto; margin: 20px 0; }
+		#content #contsite ul.cosubnav ul {width: 270px; height: auto; margin: 0; }
+		#content #contsite ul.cosubnav li { }
+		#content #contsite ul.cosubnav li.aktiv {width: 270px; min-height: 30px; margin: 0; background: url(../images/subnav_bgaktiv.png) no-repeat left top; overflow: visible; font-weight: bold;}
+		#content #contsite ul.cosubnav li a { margin-left: 10px; padding-left:20px; display: block; color: #b6a083; height: 24px; font-size: 1.2em; padding-top:7px; border-top: 1px dotted #f2eadf;}
+		#content #contsite ul.cosubnav ul li a { margin-left: 10px; padding-left:40px;}
+		#content #contsite ul.cosubnav ul ul li a { margin-left: 10px; padding-left:60px;}
+		#content #contsite ul.cosubnav ul ul ul li a { margin-left: 10px; padding-left:80px;}
+		#content #contsite ul.cosubnav li a:hover { background-color: #f2eadf; }
+
 		ul.subactionbut { margin: 0 0 14px 0; }
 		ul.subactionbut li { display: block; width: 228px; height: 72px; border: solid 1px #f1e5c4; margin: 10px 0 0 25px;
 		background-image: url(../images/subac_bg.png);}

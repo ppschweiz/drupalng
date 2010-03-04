@@ -88,25 +88,25 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body class="<?php print $body_classes; ?>">
+<body class="<?php print $body_classes; ?>" onload="initPage();">
 	<div id="decortop">
         	<div id="topwrapper">
-			<div id="interlinks">
-				<?php print $interlink ?>
-	                </div>
-        	        <ul id="servicenav">
-				<li title="English"><a href="http://stage.pirateparty.ch">en</a></li>
-                		<li title="Italiano"><a href="http://stage.partitopirata.ch">it</a></li>
-				<li title="Français"><a href="http://stage.partipirate.ch">fr</a></li>
-                		<li title="Deutsch"><a href="http://stage.piratenpartei.ch">de</a></li>
-
-	                    	<li><a href="/kontaktformular" class="kontakt"><?php print $conttext ?></a></li>
-        	            	<?php if ($logged_in) { ?>
-					<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes'=>array('class'=>'logout'))); ?></li>
-        	        	<?php } else { ?>
-                 	   		<li title="Login"><a href="/user" class="login">Login</a></li>
-		                <?php } ?>
-        	        </ul>
+			<table><tr><td id="servicenavleft">
+				<?php print $servicenavleft ?>
+	                </td>
+			<td id="servicenavright">
+				<?php print $servicenavright ?>
+	       	        </td>
+			<td id="servicenavfix">
+				<ul>
+		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
+       				            	<?php if ($logged_in) { ?>
+						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class'=>'logout'))); ?></li>
+        	       			<?php } else { ?>
+	               	   			<li title="Login"><a href="<?php print $base_path ?>/user" class="login">Login</a></li>
+			                <?php } ?>
+				</ul>
+	       	        </td></tr></table>
             	</div>
         </div>
 	<div id="decormid">
@@ -119,97 +119,34 @@
 			        <?php print $messages ?>
 			</div>
         	<?php } ?>
-		<div id="boardtop"></div>
+                <?php if ($tabs) { ?>
+			<div class="tabs-wrapper">
+				<?php print $tabs ?>
+                       	</div>
+		<?php } else { ?>
+	                <div id="boardtop"></div>
+                <?php } ?>
 		<div id="boardmid">
 			<div id="navigation">
 				<div class="navwrapper">
-					<ul id="hnavkont">
-						<li class="navhome"><a class="link" href="<?php print $front_page; ?>"></a>
-							<a href="javascript:void(0);" class="down" id="navklapbut" onclick="$('ul#subnavklapp>li').slideToggle();$(this).toggleClass('up');$(this).toggleClass('down'); return false;"></a>
-						</li>
-						<li class="navakt"><a href="in_blog.html"><span class="link">Aktuell</span></a></li>
-						<li class="navpos"><a href="in_blog_detail.html"><span class="link">Positionen</span></a></li>
-						<li class="navpar"><a href="in_content.html"><span class="link">Partei</span></a></li>
-						<li class="navmed"><a href="in_formular.html"><span class="link">Medien</span></a></li>
-						<li class="navmit"><a href="#"><span class="link">Mitmachen</span></a></li>
-					</ul>
-					<ul id="subnavklapp">
-						<li class="navhome" style="display: none"></li>
-						<li class="navakt" style="display: none">
-							<ul class="subnav">
-								<li><a href="#">Communiqués</a></li>
-								<li><a href="#">Politblog</a></li>
-								<li><a href="#">Termine/Events</a></li>
-							</ul>
-						</li>
-						<li class="navpos" style="display: none">
-							<ul class="subnav">
-								<li><a href="#">Parteiprogramm</a></li>
-								<li><a href="#">Themen</a></li>
-								<li><a href="#">Positionspapiere</a></li>
-								<li><a href="#">Vorstösse</a></li>
-							</ul>
-						</li>
-						<li class="navpar" style="display: none">
-							<ul class="subnav">
-								<li><a href="#">Organe</a></li>
-								<li><a href="#">Statuten</a></li>
-								<li><a href="#">Netzwerk</a></li>
-								<li><a href="#">Beitritt</a></li>
-								<li><a href="#">Spenden</a></li>
-							</ul>
-						</li>
-						<li class="navmed" style="display: none">
-							<ul class="subnav">
-								<li><a href="#">Pressdienst</a></li>
-								<li><a href="#">Bilder</a></li>
-								<li><a href="#">Downloads</a></li>
-								<li><a href="#">Pressespiegel</a></li>
-							</ul>
-						</li>
-						<li class="navmit" style="display: none">
-							<ul class="subnav">
-								<li><a href="">Mitmachen</a></li>
-								<li><a href="">Community</a></li>
-								<li class="extern"><a href="#">Forum</a></li>
-								<li class="extern"><a href="#">Wiki</a></li>
-							</ul>
-						</li>
-					</ul>
-					<div class="clear"></div>
+					<?php if ($primary_links) { ?>						
+						<?php print theme('piratenavi', menu_tree_page_data(variable_get('menu_primary_links_source', 'primary-links'))); ?>
+					<?php } ?>
 				</div>	
 			</div>	
 			<div class="body" id="content">
-				<div class="contbodykopf"><div class="kopf"><a class="rss" href="#"></a><div id="breadcrump"><a class="home" href="#"></a><em>/</em><a href="#">Aktuell</a><em>/</em><a href="#">News</a></div></div></div>
-				<div class="contsitekopf"><div class="kopf"><h1>Subnavigation</h1></div></div>
-			
-			
+				<?php print $breadcrumb ?>
+				<div class="contsitekopf"><div class="kopf"><h1><?php print t('Subnavigation'); ?></h1></div></div>
 				<div class="contbody">
-					<?php print $tabs ?>
-					<?php print $content ?>
-				</div>	
-				<div id="contsite">
-					<ul class="cosubnav">
-						<li><a href="#"><em>News</em></a></li>
-						<li><a href="#"><em>News</em></a></li>
-						<li class="aktiv"><hr><p>News</p></li>
-							<ul>
-								<li><a href="#"><em>News</em></a></li>
-								<li class="aktiv"><hr><p>News</p></li>
-							</ul>
-						<li><a href="#"><em>News</em></a></li>
-						<li class="end"></li>
-					</ul>
-					<ul class="subactionbut">
-						<li><a href="#"><img height="73px" width="64px" alt="Mitmachen bei den Piraten" src="/<?php print path_to_theme(TRUE); ?>/images/subacbut_mitmach.png">
-							<span class="headone">Jetzt mitmachen!</span><span class="headtwo">Werde auch du ein Pirat.</span></a></li>
-						<li><a href="#"><img height="73px" width="64px" alt="Jetzt mitmachen" src="/<?php print path_to_theme(TRUE); ?>/images/subacbut_shop.png">
-							<span class="headone">Werbematerial</span><span class="headtwo">Piraten - an die Kanonen!</span></a></li>
-						<li><a href="#"><img height="73px" width="64px" alt="Spenden" src="/<?php print path_to_theme(TRUE); ?>/images/subacbut_spende.png">
-							<span class="headone">Unterstütze uns ...</span><span class="headtwo">...mit deiner Spende.</span></a></li>
-					</ul>
+					<?php if ($content) { ?>
+						<?php print $content; ?>
+					<?php } ?>
 				</div>
-				<div class="clear"></div>		
+				<div id="contsite">
+					<?php print theme('piratesubnavi', menu_tree_page_data('navigation')); ?>
+					<?php print $content_right ?>
+				</div>
+				<div class="clear"></div>
 			</div>
 		</div>
 		<div id="boardfot"></div>

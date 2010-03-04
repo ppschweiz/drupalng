@@ -1,0 +1,17 @@
+<?php
+// $Id:  pirate_base module Exp $
+
+function pirate_base_menu() {
+  $items['admin/pirate'] = array(
+    'title' => 'Pirates',
+    'description' => 'Administer the pirate party modules',
+    'position' => 'left',
+    'weight' => -4,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer site configuration'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  return $items;
+}
