@@ -1,71 +1,116 @@
 <?php
-// $Id:  pirate_slider module Exp $
+// $Id:	pirate_slider module Exp $
 
 function pirate_slider_menu() {
-  $items['admin/pirate/slider'] = array(
-    'title' => 'Slider',
-    'description' => 'Configure the Slider on the frontpage.',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('pirate_slider_admin'),
-    'access arguments' => array('administer site configuration'),
-  );
-
-  return $items;
+	$domains = domain_domains();
+	if (empty($domains)) 
+	{
+		$items['admin/pirate/slider'] = array(
+			'title' => 'Slider',
+			'description' => 'Configure the Slider on the frontpage.',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('pirate_slider_admin', "none"),
+			'access arguments' => array('administer site configuration'),
+		);			 
+	}
+	else
+	{
+		$items['admin/pirate/slider'] = array(
+			'title' => 'Slider',
+			'description' => 'Configure the Slider on the frontpage.',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('pirate_slider_admin', "all"),
+			'access arguments' => array('administer site configuration'),
+		);
+		foreach($domains as $domain) 
+		{
+			$items['admin/pirate/slider/'.$domain['domain_id']] = array(
+				'title' => $domain['sitename'],
+				'type' => MENU_LOCAL_TASK,
+				'description' => 'Configure the Slider on the frontpage.',
+				'page callback' => 'drupal_get_form',
+				'page arguments' => array('pirate_slider_admin', $domain),
+				'access arguments' => array('administer site configuration'),
+			);
+		}
+	}
+	return $items;
 }
 
-function pirate_slider_admin() {
-  $slider = 0;
-  $form = array();
-  do {
-    $slider++;
-    $form['pirate_slider_slide'.$slider.'_title'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Slide #'.$slider.' Title'),
-      '#default_value' => variable_get('pirate_slider_slide'.$slider.'_title', ''),
-      '#size' => 60,
-      '#maxlength' => 63,
-      '#description' => t("The title of slide ".$slider."."),
-      '#required' => FALSE,
-    );
-    $form['pirate_slider_slide'.$slider.'_subtitle'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Slide #'.$slider.' Sub Title'),
-      '#default_value' => variable_get('pirate_slider_slide'.$slider.'_subtitle', ''),
-      '#size' => 60,
-      '#maxlength' => 63,
-      '#description' => t("The subtitle of slide ".$slider."."),
-      '#required' => FALSE,
-    );
-    $form['pirate_slider_slide'.$slider.'_linktext'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Slide #'.$slider.' Linktext'),
-      '#default_value' => variable_get('pirate_slider_slide'.$slider.'_linktext', ''),
-      '#size' => 60,
-      '#maxlength' => 255,
-      '#description' => t("The linktext of slide ".$slider."."),
-      '#required' => FALSE,
-    );
-    $form['pirate_slider_slide'.$slider.'_url'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Slide #'.$slider.' URL'),
-      '#default_value' => variable_get('pirate_slider_slide'.$slider.'_url', ''),
-      '#size' => 60,
-      '#maxlength' => 255,
-      '#description' => t("The Link of slide ".$slider."."),
-      '#required' => FALSE,
-    );
-    $form['pirate_slider_slide'.$slider.'_image'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Slide #'.$slider.' Image Url'),
-      '#default_value' => variable_get('pirate_slider_slide'.$slider.'_image', ''),
-      '#size' => 60,
-      '#maxlength' => 255,
-      '#description' => t("The Image URL of slide ".$slider."."),
-      '#required' => FALSE,
-    );
-  } while (variable_get('pirate_slider_slide'.($slider).'_title', NULL));
+function pirate_slider_admin($arg, $domain) {
+	if ($domain == all || $domain == "none")
+	{
+		return '';
+	}
 
-  return system_settings_form($form);
+	$slider = 0;
+
+	$form = array();
+	$form['pirate_slider'] = array(
+		'#type' => 'fieldset',
+		'#title' => t($domain['sitename']),
+		'#collapsible' => FALSE
+	);
+
+	do {
+		$slider++;
+
+		$fieldsettitle = (variable_get('pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_title', NULL)) ? "Slide ".$slider : "New Slide";
+		$form['pirate_slider']['slide'.$slider] = array(
+			'#type' => 'fieldset',
+			'#title' => t($fieldsettitle),
+			'#collapsible' => TRUE
+		);
+
+		$form['pirate_slider']['slide'.$slider]['pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_title'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Slide Title'),
+			'#default_value' => variable_get('pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_title', ''),
+			'#size' => 60,
+			'#maxlength' => 63,
+			'#description' => t("The title of the slide. First row of the slide, orange."),
+			'#required' => FALSE,
+		);
+		$form['pirate_slider']['slide'.$slider]['pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_subtitle'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Slide Sub Title'),
+			'#default_value' => variable_get('pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_subtitle', ''),
+			'#size' => 60,
+			'#maxlength' => 63,
+			'#description' => t("The subtitle of the slide. Second row of the slide, Big."),
+			'#required' => FALSE,
+		);
+		$form['pirate_slider']['slide'.$slider]['pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_linktext'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Slide Linktext'),
+			'#default_value' => variable_get('pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_linktext', ''),
+			'#size' => 60,
+			'#maxlength' => 255,
+			'#description' => t("The linktext of the slide. Last row with an arrow to the Link."),
+			'#required' => FALSE,
+		);
+		$form['pirate_slider']['slide'.$slider]['pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_url'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Slide Link URL'),
+			'#default_value' => variable_get('pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_url', ''),
+			'#size' => 60,
+			'#maxlength' => 255,
+			'#description' => t("The Link of the slide which links to the content."),
+			'#required' => FALSE,
+		);
+		$form['pirate_slider']['slide'.$slider]['pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_image'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Slide #'.$slider.' Image Url'),
+			'#default_value' => variable_get('pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_image', ''),
+			'#size' => 60,
+			'#maxlength' => 255,
+			'#description' => t("The Image URL of the slide image."),
+			'#required' => FALSE,
+		);
+	} while (variable_get('pirate_slider_slide'.$domain['domain_id'].'_'.$slider.'_title', NULL));
+
+	$output = system_settings_form($form);
+	return $output;
 }
 
 
@@ -74,34 +119,35 @@ function pirate_slider_admin() {
 // Template
 function pirate_slider_theme($op = 'list', $delta = 0) 
 {
-  return array(
-    'pirate_slider' => array(
-      'template' => 'pirate_slider',
-      'arguments' => array('slides' => NULL),
-    ),
-  );
+	return array(
+		'pirate_slider' => array(
+			'template' => 'pirate_slider',
+			'arguments' => array('slides' => NULL),
+		),
+	);
 }
 
 // Block
 function pirate_slider_block($op = 'list', $delta = 0) 
 {
 
-  if ($op == "list") 
-  {
-    $block = array();
-    $block[0]["info"] = t('Pirate Slider Block');
-    return $block;
-  } 
+	if ($op == "list") 
+	{
+		$block = array();
+		$block[0]["info"] = t('Pirate Slider Block');
+		return $block;
+	} 
 
-  if ($op == 'view') 
-  { 
-    drupal_add_js(drupal_get_path('module', 'pirate_slider').'/js/jquery-1.3.2.min.js');
-    drupal_add_js(drupal_get_path('module', 'pirate_slider').'/js/jquery.coda-slider-2.0.js');
-    drupal_add_js(drupal_get_path('module', 'pirate_slider').'/js/jquery.easing.1.3.js');
-    drupal_add_js("$().ready(function() { $('#coda-slider-1').show(); $('#coda-slider-1').codaSlider({autoSlide: true, autoSlideInterval: 8000, autoSlideStopWhenClicked: true, autoHeightEaseDuration: 1000, autoHeightEaseFunction: \"easeInOutBack\", slideEaseDuration: 1000, slideEaseFunction: \"easeInOutBack\" }); });", 'inline');
+	if ($op == 'view') 
+	{ 
+		drupal_add_js(drupal_get_path('module', 'pirate_slider').'/js/jquery-1.3.2.min.js');
+		drupal_add_js(drupal_get_path('module', 'pirate_slider').'/js/jquery.coda-slider-2.0.js');
+		drupal_add_js(drupal_get_path('module', 'pirate_slider').'/js/jquery.easing.1.3.js');
+		drupal_add_js("$().ready(function() { $('#coda-slider-1').show(); $('#coda-slider-1').codaSlider({autoSlide: true, autoSlideInterval: 8000, autoSlideStopWhenClicked: true, autoHeightEaseDuration: 1000, autoHeightEaseFunction: \"easeInOutBack\", slideEaseDuration: 1000, slideEaseFunction: \"easeInOutBack\" }); });", 'inline');
 
-    $block = array();
-    $block['content'] = theme("pirate_slider", NULL);
-    return $block;
-  }
+		$block = array();
+		$block['content'] = theme("pirate_slider", NULL);
+		return $block;
+	}
 } 
+

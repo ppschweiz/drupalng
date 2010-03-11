@@ -1,7 +1,29 @@
-                                               <li><a href="#"><img alt="Mitmachen bei den Piraten" src="<?php print path_to_theme(TRUE); ?>/images/acbutton_de_mitmach.png">
-                                                        <span class="headone">Jetzt mitmachen!</span><span class="headtwo">Werde auch du ein Pirat.</span></a></li>
-                                                <li><a href="#"><img alt="Jetzt mitmachen" src="<?php print path_to_theme(TRUE); ?>/images/acbutton_de_werbe.png">
-                                                        <span class="headone">Werbematerial</span><span class="headtwo">Piraten - an die Kanonen!</span></a></li>
-                                                <li><a href="#"><img alt="Spenden" src="<?php print path_to_theme(TRUE); ?>/images/acbutton_de_spende.png">
-                                                        <span class="headone">Unterstütze uns ...</span><span class="headtwo">...mit deiner Spende.</span></a></li>
+<?php
+  $current_domain = domain_resolve_host();
+  $domain_id = $current_domain['domain_id'];
+?>
+
+<ul id="actionbutton">
+	<li>
+		<a href="<?php print variable_get('d'.$domain_id.'pirate_actionbutton_top_link', ''); ?>">
+			<img alt="<?php print variable_get('d'.$domain_id.'pirate_actionbutton_top_title', ''); ?>" src="/<?php print path_to_theme(TRUE); ?>/images/acbutton_mitmach.png">
+			<span class="headone"><?php print variable_get('d'.$domain_id.'pirate_actionbutton_top_title', ''); ?></span>
+			<span class="headtwo"><?php print variable_get('d'.$domain_id.'pirate_actionbutton_top_subtitle', ''); ?></span>
+		</a>
+	</li>
+	<li>
+		<a href="<?php print variable_get('d'.$domain_id.'pirate_actionbutton_middle_link', ''); ?>">
+			<img alt="<?php print variable_get('d'.$domain_id.'pirate_actionbutton_middle_title', ''); ?>" src="/<?php print path_to_theme(TRUE); ?>/images/acbutton_werbe.png">
+			<span class="headone"><?php print variable_get('d'.$domain_id.'pirate_actionbutton_middle_title', ''); ?></span>
+			<span class="headtwo"><?php print variable_get('d'.$domain_id.'pirate_actionbutton_middle_subtitle', ''); ?></span>
+		</a>
+	</li>
+	<li>
+		<a href="<?php print variable_get('d'.$domain_id.'pirate_actionbutton_bottom_link', ''); ?>">
+			<img alt="<?php print variable_get('d'.$domain_id.'pirate_actionbutton_bottom_title', ''); ?>" src="/<?php print path_to_theme(TRUE); ?>/images/acbutton_spende.png">
+			<span class="headone"><?php print variable_get('d'.$domain_id.'pirate_actionbutton_bottom_title', ''); ?></span>
+			<span class="headtwo"><?php print variable_get('d'.$domain_id.'pirate_actionbutton_bottom_subtitle', ''); ?></span>
+		</a>
+	</li>
+</ul>
 

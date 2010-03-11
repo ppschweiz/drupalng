@@ -1,0 +1,18 @@
+*** Pirate Theme 2.0 ***
+
+Design: 	Stefan 'Convex' Degen
+Implementation:	Philipp 'dergringo' Kopf, Thomas 'Apophis' Bruderer, Abnaxos, Simon Rupf
+
+*** Needed modules ***
+
+*** Pirate Modules ***
+
+Create with the Date-Wizard a new Content Type, the internal name of this should be "event". That way the right column gets correctly
+
+*** FAQ ***
+
+* Q: I dont see the slider, or any other part of the page
+* A: Add the corresponding Block-views to the blocks
+
+* Q: The Events show up, but are formatted incorrectly
+* A: The Upcoming Event view does need to output "Nodes" and "Unformatted"

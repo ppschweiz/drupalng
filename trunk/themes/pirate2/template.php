@@ -257,6 +257,7 @@ function pirateparty_preprocess_node(&$vars)
 {
 }
 
+$handle_multiple_dates = array();
 
 function pirate2_preprocess_node(&$vars, $hook) 
 {
@@ -286,7 +287,31 @@ function pirate2_preprocess_node(&$vars, $hook)
 
 	if ($vars['type'] == 'event')
 	{
-
+		global $handle_multiple_dates;
+		if(!isset($handle_multiple_dates[$vars['nid']]))
+		{
+			$handle_multiple_dates[$vars['nid']] = -1;
+			$i = 0;
+			$xtime = strtotime($vars['field_date'][$i]['value']);
+			$vars['month'] = date('M', $xtime).'.';
+			$vars['day'] = date('j', $xtime).'.';
+			while($xtime < time() - (24 * 60 * 60) && $vars['field_date'][$i+1])
+			{
+				$i++;
+				$xtime = strtotime($vars['field_date'][$i]['value']);
+				$vars['month'] = date('M', $xtime).'.';
+				$vars['day'] = date('j', $xtime).'.';
+			}
+		} else {
+			do
+			{
+				$handle_multiple_dates[$vars['nid']]++;     
+				$xtime = strtotime($vars['field_date'][$handle_multiple_dates[$vars['nid']]]['value']);
+				$vars['month'] = date('M', $xtime).'.';
+				$vars['day'] = date('j', $xtime).'.';
+			} 
+			while($xtime < time() - (24 * 60 * 60) && $vars['field_date'][$handle_multiple_dates[$vars['nid']]]);
+		}
         }
 	else
 	{

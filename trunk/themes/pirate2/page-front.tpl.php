@@ -100,8 +100,9 @@
 			<td id="servicenavfix">
 				<ul>
 		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
-       				            	<?php if ($logged_in) { ?>
-						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class'=>'logout'))); ?></li>
+			            	<?php if ($logged_in) { ?>
+						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
+						<li title="User Page"><?php print l(t('My Account'), 'user'); ?></li>
         	       			<?php } else { ?>
 	               	   			<li title="Login"><?php print l(t('Login'), 'user', array('attributes' => array('class'=>'login'))); ?></li>
 			                <?php } ?>
@@ -127,13 +128,13 @@
 				<?php } else { ?>
 					<div class="slider-wrapper">Place "Pirate Slider Block" here</div>
 				<?php } ?>
-				<ul id="actionbutton">
-					<?php if ($actionbutton) { ?>
-						<?php print $actionbutton ?>
-					<?php } else { ?>                                        
-						<li>Place "Pirate Actionbutton Front Block" here<a></a><li>
-					<?php } ?>
-				</ul>		
+				<?php if ($actionbutton) { ?>
+					<?php print $actionbutton ?>
+				<?php } else { ?>                                        
+					<ul id="actionbutton">
+						<li>Place "Pirate Actionbutton Front Block" here<li>
+					</ul>		
+				<?php } ?>
 			</div>
 			<div id="navigation">
 				<div class="navwrapper">
@@ -151,13 +152,14 @@
 				</div>
 				<div id="contevents">
 					<?php print $content_right ?>
-				</div>		
-				<ul id="contbuttons">
-					<li class="butpirates"><a href="#"></a></li>
-					<li class="twocol"><a href="#"><img alt="gegen Softwarepadente" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_softpad.png"></a></li>
+				</div>
+				<?php print $footer ?>
+                                <ul id="contbuttons">
+                                        <li class="butpirates"><a href="#"></a></li>
+                                        <li class="twocol"><a href="#"><img alt="gegen Softwarepadente" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_softpad.png"></li>
 					<li class="onecol"><a href="#"><img alt="Fichenaffaire 2.0" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_fichen.png"></a></li>
 					<li class="twocol"><a href="#"><img alt="Biometrischer Pass" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_biopass.png"></a></li>
-				</ul>
+                                </ul>
 			</div>
 		</div>
 		<div id="boardfot"></div>

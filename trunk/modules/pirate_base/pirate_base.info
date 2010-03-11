@@ -7,4 +7,3 @@ version = 1.x-dev
 
 dependencies[] = views
 dependencies[] = menu
-dependencies[] = nodehierarchy

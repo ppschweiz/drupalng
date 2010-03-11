@@ -102,6 +102,7 @@
 		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
        				            	<?php if ($logged_in) { ?>
 						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class'=>'logout'))); ?></li>
+                                                <li title="User Page"><?php print l(t('My Account'), 'user'); ?></li>
         	       			<?php } else { ?>
 	               	   			<li title="Login"><a href="<?php print $base_path ?>/user" class="login">Login</a></li>
 			                <?php } ?>

@@ -3,20 +3,159 @@
 
 function pirate_actionbutton_menu() 
 {
-	$items['admin/pirate/actionbutton'] = array(
-		'title' => 'Actionbutton',
-		'description' => 'Configure Actionbutton Blocks.',
-		'page callback' => 'drupal_get_form',
-		'page arguments' => array('pirate_actionbutton_admin'),
-		'access arguments' => array('administer site configuration'),
-	);
+	$domains = domain_domains();
+	if (empty($domains))
+	{
 
+		$items['admin/pirate/actionbutton'] = array(
+			'title' => 'Actionbutton',
+			'description' => 'Configure Actionbutton Blocks.',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('pirate_actionbutton_admin', 'none'),
+			'access arguments' => array('administer site configuration'),
+		);
+	}
+	else 
+	{
+		$items['admin/pirate/actionbutton'] = array(
+			'title' => 'Actionbutton',
+			'description' => 'Configure Actionbutton Blocks.',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('pirate_actionbutton_admin', 'all'),
+			'access arguments' => array('administer site configuration'),
+		);
+
+		foreach($domains as $domain)
+		{
+			$items['admin/pirate/actionbutton/'.$domain['domain_id']] = array(
+				'title' =>  $domain['sitename'],
+				'type' => MENU_LOCAL_TASK,
+				'description' => 'Configure Actionbutton Blocks.',
+				'page callback' => 'drupal_get_form',
+				'page arguments' => array('pirate_actionbutton_admin', $domain),
+				'access arguments' => array('administer site configuration'),
+			);
+		}
+	}
 	return $items;
 }
 
-function pirate_actionbutton_admin() 
+function pirate_actionbutton_admin($arg1, $domain) 
 {
+        if ($domain == all || $domain == "none")
+        {
+                return '';
+        }
 
+        $form = array();
+        $form['pirate_acbutton'] = array(
+                '#type' => 'fieldset',
+                '#title' => t($domain['sitename']),
+                '#collapsible' => FALSE
+        );
+
+        $form['pirate_acbutton']['top'] = array(
+                '#type' => 'fieldset',
+                '#title' => t('Top Button'),
+                '#collapsible' => TRUE
+        );
+
+	$form['pirate_acbutton']['top']['d'.$domain['domain_id'].'pirate_actionbutton_top_title'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Top Actiobutton Title'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_top_title', 'Jetzt mitmachen!'),
+		'#size' => 60,
+		'#maxlength' => 63,
+		'#description' => t("The Top Actionbutton Main Title."),
+		'#required' => FALSE,
+	);
+	$form['pirate_acbutton']['top']['d'.$domain['domain_id'].'pirate_actionbutton_top_subtitle'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Top Actiobutton Subtitle'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_top_subtitle', 'Werde auch du ein Pirat!'),
+		'#size' => 60,
+		'#maxlength' => 63,
+		'#description' => t("The Top Actionbutton Subtitle."),
+		'#required' => FALSE,
+	);
+	$form['pirate_acbutton']['top']['d'.$domain['domain_id'].'pirate_actionbutton_top_link'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Top Actiobutton Link'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_top_link', ''),
+		'#size' => 60,
+		'#maxlength' => 255,
+		'#description' => t("The Top Actionbutton Link."),
+		'#required' => FALSE,
+	);
+
+        $form['pirate_acbutton']['middle'] = array(
+                '#type' => 'fieldset',
+                '#title' => t('Middle Button'),
+                '#collapsible' => TRUE
+        );
+
+	$form['pirate_acbutton']['middle']['d'.$domain['domain_id'].'pirate_actionbutton_middle_title'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Middle Actiobutton Title'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_middle_title', 'Werbematerial'),
+		'#size' => 60,
+		'#maxlength' => 63,
+		'#description' => t("The Middle Actionbutton Main Title."),
+		'#required' => FALSE,
+	);
+	$form['pirate_acbutton']['middle']['d'.$domain['domain_id'].'pirate_actionbutton_middle_subtitle'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Middle Actiobutton Subtitle'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_middle_subtitle', 'Piraten - an die Kanonen!'),
+		'#size' => 60,
+		'#maxlength' => 63,
+		'#description' => t("The Middle Actionbutton Subtitle."),
+		'#required' => FALSE,
+	);
+	$form['pirate_acbutton']['middle']['d'.$domain['domain_id'].'pirate_actionbutton_middle_link'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Middle Actiobutton Link'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_middle_link', ''),
+		'#size' => 60,
+		'#maxlength' => 255,
+		'#description' => t("The Middle Actionbutton Link."),
+		'#required' => FALSE,
+	);
+
+        $form['pirate_acbutton']['bottom'] = array(
+                '#type' => 'fieldset',
+                '#title' => t('Bottom Button'),
+                '#collapsible' => TRUE
+        );
+
+	$form['pirate_acbutton']['bottom']['d'.$domain['domain_id'].'pirate_actionbutton_bottom_title'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Bottom Actiobutton Title'),
+		'#default_value' => variable_get('pirate_actionbutton_bottom_title', 'Unterstütze uns'),
+		'#size' => 60,
+		'#maxlength' => 63,
+		'#description' => t("The Bottom Actionbutton Main Title."),
+		'#required' => FALSE,
+	);
+	$form['pirate_acbutton']['bottom']['d'.$domain['domain_id'].'pirate_actionbutton_bottom_subtitle'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Bottom Actiobutton Title'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_bottom_subtitle', '...mit deiner Spende.'),
+		'#size' => 60,
+		'#maxlength' => 63,
+		'#description' => t("The Bottom Actionbutton Subtitle."),
+		'#required' => FALSE,
+	);
+	$form['pirate_acbutton']['bottom']['d'.$domain['domain_id'].'pirate_actionbutton_bottom_link'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Top Actiobutton'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_bottom_link', ''),
+		'#size' => 60,
+		'#maxlength' => 255,
+		'#description' => t("The Bottom Actionbutton Link."),
+		'#required' => FALSE,
+	);
+	return system_settings_form($form);
 }
 
 // Template

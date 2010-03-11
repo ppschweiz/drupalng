@@ -10,11 +10,15 @@
 			$active = ($submenu['link']['in_active_trail'] && !is_sub_active($submenu['below'])) ? " class=\"aktiv\"" : "";
 			
 			print "<li".$active.">";
-			print l($submenu['link']['title'], $submenu['link']['href']);
+			$title = ($submenu['link']['title']) ? $submenu['link']['title'] : "<".$submenu['link']['module']."/".$submenu['link']['link_path'].">";
+			print l($title, $submenu['link']['href']);
 			print "</li>";
-			foreach($submenu['below'] as $menuitem) 
+			if(is_array($submenu['below'])) 
 			{
-				recursive_subnavigation($menuitem, $level + 1);
+				foreach($submenu['below'] as $menuitem) 
+				{
+					recursive_subnavigation($menuitem, $level + 1);
+				}
 			}
 			print "</ul>";
 		}
@@ -22,6 +26,9 @@
 
 	function is_sub_active($submenu) 
 	{
+		if (!$submenu)
+			return 0;
+
 		foreach($submenu as $menuitem) 
 		{
 			if($menuitem['link']['in_active_trail'])

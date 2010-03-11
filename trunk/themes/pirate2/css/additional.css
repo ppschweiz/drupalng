@@ -165,3 +165,17 @@ fieldset.collapsed
 	background-color: #ffffff;
 }
 
+tr.ok
+{
+	background-color: #ccffcc;
+}
+
+tr.warning
+{
+	background-color: #ffffaa;
+}
+
+tr.error
+{
+	background-color: #ffcccc;
+}
