@@ -179,3 +179,8 @@ tr.error
 {
 	background-color: #ffcccc;
 }
+
+#admin-menu-shadow 
+{
+	display: none;
+}

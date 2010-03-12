@@ -1,13 +1,36 @@
 *** Pirate Theme 2.0 ***
 
+
 Design: 	Stefan 'Convex' Degen
+License: CC-BY 2.5 Switzerland
+
 Implementation:	Philipp 'dergringo' Kopf, Thomas 'Apophis' Bruderer, Abnaxos, Simon Rupf
+License : TBD
+
+Documentation:
+License: Gnu FDL
 
 *** Needed modules ***
+
+The design makes only sense with the pirate modules you probably got from the same repository.
+
+necessary for design:
+
+pirate_base
+pirate_slider
+pirate_actionbutton
+
+optional features:
+pirate_donate / pirate_progressbar
+
+*** Initial Setup ***
+
+You need the zen-1.1 Maindesign, and this supdesign!
 
 *** Pirate Modules ***
 
 Create with the Date-Wizard a new Content Type, the internal name of this should be "event". That way the right column gets correctly
+styled
 
 *** FAQ ***
 
@@ -15,4 +38,4 @@ Create with the Date-Wizard a new Content Type, the internal name of this should
 * A: Add the corresponding Block-views to the blocks
 
 * Q: The Events show up, but are formatted incorrectly
-* A: The Upcoming Event view does need to output "Nodes" and "Unformatted"
+* A: The Upcoming Event view does need the outputformat as "Nodes" and the list style as "Unformatted"

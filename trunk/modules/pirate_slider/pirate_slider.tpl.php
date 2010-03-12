@@ -7,7 +7,7 @@
   $current_domain = domain_resolve_host();
   $domain_id = $current_domain['domain_id'];
 ?>
-    <?php for ( $i = 1; variable_get('pirate_slider_slide'.$i.'_title', ''); $i++)
+    <?php for ( $i = 1; variable_get('pirate_slider_slide'.$domain_id.'_'.$i.'_title', ''); $i++)
     { 
       $slide_prefix = 'pirate_slider_slide'.$domain_id.'_'.$i.'_';
 ?>

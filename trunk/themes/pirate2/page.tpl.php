@@ -97,17 +97,18 @@
 			<td id="servicenavright">
 				<?php print $servicenavright ?>
 	       	        </td>
-			<td id="servicenavfix">
-				<ul>
-		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
-       				            	<?php if ($logged_in) { ?>
-						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class'=>'logout'))); ?></li>
-                                                <li title="User Page"><?php print l(t('My Account'), 'user'); ?></li>
-        	       			<?php } else { ?>
-	               	   			<li title="Login"><a href="<?php print $base_path ?>/user" class="login">Login</a></li>
-			                <?php } ?>
-				</ul>
-	       	        </td></tr></table>
+                       <td id="servicenavfix">
+                                <ul>
+                                        <li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
+                                        <?php if ($logged_in) { ?>
+                                                <li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
+                                                <li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
+                                        <?php } else { ?>
+                                                <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class'=>'login'))); ?></li>
+                                                <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
+                                        <?php } ?>
+                                </ul>
+                        </td></tr></table>
             	</div>
         </div>
 	<div id="decormid">

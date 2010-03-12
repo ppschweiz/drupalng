@@ -131,7 +131,7 @@ function pirate_actionbutton_admin($arg1, $domain)
 	$form['pirate_acbutton']['bottom']['d'.$domain['domain_id'].'pirate_actionbutton_bottom_title'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Bottom Actiobutton Title'),
-		'#default_value' => variable_get('pirate_actionbutton_bottom_title', 'Unterstütze uns'),
+		'#default_value' => variable_get('d'.$domain['domain_id'].'pirate_actionbutton_bottom_title', 'Unterstütze uns'),
 		'#size' => 60,
 		'#maxlength' => 63,
 		'#description' => t("The Bottom Actionbutton Main Title."),

@@ -101,10 +101,11 @@
 				<ul>
 		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
 			            	<?php if ($logged_in) { ?>
-						<li title="Logout"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
-						<li title="User Page"><?php print l(t('My Account'), 'user'); ?></li>
+						<li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
+						<li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
         	       			<?php } else { ?>
-	               	   			<li title="Login"><?php print l(t('Login'), 'user', array('attributes' => array('class'=>'login'))); ?></li>
+	               	   			<li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class'=>'login'))); ?></li>
+						<li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
 			                <?php } ?>
 				</ul>
 	       	        </td></tr></table>
