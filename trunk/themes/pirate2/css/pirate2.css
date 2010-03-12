@@ -3,8 +3,8 @@
 /***********************************************/
 
 /* @group base */
-	@font-face { font-family: 'Aller'; src: url('../fonts/allerlight.ttf') ; font-weight:normal;}
-	@font-face { font-family: 'Aller'; src: url('../fonts/aller.ttf') ; font-weight: bold;}
+	@font-face { font-family: 'Aller'; src: url('../fonts/allerl.ttf') ; font-weight:normal;}
+	@font-face { font-family: 'Aller'; src: url('../fonts/allerbold.ttf') ; font-weight: bold;}
 	html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p,blockquote,fieldset,input {margin: 0; padding: 0;}
 	h1,h2,h3,h4,h5,h6,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal;}
 	ul,ol { list-style-image:none; list-style-position:outside; list-style-type:none; }
