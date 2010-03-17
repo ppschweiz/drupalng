@@ -3,7 +3,7 @@
 /***********************************************/
 
 /* @group base */
-	@font-face { font-family: 'Aller'; src: url('../fonts/allerl.ttf') ; font-weight:normal;}
+	@font-face { font-family: 'Aller'; src: url('../fonts/aller.ttf') ; font-weight:normal;}
 	@font-face { font-family: 'Aller'; src: url('../fonts/allerbold.ttf') ; font-weight: bold;}
 	html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p,blockquote,fieldset,input {margin: 0; padding: 0;}
 	h1,h2,h3,h4,h5,h6,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal;}
@@ -44,7 +44,8 @@
 	ul#servicenav li {float: right; color: #ccc; text-transform: uppercase; letter-spacing: 1px;margin:4px 0 0 12px;}
 	ul#servicenav li em.activ {color: #fff;}
 	ul#servicenav li a {color: #ccc;}
-	ul#servicenav li a:hover {color: #e79928;}ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafriend {padding-right:20px;}
+	ul#servicenav li a:hover {color: #e79928;}
+ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafriend {padding-right:20px;}
 /* @end */
 
 /* @group blockconfig */
@@ -166,7 +167,8 @@
 		noscript div { background: #ddd; display: block; float:left; height:270px; margin:0; width:592px; z-index: 20; position: absolute;}
 		noscript div p { padding: 20px; font-size: 1.2em; text-align: left;}
 		noscript div ol li { padding: 10px 20px; font-size: 1.2em; text-align: left; list-style-type: disc; list-style-position: inside; }
-		.coda-slider-wrapper {display: block; float:left; height:270px; margin:0; width:592px;}	.coda-slider { background: #eee; }
+		.coda-slider-wrapper {display: block; float:left; height:270px; margin:0; width:592px;}
+	.coda-slider { background: #eee; }
 		.coda-slider-no-js .coda-slider { height: 200px; overflow: auto !important; padding-right: 20px;}
 		.coda-slider, .coda-slider .panel { width: 592px; height: 270px;} 
 		.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { margin: 0; padding: 0; }
