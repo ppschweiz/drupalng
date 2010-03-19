@@ -54,7 +54,7 @@ function pirate2_settings($saved_settings)
       );
       $form['socialnetworks_'.$clang][$socnet.'_link_'.$clang] = array(
         '#type'          => 'textfield',
-        '#title'         => t('RSS Link'),
+        '#title'         => t($socname.' Link'),
         '#description'   => t('The fully qualified URL of the the '.$socname.'.'),
         '#default_value' => $settings[$socnet.'_link_'.$clang],
         '#size'          => 63,
@@ -62,7 +62,7 @@ function pirate2_settings($saved_settings)
       );
       $form['socialnetworks_'.$clang][$socnet.'_hover_'.$clang] = array(
         '#type'          => 'textfield',
-        '#title'         => t('RSS Link'),
+        '#title'         => t($socname.' Description'),
         '#description'   => t('On Hover Text of the the '.$socname.'.'),
         '#default_value' => $settings[$socnet.'_link_'.$clang],
         '#size'          => 63,
