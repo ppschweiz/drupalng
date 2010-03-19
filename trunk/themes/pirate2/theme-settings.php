@@ -60,6 +60,14 @@ function pirate2_settings($saved_settings)
         '#size'          => 63,
         '#maxlength'     => 255,
       );
+      $form['socialnetworks_'.$clang][$socnet.'_hover_'.$clang] = array(
+        '#type'          => 'textfield',
+        '#title'         => t('RSS Link'),
+        '#description'   => t('On Hover Text of the the '.$socname.'.'),
+        '#default_value' => $settings[$socnet.'_link_'.$clang],
+        '#size'          => 63,
+        '#maxlength'     => 255,
+      );
     }
   }
 

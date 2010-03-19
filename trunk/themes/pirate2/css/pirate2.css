@@ -294,8 +294,9 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 
 
 /* @group footer */
-	#fooleft { width: 495px; height: 32px; float: left; margin-top: 7px;}
-	#fooright {width: 483px; height: 38px; float: left; margin-top: 4px;}
+	#fooleft { width: 260px; height: 32px; float: left; margin-top: 7px;}
+	#foocenter { width: 458px; height: 32px; float: left; margin-top: 7px;}
+	#fooright {width: 260px; height: 38px; float: left; margin-top: 4px;}
 	#fooleft a.imgcc {width: 32px; height: 32px; float: left; display: block; background: url(../images/fotccico.png) no-repeat 15px top; padding-left: 15px; margin-right: 6px;}
 	#fooleft a.imgcc:hover {background: url(../images/fotccico.png) no-repeat 15px bottom;}
 	#fooleft p {float: left; text-align: left; color: #984508; line-height: 1.3em; font-size: 1em; margin-top: 3px;}

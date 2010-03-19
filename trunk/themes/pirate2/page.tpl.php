@@ -156,29 +156,35 @@
 	<div id="decorfot">
 		<div class="wrapper">
 			<div id="fooleft">
-				<a class="imgcc" href="#"></a><p>Piratenpartei Schweiz, Postfach, 1337 Vallorbe, info@piratenpartei.ch <br><a class="impressum" href="#">CC-BY 2.5 Switerland</a> | <a class="impressum" href="#">Impressum</a> | <a class="impressum" href="#">Kontakt</a></p>
+				<a class="imgcc" href="#"></a>
+				<p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br />
+					<a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en_CA">CC-BY 2.5 Switerland</a>
+				</p>
 			</div>
+			<div id="foocenter">
+				<?php print $footer; ?>
+			</div>	
 			<ul id="fooright">
 				<?php if(theme_get_setting('identica_available_'.$language->language)) { ?>
-					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link_'.$language->language); ?>"><span class="tip"><b><?php print t("Follow on Identica"); ?></b></span></a></li>
+					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('identica_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('facebook_available_'.$language->language)) { ?>
-					<li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link_'.$language->language); ?>"><span class="tip"><b><?php print t("Follow on Facebook"); ?></b></span></a></li>
+					<li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('facebook_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('twitter_available_'.$language->language)) { ?>
-					<li><a class="medico yout" href="<?php print theme_get_setting('twitter_link_'.$language->language); ?>"><span class="tip"><b><?php print t("Follow on Twitter"); ?></b></span></a></li>
+					<li><a class="medico yout" href="<?php print theme_get_setting('twitter_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('twitter_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('youtube_available_'.$language->language)) { ?>
-					<li><a class="medico twit" href="<?php print theme_get_setting('youtube_link_'.$language->language); ?>"><span class="tip"><b><?php print t("Follow on YouTube"); ?></b></span></a></li>
+					<li><a class="medico twit" href="<?php print theme_get_setting('youtube_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('youtube_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('myspace_available_'.$language->language)) { ?>
-					<li><a class="medico face" href="<?php print theme_get_setting('myspace_link_'.$language->language); ?>"><span class="tip"><b><?php print t("Follow on MySpace"); ?></b></span></a></li>
+					<li><a class="medico face" href="<?php print theme_get_setting('myspace_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('myspace_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('flickr_available_'.$language->language)) { ?>
-					<li><a class="medico ident" href="<?php print theme_get_setting('flickr_link_'.$language->language); ?>"><span class="tip"><b><?php print t("Follow on Flickr"); ?></b></span></a></li>
+					<li><a class="medico ident" href="<?php print theme_get_setting('flickr_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('flickr_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('rss_available_'.$language->language)) { ?>
-					<li><a class="medico rss" href="<?php print theme_get_setting('rss_link_'.$language->language); ?>"><span class="tip"><b><?php print t("Follow on RSS"); ?></b></span></a></li>
+					<li><a class="medico rss" href="<?php print theme_get_setting('rss_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('rss_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
 			</ul>
 		</div>
