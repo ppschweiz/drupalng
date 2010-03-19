@@ -36,7 +36,7 @@ function pirate2_settings($saved_settings)
     'twitter' => 'Twitter Feed', 
     'facebook' => 'Facebook Group', 
     'identica' => 'Identica Feed'
-  )
+  );
   
   $form = array();  
   foreach(locale_language_list('language') as $clang) 
