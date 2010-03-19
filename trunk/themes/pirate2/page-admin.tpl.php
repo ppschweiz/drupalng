@@ -141,13 +141,27 @@
 				<a class="imgcc" href="#"></a><p>Piratenpartei Schweiz, Postfach, 1337 Vallorbe, info@piratenpartei.ch <br><a class="impressum" href="#">CC-BY 2.5 Switerland</a> | <a class="impressum" href="#">Impressum</a> | <a class="impressum" href="#">Kontakt</a></p>
 			</div>
 			<ul id="fooright">
-				<li><a class="medico flick" href="#"><span class="tip"><b>PP bei Identica</b></span></a></li>
-				<li><a class="medico mysp" href="#"><span class="tip"><b>PP bei Facebook</b></span></a></li>
-				<li><a class="medico yout" href="#"><span class="tip"><b>PP bei Twitter</b></span></a></li>
-				<li><a class="medico twit" href="#"><span class="tip"><b>PP bei YouTube</b></span></a></li>
-				<li><a class="medico face" href="#"><span class="tip"><b>PP bei MySpace</b></span></a></li>
-				<li><a class="medico ident" href="#"><span class="tip"><b>PP bei Flicker</b></span></a></li>
-				<li><a class="medico rss" href="#"><span class="tip"><b>RSS-Newsfeed</b></span></a></li>
+				<?php if(theme_get_setting('identica_available')) { ?>
+					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link'); ?>"><span class="tip"><b><?php print t("Follow on Identica"); ?></b></span></a></li>
+				<?php } ?>				
+				<?php if(theme_get_setting('facebook_available')) { ?>
+					<li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link'); ?>"><span class="tip"><b><?php print t("Follow on Facebook"); ?></b></span></a></li>
+				<?php } ?>				
+				<?php if(theme_get_setting('twitter_available')) { ?>
+					<li><a class="medico yout" href="<?php print theme_get_setting('twitter_link'); ?>"><span class="tip"><b><?php print t("Follow on Twitter"); ?></b></span></a></li>
+				<?php } ?>				
+				<?php if(theme_get_setting('youtube_available')) { ?>
+					<li><a class="medico twit" href="<?php print theme_get_setting('youtube_link'); ?>"><span class="tip"><b><?php print t("Follow on YouTube"); ?></b></span></a></li>
+				<?php } ?>				
+				<?php if(theme_get_setting('myspace_available')) { ?>
+					<li><a class="medico face" href="<?php print theme_get_setting('myspace_link'); ?>"><span class="tip"><b><?php print t("Follow on MySpace"); ?></b></span></a></li>
+				<?php } ?>				
+				<?php if(theme_get_setting('flickr_available')) { ?>
+					<li><a class="medico ident" href="<?php print theme_get_setting('flickr_link'); ?>"><span class="tip"><b><?php print t("Follow on Flickr"); ?></b></span></a></li>
+				<?php } ?>				
+				<?php if(theme_get_setting('rss_available')) { ?>
+					<li><a class="medico rss" href="<?php print theme_get_setting('rss_link'); ?>"><span class="tip"><b><?php print t("Follow on RSS"); ?></b></span></a></li>
+				<?php } ?>				
 			</ul>
 		</div>
 	</div>

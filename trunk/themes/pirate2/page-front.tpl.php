@@ -168,29 +168,34 @@
 	<div id="decorfot">
 		<div class="wrapper">
 			<div id="fooleft">
-				<a class="imgcc" href="#"></a><p>Piratenpartei Schweiz, Postfach, 1337 Vallorbe, info@piratenpartei.ch <br><a class="impressum" href="#">CC-BY 2.5 Switerland</a> | <a class="impressum" href="#">Impressum</a> | <a class="impressum" href="#">Kontakt</a></p>
+				<a class="imgcc" href="#"></a>
+				<p><b>Design: </b><a href="">Piratenpartei Schweiz</a> | <b>Content: </b><a href="">Piratenpartei Schweiz</a><br>
+					<a class="impressum" href="#">CC-BY 2.5 Switerland</a> | 
+					<a class="impressum" href="#">Impressum</a> |
+					<a class="impressum" href="#">Kontakt</a>
+				</p>
 			</div>
 			<ul id="fooright">
 				<?php if(theme_get_setting('identica_available')) { ?>
-					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link'); ?>"><span class="tip"><b><?php print t("Follow us on Identica"); ?></b></span></a></li>
+					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link'); ?>"><span class="tip"><b><?php print t("Follow on Identica"); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('facebook_available')) { ?>
-					<li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link'); ?>"><span class="tip"><b><?php print t("Follow us on Facebook"); ?></b></span></a></li>
+					<li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link'); ?>"><span class="tip"><b><?php print t("Follow on Facebook"); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('twitter_available')) { ?>
-					<li><a class="medico yout" href="<?php print theme_get_setting('twitter_link'); ?>"><span class="tip"><b><?php print t("Follow us on Twitter"); ?></b></span></a></li>
+					<li><a class="medico yout" href="<?php print theme_get_setting('twitter_link'); ?>"><span class="tip"><b><?php print t("Follow on Twitter"); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('youtube_available')) { ?>
-					<li><a class="medico twit" href="<?php print theme_get_setting('youtube_link'); ?>"><span class="tip"><b><?php print t("Follow us on YouTube"); ?></b></span></a></li>
+					<li><a class="medico twit" href="<?php print theme_get_setting('youtube_link'); ?>"><span class="tip"><b><?php print t("Follow on YouTube"); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('myspace_available')) { ?>
-					<li><a class="medico face" href="<?php print theme_get_setting('myspace_link'); ?>"><span class="tip"><b><?php print t("Follow us on MySpace"); ?></b></span></a></li>
+					<li><a class="medico face" href="<?php print theme_get_setting('myspace_link'); ?>"><span class="tip"><b><?php print t("Follow on MySpace"); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('flickr_available')) { ?>
-					<li><a class="medico ident" href="<?php print theme_get_setting('flickr_link'); ?>"><span class="tip"><b><?php print t("Follow us on Flickr"); ?></b></span></a></li>
+					<li><a class="medico ident" href="<?php print theme_get_setting('flickr_link'); ?>"><span class="tip"><b><?php print t("Follow on Flickr"); ?></b></span></a></li>
 				<?php } ?>				
 				<?php if(theme_get_setting('rss_available')) { ?>
-					<li><a class="medico rss" href="<?php print theme_get_setting('rss_link'); ?>"><span class="tip"><b><?php print t("Follow us on RSS"); ?></b></span></a></li>
+					<li><a class="medico rss" href="<?php print theme_get_setting('rss_link'); ?>"><span class="tip"><b><?php print t("Follow on RSS"); ?></b></span></a></li>
 				<?php } ?>				
 			</ul>
 		</div>

@@ -27,7 +27,7 @@ function pirate2_settings($saved_settings) {
   $form = array();  
     $form['socialnetworks'] = array(
     '#type'          => 'fieldset',
-    '#title'         => t('Social Networklinks in the footer'),
+    '#title'         => t('Social Networklinks in the footer, for language: '.$language),
   );
   $form['socialnetworks']['rss_available'] = array(
     '#type'          => 'checkbox',
