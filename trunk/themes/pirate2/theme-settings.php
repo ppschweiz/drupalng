@@ -13,8 +13,10 @@ include_once './' . drupal_get_path('theme', 'zen') . '/theme-settings.php';
  * @return
  *   A form array.
  */
-function pirate2_settings($saved_settings) {
-
+function pirate2_settings($saved_settings) 
+{
+  global $language;
+	
   // Get the default values from the .info file.
   $defaults = zen_theme_get_default_settings('pirate2');
 
