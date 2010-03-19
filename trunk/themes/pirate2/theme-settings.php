@@ -24,9 +24,6 @@ function pirate2_settings($saved_settings)
   /*
    * Create the form using Forms API: http://api.drupal.org/api/6
    */
-   
-  print_r(locale_language_list('name'));
-  print_r(locale_language_list('language'));
   
   $socialnetworks = array (
     'rss' => 'RSS Feed', 
@@ -39,11 +36,11 @@ function pirate2_settings($saved_settings)
   );
   
   $form = array();  
-  foreach(locale_language_list('language') as $clang) 
+  foreach(locale_language_list('name') as $clang => $clangname) 
   { 
     $form['socialnetworks_'.$clang] = array(
       '#type'          => 'fieldset',
-      '#title'         => t('Social Networklinks in the footer, for language: '.locale_language_name($clang)),
+      '#title'         => t('Social Networklinks in the footer, for language: '.$clangname),
 	  '#collapsible'   => TRUE,
 	  '#collapsed'     => TRUE
     );
