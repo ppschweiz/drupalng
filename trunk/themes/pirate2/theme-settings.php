@@ -25,19 +25,45 @@ function pirate2_settings($saved_settings) {
    * Create the form using Forms API: http://api.drupal.org/api/6
    */
   $form = array();  
-  $form['pirate2_example'] = array(
+    $form['socialnetworks'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('Social Networklinks in the footer'),
+  );
+  $form['socialnetworks']['rss_available'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('Use this sample setting'),
-    '#default_value' => $settings['pirate2_example'],
-    '#description'   => t("This option doesn't do anything; it's just an example."),
+    '#title'         => t('Activate RSS Link'),
+    '#default_value' => FALSE,
+  );
+  $form['breadcrumb']['rss_link'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('RSS Link'),
+    '#description'   => t('The fully qualified URL of the the RSS feed'),
+    '#default_value' => '',
+    '#size'          => 63,
+    '#maxlength'     => 255,
+  );
+  $form['socialnetworks']['zen_breadcrumb'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Activate Flickr Link'),
+    '#default_value' => FALSE,
+  );
+  $form['breadcrumb']['zen_breadcrumb_separator'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Flickr Link'),
+    '#description'   => t('The fully qualified URL of the the Flickr gallery'),
+    '#default_value' => '',
+    '#size'          => 63,
+    '#maxlength'     => 255,
   );
 
   // Add the base theme's settings.
   $form += zen_settings($saved_settings, $defaults);
 
   // Remove some of the base theme's settings.
-  unset($form['themedev']['zen_layout']); // We don't need to select the base stylesheet.
-
+  unset($form['themedev']['zen_layout']);
+  unset($form['themedev']['zen_wireframes']);
+  unset($form['breadcrumb']);
+  
   // Return the form
   return $form;
 }
