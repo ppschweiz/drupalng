@@ -26,10 +26,12 @@ function pirate2_settings($saved_settings)
   /*
    * Create the form using Forms API: http://api.drupal.org/api/6
    */
+  print_r($language);
+   
   $form = array();  
     $form['socialnetworks'] = array(
     '#type'          => 'fieldset',
-    '#title'         => t('Social Networklinks in the footer, for language: '.$language['name']),
+    '#title'         => t('Social Networklinks in the footer, for language: '),
   );
   $form['socialnetworks']['rss_available'] = array(
     '#type'          => 'checkbox',
