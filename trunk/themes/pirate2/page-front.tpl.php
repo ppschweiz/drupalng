@@ -154,13 +154,12 @@
 				<div id="contevents">
 					<?php print $content_right ?>
 				</div>
-				<?php print $footer ?>
-                                <ul id="contbuttons">
-                                        <li class="butpirates"><a href="#"></a></li>
-                                        <li class="twocol"><a href="#"><img alt="gegen Softwarepadente" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_softpad.png"></li>
+                <ul id="contbuttons">
+                    <li class="butpirates"><a href="#"></a></li>
+                    <li class="twocol"><a href="#"><img alt="gegen Softwarepadente" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_softpad.png"></li>
 					<li class="onecol"><a href="#"><img alt="Fichenaffaire 2.0" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_fichen.png"></a></li>
 					<li class="twocol"><a href="#"><img alt="Biometrischer Pass" src="<?php print path_to_theme(TRUE) ?>/images/dummy/botbutton_de_biopass.png"></a></li>
-                                </ul>
+                </ul>
 			</div>
 		</div>
 		<div id="boardfot"></div>
