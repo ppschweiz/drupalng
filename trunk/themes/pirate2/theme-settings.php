@@ -15,7 +15,6 @@ include_once './' . drupal_get_path('theme', 'zen') . '/theme-settings.php';
  */
 function pirate2_settings($saved_settings) 
 {
-  global $language;
 	
   // Get the default values from the .info file.
   $defaults = zen_theme_get_default_settings('pirate2');
@@ -29,7 +28,7 @@ function pirate2_settings($saved_settings)
   $form = array();  
     $form['socialnetworks'] = array(
     '#type'          => 'fieldset',
-    '#title'         => t('Social Networklinks in the footer, for language: '.$language),
+    '#title'         => t('Social Networklinks in the footer, for language: '.$language['name']),
   );
   $form['socialnetworks']['rss_available'] = array(
     '#type'          => 'checkbox',
