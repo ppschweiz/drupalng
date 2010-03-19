@@ -28,6 +28,10 @@ domain_access,
 locale,
 i18n
 
+*** Simple install ***
+
+you can run the install_drupal.sh script, this will setup drupal exactly the same as on the development plattform (only configurationfiles must be done)
+
 *** Initial Setup ***
 
 You need the zen-1.1 Maindesign, and pirate2 subdesign.

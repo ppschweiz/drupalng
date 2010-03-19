@@ -103,10 +103,6 @@
  tar xvzf diff-6.x-2.1-alpha3.tar.gz
  rm diff-6.x-2.1-alpha3.tar.gz
  
- wget http://ftp.drupal.org/files/projects/gmap-6.x-1.0.tar.gz
- tar xvzf gmap-6.x-1.0.tar.gz
- rm gmap-6.x-1.0.tar.gz
- 
  wget http://ftp.drupal.org/files/projects/twitter-6.x-3.0-beta2.tar.gz
  tar xvzf twitter-6.x-3.0-beta2.tar.gz
  rm twitter-6.x-3.0-beta2.tar.gz
@@ -114,6 +110,10 @@
  wget http://ftp.drupal.org/files/projects/share-6.x-2.0-alpha2.tar.gz
  tar xvzf share-6.x-2.0-alpha2.tar.gz
  rm share-6.x-2.0-alpha2.tar.gz
+ 
+ wget http://ftp.drupal.org/files/projects/sharethis-6.x-1.8.tar.gz
+ tar xvzf sharethis-6.x-1.8.tar.gz
+ rm sharethis-6.x-1.8.tar.gz
  
  wget http://ftp.drupal.org/files/projects/captcha-6.x-2.1.tar.gz
  tar xvzf captcha-6.x-2.1.tar.gz
