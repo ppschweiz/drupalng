@@ -173,7 +173,7 @@
 			<ul id="fooright">
 				<?php if(theme_get_setting('rss_available')) { ?>
 					<li><a class="medico flick" href="<?php print theme_get_setting('rss_link'); ?>"><span class="tip"><b>PP bei Identica</b></span></a></li>
-				<?php } ?>				
+				<?php } else { print $settings['rss_available'] } ?>				
 				<li><a class="medico mysp" href="#"><span class="tip"><b>PP bei Facebook</b></span></a></li>
 				<li><a class="medico yout" href="#"><span class="tip"><b>PP bei Twitter</b></span></a></li>
 				<li><a class="medico twit" href="#"><span class="tip"><b>PP bei YouTube</b></span></a></li>

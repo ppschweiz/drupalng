@@ -32,26 +32,26 @@ function pirate2_settings($saved_settings) {
   $form['socialnetworks']['rss_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate RSS Link'),
-    '#default_value' => theme_get_setting('rss_available')
+    '#default_value' => $settings['rss_available')
   );
   $form['socialnetworks']['rss_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('RSS Link'),
     '#description'   => t('The fully qualified URL of the the RSS feed'),
-    '#default_value' => theme_get_setting('rss_link'),
+    '#default_value' => $settings['rss_link'),
     '#size'          => 63,
     '#maxlength'     => 255,
   );
   $form['socialnetworks']['flickr_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate Flickr Link'),
-    '#default_value' => theme_get_setting('flickr_available')
+    '#default_value' => $settings['flickr_available')
   );
   $form['socialnetworks']['flickr_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Flickr Link'),
     '#description'   => t('The fully qualified URL of the the Flickr gallery'),
-    '#default_value' => theme_get_setting('flickr_link'),
+    '#default_value' => $settings['flickr_link'),
     '#size'          => 63,
     '#maxlength'     => 255,
   );
@@ -59,61 +59,61 @@ function pirate2_settings($saved_settings) {
   $form['socialnetworks']['myspace_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate MySpace Link'),
-    '#default_value' => theme_get_setting('myspace_available')
+    '#default_value' => $settings['myspace_available']
   );
   $form['socialnetworks']['myspace_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('MySpace Link'),
     '#description'   => t('The fully qualified URL of the the MySpace Account'),
-    '#default_value' => theme_get_setting('myspace_link'),
+    '#default_value' => $settings['myspace_link'],
     '#size'          => 63,
     '#maxlength'     => 255,
   );  $form['socialnetworks']['youtube_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate YouTube Link'),
-    '#default_value' => theme_get_setting('youtube_available')
+    '#default_value' => $settings['youtube_available']
   );
   $form['socialnetworks']['youtube_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('YouTube Link'),
     '#description'   => t('The fully qualified URL of the the YouTube channel'),
-    '#default_value' => theme_get_setting('youtube_link'),
+    '#default_value' => $settings['youtube_link'],
     '#size'          => 63,
     '#maxlength'     => 255,
   );  $form['socialnetworks']['twitter_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate Twitter Link'),
-    '#default_value' => theme_get_setting('twitter_available')
+    '#default_value' => $settings['twitter_available']
   );
   $form['socialnetworks']['twitter_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Twitter Link'),
     '#description'   => t('The fully qualified URL of the the Twitter feed'),
-    '#default_value' => theme_get_setting('twitter_link'),
+    '#default_value' => $settings['twitter_link'],
     '#size'          => 63,
     '#maxlength'     => 255,
   );  $form['socialnetworks']['facebook_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate Facebook Link'),
-    '#default_value' => theme_get_setting('facebook_available')
+    '#default_value' => $settings['facebook_available']
   );
   $form['socialnetworks']['facebook_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Facebook Link'),
     '#description'   => t('The fully qualified URL of the the Facebook group'),
-    '#default_value' => theme_get_setting('facebook_link'),
+    '#default_value' => $settings['facebook_link'],
     '#size'          => 63,
     '#maxlength'     => 255,
   );  $form['socialnetworks']['identica_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate Identica  Link'),
-    '#default_value' => theme_get_setting('identica_available')
+    '#default_value' => $settings['identica_available']
   );
   $form['socialnetworks']['identica_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Identica Link'),
     '#description'   => t('The fully qualified URL of the the Identica feed'),
-    '#default_value' => theme_get_setting('identica_link'),
+    '#default_value' => $settings['identica_link'],
     '#size'          => 63,
     '#maxlength'     => 255,
   );
