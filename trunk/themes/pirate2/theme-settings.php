@@ -28,6 +28,16 @@ function pirate2_settings($saved_settings)
   print_r(locale_language_list('name'));
   print_r(locale_language_list('language'));
   
+  $socialnetworks = array (
+    'rss' => 'RSS Feed', 
+    'flickr' => 'Flicker Album', 
+    'myspace' => 'MySpace account', 
+    'youtube' => 'YouTube Channel', 
+    'twitter' => 'Twitter Feed', 
+    'facebook' => 'Facebook Group', 
+    'identica' => 'Identica Feed'
+  )
+  
   $form = array();  
   foreach(locale_language_list('language') as $clang) 
   { 
@@ -37,97 +47,23 @@ function pirate2_settings($saved_settings)
 	  '#collapsible'   => TRUE,
 	  '#collapsed'     => TRUE
     );
-    $form['socialnetworks_'.$clang]['rss_available_'.$clang] = array(
-      '#type'          => 'checkbox',
-      '#title'         => t('Activate RSS Link'),
-      '#default_value' => $settings['rss_available']
-    );
-    $form['socialnetworks_'.$clang]['rss_link_'.$clang] = array(
-      '#type'          => 'textfield',
-      '#title'         => t('RSS Link'),
-      '#description'   => t('The fully qualified URL of the the RSS feed'),
-      '#default_value' => $settings['rss_link'],
-      '#size'          => 63,
-      '#maxlength'     => 255,
-    );
-    $form['socialnetworks_'.$clang]['flickr_available_'.$clang] = array(
-      '#type'          => 'checkbox',
-      '#title'         => t('Activate Flickr Link'),
-      '#default_value' => $settings['flickr_available']
-    );
-    $form['socialnetworks_'.$clang]['flickr_link_'.$clang] = array(
-      '#type'          => 'textfield',
-      '#title'         => t('Flickr Link'),
-      '#description'   => t('The fully qualified URL of the the Flickr gallery'),
-      '#default_value' => $settings['flickr_link'],
-      '#size'          => 63,
-      '#maxlength'     => 255,
-    ); 
-    $form['socialnetworks_'.$clang]['myspace_available_'.$clang] = array(
-      '#type'          => 'checkbox',
-      '#title'         => t('Activate MySpace Link'),
-      '#default_value' => $settings['myspace_available']
-    );
-    $form['socialnetworks_'.$clang]['myspace_link_'.$clang] = array(
-      '#type'          => 'textfield',
-      '#title'         => t('MySpace Link'),
-      '#description'   => t('The fully qualified URL of the the MySpace Account'),
-      '#default_value' => $settings['myspace_link'],
-      '#size'          => 63,
-      '#maxlength'     => 255,
-    );
-	$form['socialnetworks_'.$clang]['youtube_available_'.$clang] = array(
-      '#type'          => 'checkbox',
-      '#title'         => t('Activate YouTube Link'),
-      '#default_value' => $settings['youtube_available']
-    );
-    $form['socialnetworks_'.$clang]['youtube_link_'.$clang] = array(
-      '#type'          => 'textfield',
-      '#title'         => t('YouTube Link'),
-      '#description'   => t('The fully qualified URL of the the YouTube channel'),
-      '#default_value' => $settings['youtube_link'],
-      '#size'          => 63,
-      '#maxlength'     => 255,
-    );
-	$form['socialnetworks_'.$clang]['twitter_available_'.$clang] = array(
-      '#type'          => 'checkbox',
-      '#title'         => t('Activate Twitter Link'),
-      '#default_value' => $settings['twitter_available']
-    );
-    $form['socialnetworks_'.$clang]['twitter_link_'.$clang] = array(
-      '#type'          => 'textfield',
-      '#title'         => t('Twitter Link'),
-      '#description'   => t('The fully qualified URL of the the Twitter feed'),
-      '#default_value' => $settings['twitter_link'],
-      '#size'          => 63,
-      '#maxlength'     => 255,
-    );
-	$form['socialnetworks_'.$clang]['facebook_available_'.$clang] = array(
-      '#type'          => 'checkbox',
-      '#title'         => t('Activate Facebook Link'),
-      '#default_value' => $settings['facebook_available']
-    );
-    $form['socialnetworks_'.$clang]['facebook_link_'.$clang] = array(
-      '#type'          => 'textfield',
-      '#title'         => t('Facebook Link'),
-      '#description'   => t('The fully qualified URL of the the Facebook group'),
-      '#default_value' => $settings['facebook_link'],
-      '#size'          => 63,
-      '#maxlength'     => 255,
-    );
-	$form['socialnetworks_'.$clang]['identica_available_'.$clang] = array(
-      '#type'          => 'checkbox',
-      '#title'         => t('Activate Identica  Link'),
-      '#default_value' => $settings['identica_available']
-    );
-    $form['socialnetworks_'.$clang]['identica_link_'.$clang] = array(
-      '#type'          => 'textfield',
-      '#title'         => t('Identica Link'),
-      '#description'   => t('The fully qualified URL of the the Identica feed'),
-      '#default_value' => $settings['identica_link'],
-      '#size'          => 63,
-      '#maxlength'     => 255,
-    );
+	
+	foreach($socialnetworks as $socnet => $socname) 
+	{
+      $form['socialnetworks_'.$clang][$socnet.'_available_'.$clang] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Activate Link to '.$socname.'.'),
+        '#default_value' => $settings[$socnet.'_available_'.$clang]
+      );
+      $form['socialnetworks_'.$clang][$socnet.'_link_'.$clang] = array(
+        '#type'          => 'textfield',
+        '#title'         => t('RSS Link'),
+        '#description'   => t('The fully qualified URL of the the '.$socname.'.'),
+        '#default_value' => $settings[$socnet.'_link_'.$clang],
+        '#size'          => 63,
+        '#maxlength'     => 255,
+      );
+    }
   }
 
   // Add the base theme's settings.
