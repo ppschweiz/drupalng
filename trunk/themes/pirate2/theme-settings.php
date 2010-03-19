@@ -32,26 +32,26 @@ function pirate2_settings($saved_settings) {
   $form['socialnetworks']['rss_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate RSS Link'),
-    '#default_value' => $settings['rss_available')
+    '#default_value' => $settings['rss_available']
   );
   $form['socialnetworks']['rss_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('RSS Link'),
     '#description'   => t('The fully qualified URL of the the RSS feed'),
-    '#default_value' => $settings['rss_link'),
+    '#default_value' => $settings['rss_link'],
     '#size'          => 63,
     '#maxlength'     => 255,
   );
   $form['socialnetworks']['flickr_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate Flickr Link'),
-    '#default_value' => $settings['flickr_available')
+    '#default_value' => $settings['flickr_available']
   );
   $form['socialnetworks']['flickr_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Flickr Link'),
     '#description'   => t('The fully qualified URL of the the Flickr gallery'),
-    '#default_value' => $settings['flickr_link'),
+    '#default_value' => $settings['flickr_link'],
     '#size'          => 63,
     '#maxlength'     => 255,
   );
