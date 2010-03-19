@@ -33,8 +33,8 @@ function pirate2_settings($saved_settings)
   { 
     $form['socialnetworks_'.$clang] = array(
       '#type'          => 'fieldset',
-      '#title'         => t('Social Networklinks in the footer, for language: '.$clang),
-	  '#collapsible'   => TRUE
+      '#title'         => t('Social Networklinks in the footer, for language: '.locale_language_name($clang)),
+	  '#collapsible'   => TRUE,
 	  '#collapsed'     => TRUE
     );
     $form['socialnetworks_'.$clang]['rss_available_'.$clang] = array(
