@@ -171,7 +171,9 @@
 				<a class="imgcc" href="#"></a><p>Piratenpartei Schweiz, Postfach, 1337 Vallorbe, info@piratenpartei.ch <br><a class="impressum" href="#">CC-BY 2.5 Switerland</a> | <a class="impressum" href="#">Impressum</a> | <a class="impressum" href="#">Kontakt</a></p>
 			</div>
 			<ul id="fooright">
-				<li><a class="medico flick" href="#"><span class="tip"><b>PP bei Identica</b></span></a></li>
+				<?php if(theme_get_setting('rss_available')) { ?>
+					<li><a class="medico flick" href="<?php print theme_get_setting('rss_link'); ?>"><span class="tip"><b>PP bei Identica</b></span></a></li>
+				<?php } ?>				
 				<li><a class="medico mysp" href="#"><span class="tip"><b>PP bei Facebook</b></span></a></li>
 				<li><a class="medico yout" href="#"><span class="tip"><b>PP bei Twitter</b></span></a></li>
 				<li><a class="medico twit" href="#"><span class="tip"><b>PP bei YouTube</b></span></a></li>

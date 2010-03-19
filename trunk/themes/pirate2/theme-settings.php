@@ -32,26 +32,88 @@ function pirate2_settings($saved_settings) {
   $form['socialnetworks']['rss_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate RSS Link'),
-    '#default_value' => FALSE,
+    '#default_value' => theme_get_setting('rss_available')
   );
-  $form['breadcrumb']['rss_link'] = array(
+  $form['socialnetworks']['rss_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('RSS Link'),
     '#description'   => t('The fully qualified URL of the the RSS feed'),
-    '#default_value' => '',
+    '#default_value' => theme_get_setting('rss_link'),
     '#size'          => 63,
     '#maxlength'     => 255,
   );
-  $form['socialnetworks']['zen_breadcrumb'] = array(
+  $form['socialnetworks']['flickr_available'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Activate Flickr Link'),
-    '#default_value' => FALSE,
+    '#default_value' => theme_get_setting('flickr_available')
   );
-  $form['breadcrumb']['zen_breadcrumb_separator'] = array(
+  $form['socialnetworks']['flickr_link'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Flickr Link'),
     '#description'   => t('The fully qualified URL of the the Flickr gallery'),
-    '#default_value' => '',
+    '#default_value' => theme_get_setting('flickr_link'),
+    '#size'          => 63,
+    '#maxlength'     => 255,
+  );
+  
+  $form['socialnetworks']['myspace_available'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Activate MySpace Link'),
+    '#default_value' => theme_get_setting('myspace_available')
+  );
+  $form['socialnetworks']['myspace_link'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('MySpace Link'),
+    '#description'   => t('The fully qualified URL of the the MySpace Account'),
+    '#default_value' => theme_get_setting('myspace_link'),
+    '#size'          => 63,
+    '#maxlength'     => 255,
+  );  $form['socialnetworks']['youtube_available'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Activate YouTube Link'),
+    '#default_value' => theme_get_setting('youtube_available')
+  );
+  $form['socialnetworks']['youtube_link'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('YouTube Link'),
+    '#description'   => t('The fully qualified URL of the the YouTube channel'),
+    '#default_value' => theme_get_setting('youtube_link'),
+    '#size'          => 63,
+    '#maxlength'     => 255,
+  );  $form['socialnetworks']['twitter_available'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Activate Twitter Link'),
+    '#default_value' => theme_get_setting('twitter_available')
+  );
+  $form['socialnetworks']['twitter_link'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Twitter Link'),
+    '#description'   => t('The fully qualified URL of the the Twitter feed'),
+    '#default_value' => theme_get_setting('twitter_link'),
+    '#size'          => 63,
+    '#maxlength'     => 255,
+  );  $form['socialnetworks']['facebook_available'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Activate Facebook Link'),
+    '#default_value' => theme_get_setting('facebook_available')
+  );
+  $form['socialnetworks']['facebook_link'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Facebook Link'),
+    '#description'   => t('The fully qualified URL of the the Facebook group'),
+    '#default_value' => theme_get_setting('facebook_link'),
+    '#size'          => 63,
+    '#maxlength'     => 255,
+  );  $form['socialnetworks']['identica_available'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Activate Identica  Link'),
+    '#default_value' => theme_get_setting('identica_available')
+  );
+  $form['socialnetworks']['identica_link'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Identica Link'),
+    '#description'   => t('The fully qualified URL of the the Identica feed'),
+    '#default_value' => theme_get_setting('identica_link'),
     '#size'          => 63,
     '#maxlength'     => 255,
   );
