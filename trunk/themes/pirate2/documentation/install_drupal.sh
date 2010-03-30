@@ -46,6 +46,11 @@
  tar xvzf jquery_ui-6.x-1.3.tar.gz
  rm jquery_ui-6.x-1.3.tar.gz
  
+ wget http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip
+ unzip jquery.ui-1.6.zip
+ rm jquery.ui-1.6.zip
+ mv jquery.ui-1.6/ jquery_ui/jquery.ui
+ 
  wget http://ftp.drupal.org/files/projects/signup-6.x-1.0-rc6.tar.gz
  tar xvzf signup-6.x-1.0-rc6.tar.gz
  rm signup-6.x-1.0-rc6.tar.gz
@@ -58,9 +63,9 @@
  tar xvzf og-6.x-2.1.tar.gz
  rm og-6.x-2.1.tar.gz
  
- wget http://ftp.drupal.org/files/projects/domain-6.x-2.3.tar.gz
- tar xvzf domain-6.x-2.3.tar.gz
- rm domain-6.x-2.3.tar.gz
+ wget http://ftp.drupal.org/files/projects/domain-6.x-2.4.tar.gz
+ tar xvzf domain-6.x-2.4.tar.gz
+ rm domain-6.x-2.4.tar.gz
  
  wget http://ftp.drupal.org/files/projects/domain_ctools-6.x-1.1.tar.gz
  tar xvzf domain_ctools-6.x-1.1.tar.gz
@@ -124,12 +129,12 @@
  rm recaptcha-6.x-1.4.tar.gz
  
  wget http://ftp.drupal.org/files/projects/cck-6.x-3.x-dev.tar.gz
- tar xvzf cck-6.x-2.6.tar.gz
- rm cck-6.x-2.6.tar.gz
+ tar xvzf cck-6.x-3.x-dev.tar.gz
+ rm cck-6.x-3.x-dev.tar.gz
  
  wget http://ftp.drupal.org/files/projects/views-6.x-3.0-alpha2.tar.gz
- tar xvzf views-6.x-2.8.tar.gz
- rm views-6.x-2.8.tar.gz
+ tar xvzf views-6.x-3.0-alpha2.tar.gz
+ rm views-6.x-3.0-alpha2.tar.gz
  
  wget http://ftp.drupal.org/files/projects/i18n-6.x-1.3.tar.gz
  tar xvzf i18n-6.x-1.3.tar.gz
