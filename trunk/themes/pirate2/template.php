@@ -285,7 +285,7 @@ function pirate2_preprocess_node(&$vars, $hook)
 	$classes[] = zen_id_safe('node-type-' . $vars['type']);
 	$vars['classes'] = implode(' ', $classes); // Concatenate with spaces
 
-	if ($vars['type'] == 'event')
+	if (isset($vars['field_date']))
 	{
 		global $handle_multiple_dates;
 		if(!isset($handle_multiple_dates[$vars['nid']]))

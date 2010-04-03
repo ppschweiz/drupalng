@@ -64,7 +64,7 @@ function pirate2_settings($saved_settings)
         '#type'          => 'textfield',
         '#title'         => t($socname.' Description'),
         '#description'   => t('On Hover Text of the the '.$socname.'.'),
-        '#default_value' => $settings[$socnet.'_link_'.$clang],
+        '#default_value' => $settings[$socnet.'_hover_'.$clang],
         '#size'          => 63,
         '#maxlength'     => 255,
       );
