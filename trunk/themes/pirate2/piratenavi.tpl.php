@@ -34,10 +34,7 @@
 								if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language) || !isset($key))
 								{									
 									print "<li class=\"".$classes[$submenu]."\">";
-									if (!isset($val)) 
-									{ 
-										subnavigation($val['below']);
-									} 									
+									subnavigation($val['below']);
 									print "</li>";
 									$submenu++;
 								}
@@ -51,7 +48,7 @@
 	function subnavigation($submenu)
 	{
 		global $language;
-		if (!$submenu)
+		if (!isset($submenu))
 			return;
 
 		print "<ul class=\"subnav\">";
