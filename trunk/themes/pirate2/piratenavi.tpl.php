@@ -10,7 +10,7 @@
 							while($submenu < 5) 
 							{
 								list($key, $val) = each($menu);
-								if (isset($val['link']['options']['langcode']) && $val['link']['options']['langcode'] == $language->language)
+								if ((isset($val['link']['options']['langcode']) && $val['link']['options']['langcode'] == $language->language) || !isset($key))
 								{
 									print "<li class=\"".$classes[$submenu]."\">";
 									if ($val) 
