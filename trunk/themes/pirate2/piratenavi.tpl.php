@@ -1,25 +1,25 @@
-					<?php print_r($menu); ?>
+					<?php print_r($menu); $language; ?>
 					<ul id="hnavkont">
 						<li class="navhome"><a class="link" href="/"></a><a class="up" id="navklapbut" onclick="navDoIt($(this))"></a></li>
 						<?php list($key, $val) = each($menu);?>
 						<li class="navakt">
-							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."</span>", $val['link']['href'], array('html' => TRUE)); } ?>
+							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."(".$val['link']['options']['langcode'].")</span>", $val['link']['href'], array('html' => TRUE)); } ?>
 						</li>
 						<?php list($key, $val) = each($menu); ?>
 						<li class="navpos">
-							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."</span>", $val['link']['href'], array('html' => TRUE)); } ?>
+							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."(".$val['link']['options']['langcode'].")</span>", $val['link']['href'], array('html' => TRUE)); } ?>
 						</li>
 						<?php list($key, $val) = each($menu); ?>
 						<li class="navpar">
-							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."</span>", $val['link']['href'], array('html' => TRUE)); } ?>
+							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."(".$val['link']['options']['langcode'].")</span>", $val['link']['href'], array('html' => TRUE)); } ?>
 						</li>
 						<?php list($key, $val) = each($menu); ?>
 						<li class="navmed">
-							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."</span>", $val['link']['href'], array('html' => TRUE)); } ?>
+							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."(".$val['link']['options']['langcode'].")</span>", $val['link']['href'], array('html' => TRUE)); } ?>
 						</li>
 						<?php list($key, $val) = each($menu); ?>
 						<li class="navmit">
-							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."</span>", $val['link']['href'], array('html' => TRUE)); } ?>
+							<?php if ($val) { print l("<span class=\"link\">".t($val['link']['title'])."(".$val['link']['options']['langcode'].")</span>", $val['link']['href'], array('html' => TRUE)); } ?>
 						</li>
 					</ul>
 					<ul id="subnavklapp">
