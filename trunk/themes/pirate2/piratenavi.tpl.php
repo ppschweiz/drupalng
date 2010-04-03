@@ -49,7 +49,10 @@
 	{
 		global $language;
 		if (!is_array($submenu))
+		{
+			print "<ul class=\"subnav\"><li></li></ul>";
 			return;
+		}
 
 		print "<ul class=\"subnav\">";
 		foreach($submenu as $item) 
