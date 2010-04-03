@@ -1,4 +1,4 @@
-					<?php print_r($menu); $language; ?>
+					<?php print_r($menu); print_r($language); ?>
 					<ul id="hnavkont">
 						<li class="navhome"><a class="link" href="/"></a><a class="up" id="navklapbut" onclick="navDoIt($(this))"></a></li>
 						<?php list($key, $val) = each($menu);?>
