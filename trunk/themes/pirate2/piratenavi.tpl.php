@@ -15,7 +15,7 @@
 									print "<li class=\"".$classes[$submenu]."\">";
 									if ($val) 
 									{ 
-										print l("<span class=\"link\">".t($val['link']['title'])."</span>", $val['link']['href'], array('html' => TRUE)); 
+										print l("<span class=\"link\">".$val['link']['title']."</span>", $val['link']['href'], array('html' => TRUE)); 
 									} 									
 									print "</li>";
 									$submenu++;
