@@ -25,22 +25,24 @@
 					</ul>
 					<ul id="subnavklapp">
 						<li class="navhome"></li>					
-						<?php reset($menu); ?>
-						<li class="navakt">
-							<?php list($key, $val) = each($menu); subnavigation($val['below']); ?>
-						</li>
-						<li class="navpos">
-							<?php list($key, $val) = each($menu); subnavigation($val['below']); ?>
-						</li>
-						<li class="navpar">
-							<?php list($key, $val) = each($menu); subnavigation($val['below']); ?>
-						</li>
-						<li class="navmed">
-							<?php list($key, $val) = each($menu); subnavigation($val['below']); ?>
-						</li>
-						<li class="navmit">
-							<?php list($key, $val) = each($menu); subnavigation($val['below']); ?>
-						</li>
+						<?php 
+							reset($menu); 											
+							$submenu = 0;
+							while($submenu < 5) 
+							{
+								list($key, $val) = each($menu);
+								if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language) || !isset($key))
+								{
+									print "<li class=\"".$classes[$submenu]."\">";
+									if ($val) 
+									{ 
+										list($key, $val) = each($menu); subnavigation($val['below']);
+									} 									
+									print "</li>";
+									$submenu++;
+								}
+							}
+						?>
 					</ul>
 					<div class="clear"></div>
 
@@ -48,15 +50,19 @@
 <?php 
 	function subnavigation($submenu)
 	{
+		global $language;
 		if (!$submenu)
 			return;
 
 		print "<ul class=\"subnav\">";
 		foreach($submenu as $item) 
 		{
-			print "<li>";
-			print l($item['link']['title'], $item['link']['href']);
-			print "</li>";
+			if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language))
+			{
+				print "<li>";
+				print l($item['link']['title'], $item['link']['href']);
+				print "</li>";
+			}
 		}
 		print "</ul>";
 	}
