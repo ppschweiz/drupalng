@@ -156,9 +156,7 @@
 				</div>
                 <ul id="contbuttons">
                     <li class="butpirates"><a href="#"></a></li>
-                    <li class="twocol" style="background-image:url('<?php print path_to_theme(TRUE); ?>/images/bottom_verlauf.png');"><a href="#"></li>
-					<li class="onecol" style="background-image:url('<?php print path_to_theme(TRUE); ?>/images/bottom_verlauf.png');"><a href="#"></a></li>
-					<li class="twocol" style="background-image:url('<?php print path_to_theme(TRUE); ?>/images/bottom_verlauf.png');"><a href="#"></a></li>
+                    <li class="twocol" style="width: 920px; background-image:url('<?php print path_to_theme(TRUE); ?>/images/bottom_verlauf.png');"><a href="#"></li>
                 </ul>
 			</div>
 		</div>
