@@ -48,7 +48,7 @@
 	function subnavigation($submenu)
 	{
 		global $language;
-		if (!isset($submenu))
+		if (!is_array($submenu))
 			return;
 
 		print "<ul class=\"subnav\">";
