@@ -36,7 +36,7 @@
 									print "<li class=\"".$classes[$submenu]."\">";
 									if (!isset($val)) 
 									{ 
-										list($key, $val) = each($menu); subnavigation($val['below']);
+										subnavigation($val['below']);
 									} 									
 									print "</li>";
 									$submenu++;
@@ -57,7 +57,7 @@
 		print "<ul class=\"subnav\">";
 		foreach($submenu as $item) 
 		{
-//			if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language))
+			if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language))
 			{
 				print "<li>";
 				print l($item['link']['title'], $item['link']['href']);
