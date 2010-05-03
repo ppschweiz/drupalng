@@ -121,7 +121,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content #contcom, #content #contblog { width: 319px; height: auto; float: left; margin-right: 1px;background: url(../images/contbg-grau.png) no-repeat left top; overflow: hidden;}
 	#content #contblog { width: 320px; margin-right: 0;}
 	#content #contevents { width: 320px; float: left; background: url(../images/contbg-orange.png) no-repeat left top;}
-	#content #contcom .kopf, #content #contblog .kopf, #content #contevents .kopf  { width: 320px; height: 34px;}
+	#content #contcom .kopf, #content #contblog .kopf, #content #contevents .kopf  { width: 320px; height: auto;}
 	#content .kopf h1 {display: block; width: 70%; position: relative; top: 7px; left: 12px; font-size: 1.1em;color: #9e9e9e; text-transform: uppercase; letter-spacing: 1px; }
 	#content #contevents .kopf h1 {color: #d2b194; }
 	#content .kopf a.goto { float: right; width: 16px; height: 28px; display: block; background: url(../images/contkopf-goto.png) no-repeat left -72px;}
