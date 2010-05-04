@@ -295,7 +295,7 @@ function pirate2_preprocess_node(&$vars, $hook)
 	$classes[] = zen_id_safe('node-type-' . $vars['type']);
 	$vars['classes'] = implode(' ', $classes); // Concatenate with spaces
 
-	if (isset($fieldname)))
+	if (isset($fieldname))
 	{
 		global $handle_multiple_dates;
 		if(!isset($handle_multiple_dates[$vars['nid']]))
