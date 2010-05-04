@@ -261,6 +261,16 @@ $handle_multiple_dates = array();
 
 function pirate2_preprocess_node(&$vars, $hook) 
 {
+    $nodetype = content_types($vars['type']);
+
+    foreach($nodetype['fields'] as $fields) 
+    {
+            if ($fields['type'] == 'datetime')  
+            {
+                    $fieldname = $fields['field_name'];
+            }
+    }
+
 	// Special classes for nodes
 	$classes = array('node');
 	if ($vars['sticky']) {
@@ -285,20 +295,20 @@ function pirate2_preprocess_node(&$vars, $hook)
 	$classes[] = zen_id_safe('node-type-' . $vars['type']);
 	$vars['classes'] = implode(' ', $classes); // Concatenate with spaces
 
-	if (isset($vars['field_date']))
+	if (isset($fieldname)))
 	{
 		global $handle_multiple_dates;
 		if(!isset($handle_multiple_dates[$vars['nid']]))
 		{
 			$handle_multiple_dates[$vars['nid']] = -1;
 			$i = 0;
-			$xtime = strtotime($vars['field_date'][$i]['value']);
+			$xtime = strtotime($vars[$fieldname][$i]['value']);
 			$vars['month'] = date('M', $xtime).'.';
 			$vars['day'] = date('j', $xtime).'.';
-			while($xtime < time() - (24 * 60 * 60) && $vars['field_date'][$i+1])
+			while($xtime < time() - (24 * 60 * 60) && $vars[$fieldname][$i+1])
 			{
 				$i++;
-				$xtime = strtotime($vars['field_date'][$i]['value']);
+				$xtime = strtotime($vars[$fieldname][$i]['value']);
 				$vars['month'] = date('M', $xtime).'.';
 				$vars['day'] = date('j', $xtime).'.';
 			}
@@ -306,11 +316,11 @@ function pirate2_preprocess_node(&$vars, $hook)
 			do
 			{
 				$handle_multiple_dates[$vars['nid']]++;     
-				$xtime = strtotime($vars['field_date'][$handle_multiple_dates[$vars['nid']]]['value']);
+				$xtime = strtotime($vars[$fieldname][$handle_multiple_dates[$vars['nid']]]['value']);
 				$vars['month'] = date('M', $xtime).'.';
 				$vars['day'] = date('j', $xtime).'.';
 			} 
-			while($xtime < time() - (24 * 60 * 60) && $vars['field_date'][$handle_multiple_dates[$vars['nid']]]);
+			while($xtime < time() - (24 * 60 * 60) && $vars[$fieldname][$handle_multiple_dates[$vars['nid']]]);
 		}
         }
 	else
