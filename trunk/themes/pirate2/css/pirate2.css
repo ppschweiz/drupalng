@@ -257,7 +257,15 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 		#content #contsite ul.cosubnav ul ul li a { margin-left: 10px; padding-left:60px;}
 		#content #contsite ul.cosubnav ul ul ul li a { margin-left: 10px; padding-left:80px;}
 		#content #contsite ul.cosubnav li a:hover { background-color: #f2eadf; }
+        #content #contsite div.views-exposed-widget .form-submit { margin:0px; }
+        #views-exposed-form-og-search-default { margin-top: 10px; }
+        #edit-keys { width: 100px; }
+        #content #contsite div.content { margin: 0 20px; }
+        #content #contsite div.content ul li { margin-left: 10px; display: block; color: #b6a083; font-size: 12px; padding: 3px 0; }
 
+		
+		
+		
 		ul.subactionbut { margin: 0 0 14px 0; }
 		ul.subactionbut li { display: block; width: 228px; height: 72px; border: solid 1px #f1e5c4; margin: 10px 0 0 25px;
 		background-image: url(../images/subac_bg.png);}
