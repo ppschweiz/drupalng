@@ -1,7 +1,7 @@
 <div class="coda-slider-wrapper">
   <div class="coda-slider preload" id="coda-slider-1" style="display: none">
     <noscript>
-      Turn on Javascript
+      <p>Please turn on Javascript</p>
     </noscript>
 <?php    
   $current_domain = domain_resolve_host();
