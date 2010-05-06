@@ -49,7 +49,7 @@
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"><div class="node-inner">
-	<?php if ($node->type == 'page') { ?>
+	<?php if ($node->type != 'page') { ?>
 	<ul>
 		<li class="cotermin">
 			<h4><?php print $month ?></h4>
