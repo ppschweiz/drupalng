@@ -301,8 +301,8 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 
 
 /* @group footer */
-	#fooleft { width: 260px; height: 32px; float: left; margin-top: 7px;}
-	#foocenter { width: 458px; height: 32px; float: left; margin-top: 7px;}
+	#fooleft { width: 460px; height: 32px; float: left; margin-top: 7px;}
+	#foocenter { width: 258px; height: 32px; float: left; margin-top: 7px;}
 	#fooright {width: 260px; height: 38px; float: left; margin-top: 4px;}
 	#fooleft a.imgcc {width: 32px; height: 32px; float: left; display: block; background: url(../images/fotccico.png) no-repeat 15px top; padding-left: 15px; margin-right: 6px;}
 	#fooleft a.imgcc:hover {background: url(../images/fotccico.png) no-repeat 15px bottom;}
