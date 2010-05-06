@@ -90,14 +90,9 @@
 	<?php } ?>
 	
 	<?php if ($page): ?>
-		<?php if ($submitted || $terms): ?>
+		<?php //if ($submitted || $terms): ?>
+		<?php if ($terms): ?>
 			<div class="meta">
-				<?php if ($submitted): ?>
-					<div class="submitted">
-						<?php print $submitted; ?>
-					</div>
-				<?php endif; ?>
-
 				<?php if ($terms): ?>
 					<div class="terms terms-inline"><?php print t(' in ') . $terms; ?></div>
 				<?php endif; ?>
