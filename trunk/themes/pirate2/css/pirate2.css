@@ -24,12 +24,16 @@
 	h5 {font-size: 1em; font-weight:normal; line-height: 1.4em;}
 	h6 {font-size: 1em; font-weight:normal; line-height: 1.4em;}
 	ul {margin: 0;padding: 0;}
-	ul.comment {padding: 5px; margin-top: 10px;}
 	img.floatleft, .flleft {float: left;}
 	img.floatright, .flright {float: right;}
 	#clear, .clear {clear: both;}
 	.hr {border: none; margin: 0; width: 960px; height: 1px; overflow: hidden; background: url(../images/hr940.gif) no-repeat center top;}
 /* @end */
+
+/* added by SciFi */
+	h2#comments-title {margin-top: 20px;}
+	ul.comment {padding: 5px; margin-top: 10px;}
+/* end SciFi */
 
 /* @group decor */
 	#decortop {width: 100%; height: 20px; background-color: #4c4642; border-bottom: 1px solid #47403c;}
