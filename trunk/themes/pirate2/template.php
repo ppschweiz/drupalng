@@ -300,29 +300,16 @@ function pirate2_preprocess_node(&$vars, $hook)
 		global $handle_multiple_dates;
 		if(!isset($handle_multiple_dates[$vars['nid']]))
 		{
-			$handle_multiple_dates[$vars['nid']] = -1;
-			$i = 0;
-			$xtime = strtotime($vars[$fieldname][$i]['value']);
+			$handle_multiple_dates[$vars['nid']] = 0;
+		}
+		do
+		{
+			$handle_multiple_dates[$vars['nid']]++;
+			$xtime = strtotime($vars[$fieldname][$handle_multiple_dates[$vars['nid']]-1]['value']);
 			$vars['month'] = date('M', $xtime).'.';
 			$vars['day'] = date('j', $xtime).'.';
-			while($xtime < time() - (24 * 60 * 60) && $vars[$fieldname][$i+1])
-			{
-				$i++;
-				$xtime = strtotime($vars[$fieldname][$i]['value']);
-				$vars['month'] = date('M', $xtime).'.';
-				$vars['day'] = date('j', $xtime).'.';
-			}
-		} else {
-			do
-			{
-				$handle_multiple_dates[$vars['nid']]++;     
-				$xtime = strtotime($vars[$fieldname][$handle_multiple_dates[$vars['nid']]]['value']);
-				$vars['month'] = date('M', $xtime).'.';
-				$vars['day'] = date('j', $xtime).'.';
-			} 
-			while($xtime < time() - (24 * 60 * 60) && $vars[$fieldname][$handle_multiple_dates[$vars['nid']]]);
-		}
-        }
+		} 
+		while($xtime < time() - (24 * 60 * 60) && $vars[$fieldname][$handle_multiple_dates[$vars['nid']]]);
 	else
 	{
 		$vars['month'] = date('M',$vars['created']).'.';
