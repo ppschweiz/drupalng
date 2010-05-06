@@ -87,19 +87,21 @@
 		</div>
 	<?php } ?>
 	
-	<?php if ($submitted || $terms): ?>
-		<div class="meta">
-			<?php if ($submitted): ?>
-				<div class="submitted">
-					<?php print $submitted; ?>
-				</div>
-			<?php endif; ?>
+	<?php if ($page): ?>
+		<?php if ($submitted || $terms): ?>
+			<div class="meta">
+				<?php if ($submitted): ?>
+					<div class="submitted">
+						<?php print $submitted; ?>
+					</div>
+				<?php endif; ?>
 
-			<?php if ($terms): ?>
-				<div class="terms terms-inline"><?php print t(' in ') . $terms; ?></div>
-			<?php endif; ?>
-		</div>
+				<?php if ($terms): ?>
+					<div class="terms terms-inline"><?php print t(' in ') . $terms; ?></div>
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
+		<?php print $links; ?>
 	<?php endif; ?>
 
-	<?php print $links; ?>
 </div></div> <!-- /node-inner, /node -->
