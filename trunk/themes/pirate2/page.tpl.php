@@ -157,7 +157,7 @@
 		<div class="wrapper">
 			<div id="fooleft">
 				<a class="imgcc" href="#"></a>
-				<p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br />
+				<p><b>Design: </b><a href="/kontaktformular">Piratenpartei Schweiz, Postfach, 1337 Vallorbe, info@piratenpartei.ch</a> <br />
 					<a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en_CA">CC-BY 2.5 Switerland</a>
 				</p>
 			</div>
