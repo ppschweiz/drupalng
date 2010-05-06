@@ -310,6 +310,7 @@ function pirate2_preprocess_node(&$vars, $hook)
 			$vars['day'] = date('j', $xtime).'.';
 		} 
 		while($xtime < time() - (24 * 60 * 60) && $vars[$fieldname][$handle_multiple_dates[$vars['nid']]]);
+	}
 	else
 	{
 		$vars['month'] = date('M',$vars['created']).'.';
