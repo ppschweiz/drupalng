@@ -60,20 +60,22 @@
 				<h1 class="title">
 					<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
 				</h1>
-				<p>
-					<?php print $content; ?>
-				</p>
+				<?php print $content; ?>
 			</li>
 			<li class="cogoto">
 			</li>
 		<?php } else { ?>
 			<li class="cotext">
-				<h1 class="title">
-					<?php print $title; ?>
-				</h1>
-				<p>
-					<?php print $content; ?>
-				</p>
+				<div class="title">
+					<h1 class="title">
+						<?php print $title; ?>
+					</h1>
+				</div>
+				<div class="author"><?php print $name; ?></div>
+
+				<div class="clear"></div>
+
+				<?php print $content; ?>
 			</li>
 		<?php } ?>
 		<li class="clear"></li>

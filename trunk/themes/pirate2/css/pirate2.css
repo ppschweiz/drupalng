@@ -215,6 +215,9 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .contbody ul li.cotermin {width: 65px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin_big_o.png) no-repeat left top; margin-top: 6px;}
 	#content .contbody.detail ul li.cotermin {width: 65px; height: 80px; background: url(../images/termin-grey.png) no-repeat 4px top; margin: 6px 0 0 0px;}
 	#content .contbody ul li.cotext {width: 574px; height: auto; display: block; float: left; margin-top: 6px;}
+	#content .contbody ul li.cotext div.title { float: left; }
+	#content .contbody ul li.cotext div.author { float: right; font-weight: bold; line-height: 2.3em; }
+	#content .contbody ul li.cotext p { text-align: justify; }
 	#content .contbody ul li.cogoto {width: 19px; height: 80px; display: block; float: left;}
 	#content .contbody ul li.cotermin h4 {color: #fff; padding-right: 15px;}
 	#content .contbody ul li.cotermin h5 {color: #999; font-size: 1.9em; font-weight: bold; line-height: 1.8em; padding-right: 15px;}
