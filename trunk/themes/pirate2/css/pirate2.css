@@ -235,8 +235,8 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .contbody .coforubrik {float: right; height: 16px; margin: 10px 0 2px 0; background: url(../images/ico_rubrik_n.png) no-repeat left center; padding: 0 0 0 20px;}
 	#content .contbody .coforubrik a.linkrubrik { padding: 0 3px 0 3px; color: #8f8f8f;}
 	#content .contbody .coforubrik a.linkrubrik:hover { color: #c48f57;}
-	#content .contbody .quote, #content .contbody .forderungen {display: block; width: 572px; height: auto; background-color: #fafafa;border: 1px solid #e3e3e3; margin: 8px 0; }
-	#content .contbody .quote p, #content .contbody .forderungen p {padding: 6px 12px;color: #999; font-style: italic;}
+	#content .contbody .quote, div.forderungen {display: block; width: 572px; height: auto; background-color: #fafafa;border: 1px solid #e3e3e3; margin: 8px 0; }
+	#content .contbody .quote p, #div.forderungen p {padding: 6px 12px;color: #999; font-style: italic;}
 	#content .contbody .cotext ul, #content .contbody .cotext ol, #content .contbody .contnorm ul, #content .contbody .contnorm ol {margin: 6px 0 6px 12px;}
 	#content .contbody .cotext ul li, #content .contbody .contnorm ul li { font-size:1.2em ; color: #999; line-height: 1.4em; background: url(../images/ico_aufzaehlung.png) no-repeat left 7px;padding-left: 9px; }
 	#content .contbody .cotext ol li, #content .contbody .contnorm ol li { font-size:1.2em ; color: #999; line-height: 1.4em; list-style-type: decimal; list-style-position: inside;}	
@@ -249,11 +249,11 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .contbody .contnorm {width: 605px; height: auto; margin: 12px 0 0 30px;}
 	#content .contbody .contnorm img {display: block;}
 	#content .contbody .contnorm p {margin-bottom: 10px; text-align: justify; display: block;}
-	#content .contbody .contnorm .quote, #content .contbody .forderungen {width: 603px;}
-	#content .contbody .contnorm .quote h1, #content .contbody .forderungen h2 {padding: 6px 12px;color: #000; font-style: normal;}
-	#content .contbody .contnorm .quote ul, #content .contbody .contnorm .quote ol {padding: 6px 12px; display: block;}
-	#content .contbody .contnorm .quote ol li, #content .contbody .forderungen ol li {list-style-type: decimal; list-style-position: inside; font-size: 1.2em; color:#999999; margin-bottom: 4px;}
-	#content .contbody .contnorm .quote p, #content .contbody .forderungen p {font-style: normal;}
+	#content .contbody .contnorm .quote, div.forderungen {width: 603px;}
+	#content .contbody .contnorm .quote h1, div.forderungen h2 {padding: 6px 12px;color: #000; font-style: normal;}
+	#content .contbody .contnorm .quote ul, #content .contbody .contnorm .quote ol, div.forderungen ol, div.forderungen ul {padding: 6px 12px; display: block;}
+	#content .contbody .contnorm .quote ol li, div.forderungen ol li {list-style-type: decimal; list-style-position: inside; font-size: 1.2em; color:#999999; margin-bottom: 4px;}
+	#content .contbody .contnorm .quote p, div.forderungen p {font-style: normal;}
 
 	/* @group site */
 		#content #contsite ul.cosubnav {width: 270px; height: auto; margin: 20px 0; }
