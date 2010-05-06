@@ -50,10 +50,12 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"><div class="node-inner"><ul>
 
-	<li class="cotermin">
-		<h4><?php print $month ?></h4>
-		<h5><?php print $day ?></h5>
-	</li>
+	<?php if($node->type =='page') { ?>
+		<li class="cotermin">
+			<h4><?php print $month ?></h4>
+			<h5><?php print $day ?></h5>
+		</li>
+	<?php } ?>
 	<?php if (!$page) { ?>
 		<li class="cotext">
 			<h1 class="title">
