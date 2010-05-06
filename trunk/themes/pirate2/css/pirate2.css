@@ -198,7 +198,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .contbodykopf.detail h1 {color: #ccc;}
 	#content .contsitekopf { width: 260px; height: auto; float: left; background: url(../images/contbg-orange.png) no-repeat left top; overflow: hidden;}
 	#content .kopf {height: 28px;}
-	#content .contbody { width: 675px; height: auto; float: left; margin: 12px 0 0 15px; overflow: hidden;}
+	#content .contbody { width: 675px; height: auto; float: left; margin: 12px 0 18px 15px; overflow: hidden;}
 	#content #contsite { width: 270px; margin-right: 0; float: left;}
 	#content .contbodykopf #breadcrumb { color:#9E9E9E; display:block; font-size:1.1em; left:12px; letter-spacing:1px; position:relative; text-transform:uppercase; top:7px; width:100%; }
 	#content .contbodykopf #breadcrumb a { color:#9E9E9E; display:inline; }
