@@ -141,7 +141,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content ul li.cotermin {width: 60px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin-o.png) no-repeat center top; margin-top: 6px;}
 	#content ul li.cotermin h4 {color: #fff;}
 	#content ul li.cotermin h5 {color: #000; font-size: 1.7em; font-weight: bold; line-height: 1.8em;}
-	#content ul li.cotext {width: 240px; height: auto; display: block; float: left; margin-top: 6px;}
+	#content ul li.cotext {width: 240px; height: auto; display: block; float: left; margin-top: 6px; margin-bottom: 4px;}
 	#content ul li.cotext h1 {font-size: 1.4em; line-height: 1.3em; width: 100%;}
 	#content ul li.cotext p, #content .contbody p {font-size: 1.2em; color: #999;}
 	#content ul li.cotext p strong, #content .contbody p strong {color: #000; font-weight: normal;}
