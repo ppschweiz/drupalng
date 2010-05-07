@@ -139,9 +139,11 @@
 			<div class="body" id="content">
 				<?php print $breadcrumb ?>
 				<div class="contsitekopf"><div class="kopf"><h1><?php print t('Subnavigation'); ?></h1></div></div>
-				<?php if ($content) { ?>
-					<?php print $content; ?>
-				<?php } ?>
+				<div class="contbody">
+					<?php if ($content) { ?>
+						<?php print $content; ?>
+					<?php } ?>
+				</div>
 				<div id="contsite">
 					<?php print theme('piratesubnavi', menu_tree_page_data('navigation')); ?>
 					<?php print $content_right ?>
