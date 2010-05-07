@@ -94,7 +94,7 @@
 </div>
 <?php if (!$teaser): ?>
 	</div>
-<?php endifif;?>
+<?php endif;?>
 
 <?php if ($page): ?>
 	<?php //if ($submitted || $terms): ?>
