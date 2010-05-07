@@ -50,7 +50,7 @@
 ?>
 <?php if (!$teaser): ?>
 	<div class="contbody">
-<?php endifif;?>
+<?php endif;?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
 	<div class="node-inner">
 		<?php if ($node->type != 'page') { ?>
