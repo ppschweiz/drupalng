@@ -48,57 +48,58 @@
  * @see template_preprocess_node()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"><div class="node-inner">
-	<?php if ($node->type != 'page') { ?>
-	<ul>
-		<li class="cotermin">
-			<h4><?php print $month ?></h4>
-			<h5><?php print $day ?></h5>
-		</li>
-		<?php if (!$page) { ?>
-			<li class="cotext">
-				<h1 class="title">
+<div class="contbody">
+	<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
+		<div class="node-inner">
+			<?php if ($node->type != 'page') { ?>
+				<ul>
+					<li class="cotermin">
+						<h4><?php print $month ?></h4>
+						<h5><?php print $day ?></h5>
+					</li>
+					<?php if (!$page) { ?>
+						<li class="cotext">
+							<h1 class="title">
+								<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
+							</h1>
+							<?php print $content; ?>
+						</li>
+						<li class="cogoto">
+						</li>
+					<?php } else { ?>
+						<li class="cotext">
+							<div class="title">
+								<h1 class="title">
+									<?php print $title; ?>
+								</h1>
+							</div>
+							<div class="author"><?php print $name; ?></div>
+							<div class="clear"></div>
+							<?php print $content; ?>
+						</li>
+					<?php } ?>
+					<li class="clear"></li>
+				</ul>
+			<?php } else { ?>
+				<h2 class="title">
 					<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
-				</h1>
-				<?php print $content; ?>
-			</li>
-			<li class="cogoto">
-			</li>
-		<?php } else { ?>
-			<li class="cotext">
-				<div class="title">
-					<h1 class="title">
-						<?php print $title; ?>
-					</h1>
+				</h2>
+				<div class="content">
+					<?php print $content; ?>
 				</div>
-				<div class="author"><?php print $name; ?></div>
-
-				<div class="clear"></div>
-
-				<?php print $content; ?>
-			</li>
-		<?php } ?>
-		<li class="clear"></li>
-	</ul>
-	<?php } else { ?>
-		<h2 class="title">
-			<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
-		</h2>
-		<div class="content">
-			<?php print $content; ?>
+			<?php } ?>		
 		</div>
-	<?php } ?>
-	
-	<?php if ($page): ?>
-		<?php //if ($submitted || $terms): ?>
-		<?php if ($terms): ?>
-			<div class="meta">
-				<?php if ($terms): ?>
-					<div class="terms terms-inline"><?php print t(' in ') . $terms; ?></div>
-				<?php endif; ?>
-			</div>
-		<?php endif; ?>
-		<?php print $links; ?>
+	</div>
+</div>
+<?php if ($page): ?>
+	<?php //if ($submitted || $terms): ?>
+	<?php if ($terms): ?>
+		<div class="meta">
+			<?php if ($terms): ?>
+				<div class="terms terms-inline"><?php print t(' in ') . $terms; ?></div>
+			<?php endif; ?>
+		</div>
 	<?php endif; ?>
-
-</div></div> <!-- /node-inner, /node -->
+	<?php print $links; ?>
+<?php endif; ?>
+ <!-- /node-inner, /node -->
