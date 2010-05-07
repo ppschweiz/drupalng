@@ -48,49 +48,54 @@
  * @see template_preprocess_node()
  */
 ?>
-<div class="contbody">
-	<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
-		<div class="node-inner">
-			<?php if ($node->type != 'page') { ?>
-				<ul>
-					<li class="cotermin">
-						<h4><?php print $month ?></h4>
-						<h5><?php print $day ?></h5>
+<?php if (!$teaser): ?>
+	<div class="contbody">
+<?php endifif;?>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
+	<div class="node-inner">
+		<?php if ($node->type != 'page') { ?>
+			<ul>
+				<li class="cotermin">
+					<h4><?php print $month ?></h4>
+					<h5><?php print $day ?></h5>
+				</li>
+				<?php if (!$page) { ?>
+					<li class="cotext">
+						<h1 class="title">
+							<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
+						</h1>
+						<?php print $content; ?>
 					</li>
-					<?php if (!$page) { ?>
-						<li class="cotext">
+					<li class="cogoto">
+					</li>
+				<?php } else { ?>
+					<li class="cotext">
+						<div class="title">
 							<h1 class="title">
-								<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
+								<?php print $title; ?>
 							</h1>
-							<?php print $content; ?>
-						</li>
-						<li class="cogoto">
-						</li>
-					<?php } else { ?>
-						<li class="cotext">
-							<div class="title">
-								<h1 class="title">
-									<?php print $title; ?>
-								</h1>
-							</div>
-							<div class="author"><?php print $name; ?></div>
-							<div class="clear"></div>
-							<?php print $content; ?>
-						</li>
-					<?php } ?>
-					<li class="clear"></li>
-				</ul>
-			<?php } else { ?>
-				<h2 class="title">
-					<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
-				</h2>
-				<div class="content">
-					<?php print $content; ?>
-				</div>
-			<?php } ?>		
-		</div>
+						</div>
+						<div class="author"><?php print $name; ?></div>
+						<div class="clear"></div>
+						<?php print $content; ?>
+					</li>
+				<?php } ?>
+				<li class="clear"></li>
+			</ul>
+		<?php } else { ?>
+			<h2 class="title">
+				<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
+			</h2>
+			<div class="content">
+				<?php print $content; ?>
+			</div>
+		<?php } ?>		
 	</div>
 </div>
+<?php if (!$teaser): ?>
+	</div>
+<?php endifif;?>
+
 <?php if ($page): ?>
 	<?php //if ($submitted || $terms): ?>
 	<?php if ($terms): ?>
