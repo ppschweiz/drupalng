@@ -173,7 +173,8 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 		noscript div p { padding: 20px; font-size: 1.2em; text-align: left;}
 		noscript div ol li { padding: 10px 20px; font-size: 1.2em; text-align: left; list-style-type: disc; list-style-position: inside; }
 		.coda-slider-wrapper {display: block; float:left; height:270px; margin:0; width:592px;}
-	.coda-slider { background: #eee; }
+		.coda-slider { background: #eee; }
+		div.coda-slider:hover { cursor: hand; cursor: pointer; }
 		.coda-slider-no-js .coda-slider { height: 200px; overflow: auto !important; padding-right: 20px;}
 		.coda-slider, .coda-slider .panel { width: 592px; height: 270px;} 
 		.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { margin: 0; padding: 0; }
