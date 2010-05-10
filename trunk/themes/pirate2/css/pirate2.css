@@ -179,7 +179,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 		.coda-slider, .coda-slider .panel { width: 592px; height: 270px;} 
 		.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { margin: 0; padding: 0; }
 		.coda-nav {position: absolute; z-index: 10;}
-		.coda-nav-left a, .coda-nav-right a { width: 20px; height: 270px; background: url(../images/sliderleft_n.png) no-repeat center center;}
+		.coda-nav-left a, .coda-nav-right a { width: 20px; height: 270px; background: url(../images/sliderleft_n.png) no-repeat center center; cursor: default; }
 		.coda-nav-right a {background: url(../images/sliderright_n.png) no-repeat center center;}
 		.coda-nav-right a:hover {background: url(../images/sliderright_h.png) no-repeat center center;}
 		.coda-nav-left a:hover {background: url(../images/sliderleft_h.png) no-repeat center center;}
