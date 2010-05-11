@@ -32,9 +32,9 @@
  */
 ?>
 <?php if ($content): ?>
-  <div class="contbodykopf detail"><div class="kopf"><h1><?php print t('Comments'); ?></h1></div></div>
+	</div>
+	<div class="contbodykopf detail"><div class="kopf"><h1><?php print t('Comments'); ?></h1></div></div>
 	<div class="contbody detail">	
 		<?php print $content; ?>
 		<div class="anker"><a class="atop right" href="#top">TOP</a><a class="atop left" href="#top">TOP</a></div>
-	</div>
 <?php endif; ?>
