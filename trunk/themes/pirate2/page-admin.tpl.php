@@ -131,6 +131,7 @@
 		<div id="boardmid">
 			<div id="admincontent">
 			        <?php print $content ?>
+			        <br class="clear" /">
 			</div>
 		</div>
 		<div id="boardfot"></div>
