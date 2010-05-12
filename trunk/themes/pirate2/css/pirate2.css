@@ -226,7 +226,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .contbody hr.trenn {width: 640px; height: 1px; display: block; clear: both; border: none; background-color: #efefef; margin: 2px 0;}
 	#content .contbody ul li.cotext h1, #content .contbody h1 {font-size: 1.8em; line-height: 1.3em;}
 	#content .contbody ul li.cotext h1 a:hover {color: #c48f57;}
-	#content .contbody ul li.cotext a.user { float: right; font: 1em; color: #999; padding-top: 7px;}
+	#content .contbody ul li.cotext span.user { float: right; font: 1em; color: #999; padding-top: 7px;}
 	#content .contbody ul li.cotext a.user:hover { color: #c48f57;}
 	#content .contbody .cofoleft {float: left; margin: 10px 0 2px 0; height: 16px; line-height: 1.6em;}
 	#content .contbody .cofoleft a.comment { background: url(../images/ico_comment_n.png) no-repeat left top; padding: 0 10px 0 18px; color: #8f8f8f;}
