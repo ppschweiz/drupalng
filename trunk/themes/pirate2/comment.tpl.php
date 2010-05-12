@@ -4,7 +4,7 @@
         <h5><?=$day?></h5>
     </li>
     <li class="cotext">
-        <a class="user"><?=$author?></a>
+        <span class="user"><?=$author?></span>
         <h1><?= $title ?></h1>
         <?= $content ?>
         <div class="cofoleft">
