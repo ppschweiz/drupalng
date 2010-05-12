@@ -138,10 +138,10 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .kopf a.rss { float: right; width: 22px; height: 28px; display: block; background: url(../images/contkopf-rss.png) no-repeat left -116px;}
 	#content .kopf a.rss:hover { float: right; width: 22px; height: 28px; display: block; background: url(../images/contkopf-rss.png) no-repeat left -34px;}
 
-	#content ul li.cotermin {width: 60px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin-o.png) no-repeat center top; margin-top: 6px;}
+	#content ul li.cotermin {width: 60px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin-o.png) no-repeat center top; margin-top: 11px;}
 	#content ul li.cotermin h4 {color: #fff;}
 	#content ul li.cotermin h5 {color: #000; font-size: 1.7em; font-weight: bold; line-height: 1.8em;}
-	#content ul li.cotext {width: 240px; height: auto; display: block; float: left; margin-top: 6px; margin-bottom: 6px;}
+	#content ul li.cotext {width: 240px; height: auto; display: block; float: left;}
 	#content ul li.cotext h1 {font-size: 1.4em; line-height: 1.3em; width: 100%;}
 	#content ul li.cotext p, #content .contbody p {font-size: 1.2em; color: #999;}
 	#content ul li.cotext p strong, #content .contbody p strong {color: #000; font-weight: normal;}
@@ -149,10 +149,10 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content ul li.cogoto a {width: 19px; height: 100px; display: block; background: url(../images/cont-butevent.png) no-repeat -72px center;}
 	#content ul li.cogoto a:hover {background: url(../images/cont-butevent.png) no-repeat -20px center;}
 	#content hr.trenn {width: 308px; height: 1px; display: block; clear: both; border: none; background-color: #efefef; margin: 8px 0 8px 5px;}
-	#content #contevents ul li.cotermin {width: 60px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin-g.png) no-repeat center top; margin-top: 6px;}
+	#content #contevents ul li.cotermin {width: 60px; height: 80px; display: block; float: left; text-align: center; background: url(../images/termin-g.png) no-repeat center top; margin-top: 11px;}
 	#content #contevents ul li.cotermin h4 {color: #fff;}
 	#content #contevents ul li.cotermin h5 {color: #999; font-size: 1.6em; font-weight: bold; line-height: 1.8em;}
-	#content #contevents ul li.cotext {width: 240px; height: auto; display: block; float: left; margin-top: 6px;}
+	#content #contevents ul li.cotext {width: 240px; height: auto; display: block; float: left;}
 	#content #contevents ul li.cotext h1 {font-size: 1.4em; line-height: 1.3em;}
 	#content #contevents ul li.cotext p {font-size: 1.1em; color: #999;}
 	#content #contevents ul li.cogoto {width: 19px; height: 100px; display: block; float: left; margin-top: 6px;}
