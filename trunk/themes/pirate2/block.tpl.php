@@ -3,11 +3,12 @@
 ?>
 	<?php if ($block->module == 'pirate_slider' || $block->module == 'pirate_actionbutton') { ?>
 		<?php print $block->content; ?>
-	<?php } else if ($is_front) { ?>
-		<?php  
-			print_r($block);
-		?>
+	<?php } else if ($is_front && $block->delta == view) { ?>
+		$view_id = explode("-",$block->delta);
+		$view = views_get_view($view_id[0]);
 
+		print_r($view['display']);
+	
 		<div class="kopf block block-<?php print $block->module; ?>" id="block-<?php print $block->module; ?>-<?php print $block->delta; ?>">
 			<a class="goto" href=""></a>
 			<a class="rss" href=""></a>
