@@ -99,7 +99,7 @@
 	       	        </td>
 			<td id="servicenavfix">
 				<ul>
-		                    	<li><a href="/kontaktformular" class="kontakt">Kontakt</a></li>
+		                <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
 			            	<?php if ($logged_in) { ?>
 						<li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
 						<li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
