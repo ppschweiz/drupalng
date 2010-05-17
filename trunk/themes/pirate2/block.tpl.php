@@ -10,14 +10,14 @@
 
 		foreach($view->display as $display) 
 		{
-			print $display->display_plugin;
-			print $display->display_options->path;
 			if ($display->display_plugin == 'page') 
 			{
+				print_r($display->display_options);
 				$pageurl = $display->display_options->path; 
 			}
 			if ($display->display_plugin == 'feed') 
 			{
+				print_r($display->display_options);
 				$feedurl = $display->display_options->path; 
 			}
 		}		
