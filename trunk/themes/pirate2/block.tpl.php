@@ -10,6 +10,8 @@
 
 		foreach($view->display as $display) 
 		{
+			print $display->display_plugin.":";
+			
 			if ($display->display_plugin == 'page' || $display->display_plugin == 'calendar') 
 			{
 				$pageurl = $display->display_options['path']; 
