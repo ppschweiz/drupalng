@@ -10,6 +10,8 @@
 
 		foreach($view->display as $display) 
 		{
+			print $display->display_plugin;
+			print $display->display_options->path;
 			if ($display->display_plugin == 'page') 
 			{
 				$pageurl = $display->display_options->path; 
