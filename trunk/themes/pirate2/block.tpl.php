@@ -8,7 +8,7 @@
 		$view_id = explode("-",$block->delta);
 		$view = views_get_view($view_id[0]);
 
-		foreach($view->display asd $display) 
+		foreach($view->display as $display) 
 		{
 			if ($display->display_plugin == 'page') 
 			{
