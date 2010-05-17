@@ -39,9 +39,9 @@
 
   #contcom, #contblog, #contevents
   {
-    float: none;
+    float: none !important;
     width: 960px !important;
-    background: none;
+    background: none !important;
   }
 
 /* Turn off any background colors or images */
@@ -113,6 +113,23 @@
   .front #content ul li.cotext
   {
     width: 880px !important;
+  }
+
+  .front #content ul li.cotermin
+  {
+    margin-bottom: -25px !important;
+    margin-left: -11px !important;
+  }
+
+  .front #content ul li.cogoto
+  {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .front #content .kopf h1
+  {
+    left: 0 !important;
   }
 
 /* Otherwise, Firefox clips the content after the first page. */
