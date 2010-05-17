@@ -166,9 +166,17 @@
 		<div class="wrapper">
 			<div id="fooleft">
 				<a class="imgcc" href="#"></a>
-				<p><b>Design: </b>Piratenpartei Schweiz, Postfach, 1337 Vallorbe, info@piratenpartei.ch<br />
-					<a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en_CA">CC-BY 2.5 Switerland</a> | <a class="impressum" href="/kontaktformular">Kontakt</a>
-				</p>
+				<?php switch($language->language) { 
+				case "de": ?>			
+					<p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p>
+				<?php break; case "fr": ?>			
+					<p><b>Design: </b><a href="http://www.partipirate.ch">Parti Pirate Suisse</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.fr">CC-BY 2.5 Suisse</a></p>
+				<?php break; case "it": ?>			
+					<p><b>Design: </b><a href="http://www.partitopirata.ch">Partito Pirata Svizzera</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.it">CC-BY 2.5 Svizzera</a></p>
+				<?php break; default: ?>			
+					<p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en">CC-BY 2.5 Switerland</a></p>				
+				<?php } ?>
+
 			</div>
 			<div id="foocenter">
 				<?php print $footer; ?>
