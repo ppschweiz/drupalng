@@ -27,8 +27,8 @@
   #content-inner
   {
     float: none;
-    width: 100%;
-    margin: 0 !important;
+    width: 960px !important;
+    margin: 0 auto !important;
     padding: 0 !important;
   }
 
@@ -44,12 +44,26 @@
   }
 
 /* Hide sidebars and nav elements */
-  #skip-to-nav, #navbar, #sidebar-left, #sidebar-right, #footer,
-  .breadcrumb, div.tabs, .links, .taxonomy,
+  #skip-to-nav, #navbar, #sidebar-left, #sidebar-right, #footer, #decortop, #decorfot,
+  .breadcrumb, div.tabs, .links, .taxonomy, #navigation, #actionarea
   .book-navigation, .forum-topic-navigation, .pager, .feed-icons
   {
     visibility: hidden;
     display: none;
+  }
+
+/* Hide other elements */
+  #search-theme-form, #contbuttons li, #contbuttons a, #contbuttons + a,
+  .goto, .rss, .view-calendar .more-link
+  {
+    visibility: hidden;
+    display: none;
+  }
+
+/* Other little tweaks and fixes */
+  #contcom
+  {
+    margin-right: 0px;
   }
 
 /* Otherwise, Firefox clips the content after the first page. */
