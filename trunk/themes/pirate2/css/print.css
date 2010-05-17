@@ -37,6 +37,13 @@
     padding: 0 !important;
   }
 
+  #contcom, #contblog, #contevents
+  {
+    float: none;
+    width: 960px !important;
+    background: none;
+  }
+
 /* Turn off any background colors or images */
   body,
   #page, #page-inner,
@@ -101,6 +108,11 @@
   #content .contbody ul li.cotext
   {
     width: 895px !important;
+  }
+
+  .front #content ul li.cotext
+  {
+    width: 880px !important;
   }
 
 /* Otherwise, Firefox clips the content after the first page. */
