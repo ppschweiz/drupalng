@@ -271,9 +271,6 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
         #edit-keys { width: 100px; }
         #content #contsite div.content { margin: 0 20px; }
         #content #contsite div.content ul li { margin-left: 10px; display: block; color: #b6a083; font-size: 12px; padding: 3px 0; }
-
-		
-		
 		
 		ul.subactionbut { margin: 0 0 14px 0; }
 		ul.subactionbut li { display: block; width: 228px; height: 72px; border: solid 1px #f1e5c4; margin: 10px 0 0 25px;
@@ -306,6 +303,8 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 		.formgen .formreq { color: #006633;}
 		#content .contbody .contnorm .forminfo { width: 603px; background-color: #f4d8cd; margin-bottom: 15px; padding: 0; font-weight: bold; text-align: center; border: 2px solid #cc4b68; font-size: 1.2em; color: #bb2643; }
 		#content .contbody .contnorm .forminfo p { padding: 15px; margin: 0; color: #000;}
+		#ldapprov-register div.edit-custom-ldap-employeeType-wrapper { color: red; }
+		#ldapprov-register div.edit-custom-ldap-employeeType-wrapper label { font-weight: bold; }
 	/* @end */	
 /* @end */
 
