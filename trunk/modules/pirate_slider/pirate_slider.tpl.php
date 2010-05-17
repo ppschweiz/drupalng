@@ -4,7 +4,7 @@
       <p>Please turn on Javascript</p>
     </noscript>
 	<?php    
-		if (module_exists('domain_access')) 
+		if (module_exists('domain')) 
 		{
 			$current_domain = domain_resolve_host();
 			$domain_id = $current_domain['domain_id'];

@@ -4,7 +4,7 @@
 function pirate_slider_menu() {
 	$domains = array(array('sitename' => 'Default', 'domain_id' => "default"));
 	
-	if (module_exists('domain_access')) 
+	if (module_exists('domain')) 
 	{
 		$domains = domain_domains();
 	}
@@ -141,7 +141,5 @@ function pirate_slider_block($op = 'list', $delta = 0)
 		$block['content'] = theme("pirate_slider", NULL);
 		return $block;
 	}
-} 
-
-?>
+}
 
