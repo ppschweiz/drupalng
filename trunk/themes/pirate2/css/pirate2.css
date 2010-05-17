@@ -73,7 +73,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#boardfot {width: 990px; height: 8px; background: url(../images/boderfot.png) no-repeat center top;margin: 0 auto;}
 /* @end */
 
-/* @group nactionarea*/
+/* @group actionarea*/
 	#actionarea { width: 960px; height: 270px; margin: 0 auto; background: url(../images/promobg.png) repeat-x;}
 	#actionboard {width: 592px; height: 270px; float: left; margin: 0;}
 	#actionbutton {width: 368px; height: 270px; float: left; margin: 0; overflow: hidden;}

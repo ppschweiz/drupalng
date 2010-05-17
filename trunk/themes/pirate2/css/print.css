@@ -45,7 +45,7 @@
 
 /* Hide sidebars and nav elements */
   #skip-to-nav, #navbar, #sidebar-left, #sidebar-right, #footer, #decortop, #decorfot,
-  .breadcrumb, div.tabs, .links, .taxonomy, #navigation, #actionarea
+  .breadcrumb, div.tabs, .links, .taxonomy, #navigation, #actionarea,
   .book-navigation, .forum-topic-navigation, .pager, .feed-icons
   {
     visibility: hidden;
