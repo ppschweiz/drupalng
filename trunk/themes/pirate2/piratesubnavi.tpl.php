@@ -10,7 +10,7 @@
 			$active = ($submenu['link']['in_active_trail'] && !is_sub_active($submenu['below'])) ? " class=\"aktiv\"" : "";
 			
 			print "<li".$active.">";
-			$title = ($submenu['link']['title']) ? $submenu['link']['title'] : "<".ucfirst($submenu['link']['link_path']).">";
+			$title = ($submenu['link']['title']) ? $submenu['link']['title'] : "".ucfirst($submenu['link']['link_path'])."";
 			print l($title, $submenu['link']['href']);
 			print "</li>";
 			if(is_array($submenu['below'])) 
