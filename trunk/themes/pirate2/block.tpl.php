@@ -1,7 +1,7 @@
 <?php
 // $Id: block.tpl.php,v 1.3 2007/08/07 08:39:36 goba Exp $
+	<?php  print $id.":".$block->module."<=>".$block->region; print_r(views_get_view($block->name)); ?>
 ?>
-	<?php // print $id.":".$block->module."<=>".$block->region; print_r($block); ?>
 	<?php if ($block->module == 'pirate_slider' || $block->module == 'pirate_actionbutton') { ?>
 		<?php print $block->content; ?>
 	<?php } else if ($is_front) { ?>
