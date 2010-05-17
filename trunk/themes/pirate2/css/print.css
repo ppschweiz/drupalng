@@ -65,6 +65,16 @@
     margin-bottom: 10px !important;
   }
 
+  #decormid
+  {
+    height: 116px !important;
+  }
+
+  #boardmid
+  {
+    background: none !important;
+  }
+
   #contcom
   {
     margin-right: 0px;
