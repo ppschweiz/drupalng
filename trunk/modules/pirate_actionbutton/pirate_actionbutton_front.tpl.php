@@ -1,6 +1,13 @@
 <?php
-  $current_domain = domain_resolve_host();
-  $domain_id = $current_domain['domain_id'];
+	if (module_exists('domain')) 
+	{
+		$current_domain = domain_resolve_host();
+		$domain_id = $current_domain['domain_id'];
+	}
+	else 
+	{
+		$domain_id = 'default';
+	}
 ?>
 
 <ul id="actionbutton">

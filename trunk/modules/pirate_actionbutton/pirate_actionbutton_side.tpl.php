@@ -1,7 +1,15 @@
 <?php
-  $current_domain = domain_resolve_host();
-  $domain_id = $current_domain['domain_id'];
+	if (module_exists('domain')) 
+	{
+		$current_domain = domain_resolve_host();
+		$domain_id = $current_domain['domain_id'];
+	}
+	else 
+	{
+		$domain_id = 'default';
+	}
 ?>
+
 <ul class="subactionbut">
 	<li>
 		<a href="<?php print variable_get('d'.$domain_id.'pirate_actionbutton_top_link', ''); ?>">

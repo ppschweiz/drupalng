@@ -3,62 +3,53 @@
 
 function pirate_actionbutton_menu() 
 {
-	$domains = domain_domains();
-	if (empty($domains))
+	$domains = array(array('sitename' => 'Default', 'domain_id' => "default"));
+	if (module_exists('domain')) 
 	{
-
-		$items['admin/pirate/actionbutton'] = array(
-			'title' => 'Actionbutton',
-			'description' => 'Configure Actionbutton Blocks.',
-			'page callback' => 'drupal_get_form',
-			'page arguments' => array('pirate_actionbutton_admin', 'none'),
-			'access arguments' => array('administer site configuration'),
-		);
+		$domains = domain_domains();
 	}
-	else 
+	
+	$items['admin/pirate/actionbutton'] = array(
+		'title' => 'Actionbutton',
+		'description' => 'Configure Actionbutton Blocks.',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('pirate_actionbutton_admin', 'all'),
+		'access arguments' => array('administer site configuration'),
+	);
+
+	foreach($domains as $domain)
 	{
-		$items['admin/pirate/actionbutton'] = array(
-			'title' => 'Actionbutton',
+		$items['admin/pirate/actionbutton/'.$domain['domain_id']] = array(
+			'title' =>  $domain['sitename'],
+			'type' => MENU_LOCAL_TASK,
 			'description' => 'Configure Actionbutton Blocks.',
 			'page callback' => 'drupal_get_form',
-			'page arguments' => array('pirate_actionbutton_admin', 'all'),
+			'page arguments' => array('pirate_actionbutton_admin', $domain),
 			'access arguments' => array('administer site configuration'),
 		);
-
-		foreach($domains as $domain)
-		{
-			$items['admin/pirate/actionbutton/'.$domain['domain_id']] = array(
-				'title' =>  $domain['sitename'],
-				'type' => MENU_LOCAL_TASK,
-				'description' => 'Configure Actionbutton Blocks.',
-				'page callback' => 'drupal_get_form',
-				'page arguments' => array('pirate_actionbutton_admin', $domain),
-				'access arguments' => array('administer site configuration'),
-			);
-		}
 	}
 	return $items;
 }
 
 function pirate_actionbutton_admin($arg1, $domain) 
 {
-        if ($domain == all || $domain == "none")
-        {
-                return '';
-        }
+	if ($domain == "all")
+	{
+			return '';
+	}
 
-        $form = array();
-        $form['pirate_acbutton'] = array(
-                '#type' => 'fieldset',
-                '#title' => t($domain['sitename']),
-                '#collapsible' => FALSE
-        );
+	$form = array();
+	$form['pirate_acbutton'] = array(
+			'#type' => 'fieldset',
+			'#title' => t($domain['sitename']),
+			'#collapsible' => FALSE
+	);
 
-        $form['pirate_acbutton']['top'] = array(
-                '#type' => 'fieldset',
-                '#title' => t('Top Button'),
-                '#collapsible' => TRUE
-        );
+	$form['pirate_acbutton']['top'] = array(
+			'#type' => 'fieldset',
+			'#title' => t('Top Button'),
+			'#collapsible' => TRUE
+	);
 
 	$form['pirate_acbutton']['top']['d'.$domain['domain_id'].'pirate_actionbutton_top_title'] = array(
 		'#type' => 'textfield',

@@ -2,8 +2,8 @@
 // $Id:	pirate_slider module Exp $
 
 function pirate_slider_menu() {
-	$domains = array(array('sitename' => 'Default', 'domain_id' => "default"));
 	
+	$domains = array(array('sitename' => 'Default', 'domain_id' => "default"));
 	if (module_exists('domain')) 
 	{
 		$domains = domain_domains();
@@ -30,7 +30,8 @@ function pirate_slider_menu() {
 	return $items;
 }
 
-function pirate_slider_admin($arg, $domain) {
+function pirate_slider_admin($arg, $domain) 
+{
 	if ($domain == "all")
 	{
 		return '';
