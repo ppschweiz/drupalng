@@ -10,13 +10,11 @@
 
 		foreach($view->display as $display) 
 		{
-			print $display->display_plugin.":";
-			
 			if ($display->display_plugin == 'page' || $display->display_plugin == 'calendar') 
 			{
 				$pageurl = $display->display_options['path']; 
 			}
-			if ($display->display_plugin == 'feed' || $display->display_plugin == 'calendar_icalblock') 
+			if ($display->display_plugin == 'feed' || $display->display_plugin == 'calendar_ical') 
 			{
 				$feedurl = $display->display_options['path']; 
 			}
