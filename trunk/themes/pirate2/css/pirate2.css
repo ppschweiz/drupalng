@@ -186,14 +186,15 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 		.coda-slider p.loading { padding: 110px 20px 0 20px; text-align: center; color: #934105; }
 		.coda-nav ul { clear: both; display: block; margin: 6px auto; overflow: hidden; text-align: center; }
 		.coda-nav ul li { display: block; float: left; height: 12px;  width: 10px; }
-		.coda-nav ul li a { display: block; width: 18px; height: 12px; text-decoration: none; background: url(../images/slider_ico_point_n.png) no-repeat center center;}
-		.coda-nav ul li a:hover {background: url(../images/slider_ico_point_a.png) no-repeat center center;}
-		.coda-nav ul li a.current {background: url(../images/slider_ico_point_h.png) no-repeat center center;}
-		.coda-slider { float: left; overflow: hidden; position: relative; height: 270px; width: 592px; top: -270px; left: 0; z-index: 9;}
-		.coda-slider .panel { display: block; float: left; height: 270px;}
-		.coda-slider .panel-container { position: relative; float: left; background-color: #000;}
-		.coda-nav-left, .coda-nav-right {width: 20px; height:270px; overflow: hidden; position: relative; z-index: 11;}
-		.coda-nav-right {left: 572px; z-index: 11; top: -540px;}
+		.coda-nav ul li a { display: block; width: 18px; height: 12px; text-decoration: none; background: url(../images/slider_ico_point_n.png) no-repeat center center; }
+		.coda-nav ul li a:hover {background: url(../images/slider_ico_point_a.png) no-repeat center center; }
+		.coda-nav ul li a.current {background: url(../images/slider_ico_point_h.png) no-repeat center center; }
+		.coda-slider { float: left; overflow: hidden; position: relative; height: 270px; width: 592px; top: -270px; left: 0; z-index: 9; }
+		.coda-slider .panel { display: block; float: left; height: 270px; }
+		.coda-slider .panel-container { position: relative; float: left; background-color: #000; }
+		.coda-slider .panel-container p { margin-top: 0px; }
+		.coda-nav-left, .coda-nav-right { width: 20px; height:270px; overflow: hidden; position: relative; z-index: 11; }
+		.coda-nav-right { left: 572px; z-index: 11; top: -540px; }
 		.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none; }
 	/* @end */
 /* @end */
