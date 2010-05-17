@@ -8,7 +8,7 @@
 		$view_id = explode("-",$block->delta);
 		$view = views_get_view($view_id[0]);
 
-		print_r($view['display']);
+		print_r($view->display);
 	?>
 		<div class="kopf block block-<?php print $block->module; ?>" id="block-<?php print $block->module; ?>-<?php print $block->delta; ?>">
 			<a class="goto" href=""></a>
