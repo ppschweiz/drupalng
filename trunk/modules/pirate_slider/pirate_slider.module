@@ -2,26 +2,46 @@
 // $Id:	pirate_slider module Exp $
 
 function pirate_slider_menu() {
-	$domains = array('Default');
-	if (module_exists('domain_access')) 
+	$domains = domain_domains();
+	if (empty($domains)) 
 	{
-		$domains = domain_domains();
-	}
-	foreach($domains as $domain) 
-	{
-		$items['admin/pirate/slider/'.$domain['domain_id']] = array(
-			'title' => $domain['sitename'],
-			'type' => MENU_LOCAL_TASK,
+		$items['admin/pirate/slider'] = array(
+			'title' => 'Slider',
 			'description' => 'Configure the Slider on the frontpage.',
 			'page callback' => 'drupal_get_form',
-			'page arguments' => array('pirate_slider_admin', $domain),
+			'page arguments' => array('pirate_slider_admin', "none"),
+			'access arguments' => array('administer site configuration'),
+		);			 
+	}
+	else
+	{
+		$items['admin/pirate/slider'] = array(
+			'title' => 'Slider',
+			'description' => 'Configure the Slider on the frontpage.',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('pirate_slider_admin', "all"),
 			'access arguments' => array('administer site configuration'),
 		);
+		foreach($domains as $domain) 
+		{
+			$items['admin/pirate/slider/'.$domain['domain_id']] = array(
+				'title' => $domain['sitename'],
+				'type' => MENU_LOCAL_TASK,
+				'description' => 'Configure the Slider on the frontpage.',
+				'page callback' => 'drupal_get_form',
+				'page arguments' => array('pirate_slider_admin', $domain),
+				'access arguments' => array('administer site configuration'),
+			);
+		}
 	}
 	return $items;
 }
 
 function pirate_slider_admin($arg, $domain) {
+	if ($domain == all || $domain == "none")
+	{
+		return '';
+	}
 
 	$slider = 0;
 
