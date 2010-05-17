@@ -3,14 +3,21 @@
     <noscript>
       <p>Please turn on Javascript</p>
     </noscript>
-<?php    
-  $current_domain = domain_resolve_host();
-  $domain_id = $current_domain['domain_id'];
-?>
-    <?php for ( $i = 1; variable_get('pirate_slider_slide'.$domain_id.'_'.$i.'_title', ''); $i++)
-    { 
-      $slide_prefix = 'pirate_slider_slide'.$domain_id.'_'.$i.'_';
-?>
+	<?php    
+		if (module_exists('domain_access')) 
+		{
+			$current_domain = domain_resolve_host();
+			$domain_id = $current_domain['domain_id'];
+		}
+		else 
+		{
+			$domain_id = 'default';
+		}
+		
+		for ( $i = 1; variable_get('pirate_slider_slide'.$domain_id.'_'.$i.'_title', ''); $i++)
+		{ 
+		  $slide_prefix = 'pirate_slider_slide'.$domain_id.'_'.$i.'_';
+	?>
       <div class="panel">
         <div class="panel-wrapper slider1" style="background-image:url(<?php print variable_get($slide_prefix.'image', '') ?>)" onclick="self.location.href='<?php print variable_get($slide_prefix.'url', 'none') ?>'">
           <h2><?php print variable_get($slide_prefix.'title', '') ?></h2>
