@@ -21,6 +21,11 @@
     font-size: 0.8em;
     font-weight: normal;
   }
+  
+  a.home:link:after, a.home:visited:after
+  {
+    display: none;
+  }
 
 /* Un-float the content */
   #content,
@@ -53,7 +58,8 @@
   }
 
 /* Hide other elements */
-  #search-theme-form, #contbuttons, .goto, .rss, .view-calendar .more-link
+  #search-theme-form, #contbuttons, .goto, .rss, .view-calendar .more-link,
+  .contsitekopf, #contsite
   {
     visibility: hidden;
     display: none;
@@ -78,6 +84,23 @@
   #contcom
   {
     margin-right: 0px;
+  }
+
+  #content .contbody
+  {
+    margin: 0;
+    width: 100%;
+  }
+
+  #content .contbodykopf
+  {
+    background: none;
+    width: 100%;
+  }
+
+  #content .contbody ul li.cotext
+  {
+    width: 895px !important;
   }
 
 /* Otherwise, Firefox clips the content after the first page. */
