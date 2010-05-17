@@ -8,11 +8,21 @@
 		$view_id = explode("-",$block->delta);
 		$view = views_get_view($view_id[0]);
 
-		print_r($view->display);
+		foreach($view->display asd $display) 
+		{
+			if ($display->display_plugin == 'page') 
+			{
+				$pageurl = $display->display_options->path; 
+			}
+			if ($display->display_plugin == 'feed') 
+			{
+				$feedurl = $display->display_options->path; 
+			}
+		}		
 	?>
 		<div class="kopf block block-<?php print $block->module; ?>" id="block-<?php print $block->module; ?>-<?php print $block->delta; ?>">
-			<a class="goto" href=""></a>
-			<a class="rss" href=""></a>
+			<a class="goto" href="<?php print $pageurl; ?>"></a>
+			<a class="rss" href="<?php print $feedurl; ?>"></a>
 			<h1><?php print $block->subject; ?></h1>
 			<div class="content">
 				<?php print $block->content; ?>
