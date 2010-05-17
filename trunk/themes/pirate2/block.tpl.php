@@ -3,7 +3,7 @@
 ?>
 	<?php if ($block->module == 'pirate_slider' || $block->module == 'pirate_actionbutton') { ?>
 		<?php print $block->content; ?>
-	<?php } else if ($is_front && $block->delta == view) { ?>
+	<?php } else if ($is_front && $block->delta == 'view') { ?>
 		$view_id = explode("-",$block->delta);
 		$view = views_get_view($view_id[0]);
 
