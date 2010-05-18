@@ -125,7 +125,10 @@ function pirate2_preprocess_block(&$vars, $hook) {
  */
 function pirate2_theme(&$existing, $type, $theme, $path) 
 {
-	$hooks = zen_theme($existing, $type, $theme, $path);
+	if (db_is_active()) 
+	{
+		$hooks = zen_theme($existing, $type, $theme, $path);
+	}
   
 	$hooks['piratenavi'] =  array(
 		'template' => 'piratenavi',
