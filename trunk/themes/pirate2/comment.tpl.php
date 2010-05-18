@@ -44,9 +44,7 @@
            <span class="date"><?= $date ?></span>
         </div>
 		<?php if ($picture): ?>
-			<div class="polaroid">
-				<a href=""><?php print $picture ?></a>
-			<div>
+			<?php print $picture ?>
 		<?php endif; ?>
     </li>
     <li class="clear"/>
