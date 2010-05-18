@@ -301,7 +301,7 @@ function pirate2_preprocess_node(&$vars, $hook)
 		global $handle_multiple_dates;
 		if(!isset($handle_multiple_dates[$vars['nid']]))
 		{
-			$handle_multiple_dates[$vars['nid']] = 0;
+			$handle_multiple_dates[$vars['nid']] = -1;
 		}
 		do
 		{
