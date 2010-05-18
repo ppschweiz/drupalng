@@ -121,7 +121,7 @@ function zen_menu_local_tasks() {
  */
 function zen_preprocess_page(&$vars, $hook) {
   // Add conditional stylesheets.
-  if (!module_exists('conditional_styles')) {
+  if (!module_exists('conditional_styles' && db_is_active())) {
     $vars['styles'] .= $vars['conditional_styles'] = variable_get('conditional_styles_' . $GLOBALS['theme'], '');
   }
 
@@ -165,7 +165,7 @@ function zen_preprocess_page(&$vars, $hook) {
  */
 function zen_preprocess_maintenance_page(&$vars, $hook) {
   // Add conditional stylesheets.
-  if (!module_exists('conditional_styles')) {
+  if (!module_exists('conditional_styles' && db_is_active())) {
     $vars['styles'] .= $vars['conditional_styles'] = variable_get('conditional_styles_' . $GLOBALS['theme'], '');
   }
 
