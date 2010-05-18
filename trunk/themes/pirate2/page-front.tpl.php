@@ -156,7 +156,7 @@
 				</div>
                 <ul id="contbuttons">
                     <li class="butpirates"><a href="<?php theme_get_setting('ppi_'.$language->language); ?>"></a></li>
-                    <li class="twocol" style="width: 920px; background-image:url('<?php print path_to_theme(TRUE); ?>/images/bottom_verlauf.png');"><a href="#"></li>
+                    <li class="twocol" style="width: 920px; background-image:url('<?php print path_to_theme(TRUE); ?>/images/bottom_verlauf.png');"><a href="#"></a></li>
                 </ul>
 			</div>
 		</div>
