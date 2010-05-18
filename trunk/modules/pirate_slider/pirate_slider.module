@@ -23,7 +23,7 @@ function pirate_slider_menu() {
 	{
 		$items['admin/pirate/slider/'.$domain['domain_id']] = array(
 			'title' => $domain['sitename'],
-			'type' => (FIRST) ? MENU_DEFAULT_LOCAL_TASK : MENU_LOCAL_TASK,
+			'type' => ((FIRST) ? MENU_DEFAULT_LOCAL_TASK : MENU_LOCAL_TASK),
 			'description' => 'Configure the Slider on the frontpage.',
 			'page callback' => 'drupal_get_form',
 			'page arguments' => array('pirate_slider_admin', $domain),

@@ -23,7 +23,7 @@ function pirate_actionbutton_menu()
 	{
 		$items['admin/pirate/actionbutton/'.$domain['domain_id']] = array(
 			'title' =>  $domain['sitename'].((FIRST)"*":""),
-			'type' => (FIRST) ? MENU_DEFAULT_LOCAL_TASK : MENU_LOCAL_TASK,
+			'type' => ((FIRST) ? MENU_DEFAULT_LOCAL_TASK : MENU_LOCAL_TASK),
 			'description' => 'Configure Actionbutton Blocks.',
 			'page callback' => 'drupal_get_form',
 			'page arguments' => array('pirate_actionbutton_admin', $domain),
