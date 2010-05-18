@@ -128,18 +128,18 @@ function pirate2_theme(&$existing, $type, $theme, $path)
 	if (db_is_active()) 
 	{
 		$hooks = zen_theme($existing, $type, $theme, $path);
-  
-		$hooks['piratenavi'] =  array(
-			'template' => 'piratenavi',
-			'arguments' => array('menu' => NULL)
-		);
-
-		$hooks['piratesubnavi'] =  array(
-			'template' => 'piratesubnavi',
-			'arguments' => array('menu' => NULL)
-		);
 	}
-	
+  
+	$hooks['piratenavi'] =  array(
+		'template' => 'piratenavi',
+		'arguments' => array('menu' => NULL)
+	);
+
+	$hooks['piratesubnavi'] =  array(
+		'template' => 'piratesubnavi',
+		'arguments' => array('menu' => NULL)
+	);
+
 	return $hooks;
 }
 
