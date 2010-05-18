@@ -83,7 +83,7 @@ function pirate2_settings($saved_settings)
 	
 	$form['theme_lang_'.$clang]['ppi_'.$clang] = array(
      '#type'          => 'textfield',
-     '#title'         => t('International Page'),
+     '#title'         => t('International Page URL:'),
      '#description'   => t('This link either directly points to the PPI site or a node with Information to the PPI and other international parties.'),
      '#default_value' => $settings['ppi_'.$clang],
      '#size'          => 63,
