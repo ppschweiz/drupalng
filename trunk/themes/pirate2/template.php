@@ -309,7 +309,7 @@ function pirate2_preprocess_node(&$vars, $hook)
 			print $handle_multiple_dates[$vars['nid']]."\n";
 			print $vars[$fieldname][$handle_multiple_dates[$vars['nid']]]['value']."\n";
 			$handle_multiple_dates[$vars['nid']]++;
-			$xtime = strtotime($vars[$fieldname][$handle_multiple_dates[$vars['nid']]-1]['value']);
+			$xtime = strtotime($vars[$fieldname][max($handle_multiple_dates[$vars['nid']]-1,0)]['value']);
 			print $xtime."\n";
 			print date('j', $xtime)."\n";
 			print date('M', $xtime)."\n\n";
