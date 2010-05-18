@@ -18,7 +18,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 
 <head>
-  <title><?php print $head_title; ?></title>
+  <title>Pirates Offline :: Maintenance </title>
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
@@ -40,7 +40,6 @@
 	<div id="decormid">
 		<div id="header">
        			<div id="pplogo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="/<?php print path_to_theme(TRUE)."/images/logo/".$language->language.".png"; ?>" alt="<?php print t('Home'); ?>" id="logo-image" /></a></div>
-			<?php print $search_box; ?>
 		</div>
 			<div class="error-message">
 				<div class="messages warning">
@@ -67,7 +66,6 @@
 
 			</div>
 			<div id="foocenter">
-				<?php print $footer; ?>
 			</div>			
 			<ul id="fooright">
 			</ul>
