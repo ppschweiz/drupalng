@@ -33,6 +33,7 @@ function pirate2_settings($saved_settings)
     'twitter' => 'Twitter Feed', 
     'facebook' => 'Facebook Group', 
     'identica' => 'Identica Feed'
+    'politnetz' => 'Politnetz'
   );
   
   $form = array();  
@@ -71,6 +72,24 @@ function pirate2_settings($saved_settings)
     }
   }
 
+  foreach(locale_language_list('name') as $clang => $clangname) 
+  { 
+    $form['theme_lang_'.$clang] = array(
+      '#type'          => 'fieldset',
+      '#title'         => t('Language dependend setting: '.$clangname),
+	  '#collapsible'   => TRUE,
+	  '#collapsed'     => TRUE
+    );
+	
+	$form['theme_lang_'.$clang]['ppi_'.$clang] = array(
+     '#type'          => 'textfield',
+     '#title'         => t('International Page'),
+     '#description'   => t('This link either directly points to the PPI site or a node with Information to the PPI and other international parties.'),
+     '#default_value' => $settings['ppi_'.$clang],
+     '#size'          => 63,
+     '#maxlength'     => 255,
+    );
+  }
   // Add the base theme's settings.
   $form += zen_settings($saved_settings, $defaults);
 

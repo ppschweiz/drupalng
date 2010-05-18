@@ -155,7 +155,7 @@
 					<?php print $content_right ?>
 				</div>
                 <ul id="contbuttons">
-                    <li class="butpirates"><a href="#"></a></li>
+                    <li class="butpirates"><a href="<?php theme_get_setting('ppi_'.$language->language); ?>"></a></li>
                     <li class="twocol" style="width: 920px; background-image:url('<?php print path_to_theme(TRUE); ?>/images/bottom_verlauf.png');"><a href="#"></li>
                 </ul>
 			</div>
@@ -165,7 +165,7 @@
 	<div id="decorfot">
 		<div class="wrapper">
 			<div id="fooleft">
-				<a class="imgcc" href="#"></a>
+				<a class="imgcc" href="http://creativecommons.org"></a>
 				<?php switch($language->language) { 
 				case "de": ?>			
 					<p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p>
@@ -182,6 +182,9 @@
 				<?php print $footer; ?>
 			</div>			
 			<ul id="fooright">
+				<?php if(theme_get_setting('politnetz_available_'.$language->language)) { ?>
+					<li><a class="medico pnetz" href="<?php print theme_get_setting('politnetz_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('politnetz_hover_'.$language->language); ?></b></span></a></li>
+				<?php } ?>				
 				<?php if(theme_get_setting('identica_available_'.$language->language)) { ?>
 					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('identica_hover_'.$language->language); ?></b></span></a></li>
 				<?php } ?>				
