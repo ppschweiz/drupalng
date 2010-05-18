@@ -152,8 +152,8 @@ function pirate2_theme(&$existing, $type, $theme, $path)
 function pirate2_preprocess_comment(&$vars, $hook)
 {
         $vars['day'] = date('j',$vars['comment']->timestamp).'.';
-        $vars['month'] = date('M',$vars['comment']->timestamp).'.';
-        $vars['year'] = date('Y',$vars['comment']->timestamp).'.';
+        $vars['month'] = date('M',$vars['comment']->timestamp);
+        $vars['year'] = date('Y',$vars['comment']->timestamp);
 }
 
 
@@ -305,25 +305,20 @@ function pirate2_preprocess_node(&$vars, $hook)
 		}
 		do
 		{
-			print $vars['nid']."\n";
-			print $handle_multiple_dates[$vars['nid']]."\n";
-			print $vars[$fieldname][$handle_multiple_dates[$vars['nid']]]['value']."\n";
+			print $vars[$fieldname][max($handle_multiple_dates[$vars['nid']]-1,0)]['value'];
 			$handle_multiple_dates[$vars['nid']]++;
 			$xtime = strtotime($vars[$fieldname][max($handle_multiple_dates[$vars['nid']]-1,0)]['value']);
-			print $xtime."\n";
-			print date('j', $xtime)."\n";
-			print date('M', $xtime)."\n\n";
 			
 			$vars['day'] = date('j', $xtime).'.';
-			$vars['month'] = date('M', $xtime).'.';
-			$vars['year'] = date('Y', $xtime).'.';
+			$vars['month'] = date('M', $xtime);
+			$vars['year'] = date('Y', $xtime);
 		} 
 		while($xtime < time() - (24 * 60 * 60) && $vars[$fieldname][$handle_multiple_dates[$vars['nid']]]);
 	}
 	else
 	{
 		$vars['day'] = date('j',$vars['created']).'.';
-		$vars['month'] = date('M',$vars['created']).'.';
-        $vars['year'] = date('Y',$vars['created']).'.';
+		$vars['month'] = date('M',$vars['created']);
+        $vars['year'] = date('Y',$vars['created']);
 	}
 }
