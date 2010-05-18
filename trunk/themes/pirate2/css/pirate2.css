@@ -304,8 +304,8 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 		.formgen .formreq { color: #006633;}
 		#content .contbody .contnorm .forminfo { width: 603px; background-color: #f4d8cd; margin-bottom: 15px; padding: 0; font-weight: bold; text-align: center; border: 2px solid #cc4b68; font-size: 1.2em; color: #bb2643; }
 		#content .contbody .contnorm .forminfo p { padding: 15px; margin: 0; color: #000;}
-		#ldapprov-register div.edit-custom-ldap-employeeType-wrapper { color: red; }
-		#ldapprov-register div.edit-custom-ldap-employeeType-wrapper label { font-weight: bold; }
+		#edit-custom-ldap-employeeType-wrapper { color: red; }
+		#edit-custom-ldap-employeeType-wrapper label { font-weight: bold; }
 	/* @end */	
 /* @end */
 
