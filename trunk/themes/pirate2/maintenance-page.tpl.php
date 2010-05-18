@@ -43,7 +43,9 @@
 			<?php print $search_box; ?>
 		</div>
 			<div class="error-message">
+				<div class="messages warning">
 			        <?php print $content ?>
+				</div>
 			</div>
 		</div>
 		<div id="boardfot"></div>
