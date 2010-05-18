@@ -307,8 +307,7 @@ function pirate2_preprocess_node(&$vars, $hook)
 		{
 			print $vars[$fieldname][max($handle_multiple_dates[$vars['nid']]-1,0)]['value'];
 			$handle_multiple_dates[$vars['nid']]++;
-			$xtime = strtotime($vars[$fieldname][max($handle_multiple_dates[$vars['nid']]-1,0)]['value']);
-			
+			$xtime = strtotime($vars[$fieldname][max($handle_multiple_dates[$vars['nid']]-1,0)]['value']." UTC");		
 			$vars['day'] = date('j', $xtime).'.';
 			$vars['month'] = date('M', $xtime);
 			$vars['year'] = date('Y', $xtime);
