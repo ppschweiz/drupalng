@@ -32,7 +32,7 @@ function pirate2_settings($saved_settings)
     'youtube' => 'YouTube Channel', 
     'twitter' => 'Twitter Feed', 
     'facebook' => 'Facebook Group', 
-    'identica' => 'Identica Feed'
+    'identica' => 'Identica Feed',
     'politnetz' => 'Politnetz'
   );
   

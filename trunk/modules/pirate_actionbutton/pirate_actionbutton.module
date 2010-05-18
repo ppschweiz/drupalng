@@ -15,14 +15,14 @@ function pirate_actionbutton_menu()
 		'title' => 'Actionbutton',
 		'description' => 'Configure Actionbutton Blocks.',
 		'page callback' => 'drupal_get_form',
-		'page arguments' => array('pirate_actionbutton_admin', 'all'),
+		'page arguments' => array('pirate_actionbutton_admin', $domains[0]),
 		'access arguments' => array('administer site configuration'),
 	);
 
 	foreach($domains as $domain)
 	{
 		$items['admin/pirate/actionbutton/'.$domain['domain_id']] = array(
-			'title' =>  $domain['sitename'],
+			'title' =>  $domain['sitename'].((FIRST)"*":""),
 			'type' => (FIRST) ? MENU_DEFAULT_LOCAL_TASK : MENU_LOCAL_TASK,
 			'description' => 'Configure Actionbutton Blocks.',
 			'page callback' => 'drupal_get_form',
@@ -36,11 +36,6 @@ function pirate_actionbutton_menu()
 
 function pirate_actionbutton_admin($arg1, $domain) 
 {
-	if ($domain == "all")
-	{
-			return '';
-	}
-
 	$form = array();
 	$form['pirate_acbutton'] = array(
 			'#type' => 'fieldset',

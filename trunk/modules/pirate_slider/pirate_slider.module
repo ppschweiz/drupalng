@@ -15,9 +15,10 @@ function pirate_slider_menu() {
 		'title' => 'Slider',
 		'description' => 'Configure the Slider on the frontpage.',
 		'page callback' => 'drupal_get_form',
-		'page arguments' => array('pirate_slider_admin', "all"),
+		'page arguments' => array('pirate_slider_admin', $domains[0]),
 		'access arguments' => array('administer site configuration'),
 	);
+	
 	foreach($domains as $domain) 
 	{
 		$items['admin/pirate/slider/'.$domain['domain_id']] = array(
@@ -35,11 +36,6 @@ function pirate_slider_menu() {
 
 function pirate_slider_admin($arg, $domain) 
 {
-	if ($domain == "all")
-	{
-		return '';
-	}
-
 	$slider = 0;
 
 	$form = array();
