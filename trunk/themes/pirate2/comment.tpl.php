@@ -36,10 +36,12 @@
         <h4><?=$month?></h4>
         <h5><?=$day?></h5>
         <h6><?=$year?></h6>
+    </li>
+	<li class="copic">
 		<?php if ($picture): ?>
 			<?php print $picture ?>
 		<?php endif; ?>
-    </li>
+	</li>
     <li class="cotext">
         <span class="user"><?=$author?></span>
         <h1><?= $title ?></h1>
