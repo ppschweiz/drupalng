@@ -35,6 +35,10 @@
     <li class="cotermin">
         <h4><?=$month?></h4>
         <h5><?=$day?></h5>
+        <h6><?=$year?></h6>
+		<?php if ($picture): ?>
+			<?php print $picture ?>
+		<?php endif; ?>
     </li>
     <li class="cotext">
         <span class="user"><?=$author?></span>
@@ -43,9 +47,7 @@
         <div class="cofoleft">
            <span class="date"><?= $date ?></span>
         </div>
-		<?php if ($picture): ?>
-			<?php print $picture ?>
-		<?php endif; ?>
+
     </li>
     <li class="clear"/>
 </ul>
