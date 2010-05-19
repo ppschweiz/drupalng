@@ -54,7 +54,7 @@
 		<li class="cotermin">
 			<h4><?php print $month ?></h4>
 			<h5><?php print $day ?></h5>
-			<?php if (!$page): ?>
+			<?php if (!$is_front): ?>
 				<h6><?php print $year ?></h6>
 			<?php endif; ?>
 		</li>
