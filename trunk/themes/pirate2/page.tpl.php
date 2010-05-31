@@ -158,13 +158,13 @@
 			<div id="fooleft">
 				<a class="imgcc" href="http://creativecommons.org"></a>
 				<?php switch($language->language) { 
-				case "de": ?>			
+				case "de": ?>
 					<p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p>
-				<?php break; case "fr": ?>			
+				<?php break; case "fr": ?>
 					<p><b>Design: </b><a href="http://www.partipirate.ch">Parti Pirate Suisse</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.fr">CC-BY 2.5 Suisse</a></p>
-				<?php break; case "it": ?>			
+				<?php break; case "it": ?>
 					<p><b>Design: </b><a href="http://www.partitopirata.ch">Partito Pirata Svizzera</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.it">CC-BY 2.5 Svizzera</a></p>
-				<?php break; default: ?>			
+				<?php break; default: ?>
 					<p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en">CC-BY 2.5 Switerland</a></p>				
 				<?php } ?>
 
@@ -175,28 +175,28 @@
 			<ul id="fooright">
 				<?php if(theme_get_setting('politnetz_available_'.$language->language)) { ?>
 					<li><a class="medico pnetz" href="<?php print theme_get_setting('politnetz_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('politnetz_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 				<?php if(theme_get_setting('identica_available_'.$language->language)) { ?>
 					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('identica_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 				<?php if(theme_get_setting('facebook_available_'.$language->language)) { ?>
 					<li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('facebook_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 				<?php if(theme_get_setting('twitter_available_'.$language->language)) { ?>
 					<li><a class="medico yout" href="<?php print theme_get_setting('twitter_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('twitter_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 				<?php if(theme_get_setting('youtube_available_'.$language->language)) { ?>
 					<li><a class="medico twit" href="<?php print theme_get_setting('youtube_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('youtube_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 				<?php if(theme_get_setting('myspace_available_'.$language->language)) { ?>
 					<li><a class="medico face" href="<?php print theme_get_setting('myspace_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('myspace_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 				<?php if(theme_get_setting('flickr_available_'.$language->language)) { ?>
 					<li><a class="medico ident" href="<?php print theme_get_setting('flickr_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('flickr_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 				<?php if(theme_get_setting('rss_available_'.$language->language)) { ?>
 					<li><a class="medico rss" href="<?php print theme_get_setting('rss_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('rss_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
