@@ -324,8 +324,8 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#fooright li a.medico {width: 37px; height: 38px; display: block;background-image: url(../images/fotsocicons.png);}
 	#fooright li a.medico.rss { background-position: left top;}
 	#fooright li a.medico.rss:hover { background-position: left bottom;}
-	#fooright li a.medico.pnetz { background-position: 259px left top;}
-	#fooright li a.medico.pnetz:hover { background-position:259px left bottom;}
+	#fooright li a.medico.pnetz { background-position: 259px top;}
+	#fooright li a.medico.pnetz:hover { background-position:259px bottom;}
 	#fooright li a.medico.flick { background-position: 37px top;}
 	#fooright li a.medico.flick:hover{ background-position: 37px bottom;}
 	#fooright li a.medico.mysp { background-position: 74px top;}
