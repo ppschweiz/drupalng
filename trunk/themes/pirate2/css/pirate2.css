@@ -322,8 +322,10 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#fooleft p a:hover {color: #550100;}
 	#fooright li {float: right;}
 	#fooright li a.medico {width: 37px; height: 38px; display: block;background-image: url(../images/fotsocicons.png);}
-	#fooright li a.medico.pnetz { background-position: left top;}
-	#fooright li a.medico.pnetz:hover { background-position: left bottom;}
+	#fooright li a.medico.rss { background-position: left top;}
+	#fooright li a.medico.rss:hover { background-position: left bottom;}
+	#fooright li a.medico.pnetz { background-position: 259px left top;}
+	#fooright li a.medico.pnetz:hover { background-position:259px left bottom;}
 	#fooright li a.medico.flick { background-position: 37px top;}
 	#fooright li a.medico.flick:hover{ background-position: 37px bottom;}
 	#fooright li a.medico.mysp { background-position: 74px top;}
@@ -332,10 +334,12 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#fooright li a.medico.yout:hover { background-position: 111px bottom;}
 	#fooright li a.medico.twit { background-position: 148px top;}
 	#fooright li a.medico.twit:hover { background-position: 148px bottom;}
-	#fooright li a.medico.ident { background-position: 222px top;}
-	#fooright li a.medico.ident:hover { background-position: 222px bottom;}
 	#fooright li a.medico.face { background-position: 185px top;}
 	#fooright li a.medico.face:hover { background-position: 185px bottom;}
+	#fooright li a.medico.ident { background-position: 222px top;}
+	#fooright li a.medico.ident:hover { background-position: 222px bottom;}
+	#fooright li a.medico.rss .tip, #fooright li a.medico.flick .tip, #fooright li a.medico.mysp .tip, #fooright li a.medico.yout .tip, #fooright li a.medico.twit .tip, #fooright li a.medico.ident .tip, #fooright li a.medico.face .tip {display:none;}
+	#fooright li a.medico.rss:hover .tip, #fooright li a.medico.flick:hover .tip, #fooright li a.medico.mysp:hover .tip, #fooright li a.medico.yout:hover .tip, #fooright li a.medico.twit:hover .tip, #fooright li a.medico.ident:hover .tip, #fooright li a.medico.face:hover .tip { display: block; z-index: 100; position: relative; top: 30px; left: -34px; width: 102px; height: 42px; padding:0; text-align: center; color: #FFF; background: url(../images/tooltip.png) no-repeat center center;}
 	#fooright li a.medico.pnetz .tip, #fooright li a.medico.flick .tip, #fooright li a.medico.mysp .tip, #fooright li a.medico.yout .tip, #fooright li a.medico.twit .tip, #fooright li a.medico.ident .tip, #fooright li a.medico.face .tip {display:none;}
 	#fooright li a.medico.pnetz:hover .tip, #fooright li a.medico.flick:hover .tip, #fooright li a.medico.mysp:hover .tip, #fooright li a.medico.yout:hover .tip, #fooright li a.medico.twit:hover .tip, #fooright li a.medico.ident:hover .tip, #fooright li a.medico.face:hover .tip { display: block; z-index: 100; position: relative; top: 30px; left: -34px; width: 102px; height: 42px; padding:0; text-align: center; color: #FFF; background: url(../images/tooltip.png) no-repeat center center;}
 	span.tip b { display: block; padding-top:18px; font-weight: normal; line-height:1.5em;}
