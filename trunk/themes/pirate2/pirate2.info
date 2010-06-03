@@ -54,6 +54,7 @@ regions[actionbutton]   = Actionbutton Region (Frontpage)
 regions[content_left]   = Content Main
 regions[content_center] = Content Center (Frontpage)
 regions[content_right]  = Right Column
+regions[orange]         = Orange Footer (Frontpage)
 regions[footer]         = Footer
 regions[closure_region] = Closure
 
