@@ -133,7 +133,7 @@
 					<?php print $actionbutton ?>
 				<?php } else { ?>                                        
 					<ul id="actionbutton">
-						<li>Place "Pirate Actionbutton Front Block" here<li>
+						<li>Place "Pirate Actionbutton Front Block" here</li>
 					</ul>		
 				<?php } ?>
 			</div>

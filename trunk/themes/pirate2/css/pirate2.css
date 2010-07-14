@@ -77,7 +77,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#actionarea { width: 960px; height: 270px; margin: 0 auto; background: url(../images/promobg.png) repeat-x;}
 	#actionboard {width: 592px; height: 270px; float: left; margin: 0;}
 	#actionbutton {width: 368px; height: 270px; float: left; margin: 0; overflow: hidden;}
-	ul.#actionbutton  { margin: 0; padding: 0; }
+	ul#actionbutton  { margin: 0; padding: 0; }
 	#actionbutton li {margin: 0; background: url(../images/acbutton_tabut.png) no-repeat left top;}
 	#actionbutton li a {width: 368px; height: 90px; display: block; padding: 0; margin: 0;}
 	#actionbutton li a:hover {background: url(../images/buthov.png) repeat;}
