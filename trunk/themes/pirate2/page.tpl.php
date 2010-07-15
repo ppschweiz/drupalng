@@ -147,16 +147,6 @@
 <?php } ?>
 
                         <div id="boardmid">
-                            <script type="text/javascript">
-                                $(function() {
-                                    $("#navklap").click(function(){
-                                        $(".bignavigation").switchClass('bignavigation', 'smallnavigation', 500);
-                                        $(".smallnavigation").switchClass('smallnavigation', 'bignavigation', 500);
-                                        return false;
-                                    });
-                                });
-                            </script>
-
                             <div id="navigation" class="bignavigation wrapper">
                 <?php if ($primary_links) {
                 ?>
