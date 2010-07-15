@@ -2,10 +2,21 @@
 global $language;
 $classes = array('navakt', 'navpos', 'navpar', 'navmed', 'navmit');
 ?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#navklap").click(function(){
+            $(".bignavigation").switchClass('bignavigation', 'smallnavigation', 500);
+            $(".smallnavigation").switchClass('smallnavigation', 'bignavigation', 500);
+            return false;
+        });
+    });
+</script>
+
 <ul class="clearfix">
     <li class="navhome">
         <a class="link" href="/"></a>
-        <a href="#" id="navklap" onclick="navKlap()"></a>
+        <a href="#" id="navklap"></a>
     </li>
     <?php
     $submenu = 0;
