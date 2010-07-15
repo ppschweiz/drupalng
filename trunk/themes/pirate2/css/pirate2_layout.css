@@ -22,7 +22,6 @@ body {
 
 #header #logo {
     background: url(../images/logo/de.png) no-repeat 0px 0px;
-    background-position: 0 0;
     height: 116px;
     width: 456px;
 }
