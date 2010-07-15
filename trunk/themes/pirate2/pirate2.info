@@ -42,7 +42,7 @@ stylesheets[all][]   = messages.css
   ; conditional-stylesheets[if IE][all][] = ie.css
 
 scripts[] = js/navscript.js
-scripts[] = js/jquery-1.4.2.min.js
+;scripts[] = js/jquery-1.4.2.min.js
 scripts[] = js/jquery-ui-1.8.2.min.js
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
