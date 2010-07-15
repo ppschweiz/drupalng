@@ -54,16 +54,6 @@ $classes = array('navakt', 'navpos', 'navpar', 'navmed', 'navmit');
         </ul>
     </li>
 </ul-->
-<script type="text/javascript">
-    $(function() {
-        $("#navklap").click(function(){
-            $(".bignavigation").switchClass('bignavigation', 'smallnavigation', 500);
-            $(".smallnavigation").switchClass('smallnavigation', 'bignavigation', 500);
-            return false;
-        });
-    });
-</script>
-
 <ul class="clearfix">
     <li class="navhome">
         <a class="link" href="/"></a>
