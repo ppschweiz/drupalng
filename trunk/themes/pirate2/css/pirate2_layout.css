@@ -24,6 +24,7 @@ body {
     background: url(../images/logo/de.png) no-repeat 0px 0px;
     height: 116px;
     width: 456px;
+    display: block;
 }
 
 #boardtop {
