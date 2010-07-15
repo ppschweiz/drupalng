@@ -135,14 +135,14 @@
                     </ul-->
                 </div>
             </div>
-
-        <!-- ?php if ($messages) {
+<!--
+        <?php if ($messages) {
         ?>
                         <div class="wrapper error-message">
             <?php print $messages ?>
                     </div>
-        <?php } ? -->
-
+        <?php } ?>
+-->
         <?php if ($tabs) {
  ?>
                         <div class="wrapper">
