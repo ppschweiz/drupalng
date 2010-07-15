@@ -5,6 +5,13 @@
     Description:
         Servicenavigation placed at the top of the page
 */
+.admin-menu {
+    padding-top: 45px;
+}
+
+.admin-menu #servicenav {
+    top: 25px;
+}
 
 #servicenav {
     background-color: rgb(76, 70, 66);
