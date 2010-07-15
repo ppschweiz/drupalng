@@ -102,20 +102,22 @@
             <div  class="wrapper" class="clearfix">
                 <h2 class="hidden">Service navigation</h2>
                 <div id="servicenavleft"><?php print $servicenavleft ?></div>
-                <ul id="servicenavmid">
-                    <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
-                    <?php if ($logged_in) {
-                    ?>
-                        <li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
-                        <li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
-                    <?php } else {
-                    ?>
-                        <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class' => 'login'))); ?></li>
-                        <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
-                    <?php } ?>
+                <div id="servicenavright">
+                    <ul>
+                        <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
+                        <?php if ($logged_in) {
+                        ?>
+                            <li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
+                            <li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
+                        <?php } else {
+                        ?>
+                            <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class' => 'login'))); ?></li>
+                            <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
+                        <?php } ?>
 
-                </ul>
-                <div id="servicenavright"><?php print $servicenavright ?></div>
+                    </ul>
+                    <?php print $servicenavright ?>
+                    </div>
             </div>
         </div>
 

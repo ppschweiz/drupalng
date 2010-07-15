@@ -16,6 +16,10 @@ body {
     padding: 0px;
 }
 
+#header {
+    background: url(../images/bgship.png) no-repeat 204px 11px;
+}
+
 #header #logo {
     background: url(../images/logo/de.png) no-repeat -21px 0px;
     height: 116px;
