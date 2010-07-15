@@ -2,6 +2,8 @@ var BUTTONTEXT = [ "Hide" , "Show" ];
 
 function initPage() // ...wird nach dem Laden der Seite aufgerufen
 {
+    jquery_ui_add(array('ui.effects'));
+
     // "Shortcuts" für die benutzten HTML-Elemente
     oMyDiv = document.getElementById( "subnavklapp" );
     oMyButton = document.getElementById( "navklapbut" );
