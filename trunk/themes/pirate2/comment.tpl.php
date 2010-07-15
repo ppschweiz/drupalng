@@ -47,9 +47,9 @@
         <h1><?= $title ?></h1>
         <?= $content ?>
         <div class="cofoleft">
-           <span class="date"><?= $date ?></span>
+           <span class="date"><?= $date ?><?= $links ?></span>
         </div>
-
+		
     </li>
     <li class="clear"/>
 </ul>
