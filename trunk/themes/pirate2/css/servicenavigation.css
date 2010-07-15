@@ -6,11 +6,11 @@
         Servicenavigation placed at the top of the page
 */
 .admin-menu {
-    padding-top: 45px;
+    padding-top: 30px;
 }
 
 .admin-menu #servicenav {
-    top: 25px;
+    top: 30px;
 }
 
 #servicenav {
