@@ -82,107 +82,114 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 
-<head>
-  <title><?php print $head_title; ?></title>
-  <?php print $head; ?>
-  <?php print $styles; ?>
-  <?php print $scripts; ?>
-</head>
-<body class="<?php print $body_classes; ?>" onload="initPage();">
-	<div id="decortop">
-        	<div id="topwrapper">
-			<table><tr><td id="servicenavleft">
-				<?php print $servicenavleft ?>
-	                </td>
-			<td id="servicenavright">
-				<?php print $servicenavright ?>
-	       	        </td>
-                       <td id="servicenavfix">
-                                <ul>
-                                        <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
-                                        <?php if ($logged_in) { ?>
-                                                <li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
-                                                <li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
-                                        <?php } else { ?>
-                                                <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class'=>'login'))); ?></li>
-                                                <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
-                                        <?php } ?>
-                                </ul>
-                        </td></tr></table>
-            	</div>
-        </div>
-	<div id="decormid">
-		<div id="header">
-       			<div id="pplogo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="/<?php print path_to_theme(TRUE)."/images/logo/".$language->language.".png"; ?>" alt="<?php print t('Home'); ?>" id="logo-image" /></a></div>
-			<?php print $search_box; ?>
-		</div>
-	        <?php if ($messages) { ?>
-			<div class="error-message">
-			        <?php print $messages ?>
-			</div>
-	       	<?php } ?>
-	        <?php if ($tabs) { ?>
-			<div style="width:960px; margin: auto;">
-		        	<?php print $tabs ?>
-			</div>
-	        <?php } else { ?>
-			<div id="boardtop"></div>
-	       	<?php } ?>
-		<div id="boardmid">
-			<div id="admincontent">
-			        <?php print $content ?>
-			        <br class="clear" />
-			</div>
-		</div>
-		<div id="boardfot"></div>
-	</div>
-	<div id="decorfot">
-		<div class="wrapper">
-			<div id="fooleft">
-				<a class="imgcc" href="http://creativecommons.org"></a>
-				<?php switch($language->language) { 
-				case "de": ?>			
-					<p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p>
-				<?php break; case "fr": ?>			
-					<p><b>Design: </b><a href="http://www.partipirate.ch">Parti Pirate Suisse</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.fr">CC-BY 2.5 Suisse</a></p>
-				<?php break; case "it": ?>			
-					<p><b>Design: </b><a href="http://www.partitopirata.ch">Partito Pirata Svizzera</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.it">CC-BY 2.5 Svizzera</a></p>
-				<?php break; default: ?>			
-					<p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en">CC-BY 2.5 Switerland</a></p>				
-				<?php } ?>
+    <head>
+        <title><?php print $head_title; ?></title>
+        <?php print $head; ?>
+        <?php print $styles; ?>
+        <?php print $scripts; ?>
+    </head>
+    <body class="<?php print $body_classes; ?>" onload="initPage();">
+        <div id="header" class="wrapper">
+            <div id="logo">
+                <h1 class="hidden"><a href="">Pirateparty Switzerland</a></h1>
+            </div>
 
-			</div>
-			<div id="foocenter">
-				<?php print $footer; ?>
-			</div>			
-			<ul id="fooright">
-				<?php if(theme_get_setting('politnetz_available_'.$language->language)) { ?>
-					<li><a class="medico pnetz" href="<?php print theme_get_setting('politnetz_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('politnetz_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-				<?php if(theme_get_setting('identica_available_'.$language->language)) { ?>
-					<li><a class="medico flick" href="<?php print theme_get_setting('identica_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('identica_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-				<?php if(theme_get_setting('facebook_available_'.$language->language)) { ?>
-					<li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('facebook_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-				<?php if(theme_get_setting('twitter_available_'.$language->language)) { ?>
-					<li><a class="medico yout" href="<?php print theme_get_setting('twitter_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('twitter_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-				<?php if(theme_get_setting('youtube_available_'.$language->language)) { ?>
-					<li><a class="medico twit" href="<?php print theme_get_setting('youtube_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('youtube_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-				<?php if(theme_get_setting('myspace_available_'.$language->language)) { ?>
-					<li><a class="medico face" href="<?php print theme_get_setting('myspace_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('myspace_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-				<?php if(theme_get_setting('flickr_available_'.$language->language)) { ?>
-					<li><a class="medico ident" href="<?php print theme_get_setting('flickr_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('flickr_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-				<?php if(theme_get_setting('rss_available_'.$language->language)) { ?>
-					<li><a class="medico rss" href="<?php print theme_get_setting('rss_link_'.$language->language); ?>"><span class="tip"><b><?php print theme_get_setting('rss_hover_'.$language->language); ?></b></span></a></li>
-				<?php } ?>				
-			</ul>
-		</div>
-	</div>
-	<?php print $closure; ?>
-</body>
+            <!--?php print $search_box; ?-->
+
+        </div>
+
+        <div id="servicenav">
+            <div  class="wrapper" class="clearfix">
+                <h2 class="hidden">Service navigation</h2>
+                <div id="servicenavleft"><?php print $servicenavleft ?></div>
+                <ul id="servicenavmid">
+                    <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
+                    <?php if ($logged_in) {
+                    ?>
+                        <li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
+                        <li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
+                    <?php } else {
+                    ?>
+                        <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class' => 'login'))); ?></li>
+                        <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
+                    <?php } ?>
+
+                </ul>
+                <div id="servicenavright"><?php print $servicenavright ?></div>
+            </div>
+        </div>
+
+        <?php if ($messages) {
+ ?>
+                        <div class="error-message">
+<?php print $messages ?>
+                    </div>
+        <?php } ?>
+<?php if ($tabs) { ?>
+                        <div style="width:960px; margin: auto;">
+<?php print $tabs ?>
+                    </div>
+<?php } else { ?>
+                        <div id="boardtop"></div>
+<?php } ?>
+                    <div id="boardmid">
+                        <div id="admincontent">
+<?php print $content ?>
+                    <br class="clear" />
+                </div>
+            </div>
+            <div id="boardfot"></div>
+            </div>
+            <div id="decorfot">
+                <div class="wrapper">
+                    <div id="fooleft">
+                        <a class="imgcc" href="http://creativecommons.org"></a>
+                    <?php switch ($language->language) {
+                        case "de": ?>
+                            <p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p>
+<?php break;
+                        case "fr": ?>
+                            <p><b>Design: </b><a href="http://www.partipirate.ch">Parti Pirate Suisse</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.fr">CC-BY 2.5 Suisse</a></p>
+                    <?php break;
+                        case "it": ?>
+                            <p><b>Design: </b><a href="http://www.partitopirata.ch">Partito Pirata Svizzera</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.it">CC-BY 2.5 Svizzera</a></p>
+<?php break;
+                        default: ?>
+                            <p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en">CC-BY 2.5 Switerland</a></p>
+                    <?php } ?>
+
+                    </div>
+                    <div id="foocenter">
+<?php print $footer; ?>
+                    </div>
+                    <ul id="fooright">
+<?php if (theme_get_setting('politnetz_available_' . $language->language)) { ?>
+                            <li><a class="medico pnetz" href="<?php print theme_get_setting('politnetz_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('politnetz_hover_' . $language->language); ?></b></span></a></li>
+                    <?php } ?>
+<?php if (theme_get_setting('identica_available_' . $language->language)) { ?>
+                            <li><a class="medico flick" href="<?php print theme_get_setting('identica_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('identica_hover_' . $language->language); ?></b></span></a></li>
+                    <?php } ?>
+<?php if (theme_get_setting('facebook_available_' . $language->language)) { ?>
+                            <li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('facebook_hover_' . $language->language); ?></b></span></a></li>
+                    <?php } ?>
+<?php if (theme_get_setting('twitter_available_' . $language->language)) { ?>
+                            <li><a class="medico yout" href="<?php print theme_get_setting('twitter_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('twitter_hover_' . $language->language); ?></b></span></a></li>
+                    <?php } ?>
+<?php if (theme_get_setting('youtube_available_' . $language->language)) { ?>
+                            <li><a class="medico twit" href="<?php print theme_get_setting('youtube_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('youtube_hover_' . $language->language); ?></b></span></a></li>
+                    <?php } ?>
+<?php if (theme_get_setting('myspace_available_' . $language->language)) { ?>
+                            <li><a class="medico face" href="<?php print theme_get_setting('myspace_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('myspace_hover_' . $language->language); ?></b></span></a></li>
+                    <?php } ?>
+<?php if (theme_get_setting('flickr_available_' . $language->language)) { ?>
+                            <li><a class="medico ident" href="<?php print theme_get_setting('flickr_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('flickr_hover_' . $language->language); ?></b></span></a></li>
+<?php } ?>				
+<?php if (theme_get_setting('rss_available_' . $language->language)) { ?>
+                            <li><a class="medico rss" href="<?php print theme_get_setting('rss_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('rss_hover_' . $language->language); ?></b></span></a></li>
+        <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+<?php print $closure; ?>
+    </body>
 </html>
