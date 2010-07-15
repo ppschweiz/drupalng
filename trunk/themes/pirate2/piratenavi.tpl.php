@@ -5,7 +5,7 @@ $classes = array('navakt', 'navpos', 'navpar', 'navmed', 'navmit');
 <ul class="clearfix">
     <li class="navhome">
         <a class="link" href="/"></a>
-        <a href="#" id="navklap"></a>
+        <a href="#" id="navklap" onclick="navKlap()"></a>
     </li>
     <?php
     $submenu = 0;
