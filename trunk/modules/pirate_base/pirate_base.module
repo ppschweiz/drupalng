@@ -15,3 +15,14 @@ function pirate_base_menu() {
 
   return $items;
 }
+
+function pirate_base_init() {
+    // The order these last two are loaded is important.
+    if (module_exists('jquery_ui'))
+    {
+      jquery_ui_add('ui.core');
+      jquery_ui_add('ui.effects');
+    }
+  }
+}
+
