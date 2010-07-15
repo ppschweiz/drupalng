@@ -41,7 +41,7 @@ stylesheets[all][]   = block-editing.css
   ; Set the conditional stylesheets that are processed by IE.
   ; conditional-stylesheets[if IE][all][] = ie.css
 
-scripts[] = js/jquery-ui-1.8.2.min.js
+;scripts[] = js/jquery-ui-1.8.2.min.js
 scripts[] = js/navscript.js
 ;scripts[] = js/jquery-1.4.2.min.js
 
