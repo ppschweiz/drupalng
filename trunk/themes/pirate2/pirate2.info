@@ -3,7 +3,7 @@ name        = Pirate Party Theme
 description = multi-column theme with a orange and yellowish color scheme. Complete rewrite as a clean Zen Subtheme.
 screenshot = screenshot.png
 core       = 6.x
-base theme = zen
+base theme = 
 version    = 2.0
 
   ; This section adds CSS files to your theme. The media type is specified in
