@@ -174,55 +174,6 @@
                 ?>
                 <?php print theme('piratenavi', menu_tree_page_data(variable_get('menu_primary_links_source', 'primary-links'))); ?>
 <?php } ?>
-                    <!--ul class="clearfix">
-                        <li class="navhome">
-                            <a href="/"></a>
-                            <a href="#" id="navklap"></a>
-                        </li>
-                        <li class="navakt">
-                            <a href="#" class="active">Aktuell</a>
-                            <ul>
-                                <li><a href="#">Communiques</a></li>
-                                <li><a href="#">Politblog</a></li>
-                                <li><a href="#">Piratenevents</a></li>
-                            </ul>
-                        </li>
-                        <li class="navpos">
-                            <a href="#">Position</a>
-                            <ul>
-                                <li><a href="#">Parteiprogramm</a></li>
-                                <li><a href="#">Wahlen</a></li>
-                            </ul>
-                        </li>
-                        <li class="navpar">
-                            <a href="#">Partei</a>
-                            <ul>
-                                <li><a href="#">Spenden</a></li>
-                                <li><a href="#">Statuten</a></li>
-                                <li><a href="#">Vorstand</a></li>
-                                <li><a href="#">Dokumente</a></li>
-                            </ul>
-                        </li>
-                        <li class="navmed">
-                            <a href="#">Medien</a>
-                            <ul>
-                                <li><a href="#">Pressedienst</a></li>
-                                <li><a href="#">Bilder</a></li>
-                                <li><a href="#">Logos</a></li>
-                                <li><a href="#">Pressespiegel</a></li>
-                            </ul>
-                        </li>
-                        <li class="navmit">
-                            <a href="#">Mitmachen</a>
-                            <ul>
-                                <li><a href="#">Werde Mitglied</a></li>
-                                <li><a href="#">Forum</a></li>
-                                <li><a href="#">Wiki</a></li>
-                                <li><a href="#">Chat</a></li>
-                                <li><a href="#">Gruppen</a></li>
-                            </ul>
-                        </li>
-                    </ul-->
                 </div>
 
                 <div class="body" id="content">
