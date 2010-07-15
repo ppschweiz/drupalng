@@ -48,10 +48,6 @@ body.admin-menu {
     list-style-position: outside;
     list-style-type: none;
 }
-#servicenav a {
-    color: rgb(204, 204, 204);
-    text-decoration: none;
-}
 #servicenav .language li {
     float: right;
 }
@@ -66,6 +62,9 @@ body.admin-menu {
 #servicenav li a {
     color: #cccccc;
     padding-bottom: 7px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 10px;
 }
 
 #servicenav li a:hover {
