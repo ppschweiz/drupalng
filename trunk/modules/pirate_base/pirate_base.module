@@ -21,7 +21,7 @@ function pirate_base_init() {
     if (module_exists('jquery_ui'))
     {
       jquery_ui_add('ui.core');
-      jquery_ui_add('ui.effects');
+      jquery_ui_add('effects.core');
     }
 }
 
