@@ -91,7 +91,7 @@
         <?php print $styles; ?>
         <?php print $scripts; ?>
     </head>
-    <body class="<?php print $body_classes; ?>">
+    <body class="<?php print $body_classes; ?>" onload="initPage();">
 
         <div id="header" class="wrapper">
             <div id="logo">
