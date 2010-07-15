@@ -94,7 +94,7 @@
     <body class="<?php print $body_classes; ?>" onload="initPage();">
 
         <div id="header" class="wrapper">
-                <a href=""><h1 id="logo" class="hidden">Pirateparty Switzerland</h1></a>
+                <a href="" id="logo"><h1 class="hidden">Pirateparty Switzerland</h1></a>
 
             <!--?php print $search_box; ?-->
 
