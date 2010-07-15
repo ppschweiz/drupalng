@@ -106,144 +106,147 @@
             <div  class="wrapper" class="clearfix">
                 <h2 class="hidden">Service navigation</h2>
                 <div id="servicenavleft"><?php print $servicenavleft ?></div>
-                <ul id="servicenavmid">
-                    <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
-                    <?php if ($logged_in) {
-                    ?>
-                        <li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
-                        <li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
-                    <?php } else {
-                    ?>
-                        <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class' => 'login'))); ?></li>
-                        <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
-                    <?php } ?>
+                <div id="servicenavright">
+                    <ul>
+                        <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
+                        <?php if ($logged_in) {
+                        ?>
+                            <li title="<?php print t("Logout"); ?>"><?php print l(t('Logout'), 'logout', array('attributes' => array('class' => 'logout'))); ?></li>
+                            <li title="<?php print t("User Page"); ?>"><?php print l(t('My Account'), 'user'); ?></li>
+                        <?php } else {
+                        ?>
+                            <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class' => 'login'))); ?></li>
+                            <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
+                        <?php } ?>
 
-                </ul>
-                <div id="servicenavright"><?php print $servicenavright ?></div>
+                    </ul>
+                    <?php print $servicenavright ?>
+                    </div>
                 </div>
             </div>
-<!--
+            <!--
         <?php if ($messages) {
         ?>
-                        <div class="wrapper error-message">
-            <?php print $messages ?>
-                    </div>
+                                                    <div class="wrapper error-message">
+        <?php print $messages ?>
+                                                </div>
         <?php } ?>
--->
+                        -->
         <?php if ($tabs) {
+        ?>
+                            <div class="wrapper">
+                                <!--?php print $tabs ?-->
+                                <ul class="tabs primary clear-block">
+                                    <li><a href="#"><span class="tab">Create new account</span></a></li>
+                                    <li class="active"><a href="#" class="active"><span class="tab">Log in</span></a></li>
+                                    <li><a href="#"><span class="tab">Request new password</span></a></li>
+                                    <li><a href="#"><span class="tab">Validate e-mail</span></a></li>
+                                </ul>
+                            </div>
+        <?php } else {
  ?>
-                        <div class="wrapper">
-                            <!--?php print $tabs ?-->
-                            <ul class="tabs primary clear-block">
-                                <li><a href="#"><span class="tab">Create new account</span></a></li>
-                                <li class="active"><a href="#" class="active"><span class="tab">Log in</span></a></li>
-                                <li><a href="#"><span class="tab">Request new password</span></a></li>
-                                <li><a href="#"><span class="tab">Validate e-mail</span></a></li>
-                            </ul>
-                        </div>
-<?php } else { ?>
-                        <div id="boardtop"></div>
+                            <div id="boardtop"></div>
 <?php } ?>
 
-                    <div id="boardmid">
-                        <script type="text/javascript">
-                            $(function() {
-                                $("#navklap").click(function(){
-                                    $(".bignavigation").switchClass('bignavigation', 'smallnavigation', 500);
-                                    $(".smallnavigation").switchClass('smallnavigation', 'bignavigation', 500);
-                                    return false;
+                        <div id="boardmid">
+                            <script type="text/javascript">
+                                $(function() {
+                                    $("#navklap").click(function(){
+                                        $(".bignavigation").switchClass('bignavigation', 'smallnavigation', 500);
+                                        $(".smallnavigation").switchClass('smallnavigation', 'bignavigation', 500);
+                                        return false;
+                                    });
                                 });
-                            });
-                        </script>
+                            </script>
 
-                        <div id="navigation" class="bignavigation wrapper">
+                            <div id="navigation" class="bignavigation wrapper">
                 <?php if ($primary_links) {
                 ?>
                 <?php print theme('piratenavi', menu_tree_page_data(variable_get('menu_primary_links_source', 'primary-links'))); ?>
 <?php } ?>
-                </div>
+                    </div>
 
-                <div class="body" id="content">
+                    <div class="body" id="content">
 <?php print $breadcrumb ?>
-                    <div class="contsitekopf"><div class="kopf"><h1><?php print t('Subnavigation'); ?></h1></div></div>
-                    <div class="contbody">
+                        <div class="contsitekopf"><div class="kopf"><h1><?php print t('Subnavigation'); ?></h1></div></div>
+                        <div class="contbody">
                     <?php if ($content) {
                     ?>
                     <?php print $content; ?>
 <?php } ?>
-                </div>
-                <div id="contsite">
+                    </div>
+                    <div id="contsite">
                     <?php print theme('piratesubnavi', menu_tree_page_data('navigation')); ?>
 <?php print $content_right ?>
+                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
+
+
             </div>
+            <div id="boardfot"></div>
 
-
-        </div>
-        <div id="boardfot"></div>
-
-        <div id="decorfot">
-            <div class="wrapper">
-                <div id="fooleft">
-                    <a class="imgcc" href="#"></a>
-                    <!--p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p-->
+            <div id="decorfot">
+                <div class="wrapper">
+                    <div id="fooleft">
+                        <a class="imgcc" href="#"></a>
+                        <!--p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p-->
                     <?php switch ($language->language) {
-                        case "de": ?>
-                            <p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p>
+                            case "de": ?>
+                                <p><b>Design: </b><a href="http://www.piratenpartei.ch">Piratenpartei Schweiz</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.de">CC-BY 2.5 Schweiz</a></p>
                     <?php break;
-                        case "fr": ?>
-                            <p><b>Design: </b><a href="http://www.partipirate.ch">Parti Pirate Suisse</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.fr">CC-BY 2.5 Suisse</a></p>
+                            case "fr": ?>
+                                <p><b>Design: </b><a href="http://www.partipirate.ch">Parti Pirate Suisse</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.fr">CC-BY 2.5 Suisse</a></p>
                     <?php break;
-                        case "it": ?>
-                            <p><b>Design: </b><a href="http://www.partitopirata.ch">Partito Pirata Svizzera</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.it">CC-BY 2.5 Svizzera</a></p>
+                            case "it": ?>
+                                <p><b>Design: </b><a href="http://www.partitopirata.ch">Partito Pirata Svizzera</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.it">CC-BY 2.5 Svizzera</a></p>
                     <?php break;
-                        default: ?>
-                            <p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en">CC-BY 2.5 Switerland</a></p>
+                            default: ?>
+                                <p><b>Design: </b><a href="http://www.pirateparty.ch">Pirate Party Switzerland</a> <br /><a class="impressum" href="http://creativecommons.org/licenses/by/2.5/ch/deed.en">CC-BY 2.5 Switerland</a></p>
 <?php } ?>
 
-                    </div>
-                    <!--div id="foocenter"><?php print $footer; ?></div-->
-                    <ul id="fooright">
-                        <!--li><a class="medico pnetz" href="#"><span class="tip"><b>politnetz</b></span></a></li>
-                        <li><a class="medico flick" href="#"><span class="tip"><b>identica</b></span></a></li>
-                        <li><a class="medico mysp" href="#"><span class="tip"><b>facebook</b></span></a></li>
-                        <li><a class="medico yout" href="#"><span class="tip"><b>twitter</b></span></a></li>
-                        <li><a class="medico twit" href="#"><span class="tip"><b>youtube</b></span></a></li>
-                        <li><a class="medico face" href="#"><span class="tip"><b>myspace</b></span></a></li>
-                        <li><a class="medico ident" href="#"><span class="tip"><b>flickr</b></span></a></li>
-                        <li><a class="medico rss" href="#"><span class="tip"><b>rss</b></span></a></li-->
-                    <?php if (theme_get_setting('politnetz_available_' . $language->language)) { ?>
-                            <li><a class="medico pnetz" href="<?php print theme_get_setting('politnetz_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('politnetz_hover_' . $language->language); ?></b></span></a></li>
+                        </div>
+                        <!--div id="foocenter"><?php print $footer; ?></div-->
+                        <ul id="fooright">
+                            <!--li><a class="medico pnetz" href="#"><span class="tip"><b>politnetz</b></span></a></li>
+                            <li><a class="medico flick" href="#"><span class="tip"><b>identica</b></span></a></li>
+                            <li><a class="medico mysp" href="#"><span class="tip"><b>facebook</b></span></a></li>
+                            <li><a class="medico yout" href="#"><span class="tip"><b>twitter</b></span></a></li>
+                            <li><a class="medico twit" href="#"><span class="tip"><b>youtube</b></span></a></li>
+                            <li><a class="medico face" href="#"><span class="tip"><b>myspace</b></span></a></li>
+                            <li><a class="medico ident" href="#"><span class="tip"><b>flickr</b></span></a></li>
+                            <li><a class="medico rss" href="#"><span class="tip"><b>rss</b></span></a></li-->
+<?php if (theme_get_setting('politnetz_available_' . $language->language)) { ?>
+                                <li><a class="medico pnetz" href="<?php print theme_get_setting('politnetz_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('politnetz_hover_' . $language->language); ?></b></span></a></li>
                     <?php } ?>
-                    <?php if (theme_get_setting('identica_available_' . $language->language)) {
-                    ?>
-                            <li><a class="medico flick" href="<?php print theme_get_setting('identica_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('identica_hover_' . $language->language); ?></b></span></a></li>
+                    <?php if (theme_get_setting('identica_available_' . $language->language)) { ?>
+                                <li><a class="medico flick" href="<?php print theme_get_setting('identica_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('identica_hover_' . $language->language); ?></b></span></a></li>
                     <?php } ?>
                     <?php if (theme_get_setting('facebook_available_' . $language->language)) {
                     ?>
-                            <li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('facebook_hover_' . $language->language); ?></b></span></a></li>
+                                <li><a class="medico mysp" href="<?php print theme_get_setting('facebook_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('facebook_hover_' . $language->language); ?></b></span></a></li>
                     <?php } ?>
                     <?php if (theme_get_setting('twitter_available_' . $language->language)) {
                     ?>
-                            <li><a class="medico yout" href="<?php print theme_get_setting('twitter_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('twitter_hover_' . $language->language); ?></b></span></a></li>
+                                <li><a class="medico yout" href="<?php print theme_get_setting('twitter_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('twitter_hover_' . $language->language); ?></b></span></a></li>
                     <?php } ?>
                     <?php if (theme_get_setting('youtube_available_' . $language->language)) {
- ?>
-                            <li><a class="medico twit" href="<?php print theme_get_setting('youtube_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('youtube_hover_' . $language->language); ?></b></span></a></li>
+                    ?>
+                                <li><a class="medico twit" href="<?php print theme_get_setting('youtube_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('youtube_hover_' . $language->language); ?></b></span></a></li>
                     <?php } ?>
-<?php if (theme_get_setting('myspace_available_' . $language->language)) { ?>
-                            <li><a class="medico face" href="<?php print theme_get_setting('myspace_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('myspace_hover_' . $language->language); ?></b></span></a></li>
+                    <?php if (theme_get_setting('myspace_available_' . $language->language)) {
+ ?>
+                                <li><a class="medico face" href="<?php print theme_get_setting('myspace_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('myspace_hover_' . $language->language); ?></b></span></a></li>
                     <?php } ?>
 <?php if (theme_get_setting('flickr_available_' . $language->language)) { ?>
-                            <li><a class="medico ident" href="<?php print theme_get_setting('flickr_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('flickr_hover_' . $language->language); ?></b></span></a></li>
+                                <li><a class="medico ident" href="<?php print theme_get_setting('flickr_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('flickr_hover_' . $language->language); ?></b></span></a></li>
                     <?php } ?>
 <?php if (theme_get_setting('rss_available_' . $language->language)) { ?>
-                            <li><a class="medico rss" href="<?php print theme_get_setting('rss_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('rss_hover_' . $language->language); ?></b></span></a></li>
+                                <li><a class="medico rss" href="<?php print theme_get_setting('rss_link_' . $language->language); ?>"><span class="tip"><b><?php print theme_get_setting('rss_hover_' . $language->language); ?></b></span></a></li>
 <?php } ?>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 <?php print $closure; ?>
     </body>
 </html>
