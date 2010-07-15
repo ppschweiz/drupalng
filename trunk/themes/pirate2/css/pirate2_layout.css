@@ -178,8 +178,7 @@ span.tip b {
 /* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
 
 .clearfix:after,
-.wrapper:after,
-.admin-menu:after {
+.wrapper:after {
     clear: both;
     content: ' ';
     display: block;
@@ -191,20 +190,17 @@ span.tip b {
 }
 
 .clearfix,
-.wrapper,
-.admin-menu {
+.wrapper {
     display: inline-block;
 }
 
 * html .clearfix,
-* html .wrapper,
-* html .admin-menu {
+* html .wrapper {
     height: 1%;
 }
 
 .clearfix,
-.wrapper,
-.admin-menu {
+.wrapper {
     display: block;
 }
 
