@@ -17,12 +17,12 @@ body {
 }
 
 #header {
-    background: url(../images/bgship.png) no-repeat 204px 11px;
-    background-position: 304px 11px;
+    background: url(../images/bgship.png) no-repeat 569px 11px;
 }
 
 #header #logo {
-    background: url(../images/logo/de.png) no-repeat -21px 0px;
+    background: url(../images/logo/de.png) no-repeat 0px 0px;
+    background-position: 0 0;
     height: 116px;
     width: 456px;
 }
