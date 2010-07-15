@@ -23,6 +23,5 @@ function pirate_base_init() {
       jquery_ui_add('ui.core');
       jquery_ui_add('ui.effects');
     }
-  }
 }
 
