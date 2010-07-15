@@ -22,12 +22,6 @@ stylesheets[all][]   = css/block-editing.css
 stylesheets[all][]   = css/pirate2.css
 stylesheets[all][]   = css/additional.css
 stylesheets[all][]   = css/coda-slider-2.0.css
-
-;stylesheets[all][]   = css/pirate2_base.css
-;stylesheets[all][]   = css/pirate2_layout.css
-;stylesheets[all][]   = css/pirate2_navigation.css
-stylesheets[all][]   = css/servicenavigation.css
-
 stylesheets[print][] = css/print.css
 ; stylesheets[all][] = wireframes.css
 
@@ -36,14 +30,12 @@ stylesheets[all][]   = zen.css
 stylesheets[all][]   = html-elements.css
 stylesheets[all][]   = tabs.css
 stylesheets[all][]   = messages.css
-stylesheets[all][]   = block-editing.css
+;stylesheets[all][]   = block-editing.css
 
   ; Set the conditional stylesheets that are processed by IE.
   ; conditional-stylesheets[if IE][all][] = ie.css
 
-;scripts[] = js/jquery-ui-1.8.2.min.js
 scripts[] = js/navscript.js
-;scripts[] = js/jquery-1.4.2.min.js
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.

@@ -1,57 +1,69 @@
-<?php
-global $language;
-$classes = array('navakt', 'navpos', 'navpar', 'navmed', 'navmit');
-?>
+					<?php global $language; 
+						//$language->language; 
+						//$val['link']['options']['langcode'];
+						$classes = array('navakt','navpos','navpar','navmed', 'navmit');
+					?>
+					<ul id="hnavkont">
+						<li class="navhome"><a class="link" href="/"></a><a class="up" id="navklapbut" onclick="navDoIt($(this))"></a></li>
+						<?php
+							$submenu = 0;
+							while($submenu < 5) 
+							{
+								list($key, $val) = each($menu);
+								if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language) || !isset($key))
+								{
+									print "<li class=\"".$classes[$submenu]."\">";
+									if ($val) 
+									{ 
+										print l("<span class=\"link\">".$val['link']['title']."</span>", $val['link']['href'], array('html' => TRUE)); 
+									} 									
+									print "</li>";
+									$submenu++;
+								}
+							}
+						?>
+					</ul>
+					<ul id="subnavklapp">
+						<li class="navhome"></li>					
+						<?php 
+							reset($menu); 											
+							$submenu = 0;
+							while($submenu < 5) 
+							{
+								list($key, $val) = each($menu);
+								if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language) || !isset($key))
+								{									
+									print "<li class=\"".$classes[$submenu]."\">";
+									subnavigation($val['below']);
+									print "</li>";
+									$submenu++;
+								}
+							}
+						?>
+					</ul>
+					<div class="clear"></div>
 
-<script type="text/javascript">
-    $(function() {
-        $("#navklap").click(function(){
-            $(".bignavigation").switchClass('bignavigation', 'smallnavigation', 500);
-            $(".smallnavigation").switchClass('smallnavigation', 'bignavigation', 500);
-            return false;
-        });
-    });
-</script>
 
-<ul class="clearfix">
-    <li class="navhome">
-        <a class="link" href="/"></a>
-        <a href="#" id="navklap"></a>
-    </li>
-    <?php
-    $submenu = 0;
-    while ($submenu < 5) {
-        list($key, $val) = each($menu);
-        if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language) || !isset($key)) {
-            print "<li class=\"" . $classes[$submenu] . "\">";
-            if ($val) {
-                print l( $val['link']['title'] , $val['link']['href'], array('html' => TRUE));
-            }
-            subnavigation($val['below']);
-            print "</li>";
-            $submenu++;
-        }
-    }
-    ?>
-</ul>
+<?php 
+	function subnavigation($submenu)
+	{
+		global $language;
+		if (!is_array($submenu))
+		{
+			print "<ul class=\"subnav\"><li></li></ul>";
+			return;
+		}
 
-
-<?php
-
-    function subnavigation($submenu) {
-        global $language;
-        if (!is_array($submenu)) {
-            return;
-        }
-
-        print "<ul>";
-        foreach ($submenu as $item) {
-            if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language)) {
-                print "<li>";
-                print l($item['link']['title'], $item['link']['href']);
-                print "</li>";
-            }
-        }
-        print "</ul>";
-    }
-?>
+		print "<ul class=\"subnav\">";
+		foreach($submenu as $item) 
+		{
+			if ((!isset($val['link']['options']['langcode']) || $val['link']['options']['langcode'] == $language->language))
+			{
+				print "<li>";
+				print l($item['link']['title'], $item['link']['href']);
+				print "</li>";
+			}
+		}
+		print "</ul>";
+	}
+ ?>

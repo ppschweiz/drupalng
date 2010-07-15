@@ -49,7 +49,7 @@
         <div class="cofoleft">
            <span class="date"><?= $date ?><?= $links ?></span>
         </div>
-		
+
     </li>
     <li class="clear"/>
 </ul>
