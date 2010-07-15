@@ -18,6 +18,7 @@ body {
 
 #header {
     background: url(../images/bgship.png) no-repeat 204px 11px;
+    background-position: 304px 11px;
 }
 
 #header #logo {
