@@ -8,3 +8,5 @@ version = 1.x-dev
 dependencies[] = views
 dependencies[] = menu
 dependencies[] = locale
+dependencies[] = jquery_ui
+
