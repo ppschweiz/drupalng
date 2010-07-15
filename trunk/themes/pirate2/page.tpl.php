@@ -105,13 +105,7 @@
         <div id="servicenav">
             <div  class="wrapper" class="clearfix">
                 <h2 class="hidden">Service navigation</h2>
-                <?php print $servicenavleft ?>
-                <!--ul id="servicenavleft" class="menu">
-                    <li class="leaf first Chat" id=" menu-item-custom-id-5"><a href="#" title="">Chat</a></li>
-                    <li class="leaf Forum" id=" menu-item-custom-id-6"><a href="#" title="Forum">Forum</a></li>
-                    <li class="leaf Wiki" id=" menu-item-custom-id-7"><a href="#" title="Piratenwiki">Wiki</a></li>
-                    <li class="leaf last www" id="menu-item-custom-id-8"><a href="#" title="">www</a></li>
-                </ul-->
+                <div id="servicenavleft"><?php print $servicenavleft ?></div>
                 <ul id="servicenavmid">
                     <li><a href="/contact" class="kontakt"><?php print t("Contact"); ?></a></li>
                     <?php if ($logged_in) {
@@ -123,16 +117,9 @@
                         <li title="<?php print t("Login"); ?>"><?php print l(t('Login'), 'user', array('attributes' => array('class' => 'login'))); ?></li>
                         <li title="<?php print t("Register User"); ?>"><?php print l(t('Register'), 'user/register'); ?></li>
                     <?php } ?>
-                    <!--li title="Contact"><a href="#" class="kontakt">Kontakt</a></li>
-                    <li title="Logout"><a href="#" class="logout">Logout</a></li>
-                    <li title="User Page"><a href="#">My Account</a></li-->
+
                 </ul>
-                <?php print $servicenavright ?>
-                    <!--ul id="servicenavright">
-                        <li class="en first"><a href="http://www.pirateparty.ch/user/38" class="language-link">EN</a></li>
-                        <li class="fr"><a href="http://www.partipirate.ch/user/38" class="language-link">FR</a></li>
-                        <li class="de last active"><a href="http://www.piratenpartei.ch/user/38" class="language-link active">DE</a></li>
-                    </ul-->
+                <div id="servicenavright"><?php print $servicenavright ?></div>
                 </div>
             </div>
 <!--
