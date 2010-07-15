@@ -136,29 +136,3 @@
     color: #722d18;
     background: url(../images/hnav-subpfeile.png) no-repeat 0 -17px;
 }
-
-/*
-	#navigation li.navhome a.link { width: 39px; height: 40px; background: url(../images/hnavico_home.png) no-repeat 8px 14px;}
-	#navigation li.navhome a.link:hover { width: 39px; height: 40px; background: url(../images/hnavico_home_h.png) no-repeat 8px 14px;}
-	#navigation li a .link { width: 120px; height: 19px; display: block; position: relative; top: 18px; left: 60px; text-align: left; font-size: 1.4em; text-transform: uppercase; letter-spacing: 2px; color: #fff;}
-	#navigation li a:hover .link { color: #863303; }
-	#navigation ul#hnavkont li.clear, #navigation ul#subnavklapp li.clear { width: 960px; height: 1px; clear: both;}
-
-	#navigation ul#subnavklapp { position: relative; width: 960px;}
-	#navigation ul#subnavklapp li {background: none;}
-	#navigation ul#subnavklapp ul {padding-bottom: 6px; list-style-type: none; }
-
-	#navigation ul.subnav { width: 124px; height: auto; position: relative; left: 60px; top:2px ;background: none; border: none;}
-	#navigation ul.subnav li { width: auto; height: auto; text-align: left; float: none;}
-	#navigation ul.subnav li.extern { background: url(../images/hnav-subpfeile.png) no-repeat 106px -38px;}
-	#navigation ul.subnav li a { width: 115px; height: 18px; display:block; font-size: 1.2em;color: #fff; padding-left: 7px; background: url(../images/hnav-subpfeile.png) no-repeat left 4px;}
-	#navigation ul.subnav li a:hover { color: #722d18; background: url(../images/hnav-subpfeile.png) no-repeat left -17px;}
-
-	#navigation .clear { width: 960px; height: 0px;}
-
-	#navigation a#navklapbut { display:block; width: 39px; height: 12px; display: block; border-style: none; background-color: transparent; cursor: pointer;}
-	#navigation a.down { background: transparent url(../images/navdown.png) no-repeat center center;}
-	#navigation a.up{ background: transparent url(../images/navup.png) no-repeat center center;}
-	#navigation a.down:hover { background: transparent url(../images/navdown_h.png) no-repeat center center;}
-	#navigation a.up:hover { background: transparent url(../images/navup_h.png) no-repeat center center;}
-*/
