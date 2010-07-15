@@ -13,6 +13,10 @@
     top: 30px;
 }
 
+body.admin-menu {
+    background-position: 50% 50px;
+}
+
 #servicenav {
     background-color: rgb(76, 70, 66);
     border-bottom: 1px solid rgb(71, 64, 60);
