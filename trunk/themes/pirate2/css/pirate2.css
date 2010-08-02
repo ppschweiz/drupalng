@@ -222,8 +222,8 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .contbody ul li.cotext p { text-align: justify; }
 	#content .contbody ul li.cogoto {width: 19px; height: 80px; display: block; float: left;}
 	#content .contbody ul li.cotermin h4 {color: #fff; padding-right: 15px;}
-	#content .contbody ul li.cotermin h5 {color: #555; font-size: 1.9em; font-weight: bold; line-height: 1.8em; padding-right: 15px;}
-	#content .contbody ul li.cotermin h6 {color: #555; font-size: 1.4em; font-weight: normal; line-height: 1.5em; padding-right: 15px;}
+	#content .contbody ul li.cotermin h5 {color: #555; font-size: 1.75em; font-weight: bold; line-height: 1em; padding-right: 15px;}
+	#content .contbody ul li.cotermin h6 {color: #555; font-size: 1.2em; font-weight: normal; line-height: 1.5em; padding-right: 15px;}
 	#content .contbody.detail ul li.cotermin h5 {color: #aaa; font-size: 1.7em;}
 	#content .contbody hr.trenn {width: 640px; height: 1px; display: block; clear: both; border: none; background-color: #efefef; margin: 2px 0;}
 	#content .contbody ul li.cotext h1, #content .contbody h1 {font-size: 1.8em; line-height: 1.3em;}
