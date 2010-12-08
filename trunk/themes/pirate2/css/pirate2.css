@@ -33,7 +33,7 @@
 /* added by SciFi */
 	h2#comments-title {margin-top: 20px;}
 	ul.comment {padding: 5px; margin-top: 10px;}
-	#content .contbody ul.comment li.cotext {border: 1px solid #aaa; padding: 5px;}
+	#content .contbody ul.comment li.cotext {border: 1px solid #aaa; padding: 5px; max-width:85%;}
 /* end SciFi */
 
 /* @group decor */
