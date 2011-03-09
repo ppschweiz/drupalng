@@ -17,7 +17,7 @@
 	a:link {color: #000; text-decoration: none;}
 	a:focus {outline: none;}
 	a:hover {color: #FFF;}
-	h1 {font-size: 1.8em; font-weight:normal; line-height: 1.4em;}
+	h1 {font-size: 1.8em; font-weight:normal; line-height: 1.4em; margin-bottom: 15px;}
 	h2 {font-size: 1.6em; font-weight:bold; line-height: 1.4em;}
 	h3 {font-size: 1.4em; font-weight:normal; line-height: 1.4em;}
 	h4 {font-size: 1.2em; font-weight:normal; line-height: 1.4em;}
@@ -253,7 +253,7 @@ ul#servicenav li a.login, ul#servicenav li a.kontakt, ul#servicenav li a.tellafr
 	#content .contbody .contnorm img {display: block;}
 	#content .contbody .contnorm p {margin-bottom: 10px; text-align: justify; display: block;}
 	#content .contbody .contnorm .quote, div.forderungen {width: 603px;}
-	#content .contbody .contnorm .quote h1, div.forderungen h3 {padding: 6px 12px;color: #000; font-style: normal; margin-top: 0px;}
+	#content .contbody .contnorm .quote h1, div.forderungen h3 {color: #000; font-style: normal; margin-top: 0px;}
 	#content .contbody .contnorm .quote ul, #content .contbody .contnorm .quote ol, div.forderungen ol, div.forderungen ul {padding: 6px 12px; display: block;}
 	#content .contbody .contnorm .quote ol li, div.forderungen ol li {list-style-type: decimal; list-style-position: inside; font-size: 1.2em; color:#555; margin-bottom: 4px;}
 	#content .contbody .contnorm .quote p, div.forderungen p {font-style: normal;}
