@@ -84,9 +84,9 @@
 		<li class="clear"></li>
 	</ul>
 	<?php } else { ?>
-		<h2 class="title">
+		<h1 class="title">
 			<a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
-		</h2>
+		</h1>
 		<div class="content">
 			<?php print $content; ?>
 		</div>
