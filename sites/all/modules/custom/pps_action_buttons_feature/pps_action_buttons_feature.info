@@ -1,0 +1,17 @@
+name = PPS Action Buttons
+core = 7.x
+package = Pirate Party Switzerland
+version = 7.x-1.0
+project = pps_action_buttons_feature
+dependencies[] = features
+dependencies[] = image
+dependencies[] = link
+dependencies[] = nodequeue
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[field][] = node-action_button-field_image
+features[field][] = node-action_button-field_link
+features[field][] = node-action_button-field_subtitle
+features[node][] = action_button
+features[views_view][] = action_buttons
