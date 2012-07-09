@@ -1,0 +1,44 @@
+@import "base";
+
+.view-action-buttons {
+  width: $dim-mobile-portrait-width;
+  background: url('images/action_button/promobg.png');
+
+  aside.node-action-button {
+    width: $dim-mobile-portrait-width;
+    margin: 0;
+    height: 83px;
+    background: url('images/action_button/buttonbg.png') right;
+    @include clearfix();
+
+    div {
+      &.node-title,
+      &.field {
+        float: left;
+        font-family: $font-sans_serif-default;
+      }
+      &.field-name-field-image {
+        img {
+          width: 100*0.921px;
+          height: 83px;
+        }
+      }
+
+      &.node-title {
+        color: white;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-top: 26px;
+        line-height: 1.4em;
+        @include text-shadow(#FC6 0 0 5px, #FC6 0 0 5px, #FC6 0 0 8px);
+      }
+
+      &.field-name-field-subtitle {
+        font-size: 13px;
+        line-height: 1.2em;
+        color: #863303;
+      }
+    }
+  }
+}
