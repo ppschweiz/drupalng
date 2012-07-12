@@ -31,6 +31,11 @@
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000338}}
+.node-content figure {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000344}}
 .view-action-buttons {
   height: 259px;
 }
