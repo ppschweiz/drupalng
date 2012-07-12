@@ -207,7 +207,7 @@ footer.submitted time span.year {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000313}}
 .node-content figure {
-  float: left;
+  float: right;
   margin-right: 0.5em;
 }
 
