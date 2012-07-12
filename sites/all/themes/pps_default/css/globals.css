@@ -150,7 +150,9 @@ footer.submitted .comment_count {
   position: relative;
   left: -16px;
   float: left;
-  background: #eee;
+  background: #cd0046;
+  color: #fff;
+  font-weight: bold;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
   -ms-border-radius: 14px;
@@ -161,7 +163,7 @@ footer.submitted .comment_count {
   line-height: 13px;
   margin-bottom: 0.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000321}}
 footer.submitted time {
   position: relative;
   float: left;
@@ -170,25 +172,25 @@ footer.submitted time {
   width: 39px;
   height: 56px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000328}}
 footer.submitted time span {
   display: block;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000332}}
 footer.submitted time span.month {
   font-size: 12px;
   line-height: 1.5em;
   color: #fff;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000339}}
 footer.submitted time span.day {
   font-weight: bold;
   font-size: 15px;
   line-height: 1.6em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_node_icon\.scss}line{font-family:\0000345}}
 footer.submitted time span.year {
   font-size: 11px;
 }

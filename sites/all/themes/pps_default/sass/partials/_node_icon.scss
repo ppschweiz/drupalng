@@ -9,7 +9,9 @@ footer.submitted {
     position: relative;
     left: -16px;
     float: left;
-    background: #eee;
+    background: $color-deep-red;
+    color: #fff;
+    font-weight: bold;
     @include border-radius(14px);
     padding: 0 4px;
     font-size: 10px;
