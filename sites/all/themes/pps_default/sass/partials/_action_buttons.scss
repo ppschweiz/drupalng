@@ -1,6 +1,7 @@
 @import "base";
 
-.view-action-buttons {
+.view-action-buttons,
+.node-type-action-button #content {
   width: $dim-mobile-portrait-width;
   background: url('images/action_button/promobg.png');
 
@@ -16,12 +17,6 @@
       &.field {
         float: left;
         font-family: $font-sans_serif-default;
-      }
-      &.field-name-field-image {
-        img {
-          width: 100*0.921px;
-          height: 83px;
-        }
       }
 
       &.node-title {

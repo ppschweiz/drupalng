@@ -64,10 +64,27 @@ function pps_default_process_page(&$vars) {
 /**
  * Override or insert variables into the node templates.
  */
-/* -- Delete this line if you want to use these functions
+
 function pps_default_preprocess_node(&$vars) {
+	$date['month'] = '<span class="month">' . format_date($vars['created'], 'custom', 'M') . '</span>';
+	$date['day'] = '<span class="day">' . format_date($vars['created'], 'custom', 'd') . '</span>';
+	$date['year'] = '<span class="year">' . format_date($vars['created'], 'custom', 'Y') . '</span>';
+	
+	// Publication date, formatted with time element
+  $vars['publication_date'] = '<time datetime="' . $vars['datetime'] . '" pubdate="pubdate">' . implode('', $date) . '</time>';
+  // $vars['comment_count'] = $vars['comment_count'] + 12323;
+  $vars['comment_badge'] = '<span class="comment_count">' . $vars['comment_count'] . '</span>';
+	
+	// Build the submitted variable used by default in node templates
+  if (variable_get('node_submitted_' . $vars['node']->type, TRUE)) {
+    $vars['submitted'] = $vars['name'] . $vars['publication_date'] . $vars['comment_badge'];
+  }
+  else {
+    $vars['submitted'] = '';
+  }
 }
-function pps_default_process_node(&$vars) {
+/* -- Delete this line if you want to use these functions
+function pps_default_process_node(&$vars) { 
 }
 // */
 
@@ -89,6 +106,7 @@ function pps_default_process_comment(&$vars) {
 /* -- Delete this line if you want to use these functions
 function pps_default_preprocess_block(&$vars) {
 }
+
 function pps_default_process_block(&$vars) {
 }
 // */

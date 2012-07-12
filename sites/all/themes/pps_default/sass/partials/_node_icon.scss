@@ -1,0 +1,48 @@
+@import "base";
+
+footer.submitted {
+  font-family: $font-sans_serif-bold;
+  .username {
+    display: none;
+  }
+  .comment_count {
+    position: relative;
+    left: -16px;
+    float: left;
+    background: #eee;
+    @include border-radius(14px);
+    padding: 0 4px;
+    font-size: 10px;
+    line-height: 13px;
+    margin-bottom: 0.2em;
+  }
+  time {
+    position: relative;
+    float: left;
+    margin: 0.4em 0.5em 0.5em -0.5em;
+    background: url(images/event-orange.png) no-repeat;
+    width: 39px;
+    height: 56px;
+    span {
+      display: block;
+      text-align: center;
+      
+      &.month {
+        font-size: 12px;
+        line-height: 1.5em;
+        color: #fff;
+        font-weight: bold;
+      }
+      
+      &.day {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 1.6em;
+      }
+      
+      &.year {
+        font-size: 11px;
+      }
+    }
+  }
+}

@@ -13,12 +13,28 @@
  *   overwritten!
  */
 
-html {
-  font-size: 112.5%; /* Increase the body font size on small devices */
+.region-header {
+  .block {
+    float: left;
+  }
+  .block-nivo-slider {
+    width: 567px;
+    height: 259px;
+    display: block;
+  }
+  
+  .theme-default .nivoSlider {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    
+    .nivo-caption {
+      height: 90px;
+    }
+  }
 }
 
-#logo {
-  img {
-    max-width: $dim-mobile-portrait-width;
-  }
+
+.view-action-buttons {
+  height: 259px;
 }

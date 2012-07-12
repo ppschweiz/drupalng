@@ -1,6 +1,8 @@
 @import "base";
 
 @include font-face("Aller Light", inline-font-files('../fonts/Aller_Lt.ttf', truetype));
+@include font-face("Aller Regular", inline-font-files('../fonts/Aller_Rg.ttf', truetype));
+@include font-face("Aller Bold", inline-font-files('../fonts/Aller_Bd.ttf', truetype));
 
 // Always apply your global font size the the HTML element, not body or #page
 html {}
@@ -11,5 +13,11 @@ body {
 }
 
 #{headings(all)} {
+    font-family: $font-sans_serif-bold;
     font-weight: bold;
+    padding-bottom: 0.2em;
+}
+
+h1 {
+  font-size: 1.8em;
 }
