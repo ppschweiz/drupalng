@@ -16,3 +16,9 @@ body {
 #columns {
 	background: $color-content-background;
 }
+
+#logo {
+  img {
+    max-width: 100%;
+  }
+}

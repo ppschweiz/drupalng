@@ -14,8 +14,3 @@ html {
   font-size: 112.5%;
   /* Increase the body font size on small devices */
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.smartphone\.portrait\.scss}line{font-family:\0000321}}
-#logo img {
-  max-width: 340px;
-}
