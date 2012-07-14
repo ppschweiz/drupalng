@@ -10,7 +10,7 @@ $legacy-support-for-ie7: true;
 // 'Aller Regular'
 // 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Geneva, sans-serif;
 $font-sans_serif-default: 'Aller Light', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Geneva, sans-serif;
-$font-sans_serif-bold: 'Aller Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Geneva, sans-serif;
+$font-sans_serif-alt: 'Aller Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Geneva, sans-serif;
 
 
 // Colors
@@ -26,6 +26,9 @@ $color-content-background: #fff;
 
 // Dimensions
 $dim-mobile-portrait-width: 340px;
+
+$font-default-size: 1.4em;
+$font-header-delta: 0.2em;
 
 @import "compass/utilities";
 @import "compass/css3";

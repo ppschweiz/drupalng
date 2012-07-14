@@ -1,7 +1,9 @@
 @import "base";
 
 footer.submitted {
-  font-family: $font-sans_serif-bold;
+  font-family: $font-sans_serif-alt;
+  line-height: 1.1;
+
   .username {
     display: none;
   }
@@ -18,10 +20,10 @@ footer.submitted {
     line-height: 13px;
     margin-bottom: 0.2em;
   }
-  time {
+  time.icon {
     position: relative;
     float: left;
-    margin: 0.4em 0.5em 0.5em -0.5em;
+    margin: 0.4em 0.8em 0.5em -0.4em;
     background: url(images/event-orange.png) no-repeat;
     width: 39px;
     height: 56px;
@@ -38,12 +40,12 @@ footer.submitted {
       
       &.day {
         font-weight: bold;
-        font-size: 15px;
-        line-height: 1.6em;
+        font-size: 22px;
+        margin-top: 1px;
       }
       
       &.year {
-        font-size: 11px;
+        font-size: 9px;
       }
     }
   }

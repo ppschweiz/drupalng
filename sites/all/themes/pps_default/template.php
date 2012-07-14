@@ -71,9 +71,14 @@ function pps_default_preprocess_node(&$vars) {
 	$date['year'] = '<span class="year">' . format_date($vars['created'], 'custom', 'Y') . '</span>';
 	
 	// Publication date, formatted with time element
-  $vars['publication_date'] = '<time datetime="' . $vars['datetime'] . '" pubdate="pubdate">' . implode('', $date) . '</time>';
+  $vars['publication_date'] = '<time class="icon" datetime="' . $vars['datetime'] . '" pubdate="pubdate">' . implode('', $date) . '</time>';
   // $vars['comment_count'] = $vars['comment_count'] + 12323;
-  $vars['comment_badge'] = '<span class="comment_count">' . $vars['comment_count'] . '</span>';
+  if ($vars['comment_count'] > 0 ) {
+    $vars['comment_badge'] = '<span class="comment_count">' . $vars['comment_count'] . '</span>';
+  }
+  else {
+    $vars['comment_badge'] = '';
+  }
 	
 	// Build the submitted variable used by default in node templates
   if (variable_get('node_submitted_' . $vars['node']->type, TRUE)) {

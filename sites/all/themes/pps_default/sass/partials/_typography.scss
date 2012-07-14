@@ -2,7 +2,8 @@
 
 @include font-face("Aller Light", inline-font-files('../fonts/Aller_Lt.ttf', truetype));
 @include font-face("Aller Regular", inline-font-files('../fonts/Aller_Rg.ttf', truetype));
-@include font-face("Aller Bold", inline-font-files('../fonts/Aller_Bd.ttf', truetype));
+@include font-face("Aller Regular Bold", inline-font-files('../fonts/Aller_Bd.ttf', truetype));
+@include font-face("Aller Regular Italic", inline-font-files('../fonts/Aller_It.ttf', truetype));
 
 // Always apply your global font size the the HTML element, not body or #page
 html {}
@@ -10,14 +11,132 @@ html {}
 
 body {
     font-family: $font-sans_serif-default;
+    /* Set base font size to 10px so we could work with em without math hassl 
+       see http://css-tricks.com/css-font-size/ for further information. */
+    font-size: 62.5%;
+    line-height: 1.4;
 }
 
 #{headings(all)} {
-    font-family: $font-sans_serif-bold;
+    font-family: $font-sans_serif-alt;
     font-weight: bold;
-    padding-bottom: 0.2em;
+    padding: 0.2em 0;
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: $font-default-size + $font-header-delta * 6;
+}
+
+h2 {
+  font-size: $font-default-size + $font-header-delta * 5;
+}
+
+h3 {
+  font-size: $font-default-size + $font-header-delta * 4;
+}
+
+article {
+  h1 {
+    font-size: $font-default-size + $font-header-delta * 5;
+  }
+
+  h2 {
+    font-size: $font-default-size + $font-header-delta * 4;
+  }
+
+  h3 {
+    font-size: $font-default-size + $font-header-delta * 3;
+  }
+
+  h4 {
+    font-size: $font-default-size + $font-header-delta * 2;
+  }
+
+  h5 {
+    font-size: $font-default-size + $font-header-delta;
+  }
+
+  h6 {
+    font-size: $font-default-size;
+  }
+
+  p {
+    font-size: $font-default-size;
+    margin: 0 0 0.75em;
+  }
+  
+  acronym {
+    border-bottom: 0.1em dotted tint(#000, 85);
+  }
+  
+  blockquote, q {
+    font-style: italic;
+    margin: 0 0 1.5em;
+    padding: 0 0 0 3em;
+
+    p {
+      margin: 0;
+    }
+  }
+  
+  cite {
+    font-style: italic;
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
+  strong {
+    font-family: $font-sans_serif-alt;
+  }
+  
+  sup, sub {
+    line-height: 0;
+    font-size: 0.7em;
+  }
+  
+  sup {
+    vertical-align: text-top;
+  }
+  
+  sub {
+    vertical-align: text-bottom;
+  }
+  
+  ul, ol {
+    margin: 0 0 1em 15px;
+    padding: 0;
+    font-size: $font-default-size;
+  }
+  
+  ul {
+    list-style-type: disc;
+  }
+  
+  ol {
+    list-style-type: decimal;
+  }
+  
+  dl {
+    font-size: $font-default-size;
+  }
+  
+  dt {
+    font-family: $font-sans_serif-alt;
+    font-weight: bold;
+  }
+  
+  dd {
+    margin: 0 0 1.5em 1.75em;
+  }
+  
+  table {
+    font-size: $font-default-size;
+    th {
+      font-family: $font-sans_serif-alt;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
 }

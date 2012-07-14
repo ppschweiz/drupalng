@@ -13,24 +13,11 @@
  *   overwritten!
  */
 
+@import "partials/slider";
+
 .region-header {
   .block {
     float: left;
-  }
-  .block-nivo-slider {
-    width: 567px;
-    height: 259px;
-    display: block;
-  }
-  
-  .theme-default .nivoSlider {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    
-    .nivo-caption {
-      height: 90px;
-    }
   }
 }
 
