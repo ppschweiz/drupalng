@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the PPS Action Buttons feature.
- */
-
-include_once 'pps_action_buttons_feature.features.inc';
