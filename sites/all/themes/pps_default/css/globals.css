@@ -224,26 +224,28 @@ article table th {
 .view-action-buttons,
 .node-type-action-button #content {
   width: 340px;
+  width: 100%;
   background: url("images/action_button/promobg.png");
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\000039}}
 .view-action-buttons aside.node-action-button,
 .node-type-action-button #content aside.node-action-button {
   width: 340px;
+  width: 100%;
   margin: 0;
   height: 83px;
-  background: url("images/action_button/buttonbg.png") right;
+  background: url("images/action_button/buttonbg.png") right no-repeat;
   overflow: hidden;
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000319}}
 .view-action-buttons aside.node-action-button div.node-title, .view-action-buttons aside.node-action-button div.field,
 .node-type-action-button #content aside.node-action-button div.node-title,
 .node-type-action-button #content aside.node-action-button div.field {
   float: left;
   font-family: "Aller Light", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000324}}
 .view-action-buttons aside.node-action-button div.node-title,
 .node-type-action-button #content aside.node-action-button div.node-title {
   color: white;
@@ -254,7 +256,7 @@ article table th {
   line-height: 1.4em;
   text-shadow: #ffcc66 0 0 5px, #ffcc66 0 0 5px, #ffcc66 0 0 8px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000334}}
 .view-action-buttons aside.node-action-button div.field-name-field-subtitle,
 .node-type-action-button #content aside.node-action-button div.field-name-field-subtitle {
   font-size: 13px;
@@ -323,13 +325,13 @@ footer.submitted time.icon span.year {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\000033}}
 #block-views-slider-block {
-  width: 66%;
-  height: 25.9em;
+  width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\000037}}
 #views_slideshow_cycle_main_slider-block {
   width: 100%;
+  height: 24.9em;
   float: left;
   overflow: hidden;
 }

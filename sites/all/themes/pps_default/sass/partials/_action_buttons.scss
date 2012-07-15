@@ -3,13 +3,15 @@
 .view-action-buttons,
 .node-type-action-button #content {
   width: $dim-mobile-portrait-width;
+  width: 100%;
   background: url('images/action_button/promobg.png');
 
   aside.node-action-button {
     width: $dim-mobile-portrait-width;
+    width: 100%;
     margin: 0;
     height: 83px;
-    background: url('images/action_button/buttonbg.png') right;
+    background: url('images/action_button/buttonbg.png') right  no-repeat;
     @include clearfix();
 
     div {

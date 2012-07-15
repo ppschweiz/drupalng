@@ -24,7 +24,12 @@
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000333}}
-.view-action-buttons {
-  height: 259px;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000332}}
+#block-views-slider-block {
+  width: 66.66%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000336}}
+#block-views-action-buttons-block {
+  width: 33.33%;
 }
