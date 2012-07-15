@@ -3,15 +3,16 @@
 @import "partials/typography";
 @import "partials/action_buttons";
 @import "partials/node_icon";
+@import "partials/slider";
 @import "partials/content";
 
 body { 
     background-color: $color-orange;
 }
 
-#block-views-slider-block {
+/*#block-views-slider-block {
   display: none;
-}
+}*/
 
 #columns {
 	background: $color-content-background;

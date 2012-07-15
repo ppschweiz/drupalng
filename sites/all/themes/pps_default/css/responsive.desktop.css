@@ -9,66 +9,22 @@
  *   sub-theme, if you set Compass to watch it or the directory this file will be
  *   overwritten!
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\000035}}
-#block-views-slider-block .view-slider {
-  width: 56.7em;
-  height: 25.9em;
-  display: block;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000311}}
-#block-views-slider-block .theme-default .nivoSlider {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000316}}
-#block-views-slider-block .theme-default .nivoSlider .nivo-caption {
-  height: 9em;
-  padding: 1em;
-  padding-left: 5em;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  font-family: "Aller Regular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000325}}
-#block-views-slider-block .theme-default .nivoSlider .nivo-caption h1, #block-views-slider-block .theme-default .nivoSlider .nivo-caption h2 {
-  font-weight: bold;
-  text-shadow: 0.3em 0.3em 0.7em #111;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000330}}
-#block-views-slider-block .theme-default .nivoSlider .nivo-caption h1 {
-  font-size: 2em;
-  margin: 0.2em 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000335}}
-#block-views-slider-block .theme-default .nivoSlider .nivo-caption h2 {
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #ffdc00;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000341}}
-#block-views-slider-block .theme-default .nivoSlider .nivo-caption p {
-  font-size: 1.4em;
-  line-height: 1.4em;
-  padding: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000317}}
 .region-header .block {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000322}}
 #block-views-slider-block {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000327}}
 .node-content figure {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000333}}
 .view-action-buttons {
   height: 259px;
 }

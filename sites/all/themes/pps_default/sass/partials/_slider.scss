@@ -1,49 +1,76 @@
 @import "base";
 
 #block-views-slider-block {
-  
-  .view-slider {
-    width: 56.7em;
-    height: 25.9em;
-    display: block;
-  }
-  
-  .theme-default .nivoSlider {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    
-    .nivo-caption {
-      height: 9em;
-      padding: 1em;
-      padding-left: 5em;
-      
-      @include opacity(0.7);
-      
-      font-family: $font-sans_serif-alt;
-      
-      h1, h2 {
-        font-weight: bold;
-        text-shadow: 0.3em 0.3em 0.7em #111;
-      }
-      
-      h1 {
-          font-size: 2em;
-          margin: 0.2em 0;
-      }
+  width: 66%;
+  height: 25.9em;
+}
 
-      h2 {
-        font-size: 1.4em;
-        font-weight: bold;
-        color: $color-yellow;
-      }
-      
-      p {
-        font-size: 1.4em;
-        line-height: 1.4em;
+#views_slideshow_cycle_main_slider-block {
+
+  width: 100%;
+  float: left;
+  
+  overflow: hidden;
+
+  .views-slideshow-cycle-main-frame {
+    width: 100% !important;
+    height: auto;
+  }
+  .views-slideshow-cycle-main-frame-row {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .views_slideshow_cycle_main {
+    .field-content {
+      max-width: 100%;
+      width: 100%;
+      img {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0;
         padding: 0;
       }
-      
+    }
+  }
+
+  .views-field-field-slide-text {
+    @include opacity(0.7);
+    background: #000;
+    height: 7em;
+    position: relative;
+    top: -9.3em;
+    padding: 1em;
+    padding-left: 5em;
+  }
+  
+  a {
+
+    line-height: 1;
+    font-family: $font-sans_serif-alt;
+    color: #fff;
+    text-decoration: none;
+    
+    h1, h2 {
+      font-weight: bold;
+      text-shadow: 0.3em 0.3em 0.7em #111;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0.2em 0;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: $color-yellow;
+    }
+
+    p {
+      font-size: 1.4em;
+      line-height: 1.4em;
+      padding: 0;
     }
   }
 }
