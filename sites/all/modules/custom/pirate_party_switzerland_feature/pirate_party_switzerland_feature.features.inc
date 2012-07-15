@@ -5,6 +5,16 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function pirate_party_switzerland_feature_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "resp_img" && $api == "default_resp_img_suffixs") {
+    return array("version" => "1");
+  }
+}
+
+/**
  * Implements hook_views_api().
  */
 function pirate_party_switzerland_feature_views_api() {
@@ -97,11 +107,11 @@ function pirate_party_switzerland_feature_image_default_styles() {
     ),
   );
 
-  // Exported image style: slide_image.
-  $styles['slide_image'] = array(
-    'name' => 'slide_image',
+  // Exported image style: slide_image_desktop.
+  $styles['slide_image_desktop'] = array(
+    'name' => 'slide_image_desktop',
     'effects' => array(
-      8 => array(
+      13 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -111,8 +121,96 @@ function pirate_party_switzerland_feature_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '567',
-          'height' => '259',
+          'width' => '800',
+          'height' => '249',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: slide_image_mobileland.
+  $styles['slide_image_mobileland'] = array(
+    'name' => 'slide_image_mobileland',
+    'effects' => array(
+      10 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '480',
+          'height' => '249',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: slide_image_mobileport.
+  $styles['slide_image_mobileport'] = array(
+    'name' => 'slide_image_mobileport',
+    'effects' => array(
+      9 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '340',
+          'height' => '249',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: slide_image_tabletland.
+  $styles['slide_image_tabletland'] = array(
+    'name' => 'slide_image_tabletland',
+    'effects' => array(
+      11 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '684',
+          'height' => '249',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: slide_image_tabletport.
+  $styles['slide_image_tabletport'] = array(
+    'name' => 'slide_image_tabletport',
+    'effects' => array(
+      12 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '768',
+          'height' => '249',
         ),
         'weight' => '1',
       ),

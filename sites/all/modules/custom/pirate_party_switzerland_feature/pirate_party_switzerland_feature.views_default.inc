@@ -144,7 +144,6 @@ function pirate_party_switzerland_feature_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['advanced_options'] = '{"containerResize":"0","slideResize":"0","fit":"1"}';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 0;
   $handler->display->display_options['row_options']['default_field_elements'] = 1;
@@ -208,7 +207,7 @@ function pirate_party_switzerland_feature_views_default_views() {
   $handler->display->display_options['fields']['field_slide_image']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_slide_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_slide_image']['settings'] = array(
-    'image_style' => 'slide_image',
+    'image_style' => 'slide_image_mobileport',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_slide_image']['field_api_classes'] = 0;
