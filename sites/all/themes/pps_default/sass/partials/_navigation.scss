@@ -1,0 +1,11 @@
+@import "base";
+
+#primary-menu-bar,
+#secondary-menu-bar {
+  ul.menu{
+    padding: 1em;
+    li {
+      float: left;
+    }
+  }
+}

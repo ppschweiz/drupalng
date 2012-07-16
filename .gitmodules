@@ -1,3 +1,6 @@
 [submodule "sites/all/libraries/json2"]
 	path = sites/all/libraries/json2
 	url = https://github.com/douglascrockford/JSON-js.git
+[submodule "sites/all/themes/adaptivetheme"]
+	path = sites/all/themes/adaptivetheme
+	url = http://git.drupal.org/project/adaptivetheme.git

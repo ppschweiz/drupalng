@@ -1,10 +1,10 @@
 @import "base";
 
-@include font-face("Aller Light", inline-font-files('../fonts/Aller_Lt.ttf', truetype));
+/*@include font-face("Aller Light", inline-font-files('../fonts/Aller_Lt.ttf', truetype));
 @include font-face("Aller Regular", inline-font-files('../fonts/Aller_Rg.ttf', truetype));
 @include font-face("Aller Regular Bold", inline-font-files('../fonts/Aller_Bd.ttf', truetype));
 @include font-face("Aller Regular Italic", inline-font-files('../fonts/Aller_It.ttf', truetype));
-
+*/
 // Always apply your global font size the the HTML element, not body or #page
 html {}
 
