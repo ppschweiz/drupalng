@@ -146,7 +146,7 @@ settings[which_pie] = PIE.htc
 settings[disble_pie_for_ie9] = 0
 settings[load_selectivizr] = 0
 settings[load_scalefixjs] = 0
-settings[adaptivetheme_meta_viewport] = width=device-width, initial-scale=1
+settings[adaptivetheme_meta_viewport] = width=340, initial-scale=1
 settings[adaptivetheme_meta_mobileoptimized] = width
 settings[adaptivetheme_meta_handheldfriendly] = true
 settings[adaptivetheme_meta_apple_mobile_web_app_capable] = yes
