@@ -19,6 +19,7 @@ dependencies[] = views_ui
 features[ctools][] = resp_img:default_resp_img_suffixs:1
 features[ctools][] = views:views_default:3.0
 features[fe_block_settings][] = search-form
+features[fe_block_settings][] = system-navigation
 features[fe_block_settings][] = user-login
 features[fe_block_settings][] = views-action_buttons-block
 features[fe_block_settings][] = views-slider-block

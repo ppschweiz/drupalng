@@ -27,6 +27,20 @@ function pirate_party_switzerland_feature_default_fe_block_settings() {
     'cache' => -1,
   );
 
+  $theme['system-navigation'] = array(
+    'module' => 'system',
+    'delta' => 'navigation',
+    'theme' => 'pps_default',
+    'status' => '1',
+    'weight' => '-10',
+    'region' => 'tertiary_content',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
   $theme['user-login'] = array(
     'module' => 'user',
     'delta' => 'login',
@@ -81,6 +95,20 @@ function pirate_party_switzerland_feature_default_fe_block_settings() {
     'status' => '1',
     'weight' => '-10',
     'region' => 'dashboard_sidebar',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-navigation'] = array(
+    'module' => 'system',
+    'delta' => 'navigation',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
