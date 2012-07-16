@@ -121,7 +121,7 @@ function pirate_party_switzerland_feature_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '800',
+          'width' => '570',
           'height' => '249',
         ),
         'weight' => '1',
@@ -187,7 +187,7 @@ function pirate_party_switzerland_feature_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '684',
+          'width' => '615',
           'height' => '249',
         ),
         'weight' => '1',
