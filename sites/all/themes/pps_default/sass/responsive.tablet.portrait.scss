@@ -1,7 +1,30 @@
+.region-header {
+  .block {
+    float: left;
+  }
+}
+
 #block-views-slider-block {
   width: 100%;
 }
 
 #block-views-action-buttons-block {
   width: 50%;
+}
+
+#block-system-navigation {
+  width: 50%;
+  height: 24.9em;
+}
+
+
+#primary-menu-bar,
+#secondary-menu-bar {
+  width: 50%;
+  float: left;
+  ul.menu{
+    li {
+      float: none;
+    }
+  }
 }

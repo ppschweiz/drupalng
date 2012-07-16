@@ -1,9 +1,32 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\000032}}
+.region-header .block {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\000037}}
 #block-views-slider-block {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\0000311}}
 #block-views-action-buttons-block {
   width: 50%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\0000315}}
+#block-system-navigation {
+  width: 50%;
+  height: 24.9em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\0000322}}
+#primary-menu-bar,
+#secondary-menu-bar {
+  width: 50%;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.tablet\.portrait\.scss}line{font-family:\0000326}}
+#primary-menu-bar ul.menu li,
+#secondary-menu-bar ul.menu li {
+  float: none;
 }

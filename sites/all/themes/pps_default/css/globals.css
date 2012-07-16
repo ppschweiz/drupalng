@@ -399,6 +399,17 @@ footer.submitted time.icon span.year {
   padding: 0;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_navigation\.scss}line{font-family:\000035}}
+#primary-menu-bar ul.menu,
+#secondary-menu-bar ul.menu {
+  padding: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_navigation\.scss}line{font-family:\000037}}
+#primary-menu-bar ul.menu li,
+#secondary-menu-bar ul.menu li {
+  float: left;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\000035}}
 #columns .content-inner,
 #columns .region-inner {
@@ -411,17 +422,43 @@ footer.submitted time.icon span.year {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000313}}
 .node-content figure {
-  float: right;
   margin-right: 0.5em;
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000319}}
 article.node {
   margin: 0.6em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000327}}
+#block-system-navigation {
+  width: 100%;
+  background: #053b73;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000331}}
+#block-system-navigation .block-inner {
+  padding: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000334}}
+#block-system-navigation a {
+  color: #fff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000339}}
+#primary-menu-bar {
+  width: 100%;
+  background: #e95e0f;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000344}}
+#secondary-menu-bar {
+  width: 100%;
+  background: #ffdc00;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000310}}
 body {
   background-color: #f9b200;
 }
@@ -429,12 +466,12 @@ body {
 /*#block-views-slider-block {
   display: none;
 }*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000318}}
 #columns {
   background: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000323}}
 #logo img {
   max-width: 100%;
 }

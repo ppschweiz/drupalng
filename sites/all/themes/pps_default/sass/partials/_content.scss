@@ -11,7 +11,6 @@
   padding: 1.5em 0 0.5em;
   
   figure {
-    float: right;
     margin-right: 0.5em;
     display: none;
   }
@@ -24,3 +23,25 @@ article.node{
     }
   }
 } 
+
+#block-system-navigation {
+  width: 100%;
+  background: $color-purple;
+  color: #fff;
+  .block-inner {
+    padding: 1em;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+#primary-menu-bar {
+  width: 100%;
+  background: $color-pale-red;
+}
+
+#secondary-menu-bar {
+  width: 100%;
+  background: $color-yellow;
+}

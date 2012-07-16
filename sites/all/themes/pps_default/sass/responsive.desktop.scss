@@ -12,12 +12,12 @@
  *   sub-theme, if you set Compass to watch it or the directory this file will be
  *   overwritten!
  */
-
-.region-header {
-  .block {
-    float: left;
-  }
-}
+ 
+ .region-header {
+   .block {
+     float: left;
+   }
+ }
 
 #block-views-slider-block {
   display: block;
@@ -30,9 +30,14 @@
 }
 
 #block-views-slider-block {
-  width: 66.66%;
+  width: 50%;
 }
 
 #block-views-action-buttons-block {
-  width: 33.33%;
+  width: 30%;
+}
+
+#block-system-navigation {
+  width: 20%;
+  height: 24.9em;
 }
