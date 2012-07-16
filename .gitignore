@@ -6,3 +6,4 @@ sites/*/files
 sites/*/private
 .DS_Store
 .sass-cache
+sites/all/themes/pps_default/generated_files/*
