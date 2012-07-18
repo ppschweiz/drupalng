@@ -41,3 +41,20 @@
   width: 20%;
   height: 24.9em;
 }
+
+.front {
+  #main-content {
+    article {
+      width: 50%;
+      float: left;
+      
+      &.node-sticky {
+        width: 100%;
+      }
+      
+      &.even {
+        clear: both;
+      }
+    }
+  }
+}
