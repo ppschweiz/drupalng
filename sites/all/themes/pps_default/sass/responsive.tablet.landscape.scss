@@ -4,10 +4,16 @@
   }
 }
 
-#block-views-slider-block {
+.node-content {
+  figure {
+    display: block;
+  }
+}
+
+#block-views-slider-slides-block {
   width: 60%;
 }
 
-#block-views-action-buttons-block {
+#block-views-action-buttons-action-buttons {
   width: 40%;
 }

@@ -5,6 +5,15 @@
   .region-inner {
 	  padding: 1.6em;
   }
+  
+  .region-highlighted {
+    margin-bottom: 1.6em;
+    
+    .region-inner{
+      background: tint($color-orange, 80);
+      margin: -1.6em;
+    }
+  }
 }
 
 .node-content {

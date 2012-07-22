@@ -206,14 +206,14 @@ article table th {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\000034}}
-.view-action-buttons,
+#block-views-action-buttons-action-buttons,
 .node-type-action-button #content {
   width: 340px;
   width: 100%;
   background: url("images/action_button/promobg.png");
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\000039}}
-.view-action-buttons aside.node-action-button,
+#block-views-action-buttons-action-buttons aside.node-action-button,
 .node-type-action-button #content aside.node-action-button {
   width: 340px;
   width: 100%;
@@ -224,14 +224,14 @@ article table th {
   *zoom: 1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000319}}
-.view-action-buttons aside.node-action-button div.node-title, .view-action-buttons aside.node-action-button div.field,
+#block-views-action-buttons-action-buttons aside.node-action-button div.node-title, #block-views-action-buttons-action-buttons aside.node-action-button div.field,
 .node-type-action-button #content aside.node-action-button div.node-title,
 .node-type-action-button #content aside.node-action-button div.field {
   float: left;
   font-family: "Aller Light", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000324}}
-.view-action-buttons aside.node-action-button div.node-title,
+#block-views-action-buttons-action-buttons aside.node-action-button div.node-title,
 .node-type-action-button #content aside.node-action-button div.node-title {
   color: white;
   text-transform: uppercase;
@@ -242,7 +242,7 @@ article table th {
   text-shadow: #ffcc66 0 0 5px, #ffcc66 0 0 5px, #ffcc66 0 0 8px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000334}}
-.view-action-buttons aside.node-action-button div.field-name-field-subtitle,
+#block-views-action-buttons-action-buttons aside.node-action-button div.field-name-field-subtitle,
 .node-type-action-button #content aside.node-action-button div.field-name-field-subtitle {
   font-size: 13px;
   line-height: 1.2em;
@@ -309,34 +309,34 @@ footer.submitted time.icon span.year {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\000033}}
-#block-views-slider-block {
+#block-views-slider-slides-block {
   width: 100%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\000037}}
-#views_slideshow_cycle_main_slider-block {
+#views_slideshow_cycle_main_slider-slides_block {
   width: 100%;
   height: 24.9em;
   float: left;
   overflow: hidden;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000315}}
-#views_slideshow_cycle_main_slider-block .views-slideshow-cycle-main-frame {
+#views_slideshow_cycle_main_slider-slides_block .views-slideshow-cycle-main-frame {
   width: 100% !important;
   height: auto;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000319}}
-#views_slideshow_cycle_main_slider-block .views-slideshow-cycle-main-frame-row {
+#views_slideshow_cycle_main_slider-slides_block .views-slideshow-cycle-main-frame-row {
   width: 100% !important;
   height: auto !important;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000324}}
-#views_slideshow_cycle_main_slider-block .views_slideshow_cycle_main .field-content {
+#views_slideshow_cycle_main_slider-slides_block .views_slideshow_cycle_main .field-content {
   max-width: 100%;
   width: 100%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000327}}
-#views_slideshow_cycle_main_slider-block .views_slideshow_cycle_main .field-content img {
+#views_slideshow_cycle_main_slider-slides_block .views_slideshow_cycle_main .field-content img {
   max-width: 100% !important;
   width: 100% !important;
   height: auto !important;
@@ -344,7 +344,7 @@ footer.submitted time.icon span.year {
   padding: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000337}}
-#views_slideshow_cycle_main_slider-block .views-field-field-slide-text {
+#views_slideshow_cycle_main_slider-slides_block .views-field-field-slide-text {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
   background: #000;
@@ -355,30 +355,30 @@ footer.submitted time.icon span.year {
   padding-left: 5em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000347}}
-#views_slideshow_cycle_main_slider-block a {
+#views_slideshow_cycle_main_slider-slides_block a {
   line-height: 1;
   font-family: "Aller Regular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
   color: #fff;
   text-decoration: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000354}}
-#views_slideshow_cycle_main_slider-block a h1, #views_slideshow_cycle_main_slider-block a h2 {
+#views_slideshow_cycle_main_slider-slides_block a h1, #views_slideshow_cycle_main_slider-slides_block a h2 {
   font-weight: bold;
   text-shadow: 0.3em 0.3em 0.7em #111;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000359}}
-#views_slideshow_cycle_main_slider-block a h1 {
+#views_slideshow_cycle_main_slider-slides_block a h1 {
   font-size: 2em;
   margin: 0.2em 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000364}}
-#views_slideshow_cycle_main_slider-block a h2 {
+#views_slideshow_cycle_main_slider-slides_block a h2 {
   font-size: 1.4em;
   font-weight: bold;
   color: #ffdc00;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_slider\.scss}line{font-family:\0000370}}
-#views_slideshow_cycle_main_slider-block a p {
+#views_slideshow_cycle_main_slider-slides_block a p {
   font-size: 1.4em;
   line-height: 1.4em;
   padding: 0;
@@ -400,44 +400,53 @@ footer.submitted time.icon span.year {
 #columns .region-inner {
   padding: 1.6em;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\000039}}
+#columns .region-highlighted {
+  margin-bottom: 1.6em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000312}}
+#columns .region-highlighted .region-inner {
+  background: #fdefcc;
+  margin: -1.6em;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000319}}
 .node-content {
   padding: 1.5em 0 0.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000322}}
 .node-content figure {
   margin-right: 0.5em;
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000328}}
 article.node {
   margin: 0.6em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000336}}
 #block-system-navigation {
   width: 100%;
   background: #053b73;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000340}}
 #block-system-navigation .block-inner {
   padding: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000343}}
 #block-system-navigation a {
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000348}}
 #primary-menu-bar {
   width: 100%;
   background: #e95e0f;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000353}}
 #secondary-menu-bar {
   width: 100%;
   background: #ffdc00;

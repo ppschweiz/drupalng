@@ -29,11 +29,11 @@
   }
 }
 
-#block-views-slider-block {
+#block-views-slider-slides-block {
   width: 50%;
 }
 
-#block-views-action-buttons-block {
+#block-views-action-buttons-action-buttons {
   width: 30%;
 }
 
@@ -52,7 +52,7 @@
         width: 100%;
       }
       
-      &.even {
+      &.odd {
         clear: both;
       }
     }
