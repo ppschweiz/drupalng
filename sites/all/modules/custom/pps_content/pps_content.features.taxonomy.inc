@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * pirate_party_switzerland_feature.features.taxonomy.inc
+ * pps_content.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function pirate_party_switzerland_feature_taxonomy_default_vocabularies() {
+function pps_content_taxonomy_default_vocabularies() {
   return array(
     'tags' => array(
       'name' => 'Tags',

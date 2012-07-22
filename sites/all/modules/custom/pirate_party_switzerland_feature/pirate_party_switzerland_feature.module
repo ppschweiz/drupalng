@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Pirate Party Switzerland feature.
- */
-
-include_once 'pirate_party_switzerland_feature.features.inc';

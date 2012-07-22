@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content feature.
+ */
+
+include_once 'pps_content.features.inc';
