@@ -415,7 +415,7 @@ footer.submitted time.icon span.year {
   padding: 1.5em 0 0.5em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000322}}
-.node-content figure {
+.node-content .field-name-field-image figure {
   margin-right: 0.5em;
   display: none;
 }
@@ -452,7 +452,28 @@ article.node {
   background: #ffdc00;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_gallery\.scss}line{font-family:\000035}}
+div.field-name-field-gallery,
+section.field-name-field-gallery {
+  float: none !important;
+  overflow: hidden;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_gallery\.scss}line{font-family:\000039}}
+div.field-name-field-gallery figure,
+section.field-name-field-gallery figure {
+  float: left;
+  width: 25em;
+  height: 25em;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_gallery\.scss}line{font-family:\0000315}}
+div.field-name-field-gallery figure img,
+section.field-name-field-gallery figure img {
+  margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000311}}
 body {
   background-color: #f9b200;
 }
@@ -460,12 +481,12 @@ body {
 /*#block-views-slider-block {
   display: none;
 }*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000319}}
 #columns {
   background: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/globals\.scss}line{font-family:\0000324}}
 #logo img {
   max-width: 100%;
 }

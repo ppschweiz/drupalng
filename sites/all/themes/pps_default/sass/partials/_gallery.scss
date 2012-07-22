@@ -1,0 +1,20 @@
+@import "base";
+
+div,
+section {
+  &.field-name-field-gallery {
+    float: none !important;
+    @include clearfix();
+    
+    figure {
+      float: left;
+      width: 25em;
+      height: 25em;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
