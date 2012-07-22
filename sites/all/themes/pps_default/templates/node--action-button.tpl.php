@@ -98,13 +98,21 @@
  */
 ?>
 <aside id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-	<a href="<?php print $content['field_link']['#items'][0]['url']; ?>">
+  <?php $link_attributes = '';
+  if (isset($content['field_link']['#items'][0]['attributes'])) {
+    foreach ($content['field_link']['#items'][0]['attributes'] as $key => $value) {
+      $link_attributes .= ' ' . $key . '="' . $value . '"';
+    }
+  }?>
+	<a href="<?php print $content['field_link'][0]['#markup']; ?>"<?php print $link_attributes; ?>>
     <?php print render($content['field_image']); ?>
-      <?php if ($title): ?>
-      <div<?php print $title_attributes; ?>>
+    <div class="title-subtitle">
+    <?php if ($title): ?>
+      <h1<?php print $title_attributes; ?>>
         <?php print $title; ?>
-      </div>
+      </h1>
     <?php endif; ?>
     <?php print render($content['field_subtitle']); ?>
+    </div>
 	</a>
 </aside>

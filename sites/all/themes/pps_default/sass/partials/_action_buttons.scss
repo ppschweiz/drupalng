@@ -10,32 +10,35 @@
     width: $dim-mobile-portrait-width;
     width: 100%;
     margin: 0;
-    height: 83px;
+    height: 8.3em;
     background: url('images/action_button/buttonbg.png') right  no-repeat;
     @include clearfix();
+    
+    font-family: $font-sans_serif-default;
 
-    div {
-      &.node-title,
-      &.field {
-        float: left;
-        font-family: $font-sans_serif-default;
-      }
+    .title-subtitle,
+    .field {
+      float: left;
+    }
 
-      &.node-title {
-        color: white;
-        text-transform: uppercase;
-        font-size: 18px;
-        letter-spacing: 2px;
-        margin-top: 26px;
-        line-height: 1.4em;
-        @include text-shadow(#FC6 0 0 5px, #FC6 0 0 5px, #FC6 0 0 8px);
-      }
+    .node-title {
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.8em;
+      letter-spacing: 0.125em;
+      margin-top: 1em;
+      line-height: 1.4em;
+      @include text-shadow(#FC6 0 0 5px, #FC6 0 0 5px, #FC6 0 0 8px);
+    }
 
-      &.field-name-field-subtitle {
-        font-size: 13px;
-        line-height: 1.2em;
-        color: #863303;
-      }
+    .field-name-field-subtitle {
+      font-size: 1.3em;
+      line-height: 1.2em;
+      color: #863303;
     }
   }
+}
+
+.node-type-action-button #content {
+  width: 36em;
 }
