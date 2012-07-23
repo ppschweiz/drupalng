@@ -5,9 +5,7 @@ base theme = adaptivetheme
 release = 7.x-1.x-dev
 engine = phptemplate
 screenshot = screenshot.png
-
 stylesheets[screen][] = css/globals.css
-
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 regions[content] = Main Content
@@ -25,7 +23,6 @@ regions[page_bottom] = Page bottom
 regions[dashboard_main] = Dashboard (main)
 regions[dashboard_sidebar] = Dashboard (sidebar)
 regions[dashboard_inactive] = Dashboard (inactive)
-
 features[] = logo
 features[] = name
 features[] = slogan
@@ -35,7 +32,6 @@ features[] = comment_user_verification
 features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
-
 settings[toggle_logo] = 1
 settings[toggle_name] = 0
 settings[toggle_slogan] = 0
@@ -45,7 +41,6 @@ settings[toggle_comment_user_verification] = 0
 settings[toggle_favicon] = 1
 settings[toggle_main_menu] = 1
 settings[toggle_secondary_menu] = 1
-
 settings[bigscreen_layout] = two_sidebars_right
 settings[bigscreen_sidebar_unit] = %
 settings[bigscreen_sidebar_first] = 30
@@ -56,7 +51,6 @@ settings[bigscreen_set_max_width] = 1
 settings[bigscreen_max_width_unit] = em
 settings[bigscreen_max_width] = 114
 settings[bigscreen_media_query] = only screen and (min-width:1025px)
-
 settings[tablet_landscape_layout] = two_sidebars_right_stack
 settings[tablet_landscape_sidebar_unit] = %
 settings[tablet_landscape_sidebar_first] = 30
@@ -64,7 +58,6 @@ settings[tablet_landscape_sidebar_second] = 20
 settings[tablet_landscape_page_unit] = %
 settings[tablet_landscape_page_width] = 100
 settings[tablet_landscape_media_query] = only screen and (min-width:769px) and (max-width:1024px)
-
 settings[tablet_portrait_layout] = one_col_vert
 settings[tablet_portrait_sidebar_unit] = %
 settings[tablet_portrait_sidebar_first] = 50
@@ -72,7 +65,6 @@ settings[tablet_portrait_sidebar_second] = 50
 settings[tablet_portrait_page_unit] = %
 settings[tablet_portrait_page_width] = 100
 settings[tablet_portrait_media_query] = only screen and (min-width:481px) and (max-width:768px)
-
 settings[smartphone_landscape_layout] = one_col_vert
 settings[smartphone_landscape_sidebar_unit] = %
 settings[smartphone_landscape_sidebar_first] = 50
@@ -87,7 +79,6 @@ settings[smartphone_portrait_sidebar_first] = 100
 settings[smartphone_portrait_sidebar_second] = 100
 settings[smartphone_portrait_sidebar_unit] = %
 settings[smartphone_portrait_layout] = one_col_stack
-
 settings[bigscreen_two_brick] = two-brick
 settings[bigscreen_two_66_33] = two-66-33
 settings[bigscreen_two_50] = two-50
@@ -101,7 +92,6 @@ settings[bigscreen_five_5x20] = five-5x20-2x3-grid
 settings[bigscreen_six_6x16] = six-6x16-3x2-grid
 settings[bigscreen_three_inset_right] = three-inset-right
 settings[bigscreen_three_inset_left] = three-inset-left
-
 settings[tablet_landscape_two_brick] = two-brick
 settings[tablet_landscape_two_66_33] = two-66-33
 settings[tablet_landscape_two_50] = two-50
@@ -115,7 +105,6 @@ settings[tablet_landscape_five_5x20] = five-5x20-2x3-grid
 settings[tablet_landscape_six_6x16] = six-6x16-3x2-grid
 settings[tablet_landscape_three_inset_right] = three-inset-right
 settings[tablet_landscape_three_inset_left] = three-inset-left
-
 settings[tablet_portrait_two_brick] = two-brick
 settings[tablet_portrait_two_66_33] = two-66-33
 settings[tablet_portrait_two_50] = two-50
@@ -129,7 +118,6 @@ settings[tablet_portrait_five_5x20] = five-5x20-1x2x2-grid
 settings[tablet_portrait_six_6x16] = six-6x16-2x3-grid
 settings[tablet_portrait_three_inset_right] = three-inset-right-wrap
 settings[tablet_portrait_three_inset_left] = three-inset-left-wrap
-
 settings[smartphone_landscape_two_brick] = two-brick-stack
 settings[smartphone_landscape_two_66_33] = two-66-33-stack
 settings[smartphone_landscape_two_50] = two-50-stack
@@ -143,25 +131,21 @@ settings[smartphone_landscape_five_5x20] = five-5x20-stack
 settings[smartphone_landscape_six_6x16] = six-6x16-stack
 settings[smartphone_landscape_three_inset_right] = three-inset-right-stack
 settings[smartphone_landscape_three_inset_left] = three-inset-left-stack
-
 settings[enable_custom_media_queries] = 0
 settings[global_default_layout_toggle] = 0
 settings[global_default_layout] = smartphone-portrait
-settings[global_files_path] = theme_directory
+settings[global_files_path] = public_files
 settings[custom_files_path] = ''
 settings[disable_responsive_styles] = 0
-
 settings[load_html5js] = 1
 settings[load_onmediaqueryjs] = 1
 settings[load_ltie8css] = 0
 settings[load_respondjs] = 0
 settings[load_scalefixjs] = 1
-
 settings[adaptivetheme_meta_viewport] = width=340, initial-scale=1
 settings[adaptivetheme_meta_mobileoptimized] = width
 settings[adaptivetheme_meta_handheldfriendly] = true
 settings[adaptivetheme_meta_apple_mobile_web_app_capable] = yes
-
 settings[chrome_edge] = 0
 settings[clear_type] = 0
 settings[expose_regions] = 0
@@ -169,7 +153,6 @@ settings[show_window_size] = 1
 settings[atcore_version_test] = 0
 settings[load_all_panels] = 0
 settings[load_all_panels_no_sidebars] = 0
-
 settings[enable_extensions] = 1
 settings[enable_font_settings] = 0
 settings[enable_heading_settings] = 0
@@ -180,22 +163,17 @@ settings[enable_custom_css] = 0
 settings[enable_context_regions] = 0
 settings[enable_float_region_blocks] = 0
 settings[enable_markup_overides] = 1
-
 settings[image_alignment] = ia-r
 settings[image_caption_teaser] = 0
 settings[image_caption_full] = 1
-
 settings[page_full_width_wrappers] = 0
 settings[page_content_type_suggestions] = 0
-
 settings[menu_item_span_elements] = 0
-
 settings[breadcrumb_display] = 0
 settings[breadcrumb_home] = 0
 settings[breadcrumb_label] = 0
 settings[breadcrumb_title] = 0
 settings[breadcrumb_separator] = ''
-
 settings[frontpage_remove_title] = 1
 settings[unset_block_system_main_front] = 1
 settings[feed_icons_hide] = 0
@@ -204,12 +182,10 @@ settings[unset_menu_titles] = 0
 settings[adv_search_extra_fieldsets] = 0
 settings[skip_link_target] = ''
 settings[rel_author] = 1
-
 settings[extra_page_classes] = 0
 settings[extra_article_classes] = 1
 settings[extra_comment_classes] = 0
 settings[extra_block_classes] = 1
 settings[extra_menu_classes] = 0
 settings[extra_item_list_classes] = 0
-
 settings[at_core] = 7.x-3.x

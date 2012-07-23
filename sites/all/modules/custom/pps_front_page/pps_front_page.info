@@ -1,0 +1,17 @@
+name = Front page
+core = 7.x
+package = Pirate Party Switzerland
+php = 5.2.4
+version = 7.x-1.0-dev
+project = pps_front_page
+dependencies[] = fe_block
+dependencies[] = fe_nodequeue
+dependencies[] = pps_content
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-front_page-highlighted
+features[fe_block_settings][] = views-front_page-promoted
+features[fe_block_settings][] = views-front_page-sticky
+features[fe_nodequeue][] = highlighted
+features[features_api][] = api:1
+features[views_view][] = front_page
