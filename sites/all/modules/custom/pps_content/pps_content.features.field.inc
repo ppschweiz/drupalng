@@ -184,7 +184,7 @@ function pps_content_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => FALSE,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -307,7 +307,7 @@ function pps_content_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'slider_mobileport',
+          'preview_image_style' => 'slider_desktop',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
