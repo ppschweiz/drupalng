@@ -5,6 +5,46 @@
  */
 
 /**
+ * Implements hook_views_api().
+ */
+function pps_action_buttons_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
+ * Implements hook_fe_nodequeue_export_fields().
+ */
+function pps_action_buttons_fe_nodequeue_export_fields() {
+  $nodequeues = array();
+
+  // Exported nodequeues: action_buttons
+  $nodequeues['action_buttons'] = array(
+    'qid' => '2',
+    'name' => 'action_buttons',
+    'title' => 'Action Buttons',
+    'subqueue_title' => '',
+    'size' => '3',
+    'link' => '',
+    'link_remove' => '',
+    'owner' => 'nodequeue',
+    'show_in_ui' => '1',
+    'show_in_tab' => '1',
+    'show_in_links' => '0',
+    'reference' => '0',
+    'reverse' => '0',
+    'i18n' => '0',
+    'subqueues' => '1',
+    'types' => array(
+      0 => 'action_button',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  return $nodequeues;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function pps_action_buttons_image_default_styles() {

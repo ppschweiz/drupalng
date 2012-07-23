@@ -206,14 +206,14 @@ article table th {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\000034}}
-#block-views-action-buttons-action-buttons,
+#block-views-action-buttons-block,
 .node-type-action-button #content {
   width: 340px;
   width: 100%;
   background: url("images/action_button/promobg.png");
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\000039}}
-#block-views-action-buttons-action-buttons aside.node-action-button,
+#block-views-action-buttons-block aside.node-action-button,
 .node-type-action-button #content aside.node-action-button {
   width: 340px;
   width: 100%;
@@ -225,14 +225,14 @@ article table th {
   font-family: "Aller Light", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000320}}
-#block-views-action-buttons-action-buttons aside.node-action-button .title-subtitle,
-#block-views-action-buttons-action-buttons aside.node-action-button .field,
+#block-views-action-buttons-block aside.node-action-button .title-subtitle,
+#block-views-action-buttons-block aside.node-action-button .field,
 .node-type-action-button #content aside.node-action-button .title-subtitle,
 .node-type-action-button #content aside.node-action-button .field {
   float: left;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000324}}
-#block-views-action-buttons-action-buttons aside.node-action-button .node-title,
+#block-views-action-buttons-block aside.node-action-button .node-title,
 .node-type-action-button #content aside.node-action-button .node-title {
   color: white;
   text-transform: uppercase;
@@ -243,7 +243,7 @@ article table th {
   text-shadow: #ffcc66 0 0 5px, #ffcc66 0 0 5px, #ffcc66 0 0 8px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_action_buttons\.scss}line{font-family:\0000334}}
-#block-views-action-buttons-action-buttons aside.node-action-button .field-name-field-subtitle,
+#block-views-action-buttons-block aside.node-action-button .field-name-field-subtitle,
 .node-type-action-button #content aside.node-action-button .field-name-field-subtitle {
   font-size: 1.3em;
   line-height: 1.2em;

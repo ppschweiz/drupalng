@@ -85,7 +85,7 @@ var queries = [
   {
     context: ['standard', 'tablet_landscape'],
     callback: function() {
-      jQuery('.region').find('#block-views-action-buttons-action-buttons').appendTo('.region-header .region-inner');
+      jQuery('.region').find('#block-views-action-buttons-block').appendTo('.region-header .region-inner');
       jQuery('.region').find('#block-system-navigation').appendTo('.region-header .region-inner');
     }
   },
@@ -93,7 +93,7 @@ var queries = [
   {
     context: ['tablet_portrait', 'smartphone_portrait', 'smartphone_landscape'],
     callback: function() {
-      jQuery('.region').find('#block-views-action-buttons-action-buttons').appendTo('.region-tertiary-content .region-inner');
+      jQuery('.region').find('#block-views-action-buttons-block').appendTo('.region-tertiary-content .region-inner');
       jQuery('.region').find('#block-system-navigation').appendTo('.region-tertiary-content .region-inner');
     }
   },
