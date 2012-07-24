@@ -38,19 +38,13 @@
   height: 24.9em;
 }
 
-.front {
-  #main-content {
-    article {
-      width: 50%;
-      float: left;
-      
-      &.node-sticky {
-        width: 100%;
-      }
-      
-      &.odd {
-        clear: both;
-      }
-    }
+#block-views-front-page-promoted {
+  .views-row {
+    width: 50%;
+    float: left;
+  }
+  
+  .views-row-odd {
+    clear: both;
   }
 }
