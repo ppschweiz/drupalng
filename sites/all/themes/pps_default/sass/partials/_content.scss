@@ -54,3 +54,19 @@ article.node{
   width: 100%;
   background: $color-yellow;
 }
+
+.node-type-group-cometee {
+  .view-og-members{
+    ol, ul {
+      list-style: none;
+      margin: 0;
+    }
+    .views-row {
+      float: left;
+      margin: 1em;
+    }
+    .views-field-name {
+      text-align: center;
+    }
+  }
+}

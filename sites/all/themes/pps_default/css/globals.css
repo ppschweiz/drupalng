@@ -99,113 +99,148 @@ h3 {
   font-size: 2.2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000339}}
-article h1 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000340}}
+article h1,
+.pane-content h1 {
   font-size: 2.4em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000343}}
-article h2 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000344}}
+article h2,
+.pane-content h2 {
   font-size: 2.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000347}}
-article h3 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000348}}
+article h3,
+.pane-content h3 {
   font-size: 2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000351}}
-article h4 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000352}}
+article h4,
+.pane-content h4 {
   font-size: 1.8em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000355}}
-article h5 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000356}}
+article h5,
+.pane-content h5 {
   font-size: 1.6em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000359}}
-article h6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000360}}
+article h6,
+.pane-content h6 {
   font-size: 1.4em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000363}}
-article p {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000364}}
+article p,
+.pane-content p {
   font-size: 1.4em;
   margin: 0 0 0.75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000368}}
-article acronym {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000369}}
+article acronym,
+.pane-content acronym {
   border-bottom: 0.1em dotted #d8d8d8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000372}}
-article blockquote, article q {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000373}}
+article blockquote, article q,
+.pane-content blockquote,
+.pane-content q {
   font-style: italic;
   margin: 0 0 1.5em;
   padding: 0 0 0 3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000377}}
-article blockquote p, article q p {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000378}}
+article blockquote p, article q p,
+.pane-content blockquote p,
+.pane-content q p {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000382}}
-article cite {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000383}}
+article cite,
+.pane-content cite {
   font-style: italic;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000386}}
-article em, article i {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000387}}
+article em, article i,
+.pane-content em,
+.pane-content i {
   font-style: italic;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000390}}
-article strong, article b {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000391}}
+article strong, article b,
+.pane-content strong,
+.pane-content b {
   font-family: "Aller Regular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000395}}
-article sup, article sub {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\0000396}}
+article sup, article sub,
+.pane-content sup,
+.pane-content sub {
   line-height: 0;
   font-size: 0.7em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003100}}
-article sup {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003101}}
+article sup,
+.pane-content sup {
   vertical-align: text-top;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003104}}
-article sub {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003105}}
+article sub,
+.pane-content sub {
   vertical-align: text-bottom;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003108}}
-article ul, article ol {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003109}}
+article ul, article ol,
+.pane-content ul,
+.pane-content ol {
   margin: 0 0 1em 1.5em;
   padding: 0;
   font-size: 1.4em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003113}}
-article ul ul, article ul ol, article ol ul, article ol ol {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003114}}
+article ul ul, article ul ol, article ol ul, article ol ol,
+.pane-content ul ul,
+.pane-content ul ol,
+.pane-content ol ul,
+.pane-content ol ol {
   font-size: 1em;
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003119}}
-article ul {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003120}}
+article ul,
+.pane-content ul {
   list-style-type: disc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003123}}
-article ol {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003124}}
+article ol,
+.pane-content ol {
   list-style-type: decimal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003127}}
-article dl {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003128}}
+article dl,
+.pane-content dl {
   font-size: 1.4em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003131}}
-article dt {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003132}}
+article dt,
+.pane-content dt {
   font-family: "Aller Regular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003136}}
-article dd {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003137}}
+article dd,
+.pane-content dd {
   margin: 0 0 1.5em 1.75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003140}}
-article table {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003141}}
+article table,
+.pane-content table {
   font-size: 1.4em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003142}}
-article table th, article table caption {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_typography\.scss}line{font-family:\00003143}}
+article table th, article table caption,
+.pane-content table th,
+.pane-content table caption {
   font-family: "Aller Regular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
   font-weight: bold;
   text-align: center;
@@ -462,6 +497,21 @@ article.node {
 #secondary-menu-bar {
   width: 100%;
   background: #ffdc00;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000360}}
+.node-type-group-cometee .view-og-members ol, .node-type-group-cometee .view-og-members ul {
+  list-style: none;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000364}}
+.node-type-group-cometee .view-og-members .views-row {
+  float: left;
+  margin: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_content\.scss}line{font-family:\0000368}}
+.node-type-group-cometee .view-og-members .views-field-name {
+  text-align: center;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/partials\/_gallery\.scss}line{font-family:\000035}}

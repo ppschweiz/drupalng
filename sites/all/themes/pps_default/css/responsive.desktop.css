@@ -35,12 +35,24 @@
   height: 24.9em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000342}}
-#block-views-front-page-promoted .views-row {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000343}}
+#block-views-front-page-promoted .views-row,
+.pane-og-nodes-content .views-row {
   width: 50%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000347}}
-#block-views-front-page-promoted .views-row-odd {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000348}}
+#block-views-front-page-promoted .views-row-odd,
+.pane-og-nodes-content .views-row-odd {
   clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000350}}
+#block-views-front-page-promoted .views-row-odd article,
+.pane-og-nodes-content .views-row-odd article {
+  padding-right: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000355}}
+#block-views-front-page-promoted .views-row-even article,
+.pane-og-nodes-content .views-row-even article {
+  padding-left: 1em;
 }

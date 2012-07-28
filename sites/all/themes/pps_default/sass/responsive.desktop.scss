@@ -38,7 +38,8 @@
   height: 24.9em;
 }
 
-#block-views-front-page-promoted {
+#block-views-front-page-promoted,
+.pane-og-nodes-content {
   .views-row {
     width: 50%;
     float: left;
@@ -46,5 +47,12 @@
   
   .views-row-odd {
     clear: both;
+    article {
+      padding-right: 1em;
+    }
+  }
+  
+  .views-row-even article {
+    padding-left: 1em;
   }
 }
