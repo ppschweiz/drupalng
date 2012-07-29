@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Commons feature.
+ */
+
+include_once 'pps_commons.features.inc';
