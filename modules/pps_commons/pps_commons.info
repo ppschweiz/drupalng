@@ -5,6 +5,7 @@ version = 7.x-1.0-dev
 project = pps_commons
 dependencies[] = ctools
 dependencies[] = strongarm
+dependencies[] = features
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = nodequeue_autocomplete_limit

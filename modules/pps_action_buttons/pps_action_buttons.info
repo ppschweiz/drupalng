@@ -13,6 +13,7 @@ dependencies[] = link
 dependencies[] = node
 dependencies[] = text
 dependencies[] = views
+dependencies[] = pps_commons
 features[ctools][] = views:views_default:3.0
 features[fe_block_settings][] = views-action_buttons-block
 features[fe_nodequeue][] = action_buttons

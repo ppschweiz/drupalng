@@ -54,7 +54,7 @@ function pps_action_buttons_image_default_styles() {
   $styles['action_button'] = array(
     'name' => 'action_button',
     'effects' => array(
-      2 => array(
+      0 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
