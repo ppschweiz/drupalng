@@ -11,12 +11,20 @@ api = 2
 ; Core project
 ; ------------
 
-projects[drupal][version] = 7.14
+projects[drupal][version] = 7.15
 
 ; Modules
 ; --------
 
-projects[ctools][version] = 1.0
+projects[cas][version] = 1.2
+projects[cas][type] = "module"
+projects[cas][subdir] = "contrib"
+
+projects[cas_attributes][version] = 1.0-beta2
+projects[cas_attributes][type] = "module"
+projects[cas_attributes][subdir] = "contrib"
+
+projects[ctools][version] = 1.1
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
 
@@ -87,6 +95,10 @@ projects[resp_img][subdir] = "contrib"
 projects[textile][version] = 2.0-rc11
 projects[textile][type] = "module"
 projects[textile][subdir] = "contrib"
+
+projects[token][version] = 1.2
+projects[token][type] = "module"
+projects[token][subdir] = "contrib"
 
 projects[vars][version] = 2.0-alpha10
 projects[vars][type] = "module"

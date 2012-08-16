@@ -1,4 +1,5 @@
 sites/*
+default
 public
 .DS_Store
 .sass-cache
