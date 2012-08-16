@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CAS Authentication feature.
+ */
+
+include_once 'pps_cas_auth.features.inc';
