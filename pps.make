@@ -126,3 +126,12 @@ projects[adaptivetheme][download][branch] = 7.x-3.x
 libraries[jquery.cycle][download][type] = "file"
 libraries[jquery.cycle][download][url] = "https://github.com/downloads/malsup/cycle/jquery.cycle.all.latest.min.js"
 libraries[jquery.cycle][download][filename] = "jquery.cycle.all.min.js"
+
+libraries[CAS][download][type] = "git"
+libraries[CAS][download][url] = "https://github.com/Jasig/phpCAS.git"
+libraries[CAS][download][tag] = "1.3.1"
+
+libraries[textile][download][type] = "svn"
+libraries[textile][download][url] = "http://textpattern.googlecode.com/svn/releases/4.3.0/source/textpattern/lib/"
+libraries[textile][destination] = "modules/contrib/textile/"
+libraries[textile][directory_name] = "include"
