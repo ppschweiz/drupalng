@@ -72,10 +72,6 @@ projects[nodequeue][version] = 2.0-beta1
 projects[nodequeue][type] = "module"
 projects[nodequeue][subdir] = "contrib"
 
-projects[og][version] = 1.4
-projects[og][type] = "module"
-projects[og][subdir] = "contrib"
-
 projects[panels][version] = 3.2
 projects[panels][type] = "module"
 projects[panels][subdir] = "contrib"
