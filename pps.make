@@ -108,6 +108,14 @@ projects[views_slideshow][version] = 3.0
 projects[views_slideshow][type] = "module"
 projects[views_slideshow][subdir] = "contrib"
 
+projects[workbench][version] = 1.1
+projects[workbench][type] = "module"
+projects[workbench][subdir] = "contrib"
+
+projects[workbench_access][version] = 1.x-dev
+projects[workbench_access][type] = "module"
+projects[workbench_access][subdir] = "contrib"
+
 ; Themes
 ; --------
 
