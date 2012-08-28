@@ -56,6 +56,10 @@ projects[features_extra][version] = 1.x-dev
 projects[features_extra][type] = "module"
 projects[features_extra][subdir] = "contrib"
 
+projects[i18n][version] = 1.7
+projects[i18n][type] = "module"
+projects[i18n][subdir] = "contrib"
+
 projects[lightbox2][version] = 1.0-beta1
 projects[lightbox2][type] = "module"
 projects[lightbox2][subdir] = "contrib"
@@ -84,6 +88,14 @@ projects[strongarm][version] = 2.0
 projects[strongarm][type] = "module"
 projects[strongarm][subdir] = "contrib"
 
+projects[superfish][version] = 1.8
+projects[superfish][type] = "module"
+projects[superfish][subdir] = "contrib"
+
+projects[taxonomy_menu][version] = 1.3
+projects[taxonomy_menu][type] = "module"
+projects[taxonomy_menu][subdir] = "contrib"
+
 projects[textile][version] = 2.0-rc11
 projects[textile][type] = "module"
 projects[textile][subdir] = "contrib"
@@ -91,6 +103,10 @@ projects[textile][subdir] = "contrib"
 projects[token][version] = 1.2
 projects[token][type] = "module"
 projects[token][subdir] = "contrib"
+
+projects[variable][version] = 2.1
+projects[variable][type] = "module"
+projects[variable][subdir] = "contrib"
 
 projects[vars][version] = 2.0-alpha10
 projects[vars][type] = "module"
@@ -134,6 +150,9 @@ libraries[CAS][download][tag] = "1.3.1"
 libraries[jquery.cycle][download][type] = "file"
 libraries[jquery.cycle][download][url] = "https://github.com/downloads/malsup/cycle/jquery.cycle.all.latest.min.js"
 libraries[jquery.cycle][download][filename] = "jquery.cycle.all.min.js"
+
+libraries[superfish][download][type] = "git"
+libraries[superfish][download][url] = "https://github.com/mehrpadin/Superfish-for-Drupal.git"
 
 libraries[textile][download][type] = "svn"
 libraries[textile][download][url] = "http://textpattern.googlecode.com/svn/releases/4.3.0/source/textpattern/lib/"
