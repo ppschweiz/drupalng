@@ -32,7 +32,7 @@ function pps_lang_strongarm() {
     'domain' => '',
     'prefix' => 'de',
     'weight' => '-10',
-    'javascript' => 'jSyUAJUs0uucpELB3z_LRuKEPDicz588Ky9wmglru9I',
+    'javascript' => 'iPGN8Jr3K4cHl_psYIFdnBXvAZnV2DKjsThVasQbAxQ',
   );
   $export['language_default'] = $strongarm;
 

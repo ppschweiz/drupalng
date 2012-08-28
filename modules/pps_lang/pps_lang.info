@@ -2,6 +2,7 @@ name = Languages
 description = Language settings
 core = 7.x
 package = Pirate Party Switzerland
+php = 5.2.4
 version = 7.x-1.0-dev
 project = pps_lang
 dependencies[] = features
