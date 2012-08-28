@@ -70,7 +70,7 @@ function pps_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
-  $strongarm->value = 'Site-Install';
+  $strongarm->value = 'Piratenpartei Schweiz';
   $export['site_name'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -99,8 +99,8 @@ function pps_site_strongarm() {
     'toggle_comment_user_picture' => 0,
     'toggle_comment_user_verification' => 0,
     'toggle_favicon' => 1,
-    'toggle_main_menu' => 1,
-    'toggle_secondary_menu' => 1,
+    'toggle_main_menu' => 0,
+    'toggle_secondary_menu' => 0,
     'default_logo' => 1,
     'logo_path' => '',
     'logo_upload' => '',
@@ -239,11 +239,11 @@ function pps_site_strongarm() {
     'page_full_width_wrappers' => 0,
     'page_content_type_suggestions' => 0,
     'menu_item_span_elements' => 0,
-    'breadcrumb_display' => 0,
-    'breadcrumb_home' => 0,
+    'breadcrumb_display' => 1,
+    'breadcrumb_home' => 1,
     'breadcrumb_label' => 0,
-    'breadcrumb_title' => 0,
-    'breadcrumb_separator' => '',
+    'breadcrumb_title' => 1,
+    'breadcrumb_separator' => ' :: ',
     'frontpage_remove_title' => 1,
     'unset_block_system_main_front' => 1,
     'feed_icons_hide' => 0,
