@@ -1,6 +1,6 @@
-sites/*
-default
-public
+www
+sites/*/files/*
+sites/*/local.*
 .DS_Store
 .sass-cache
-envbuild.sh
+build_environment.sh

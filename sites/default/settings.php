@@ -102,3 +102,5 @@ $local_settings_filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'local.sett
 if (file_exists($local_settings_filename)) {
   require_once $local_settings_filename;
 }
+
+$conf['install_profile'] = 'minimal';
