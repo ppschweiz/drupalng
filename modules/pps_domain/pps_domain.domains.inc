@@ -53,10 +53,20 @@ function pps_domain_domain_alias_default_aliases() {
       'redirect' => '0',
       'machine_name' => 'partipirate_ch',
     ),
+    'd7.partipirate.ch' => array(
+      'pattern' => 'd7.partipirate.ch',
+      'redirect' => '0',
+      'machine_name' => 'partipirate_ch',
+    ),
   );
   $domain_aliases['partitopirata_ch'] = array(
     'partitopirata.dev' => array(
       'pattern' => 'partitopirata.dev',
+      'redirect' => '0',
+      'machine_name' => 'partitopirata_ch',
+    ),
+    'd7.partitopirata.ch' => array(
+      'pattern' => 'd7.partitopirata.ch',
       'redirect' => '0',
       'machine_name' => 'partitopirata_ch',
     ),
@@ -70,6 +80,16 @@ function pps_domain_domain_alias_default_aliases() {
     'pirateparty.ch' => array(
       'pattern' => 'pirateparty.ch',
       'redirect' => '1',
+      'machine_name' => 'piratenpartei_ch',
+    ),
+    'pirateparty.dev' => array(
+      'pattern' => 'pirateparty.dev',
+      'redirect' => '0',
+      'machine_name' => 'piratenpartei_ch',
+    ),
+    'd7.piratenpartei.ch' => array(
+      'pattern' => 'd7.piratenpartei.ch',
+      'redirect' => '0',
       'machine_name' => 'piratenpartei_ch',
     ),
   );
