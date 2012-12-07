@@ -68,9 +68,9 @@ projects[i18n][version] = 1.7
 projects[i18n][type] = "module"
 projects[i18n][subdir] = "contrib"
 
-projects[l10n-update][version] = l10n-update
-projects[l10n-update][type] = "module"
-projects[l10n-update][subdir] = "contrib"
+projects[l10n_update][version] = 1.0-beta3
+projects[l10n_update][type] = "module"
+projects[l10n_update][subdir] = "contrib"
 
 projects[link][version] = 1.0
 projects[link][type] = "module"

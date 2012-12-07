@@ -2,7 +2,7 @@
 
 rm -rf www
 
-drush make pps.make www --translations=de,fr,it
+drush make pps.make www --no-cache --translations=de,fr,it
 
 rm -r www/sites/default
 ln -s ../../sites/default www/sites/default
