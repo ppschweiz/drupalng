@@ -3,4 +3,3 @@ sites/*/files/*
 sites/*/local.*
 .DS_Store
 .sass-cache
-build_environment.sh
