@@ -44,7 +44,7 @@ function pps_lang_locale_default_languages() {
     'direction' => '0',
     'enabled' => '1',
     'plurals' => '2',
-    'formula' => '($n!=1)',
+    'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-9',

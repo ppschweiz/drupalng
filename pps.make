@@ -36,10 +36,6 @@ projects[date][version] = 2.6
 projects[date][type] = "module"
 projects[date][subdir] = "contrib"
 
-projects[diff][version] = 3.2
-projects[diff][type] = "module"
-projects[diff][subdir] = "contrib"
-
 projects[domain][version] = 3.5
 projects[domain][type] = "module"
 projects[domain][subdir] = "contrib"
@@ -71,6 +67,10 @@ projects[flag_weights][subdir] = "contrib"
 projects[i18n][version] = 1.7
 projects[i18n][type] = "module"
 projects[i18n][subdir] = "contrib"
+
+projects[l10n-update][version] = l10n-update
+projects[l10n-update][type] = "module"
+projects[l10n-update][subdir] = "contrib"
 
 projects[link][version] = 1.0
 projects[link][type] = "module"
@@ -172,6 +172,11 @@ libraries[textile][directory_name] = "include"
 
 ; Development Modules
 ; -------------------
+
 projects[devel][version] = 1.3
 projects[devel][type] = "module"
 projects[devel][subdir] = "contrib"
+
+projects[diff][version] = 3.2
+projects[diff][type] = "module"
+projects[diff][subdir] = "contrib"

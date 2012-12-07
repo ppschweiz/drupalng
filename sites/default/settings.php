@@ -103,4 +103,3 @@ if (file_exists($local_settings_filename)) {
   require_once $local_settings_filename;
 }
 
-$conf['install_profile'] = 'minimal';
