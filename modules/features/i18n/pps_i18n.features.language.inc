@@ -7,7 +7,7 @@
 /**
  * Implements hook_locale_default_languages().
  */
-function pps_lang_locale_default_languages() {
+function pps_i18n_locale_default_languages() {
   $languages = array();
 
   // Exported language: de.

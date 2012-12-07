@@ -4,4 +4,4 @@
  * Code for the Languages feature.
  */
 
-include_once 'pps_lang.features.inc';
+include_once 'pps_i18n.features.inc';

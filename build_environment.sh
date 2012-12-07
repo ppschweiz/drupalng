@@ -10,9 +10,9 @@ drush si --db-url=mysql://root:@127.0.0.1/drupal --account-pass=q -y minimal
 drush en admin_menu_toolbar -y
 drush en diff -y
 
-drush en pps_lang -y
+drush en pps_i18n -y
 drush cc all
-drush fr pps_lang -y
+drush fr pps_i18n -y
 drush l10n-update
 drush cc all
 

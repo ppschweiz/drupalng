@@ -7,7 +7,7 @@
 /**
  * Implements hook_strongarm().
  */
-function pps_lang_strongarm() {
+function pps_i18n_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
