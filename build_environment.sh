@@ -33,4 +33,11 @@ drush cc all
 drush fr pps_domain -y
 drush cc all
 
+drush en pps_cas_auth -y
+drush cc all
+
+drush en pps_migrate_d6 -y
+drush cc all
+drush mi User
+
 cd -

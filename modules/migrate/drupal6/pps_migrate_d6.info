@@ -1,0 +1,15 @@
+name = Migrate Drupal 6
+description = Migrate content from the old Drupal 6
+package = Pirate Party Switzerland
+core = 7.x
+version = 7.x-1.x-dev
+project = pps_migrate_d6
+hidden = TRUE
+
+dependencies[] = cas
+dependencies[] = migrate
+dependencies[] = migrate_d2d
+
+files[] = migrations/node.inc
+files[] = migrations/user.inc
+files[] = handlers/text_field.inc
