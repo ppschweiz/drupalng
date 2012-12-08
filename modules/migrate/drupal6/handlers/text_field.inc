@@ -48,9 +48,13 @@ class PPSMigrateTextFieldHandler extends MigrateTextFieldHandler {
   }
 
   private function convertToTextile($text) {
-    $echo = variable_get('shell_cmd_echo', '/bin/echo');
+    $file = tmpfile();
+    $meta_data = stream_get_meta_data($file);
+    $filename = $meta_data['uri'];
+    fwrite($file, $text);
     $pandoc = variable_get('shell_cmd_pandoc', '/usr/bin/pandoc');
-    $text = shell_exec("$echo '$text' | $pandoc -f html -t textile -");
+    $text = shell_exec("$pandoc -f html -t textile $filename");
+    fclose($file);
     return $text;
   }
 }
