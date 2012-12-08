@@ -4,3 +4,4 @@ sites/*/local.*
 sites/*/settings.php
 .DS_Store
 .sass-cache
+legacy
