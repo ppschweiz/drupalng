@@ -1,0 +1,12 @@
+name = Formatting
+description = Text and image formats
+core = 7.x
+package = Pirate Party Switzerland
+version = 7.x-1.0
+project = pps_formatting
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = textile
+features[features_api][] = api:1
+features[filter][] = plain_text
+features[filter][] = textile

@@ -5,15 +5,153 @@
  */
 function pps_migrate_d6_flush_caches() {
   pps_migrate_d6_register_user_migrations();
+  pps_migrate_d6_register_taxonomy_migrations();
+  pps_migrate_d6_register_files_migrations();
+  pps_migrate_d6_register_node_migrations();
+//  pps_migrate_d6_register_comment_migrations();
 }
 
-
+/**
+ * Register user migrations
+ */
 function pps_migrate_d6_register_user_migrations() {
   $arguments = pps_migrate_common_arguments() + array(
     'description' => t('Migration of users'),
     'machine_name' => 'User',
   );
   Migration::registerMigration('PPSUserMigration', $arguments['machine_name'], $arguments);
+}
+
+/**
+ * Register user migrations
+ */
+function pps_migrate_d6_register_files_migrations() {
+  $file_arguments = pps_migrate_common_arguments() + array(
+    'machine_name' => 'Files',
+    'description' => t('Import files'),
+    'user_migration' => 'User',
+    'source_dir' => '/Users/christian/Development/pps_d7/legacy',
+    'destination_dir' => 'public://legacy_files',
+  );
+  Migration::registerMigration('DrupalFile6Migration', $file_arguments['machine_name'], $file_arguments);
+}
+
+/**
+ * Register taxonomy migrations
+ */
+function pps_migrate_d6_register_taxonomy_migrations() {
+  $vocabulary_arguments = array(
+    array(
+      // Migrate media companies
+      'description' => t('Migration of Media terms'),
+      'machine_name' => 'MediaCompanies',
+      'source_vocabulary' => '2',
+      'destination_vocabulary' => 'media_companies',
+    ),
+  );
+
+  $common_vocabulary_arguments = pps_migrate_common_arguments() + array(
+    'class_name' => 'DrupalTerm6Migration',
+    'soft_dependencies' => array('User'),
+  );
+
+  foreach ($vocabulary_arguments as $arguments) {
+    $arguments += $common_vocabulary_arguments;
+    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
+  }
+}
+
+/**
+ * Register node migrations
+ */
+function pps_migrate_d6_register_node_migrations() {
+  $node_arguments = array(
+    array(
+      // Press reviews
+      'class_name' => 'PPSPressReviewMigration',
+      'description' => t('Migration of Press Reviews'),
+      'machine_name' => 'Press',
+      'source_type' => 'press',
+      'destination_type' => 'press_review',
+      'dependencies' => array('MediaCompanies'),
+    ),
+    array(
+      'class_name' => 'PPSNodeMigration',
+      'description' => t('Migration of Politblog'),
+      'machine_name' => 'Politblog',
+      'source_type' => 'politblog',
+      'destination_type' => 'article',
+    ),
+//    array(
+//      'class_name' => 'PPSNodeMigration',
+//      'description' => t('Migration of Communique'),
+//      'machine_name' => 'Communique',
+//      'source_type' => 'communique',
+//      'destination_type' => 'article',
+//    ),
+//    array(
+//      'class_name' => 'PPSNodeMigration',
+//      'description' => t('Migration of Page'),
+//      'machine_name' => 'Page',
+//      'source_type' => 'page',
+//      'destination_type' => 'article',
+//    ),
+//    array(
+//      'class_name' => 'PPSNodeMigration',
+//      'description' => t('Migration of Organic Group'),
+//      'machine_name' => 'OrganicGroup',
+//      'source_type' => 'og',
+//      'destination_type' => 'page',
+//    ),
+  );
+
+  $common_node_arguments = pps_migrate_common_arguments() + array(
+    'user_migration' => 'User',
+    'dependencies' => array('Files'),
+  );
+
+  foreach ($node_arguments as $arguments) {
+    $arguments += $common_node_arguments;
+    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
+  }
+}
+
+/**
+ * Register comment migrations
+ */
+function pps_migrate_d6_register_comment_migrations() {
+  $comment_arguments = array(
+    array(
+      'machine_name' => 'PolitblogComments',
+      'description' => t('Import Politblog comments'),
+      'source_type' => 'politblog',
+      'destination_type' => 'article',
+      'node_migration' => 'Politblog',
+    ),
+    array(
+      'machine_name' => 'CommuniqueComments',
+      'description' => t('Import Communique comments'),
+      'source_type' => 'communique',
+      'destination_type' => 'article',
+      'node_migration' => 'Communique',
+    ),
+    array(
+      'machine_name' => 'PageComments',
+      'description' => t('Import Page comments'),
+      'source_type' => 'page',
+      'destination_type' => 'article',
+      'node_migration' => 'Page',
+    ),
+  );
+  $common_comment_arguments = pps_migrate_common_arguments() + array(
+    'class_name' => 'DrupalComment6Migration',
+    'user_migration' => 'User',
+    'default_uid' => 1,
+  );
+  foreach ($comment_arguments as $arguments) {
+    $arguments += $common_comment_arguments;
+    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
+  }
 }
 
 /**
@@ -38,145 +176,15 @@ function pps_migrate_common_arguments(){
         '5' => 'plain_text',
         '6' => 'textile',
       ),
+      'domain_mappings' => array(
+        0 => 'piratenpartei_ch',
+        2 => 'partipirate_ch',
+        3 => 'pirateparty_ch',
+        4 => 'partitopirata_ch',
+      ),
     );
   }
   return $arguments;
-}
-
-
-/**
- * Register all D6->D7 migrations.
- */
-function pps_migrate_d6_register_migrations() {
-  // Arguments common for all migrations
-  $common_arguments = array(
-    'source_connection' => 'legacy',
-    'source_version' => 6,
-    'format_mappings' => array(
-      '1' => 'plain_text',
-      '2' => 'textile',
-      '3' => 'textile',
-      '4' => 'full_html',
-      '5' => 'plain_text',
-      '6' => 'textile',
-    ),
-  );
-
-  // User migration
-  $arguments = $common_arguments + array(
-    'description' => t('Migration of users'),
-    'machine_name' => 'User',
-  );
-  Migration::registerMigration('DrupalUser6Migration', $arguments['machine_name'], $arguments);
-
-  // Migrate media companies
-  $vocabulary_arguments = array(
-    array(
-      'description' => t('Migration of Media terms'),
-      'machine_name' => 'Media',
-      'source_vocabulary' => '2',
-      'destination_vocabulary' => 'media_companies',
-    ),
-  );
-  $common_vocabulary_arguments = $common_arguments + array(
-    'class_name' => 'DrupalTerm6Migration',
-    'soft_dependencies' => array('User'),
-  );
-  foreach ($vocabulary_arguments as $arguments) {
-    $arguments += $common_vocabulary_arguments;
-    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
-  }
-
-  // Files
-  $file_arguments = $common_arguments + array(
-    'machine_name' => 'Files',
-    'description' => t('Import files'),
-    'user_migration' => 'User',
-    'source_dir' => '/Users/christian/Sites/drupal/sites/legacy',
-    'destination_dir' => 'public://legacy_files',
-  );
-  Migration::registerMigration('DrupalFile6Migration', $file_arguments['machine_name'], $file_arguments);
-
-  // Nodes
-  $node_arguments = array(
-    array(
-      'class_name' => 'PPSPressReviewMigration',
-      'description' => t('Migration of Press Reviews'),
-      'machine_name' => 'Press',
-      'source_type' => 'press',
-      'destination_type' => 'press_review',
-    ),
-    array(
-      'class_name' => 'PPSNodeMigration',
-      'description' => t('Migration of Politblog'),
-      'machine_name' => 'Politblog',
-      'source_type' => 'politblog',
-      'destination_type' => 'article',
-    ),
-    array(
-      'class_name' => 'PPSNodeMigration',
-      'description' => t('Migration of Communique'),
-      'machine_name' => 'Communique',
-      'source_type' => 'communique',
-      'destination_type' => 'article',
-    ),
-    array(
-      'class_name' => 'PPSNodeMigration',
-      'description' => t('Migration of Page'),
-      'machine_name' => 'Page',
-      'source_type' => 'page',
-      'destination_type' => 'article',
-    ),
-    array(
-      'class_name' => 'PPSNodeMigration',
-      'description' => t('Migration of Organic Group'),
-      'machine_name' => 'OrganicGroup',
-      'source_type' => 'og',
-      'destination_type' => 'page',
-    ),
-  );
-  $common_node_arguments = $common_arguments + array(
-    'user_migration' => 'User',
-    'dependencies' => array('Files'),
-  );
-  foreach ($node_arguments as $arguments) {
-    $arguments = array_merge_recursive($arguments, $common_node_arguments);
-    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
-  }
-
-  // Comments
-  $comment_arguments = array(
-    array(
-      'machine_name' => 'PolitblogComments',
-      'description' => t('Import Politblog comments'),
-      'source_type' => 'politblog',
-      'destination_type' => 'article',
-      'node_migration' => 'Politblog',
-    ),
-    array(
-      'machine_name' => 'CommuniqueComments',
-      'description' => t('Import Communique comments'),
-      'source_type' => 'communique',
-      'destination_type' => 'article',
-      'node_migration' => 'Communique',
-    ),
-    array(
-      'machine_name' => 'PageComments',
-      'description' => t('Import Page comments'),
-      'source_type' => 'page',
-      'destination_type' => 'article',
-      'node_migration' => 'Page',
-    ),
-  );
-  $common_comment_arguments = $common_arguments + array(
-    'class_name' => 'DrupalComment6Migration',
-    'user_migration' => 'User',
-    'default_uid' => 1,
-  );
-  foreach ($comment_arguments as $arguments) {
-    $arguments = array_merge_recursive($arguments, $common_comment_arguments);
-    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'], $arguments);
-  }
 }
 
 /**
