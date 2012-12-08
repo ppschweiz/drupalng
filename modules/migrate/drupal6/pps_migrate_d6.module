@@ -8,7 +8,7 @@ function pps_migrate_d6_flush_caches() {
   pps_migrate_d6_register_taxonomy_migrations();
   pps_migrate_d6_register_files_migrations();
   pps_migrate_d6_register_node_migrations();
-//  pps_migrate_d6_register_comment_migrations();
+  pps_migrate_d6_register_comment_migrations();
 }
 
 /**
@@ -66,36 +66,21 @@ function pps_migrate_d6_register_taxonomy_migrations() {
  */
 function pps_migrate_d6_register_node_migrations() {
   $node_arguments = array(
-    array(
-      // Press reviews
-      'class_name' => 'PPSPressReviewMigration',
-      'description' => t('Migration of Press Reviews'),
-      'machine_name' => 'Press',
-      'source_type' => 'press',
-      'destination_type' => 'press_review',
-      'dependencies' => array('MediaCompanies'),
-    ),
+    // Bild (gallery_image)
+
+    // Communiqué (communique)
     array(
       'class_name' => 'PPSNodeMigration',
-      'description' => t('Migration of Politblog'),
-      'machine_name' => 'Politblog',
-      'source_type' => 'politblog',
+      'description' => t('Migration of Communique'),
+      'machine_name' => 'Communique',
+      'source_type' => 'communique',
       'destination_type' => 'article',
     ),
-//    array(
-//      'class_name' => 'PPSNodeMigration',
-//      'description' => t('Migration of Communique'),
-//      'machine_name' => 'Communique',
-//      'source_type' => 'communique',
-//      'destination_type' => 'article',
-//    ),
-//    array(
-//      'class_name' => 'PPSNodeMigration',
-//      'description' => t('Migration of Page'),
-//      'machine_name' => 'Page',
-//      'source_type' => 'page',
-//      'destination_type' => 'article',
-//    ),
+    // Event (event)
+
+    // Gallery (gallery)
+
+    // Group (og)
 //    array(
 //      'class_name' => 'PPSNodeMigration',
 //      'description' => t('Migration of Organic Group'),
@@ -103,6 +88,59 @@ function pps_migrate_d6_register_node_migrations() {
 //      'source_type' => 'og',
 //      'destination_type' => 'page',
 //    ),
+    // Group Post (ogpost)
+      /**
+       * There is only one test node. So no need to migrate.
+       */
+    // Group Wiki (ogwiki)
+      /**
+       * No records.
+       */
+    // Job (job)
+      /**
+       * Obsolete, wont't be migrated. Only five records by the way.
+       */
+    // Page (page)
+    array(
+      'class_name' => 'PPSNodeMigration',
+      'description' => t('Migration of Page'),
+      'machine_name' => 'Page',
+      'source_type' => 'page',
+      'destination_type' => 'article',
+    ),
+    // Panel (panel)
+      /**
+       * No records.
+       */
+    // Politblog (politblog)
+    array(
+      'class_name' => 'PPSNodeMigration',
+      'description' => t('Migration of Politblog'),
+      'machine_name' => 'Politblog',
+      'source_type' => 'politblog',
+      'destination_type' => 'article',
+    ),
+    // Pressespiegel (press)
+    array(
+      'class_name' => 'PPSPressReviewMigration',
+      'description' => t('Migration of Press Reviews'),
+      'machine_name' => 'Press',
+      'source_type' => 'press',
+      'destination_type' => 'press_review',
+      'dependencies' => array('MediaCompanies'),
+    ),
+    // Product (product)
+      /**
+       * No records.
+       */
+    // Produktzusammenstellung (product_kit)
+      /**
+       * No records.
+       */
+    // Umfrage (poll)
+      /**
+       * No records.
+       */
   );
 
   $common_node_arguments = pps_migrate_common_arguments() + array(
