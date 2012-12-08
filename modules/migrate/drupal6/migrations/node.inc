@@ -2,6 +2,9 @@
 
 /**
  * Common mappings for the node migrations.
+ *
+ * @todo Get the attachment description.
+ * @todo Probably we nee to deal with attachments in different way.
  */
 class PPSNodeMigration extends DrupalNode6Migration {
 
@@ -64,8 +67,6 @@ class PPSNodeMigration extends DrupalNode6Migration {
 
 /**
  * Press review mappings and handling.
- *
- * @todo Get the attachment description.
  */
 class PPSPressReviewMigration extends PPSNodeMigration {
   public function __construct(array $arguments) {
@@ -90,4 +91,41 @@ class PPSPressReviewMigration extends PPSNodeMigration {
       'field_media_company:ignore_case',
     ));
   }
+}
+
+class PPSEventMigration extends PPSNodeMigration {
+  public function __construct(array $arguments) {
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_event_type', 1)
+      ->sourceMigration('EventTypes')
+      ->arguments(array('source_type' => 'tid'));
+
+    $this->addFieldMapping('field_time', 'field_event');
+//      ->arguments(array('to' => array('source_field' => 'field_event:value2')));
+
+    $this->addUnmigratedSources(array(
+      'domain_site',
+      'field_event:value2',
+      'field_event:rrule',
+    ));
+    $this->addUnmigratedDestinations(array(
+      'field_event_type:source_type',
+      'field_event_type:create_term',
+      'field_event_type:ignore_case',
+    ));
+  }
+
+  public function prepareRow($row) {
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+    $row_array = (array)$row;
+    $row->field_event = drupal_json_encode(array(
+      'from' => $row->field_event[0],
+      'to' => $row_array['field_event:value2'][0],
+      'rrule' => $row_array['field_event:rrule'][0],
+    ));
+  }
+
 }

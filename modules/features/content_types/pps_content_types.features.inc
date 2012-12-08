@@ -27,6 +27,14 @@ function pps_content_types_node_info() {
       'title_label' => t('Titel'),
       'help' => '',
     ),
+    'event' => array(
+      'name' => t('Event'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'press_review' => array(
       'name' => t('Press Review'),
       'base' => 'node_content',

@@ -48,6 +48,13 @@ function pps_migrate_d6_register_taxonomy_migrations() {
       'source_vocabulary' => '2',
       'destination_vocabulary' => 'media_companies',
     ),
+    array(
+      // Migrate event type
+      'description' => t('Migration of Event Types'),
+      'machine_name' => 'EventTypes',
+      'source_vocabulary' => '1',
+      'destination_vocabulary' => 'event_types',
+    ),
   );
 
   $common_vocabulary_arguments = pps_migrate_common_arguments() + array(
@@ -77,6 +84,13 @@ function pps_migrate_d6_register_node_migrations() {
       'destination_type' => 'article',
     ),
     // Event (event)
+    array(
+      'class_name' => 'PPSEventMigration',
+      'description' => t('Event of Communique'),
+      'machine_name' => 'Event',
+      'source_type' => 'event',
+      'destination_type' => 'event',
+    ),
 
     // Gallery (gallery)
 
