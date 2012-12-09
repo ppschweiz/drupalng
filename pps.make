@@ -12,6 +12,12 @@ projects[admin_menu][version] = 3.0-rc3
 projects[admin_menu][type] = "module"
 projects[admin_menu][subdir] = "contrib"
 
+projects[bueditor][version] = 1.5
+projects[bueditor][type] = "module"
+projects[bueditor][subdir] = "contrib"
+
+; bueditor_plus
+
 projects[cas][version] = 1.2
 projects[cas][type] = "module"
 projects[cas][subdir] = "contrib"
@@ -68,6 +74,17 @@ projects[i18n][version] = 1.7
 projects[i18n][type] = "module"
 projects[i18n][subdir] = "contrib"
 
+projects[imce][version] = 1.6
+projects[imce][type] = "module"
+projects[imce][subdir] = "contrib"
+
+; imce_crop
+; imce_filefield / imce_plupload / filefield_sources
+; imce_mkdir
+; imce_rename
+; imce_tools
+; imce_watermark
+
 projects[l10n_update][version] = 1.0-beta3
 projects[l10n_update][type] = "module"
 projects[l10n_update][subdir] = "contrib"
@@ -104,6 +121,8 @@ projects[taxonomy_menu][version] = 1.4
 projects[taxonomy_menu][type] = "module"
 projects[taxonomy_menu][subdir] = "contrib"
 
+; textbook
+
 projects[textile][version] = 2.0-rc11
 projects[textile][type] = "module"
 projects[textile][subdir] = "contrib"
@@ -139,10 +158,6 @@ projects[workbench][subdir] = "contrib"
 projects[workbench_access][version] = 1.0
 projects[workbench_access][type] = "module"
 projects[workbench_access][subdir] = "contrib"
-
-projects[workbench_media][version] = 1.1
-projects[workbench_media][type] = "module"
-projects[workbench_media][subdir] = "contrib"
 
 projects[workbench_moderation][version] = 1.2
 projects[workbench_moderation][type] = "module"
