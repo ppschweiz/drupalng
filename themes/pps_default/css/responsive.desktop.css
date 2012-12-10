@@ -9,49 +9,40 @@
  *   sub-theme, if you set Compass to watch it or the directory this file will be
  *   overwritten!
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000317}}
 .region-header .block {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000323}}
 .node-content .field-name-field-image figure {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000328}}
 #block-views-slides-block {
   width: 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000332}}
 #block-views-action-buttons-block {
   width: 30%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000336}}
 #block-system-navigation {
   width: 20%;
   height: 24.9em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000343}}
 #block-views-front-page-promoted .views-row,
 .pane-og-nodes-content .views-row {
   width: 50%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000348}}
 #block-views-front-page-promoted .views-row-odd,
 .pane-og-nodes-content .views-row-odd {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000350}}
 #block-views-front-page-promoted .views-row-odd article,
 .pane-og-nodes-content .views-row-odd article {
   padding-right: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/christian\/Development\/pps_d7\/sites\/all\/themes\/pps_default\/sass\/responsive\.desktop\.scss}line{font-family:\0000355}}
 #block-views-front-page-promoted .views-row-even article,
 .pane-og-nodes-content .views-row-even article {
   padding-left: 1em;
