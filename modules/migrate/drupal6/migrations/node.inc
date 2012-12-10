@@ -17,8 +17,10 @@ class PPSNodeMigration extends DrupalNode6Migration {
 
     parent::__construct ($arguments);
 
-    $this->addFieldMapping('field_attachments', 'attachment_fids')->sourceMigration('Files');
-    $this->addFieldMapping('field_attachments:file_class')->defaultValue('MigrateFileFid');
+    $this->addFieldMapping('field_attachments', 'attachment_fids')
+      ->sourceMigration('Files');
+    $this->addFieldMapping('field_attachments:file_class')
+      ->defaultValue('MigrateFileFid');
     $this->addFieldMapping('domain_site')->defaultValue(FALSE);
     $this->addFieldMapping('domains', 'domains');
 
@@ -70,8 +72,6 @@ class PPSNodeMigration extends DrupalNode6Migration {
  */
 class PPSPressReviewMigration extends PPSNodeMigration {
   public function __construct(array $arguments) {
-    $this->sourceFields['attachment_fids'] = t('File attachments');
-
     parent::__construct($arguments);
 
     $this->addFieldMapping('field_media_company', 2)
@@ -102,7 +102,6 @@ class PPSEventMigration extends PPSNodeMigration {
       ->arguments(array('source_type' => 'tid'));
 
     $this->addFieldMapping('field_time', 'field_event');
-//      ->arguments(array('to' => array('source_field' => 'field_event:value2')));
 
     $this->addUnmigratedSources(array(
       'domain_site',
@@ -127,5 +126,52 @@ class PPSEventMigration extends PPSNodeMigration {
       'rrule' => $row_array['field_event:rrule'][0],
     ));
   }
+}
 
+class PPSGalleryMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    $this->sourceFields['image_fids'] = t('Images');
+    $this->sourceFields['image_alts'] = t('Image alternatives');
+    $this->sourceFields['image_titles'] = t('Image titles');
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_images', 'image_fids')
+      ->sourceMigration('Files');
+    $this->addFieldMapping('field_images:file_class')
+      ->defaultValue('MigrateFileFid');
+
+    $this->addFieldMapping('field_images:alt', 'image_alts');
+    $this->addFieldMapping('field_images:title', 'image_titles');
+
+    $this->addFieldMapping('domain_site')->defaultValue(TRUE);
+    $this->addFieldMapping('domains')->defaultValue(array('piratenpartei_ch'));
+
+    $this->addUnmigratedDestinations(array(
+      'field_images:language',
+    ));
+  }
+
+  public function prepareRow($row) {
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+    $query = Database::getConnection('default', $this->sourceConnection)
+      ->select('node', 'n')
+      ->fields('n', array('nid', 'title'))
+      ->condition('type', 'gallery_image')
+      ->orderBy('f.field_sort_value');
+    $query->innerJoin('node_revisions', 'nr', 'n.vid=nr.vid');
+    $query->join('content_type_gallery_image', 'f', 'n.vid=f.vid and f.field_gallery_nid = :nid', array(':nid' => $row->nid));
+    $query->fields('f', array('field_gallery_image_fid'));
+    $results = $query->execute()->fetchAllAssoc('nid');
+
+    $row->image_fids = array();
+    $row->image_alts = array();
+    $row->image_titles = array();
+    foreach ($results as $result) {
+      $row->image_fids[] = $result->field_gallery_image_fid;
+      $row->image_alts[] = $result->title;
+      $row->image_titles[] = $result->title;
+    }
+  }
 }

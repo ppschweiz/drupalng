@@ -74,7 +74,9 @@ function pps_migrate_d6_register_taxonomy_migrations() {
 function pps_migrate_d6_register_node_migrations() {
   $node_arguments = array(
     // Bild (gallery_image)
-
+     /**
+      * Part of the gallery migration.
+      */
     // Communiqué (communique)
     array(
       'class_name' => 'PPSNodeMigration',
@@ -86,14 +88,19 @@ function pps_migrate_d6_register_node_migrations() {
     // Event (event)
     array(
       'class_name' => 'PPSEventMigration',
-      'description' => t('Event of Communique'),
+      'description' => t('Migration of Events'),
       'machine_name' => 'Event',
       'source_type' => 'event',
       'destination_type' => 'event',
     ),
-
     // Gallery (gallery)
-
+    array(
+      'class_name' => 'PPSGalleryMigration',
+      'description' => t('Migration of Galleries'),
+      'machine_name' => 'Gallery',
+      'source_type' => 'gallery',
+      'destination_type' => 'gallery',
+    ),
     // Group (og)
 //    array(
 //      'class_name' => 'PPSNodeMigration',
