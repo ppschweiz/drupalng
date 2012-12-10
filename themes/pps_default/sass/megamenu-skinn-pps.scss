@@ -1,0 +1,81 @@
+@import "partials/base";
+
+$color-megamenu-border-light: rgba(255, 255, 255, 0.2);
+$color-megamenu-border-dark: rgba(219, 50, 0, 0.2);
+$color-megamenu-border-fix: rgb(234, 126, 0);
+
+$size-megamenu-border-thikness: 1px;
+
+.megamenu-skin-pps {
+  background: url(../images/megamenu/bg.png);
+  border-bottom: $size-megamenu-border-thikness solid rgb(234, 175, 34);
+  padding-top: $size-megamenu-border-thikness;
+  font-size: 14px;
+
+  a, a.active {
+    text-decoration:none;
+    color: #fff;
+    &:hover {
+      color: #863303;
+    }
+  }
+
+  &.hovering {
+    .megamenu-parent-title {
+      a {
+        color: #863303;
+      }
+    }
+  }
+
+  .megamenu-parent {
+    margin: 0;
+    padding: 1em 1em 0;
+    display: inline-block;
+    border-right: $size-megamenu-border-thikness solid $color-megamenu-border-dark;
+    @include box-shadow($size-megamenu-border-thikness 0 0 $color-megamenu-border-light);
+
+    .megamenu-parent-title {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding-bottom: 1em;
+      display: inline-block;
+    }
+  }
+
+  .megamenu-bin {
+    @include box-shadow(
+        $size-megamenu-border-thikness $size-megamenu-border-thikness $size-megamenu-border-thikness $color-megamenu-border-fix,
+        -$size-megamenu-border-thikness 0 0 $color-megamenu-border-fix,
+        -$size-megamenu-border-thikness $size-megamenu-border-thikness 0 $color-megamenu-border-fix);
+    background: #e8c346 url(../images/megamenu/bg.png) repeat-x left -3em;
+    border: $size-megamenu-border-thikness solid $color-megamenu-border-light;
+    border-top: none;
+  }
+
+  .megamenu-slot {
+    width: atuo;
+    .megamenu-slot-title{
+      padding:  1em;
+    }
+  }
+
+  // Home button
+  .megamenu-parent-0 {
+    padding-top: 0;
+    .megamenu-parent-title {
+      padding: 0;
+      margin-top: 10px;
+      width: 23px;
+      height: 23px;
+      background: url(../images/megamenu/home.png) no-repeat top;
+      &:hover {
+        background-position: bottom;
+      }
+      a, a.active, a:hover, &.hovering {
+        color: transparent;
+        display: block;
+      }
+    }
+  }
+}

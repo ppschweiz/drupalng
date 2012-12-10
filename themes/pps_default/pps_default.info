@@ -6,6 +6,7 @@ release = 7.x-1.x-dev
 engine = phptemplate
 screenshot = screenshot.png
 stylesheets[screen][] = css/globals.css
+stylesheets[screen][] = css/megamenu-skinn-pps.css
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 regions[content] = Main Content
