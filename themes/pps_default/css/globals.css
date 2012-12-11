@@ -279,27 +279,61 @@ footer.submitted time.icon {
   position: relative;
   float: left;
   margin: 0.4em 0.8em 0.5em -0.4em;
-  background: url(images/event-orange.png) no-repeat;
-  width: 39px;
-  height: 56px;
-}
-footer.submitted time.icon span {
-  display: block;
-  text-align: center;
+  width: 3em;
 }
 footer.submitted time.icon span.month {
-  font-size: 12px;
+  background: #f9b200;
+  background: #f08a00;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f08a00 0%, #febf01 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f08a00), color-stop(100%, #febf01));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f08a00 0%, #febf01 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f08a00 0%, #febf01 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f08a00 0%, #febf01 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f08a00 0%, #febf01 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f08a00', endColorstr='#febf01',GradientType=0 );
+  /* IE6-9 */
+  text-shadow: 0em 0em 0.4em #bbb;
+  filter: dropshadow(color=#b0b0b0, offx=1, offy=1);
+  text-align: center;
+  color: white;
+  font-size: 0.8em;
   line-height: 1.5em;
-  color: #fff;
+  width: 3.75em;
   font-weight: bold;
+  display: inline-block;
 }
 footer.submitted time.icon span.day {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  width: 2em;
   font-weight: bold;
-  font-size: 22px;
-  margin-top: 1px;
+  border-right: thin solid #febf01;
+  border-left: thin solid #febf01;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 footer.submitted time.icon span.year {
-  font-size: 9px;
+  display: block;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 0.6em;
+  font-weight: bold;
+  width: 5em;
+  border: thin solid #febf01;
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #block-views-slides-block {
