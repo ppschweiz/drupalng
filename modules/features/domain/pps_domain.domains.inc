@@ -37,6 +37,15 @@ function pps_domain_domain_default_domains() {
     'is_default' => '1',
     'machine_name' => 'piratenpartei_ch',
   );
+  $domains['pirateparty_ch'] = array(
+    'subdomain' => 'pirateparty.ch',
+    'sitename' => 'Pirate Party Switzerland',
+    'scheme' => 'http',
+    'valid' => '1',
+    'weight' => '3',
+    'is_default' => '0',
+    'machine_name' => 'pirateparty_ch',
+  );
 
   return $domains;
 }
@@ -77,20 +86,22 @@ function pps_domain_domain_alias_default_aliases() {
       'redirect' => '0',
       'machine_name' => 'piratenpartei_ch',
     ),
-    'pirateparty.ch' => array(
-      'pattern' => 'pirateparty.ch',
-      'redirect' => '1',
-      'machine_name' => 'piratenpartei_ch',
-    ),
-    'pirateparty.dev' => array(
-      'pattern' => 'pirateparty.dev',
-      'redirect' => '0',
-      'machine_name' => 'piratenpartei_ch',
-    ),
     'd7.piratenpartei.ch' => array(
       'pattern' => 'd7.piratenpartei.ch',
       'redirect' => '0',
       'machine_name' => 'piratenpartei_ch',
+    ),
+  );
+  $domain_aliases['pirateparty_ch'] = array(
+    'pirateparty.dev' => array(
+      'pattern' => 'pirateparty.dev',
+      'redirect' => '0',
+      'machine_name' => 'pirateparty_ch',
+    ),
+    'd7.pirateparty.ch' => array(
+      'pattern' => 'd7.pirateparty.ch',
+      'redirect' => '0',
+      'machine_name' => 'pirateparty_ch',
     ),
   );
 
@@ -145,6 +156,7 @@ function pps_domain_domain_conf_default_variables() {
     'maintenance_mode_message' => 'Piraten Partei Schweiz is currently under maintenance. We should be back shortly. Thank you for your patience.',
     'language_default' => 'de',
   );
+  $domain_variables['pirateparty_ch'] = array();
 
   return $domain_variables;
 }
@@ -502,6 +514,179 @@ function pps_domain_domain_theme_default_themes() {
     ),
   );
   $domain_themes['piratenpartei_ch'] = array();
+  $domain_themes['pirateparty_ch'] = array(
+    'bartik' => array(
+      'theme' => 'bartik',
+      'settings' => array(
+        'toggle_logo' => 1,
+        'toggle_name' => 1,
+        'toggle_slogan' => 1,
+        'toggle_node_user_picture' => 1,
+        'toggle_comment_user_picture' => 1,
+        'toggle_comment_user_verification' => 1,
+        'toggle_favicon' => 1,
+        'toggle_main_menu' => 1,
+        'toggle_secondary_menu' => 1,
+        'default_logo' => 1,
+        'logo_path' => '',
+        'logo_upload' => '',
+        'default_favicon' => 1,
+        'favicon_path' => '',
+        'favicon_upload' => '',
+        'scheme' => 'ice',
+        'palette' => array(
+          'top' => '#d0d0d0',
+          'bottom' => '#c2c4c5',
+          'bg' => '#ffffff',
+          'sidebar' => '#ffffff',
+          'sidebarborders' => '#cccccc',
+          'footer' => '#24272c',
+          'titleslogan' => '#000000',
+          'text' => '#4a4a4a',
+          'link' => '#019dbf',
+        ),
+        'theme' => 'bartik',
+        'info' => array(
+          'fields' => array(
+            'top' => 'Kopfbereich oben',
+            'bottom' => 'Kopfbereich unten',
+            'bg' => 'Haupthintergrund',
+            'sidebar' => 'Hintergrund der Seitenleiste',
+            'sidebarborders' => 'Rahmen der Seitenleiste',
+            'footer' => 'Hintergrund des Fußbereich',
+            'titleslogan' => 'Titel und Slogan',
+            'text' => 'Schriftfarbe',
+            'link' => 'Linkfarbe',
+          ),
+          'schemes' => array(
+            'default' => array(
+              'title' => 'Blaue Lagune (Standard)',
+              'colors' => array(
+                'top' => '#0779bf',
+                'bottom' => '#48a9e4',
+                'bg' => '#ffffff',
+                'sidebar' => '#f6f6f2',
+                'sidebarborders' => '#f9f9f9',
+                'footer' => '#292929',
+                'titleslogan' => '#fffeff',
+                'text' => '#3b3b3b',
+                'link' => '#0071B3',
+              ),
+            ),
+            'firehouse' => array(
+              'title' => 'Feuerwehrhaus',
+              'colors' => array(
+                'top' => '#cd2d2d',
+                'bottom' => '#cf3535',
+                'bg' => '#ffffff',
+                'sidebar' => '#f1f4f0',
+                'sidebarborders' => '#ededed',
+                'footer' => '#1f1d1c',
+                'titleslogan' => '#fffeff',
+                'text' => '#3b3b3b',
+                'link' => '#d6121f',
+              ),
+            ),
+            'ice' => array(
+              'title' => 'Eis',
+              'colors' => array(
+                'top' => '#d0d0d0',
+                'bottom' => '#c2c4c5',
+                'bg' => '#ffffff',
+                'sidebar' => '#ffffff',
+                'sidebarborders' => '#cccccc',
+                'footer' => '#24272c',
+                'titleslogan' => '#000000',
+                'text' => '#4a4a4a',
+                'link' => '#019dbf',
+              ),
+            ),
+            'plum' => array(
+              'title' => 'Pflaume',
+              'colors' => array(
+                'top' => '#4c1c58',
+                'bottom' => '#593662',
+                'bg' => '#fffdf7',
+                'sidebar' => '#edede7',
+                'sidebarborders' => '#e7e7e7',
+                'footer' => '#2c2c28',
+                'titleslogan' => '#ffffff',
+                'text' => '#301313',
+                'link' => '#9d408d',
+              ),
+            ),
+            'slate' => array(
+              'title' => 'Slate',
+              'colors' => array(
+                'top' => '#4a4a4a',
+                'bottom' => '#4e4e4e',
+                'bg' => '#ffffff',
+                'sidebar' => '#ffffff',
+                'sidebarborders' => '#d0d0d0',
+                'footer' => '#161617',
+                'titleslogan' => '#ffffff',
+                'text' => '#3b3b3b',
+                'link' => '#0073b6',
+              ),
+            ),
+            '' => array(
+              'title' => 'Benutzerdefiniert',
+              'colors' => array(),
+            ),
+          ),
+          'css' => array(
+            0 => 'css/colors.css',
+          ),
+          'copy' => array(
+            0 => 'logo.png',
+          ),
+          'gradients' => array(
+            0 => array(
+              'dimension' => array(
+                0 => 0,
+                1 => 0,
+                2 => 0,
+                3 => 0,
+              ),
+              'direction' => 'vertical',
+              'colors' => array(
+                0 => 'top',
+                1 => 'bottom',
+              ),
+            ),
+          ),
+          'fill' => array(),
+          'slices' => array(),
+          'blend_target' => '#ffffff',
+          'preview_css' => 'color/preview.css',
+          'preview_js' => 'color/preview.js',
+          'preview_html' => 'color/preview.html',
+          'base_image' => 'color/base.png',
+        ),
+        'color_bartik_palette' => array(
+          'top' => '#d0d0d0',
+          'bottom' => '#c2c4c5',
+          'bg' => '#ffffff',
+          'sidebar' => '#ffffff',
+          'sidebarborders' => '#cccccc',
+          'footer' => '#24272c',
+          'titleslogan' => '#000000',
+          'text' => '#4a4a4a',
+          'link' => '#019dbf',
+        ),
+        'color_bartik_stylesheets' => array(
+          0 => 'public://color/bartik-002ef54c/colors.css',
+        ),
+        'color_bartik_logo' => 'public://color/bartik-002ef54c/logo.png',
+        'color_bartik_files' => array(
+          0 => 'public://color/bartik-002ef54c/logo.png',
+          1 => 'public://color/bartik-002ef54c/colors.css',
+        ),
+      ),
+      'status' => '1',
+      'filepath' => 'bartik-002ef54c',
+    ),
+  );
 
   return $domain_themes;
 }
