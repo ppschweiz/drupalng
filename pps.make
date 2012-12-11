@@ -109,6 +109,10 @@ projects[panels][version] = 3.3
 projects[panels][type] = "module"
 projects[panels][subdir] = "contrib"
 
+projects[pathauto][version] = 1.2
+projects[pathauto][type] = "module"
+projects[pathauto][subdir] = "contrib"
+
 projects[resp_img][version] = 1.3
 projects[resp_img][type] = "module"
 projects[resp_img][subdir] = "contrib"
