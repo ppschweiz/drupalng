@@ -122,12 +122,28 @@ function pps_migrate_d6_register_node_migrations() {
        * Obsolete, wont't be migrated. Only five records by the way.
        */
     // Page (page)
+//    array(
+//      'class_name' => 'PPSNodeMigration',
+//      'description' => t('Migration of Page'),
+//      'machine_name' => 'Page',
+//      'source_type' => 'page',
+//      'destination_type' => 'article',
+//    ),
     array(
-      'class_name' => 'PPSNodeMigration',
-      'description' => t('Migration of Page'),
-      'machine_name' => 'Page',
+      'class_name' => 'PPSMinutesMigration',
+      'description' => t('Migration of Minutes'),
+      'machine_name' => 'Minutes',
       'source_type' => 'page',
-      'destination_type' => 'article',
+      'destination_type' => 'minutes',
+      'domain_mappings' => array(
+        'piratenpartei_ch',
+        'partipirate_ch',
+        'partitopirata_ch',
+        'pirateparty_ch',
+      ),
+      'parents' => array(
+        1187, 1284, 318, 636, 637, 638, 1099
+      ),
     ),
     // Panel (panel)
       /**
@@ -194,13 +210,13 @@ function pps_migrate_d6_register_comment_migrations() {
       'destination_type' => 'article',
       'node_migration' => 'Communique',
     ),
-    array(
-      'machine_name' => 'PageComments',
-      'description' => t('Import Page comments'),
-      'source_type' => 'page',
-      'destination_type' => 'article',
-      'node_migration' => 'Page',
-    ),
+//    array(
+//      'machine_name' => 'PageComments',
+//      'description' => t('Import Page comments'),
+//      'source_type' => 'page',
+//      'destination_type' => 'article',
+//      'node_migration' => 'Page',
+//    ),
   );
   $common_comment_arguments = pps_migrate_common_arguments() + array(
     'class_name' => 'DrupalComment6Migration',

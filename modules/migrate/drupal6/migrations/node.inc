@@ -68,6 +68,56 @@ class PPSNodeMigration extends DrupalNode6Migration {
 }
 
 /**
+ * Minutes migration
+ */
+class PPSMinutesMigration extends PPSNodeMigration {
+  private $parents = array();
+
+  public function __construct(array $arguments) {
+    $this->sourceFields['field_date'] = t('Date');
+    if (isset($arguments['parents'])) {
+      if (is_array($arguments['parents'])) {
+        $this->parents = $arguments['parents'];
+      }
+      else {
+        $this->parents = array($arguments['parents']);
+      }
+    }
+    parent::__construct($arguments);
+
+    $this->removeFieldMapping('promote', 'promote');
+    $this->addFieldMapping('promote')->defaultValue(FALSE);
+    $this->addSimpleMappings(array('field_date'));
+
+    $this->addUnmigratedSources(array(
+      'domain_site',
+      'promote',
+    ));
+  }
+
+  protected function query() {
+    $query = parent::query();
+    $query->rightJoin('nodehierarchy', 'nh', 'n.nid = nh.nid');
+    $query->condition('nh.parent', $this->parents, 'IN');
+    return $query;
+  }
+
+  public function prepareRow ($row) {
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+    $date = date_parse($row->title);
+    if (isset($date['year']) && isset($date['month']) && isset($date['day'])) {
+      $row->field_date = format_string('!year-!month-!day', array(
+        '!year' => $date['year'],
+        '!month' => $date['month'],
+        '!day' => $date['day'],
+      ));
+    }
+  }
+}
+
+/**
  * Press review mappings and handling.
  */
 class PPSPressReviewMigration extends PPSNodeMigration {
