@@ -56,6 +56,13 @@ drush en diff -y
 
 cat <<EOF
 
+============== Set default theme ==============
+EOF
+drush en pps_default -y
+drush vset theme_default pps_default
+
+cat <<EOF
+
 ================= Enable i18n =================
 EOF
 
