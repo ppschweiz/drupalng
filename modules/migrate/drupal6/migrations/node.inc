@@ -93,6 +93,29 @@ class PPSNodehierarchyMigration extends PPSNodeMigration {
   }
 }
 
+class PPSTeamMigration extends PPSNodehierarchyMigration {
+  public function __construct(array $arguments) {
+    parent::__construct($arguments);
+
+    $this->removeFieldMapping('promote', 'promote');
+    $this->addFieldMapping('promote')->defaultValue(FALSE);
+    $this->removeFieldMapping('domains');
+    $this->addFieldMapping('domains')->defaultValue(array(
+      'piratenpartei_ch',
+      'partipirate_ch',
+      'partitopirata_ch',
+      'pirateparty_ch',
+    ));
+
+    $this->addUnmigratedSources(array(
+      'domain_site',
+      'domains',
+      'promote',
+    ));
+  }
+
+}
+
 /**
  * Minutes migration
  */

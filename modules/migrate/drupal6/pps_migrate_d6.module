@@ -102,15 +102,12 @@ function pps_migrate_d6_register_node_migrations() {
       'destination_type' => 'gallery',
     ),
     // Group (og)
-//    array(
-//      'class_name' => 'PPSNodeMigration',
-//      'description' => t('Migration of Organic Group'),
-//      'machine_name' => 'OrganicGroup',
-//      'source_type' => 'og',
-//      'destination_type' => 'page',
-//    ),
-    // Group Post (ogpost)
       /**
+       * Groups are not in use.
+       * All Working groups are published as pages.
+       */
+    // Group Post (ogpost)
+    /**
        * There is only one test node. So no need to migrate.
        */
     // Group Wiki (ogwiki)
@@ -136,12 +133,6 @@ function pps_migrate_d6_register_node_migrations() {
       'machine_name' => 'Minutes',
       'source_type' => 'page',
       'destination_type' => 'minutes',
-      'domain_mappings' => array(
-        'piratenpartei_ch',
-        'partipirate_ch',
-        'partitopirata_ch',
-        'pirateparty_ch',
-      ),
       'parents' => array(
         1187, 1284, 318, 636, 637, 638, 1099
       ),
@@ -153,12 +144,6 @@ function pps_migrate_d6_register_node_migrations() {
       'machine_name' => 'Newsletter',
       'source_type' => 'page',
       'destination_type' => 'newsletter',
-      'domain_mappings' => array(
-        'piratenpartei_ch',
-        'partipirate_ch',
-        'partitopirata_ch',
-        'pirateparty_ch',
-      ),
       'parents' => array(
         1061, 1058, 419,
       ),
@@ -170,14 +155,20 @@ function pps_migrate_d6_register_node_migrations() {
       'machine_name' => 'Positions',
       'source_type' => 'page',
       'destination_type' => 'position',
-      'domain_mappings' => array(
-        'piratenpartei_ch',
-        'partipirate_ch',
-        'partitopirata_ch',
-        'pirateparty_ch',
-      ),
       'parents' => array(
         390,
+      ),
+    ),
+    array(
+      // Teams
+      'class_name' => 'PPSTeamMigration',
+      'description' => t('Migration of teams'),
+      'machine_name' => 'Teams',
+      'source_type' => 'page',
+      'destination_type' => 'team',
+      'parents' => array(
+        675, // Working groups
+        1230, // Elected teams
       ),
     ),
     // Panel (panel)

@@ -41,6 +41,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_team';
+  $strongarm->value = 0;
+  $export['comment_anonymous_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_event';
   $strongarm->value = 1;
   $export['comment_default_mode_event'] = $strongarm;
@@ -69,6 +76,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_team';
+  $strongarm->value = 1;
+  $export['comment_default_mode_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_event';
   $strongarm->value = '50';
   $export['comment_default_per_page_event'] = $strongarm;
@@ -93,6 +107,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'comment_default_per_page_position';
   $strongarm->value = '50';
   $export['comment_default_per_page_position'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_team';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_team'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -128,6 +149,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'comment_form_location_position';
   $strongarm->value = 1;
   $export['comment_form_location_position'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_team';
+  $strongarm->value = 1;
+  $export['comment_form_location_team'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -181,6 +209,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_team';
+  $strongarm->value = '1';
+  $export['comment_preview_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_event';
   $strongarm->value = 1;
   $export['comment_subject_field_event'] = $strongarm;
@@ -205,6 +240,20 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'comment_subject_field_position';
   $strongarm->value = 1;
   $export['comment_subject_field_position'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_team';
+  $strongarm->value = 1;
+  $export['comment_subject_field_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_team';
+  $strongarm->value = '0';
+  $export['comment_team'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -470,6 +519,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_team';
+  $strongarm->value = '0';
+  $export['language_content_type_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_article';
   $strongarm->value = array(
     0 => 'status',
@@ -535,6 +591,15 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_team';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_article';
   $strongarm->value = '1';
   $export['node_preview_article'] = $strongarm;
@@ -573,6 +638,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'node_preview_press_review';
   $strongarm->value = '1';
   $export['node_preview_press_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_team';
+  $strongarm->value = '1';
+  $export['node_preview_team'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -622,6 +694,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'node_submitted_press_review';
   $strongarm->value = 0;
   $export['node_submitted_press_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_team';
+  $strongarm->value = 0;
+  $export['node_submitted_team'] = $strongarm;
 
   return $export;
 }

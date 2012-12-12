@@ -64,7 +64,7 @@ function pps_content_types_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
     'press_review' => array(
@@ -73,6 +73,14 @@ function pps_content_types_node_info() {
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Headline'),
+      'help' => '',
+    ),
+    'team' => array(
+      'name' => t('Team page'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
       'help' => '',
     ),
   );
