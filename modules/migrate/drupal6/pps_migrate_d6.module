@@ -145,6 +145,22 @@ function pps_migrate_d6_register_node_migrations() {
         1187, 1284, 318, 636, 637, 638, 1099
       ),
     ),
+    array(
+      'class_name' => 'PPSNewsletterMigration',
+      'description' => t('Migration of messages in a bottle'),
+      'machine_name' => 'Newsletter',
+      'source_type' => 'page',
+      'destination_type' => 'newsletter',
+      'domain_mappings' => array(
+        'piratenpartei_ch',
+        'partipirate_ch',
+        'partitopirata_ch',
+        'pirateparty_ch',
+      ),
+      'parents' => array(
+        1061, 1058, 419,
+      ),
+    ),
     // Panel (panel)
       /**
        * No records.

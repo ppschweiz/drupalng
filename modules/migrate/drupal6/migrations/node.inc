@@ -70,11 +70,10 @@ class PPSNodeMigration extends DrupalNode6Migration {
 /**
  * Minutes migration
  */
-class PPSMinutesMigration extends PPSNodeMigration {
+class PPSNodehierarchyMigration extends PPSNodeMigration {
   private $parents = array();
 
   public function __construct(array $arguments) {
-    $this->sourceFields['field_date'] = t('Date');
     if (isset($arguments['parents'])) {
       if (is_array($arguments['parents'])) {
         $this->parents = $arguments['parents'];
@@ -83,6 +82,25 @@ class PPSMinutesMigration extends PPSNodeMigration {
         $this->parents = array($arguments['parents']);
       }
     }
+    parent::__construct($arguments);
+  }
+
+  protected function query() {
+    $query = parent::query();
+    $query->rightJoin('nodehierarchy', 'nh', 'n.nid = nh.nid');
+    $query->condition('nh.parent', $this->parents, 'IN');
+    return $query;
+  }
+}
+
+/**
+ * Minutes migration
+ */
+class PPSMinutesMigration extends PPSNodehierarchyMigration {
+
+  public function __construct(array $arguments) {
+    $this->sourceFields['field_date'] = t('Date');
+
     parent::__construct($arguments);
 
     $this->removeFieldMapping('promote', 'promote');
@@ -95,11 +113,39 @@ class PPSMinutesMigration extends PPSNodeMigration {
     ));
   }
 
-  protected function query() {
-    $query = parent::query();
-    $query->rightJoin('nodehierarchy', 'nh', 'n.nid = nh.nid');
-    $query->condition('nh.parent', $this->parents, 'IN');
-    return $query;
+  public function prepareRow ($row) {
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+    $date = date_parse($row->title);
+    if (!empty($date['year']) && !empty($date['month']) && !empty($date['day'])) {
+      $row->field_date = format_string('!year-!month-!day', array(
+        '!year' => $date['year'],
+        '!month' => $date['month'],
+        '!day' => $date['day'],
+      ));
+    }
+  }
+}
+
+/**
+ * Minutes migration
+ */
+class PPSNewsletterMigration extends PPSNodehierarchyMigration {
+
+  public function __construct(array $arguments) {
+    $this->sourceFields['field_month'] = t('Date');
+
+    parent::__construct($arguments);
+
+    $this->removeFieldMapping('promote', 'promote');
+    $this->addFieldMapping('promote')->defaultValue(FALSE);
+    $this->addSimpleMappings(array('field_month'));
+
+    $this->addUnmigratedSources(array(
+      'domain_site',
+      'promote',
+    ));
   }
 
   public function prepareRow ($row) {
@@ -107,11 +153,10 @@ class PPSMinutesMigration extends PPSNodeMigration {
       return FALSE;
     }
     $date = date_parse($row->title);
-    if (isset($date['year']) && isset($date['month']) && isset($date['day'])) {
-      $row->field_date = format_string('!year-!month-!day', array(
+    if (!empty($date['year']) && !empty($date['month'])) {
+      $row->field_month = format_string('!year-!month', array(
         '!year' => $date['year'],
         '!month' => $date['month'],
-        '!day' => $date['day'],
       ));
     }
   }
