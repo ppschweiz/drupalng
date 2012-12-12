@@ -1,12 +1,47 @@
 <?php
 
+class PPSNodeMigration extends DrupalNode6Migration {
+  public function __construct (array $arguments) {
+    parent::__construct ($arguments);
+
+    $this->removeFieldMapping('path');
+    $this->addUnmigratedDestinations(array('path',));
+  }
+
+  /**
+   * Add redirect for old path.
+   */
+  public function complete ($node, $row) {
+    if (!empty($row->path)) {
+      $redirect = new stdClass();
+      $redirect->type =  'redirect';
+      $redirect->language =  'und';
+      $redirect->status_code =  0;
+      $redirect->override =  FALSE;
+      $redirect->source_options = array();
+      $redirect->redirect_options = array();
+
+      $redirect->source = $row->path;
+      $redirect->redirect = 'node/' . $node->nid;
+      redirect_save($redirect);
+    }
+  }
+
+  /**
+   * Remove redirects.
+   */
+  public function completeRollback($entity) {
+    redirect_delete_by_path('node/' . $entity->nid);
+  }
+}
+
 /**
  * Common mappings for the node migrations.
  *
  * @todo Get the attachment description.
  * @todo Probably we nee to deal with attachments in different way.
  */
-class PPSNodeMigration extends DrupalNode6Migration {
+class PPSAttachmentNodeMigration extends PPSNodeMigration {
 
   private $domainMappings = array();
 
@@ -70,7 +105,7 @@ class PPSNodeMigration extends DrupalNode6Migration {
 /**
  * Minutes migration
  */
-class PPSNodehierarchyMigration extends PPSNodeMigration {
+class PPSNodehierarchyMigration extends PPSAttachmentNodeMigration {
   private $parents = array();
 
   public function __construct(array $arguments) {
@@ -188,7 +223,7 @@ class PPSNewsletterMigration extends PPSNodehierarchyMigration {
 /**
  * Press review mappings and handling.
  */
-class PPSPressReviewMigration extends PPSNodeMigration {
+class PPSPressReviewMigration extends PPSAttachmentNodeMigration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
 
@@ -211,7 +246,7 @@ class PPSPressReviewMigration extends PPSNodeMigration {
   }
 }
 
-class PPSEventMigration extends PPSNodeMigration {
+class PPSEventMigration extends PPSAttachmentNodeMigration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
 
@@ -246,7 +281,7 @@ class PPSEventMigration extends PPSNodeMigration {
   }
 }
 
-class PPSGalleryMigration extends DrupalNode6Migration {
+class PPSGalleryMigration extends PPSNodeMigration {
   public function __construct(array $arguments) {
     $this->sourceFields['image_fids'] = t('Images');
     $this->sourceFields['image_alts'] = t('Image alternatives');

@@ -79,7 +79,7 @@ function pps_migrate_d6_register_node_migrations() {
       */
     // Communiqué (communique)
     array(
-      'class_name' => 'PPSNodeMigration',
+      'class_name' => 'PPSAttachmentNodeMigration',
       'description' => t('Migration of Communique'),
       'machine_name' => 'Communique',
       'source_type' => 'communique',
@@ -120,7 +120,7 @@ function pps_migrate_d6_register_node_migrations() {
        */
     // Page (page)
 //    array(
-//      'class_name' => 'PPSNodeMigration',
+//      'class_name' => 'PPSAttachmentNodeMigration',
 //      'description' => t('Migration of Page'),
 //      'machine_name' => 'Page',
 //      'source_type' => 'page',
@@ -177,7 +177,7 @@ function pps_migrate_d6_register_node_migrations() {
        */
     // Politblog (politblog)
     array(
-      'class_name' => 'PPSNodeMigration',
+      'class_name' => 'PPSAttachmentNodeMigration',
       'description' => t('Migration of Politblog'),
       'machine_name' => 'Politblog',
       'source_type' => 'politblog',

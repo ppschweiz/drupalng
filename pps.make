@@ -113,6 +113,10 @@ projects[pathauto][version] = 1.2
 projects[pathauto][type] = "module"
 projects[pathauto][subdir] = "contrib"
 
+projects[redirect][version] = 1.0-rc1
+projects[redirect][type] = "module"
+projects[redirect][subdir] = "contrib"
+
 projects[resp_img][version] = 1.3
 projects[resp_img][type] = "module"
 projects[resp_img][subdir] = "contrib"
