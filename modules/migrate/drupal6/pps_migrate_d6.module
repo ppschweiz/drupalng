@@ -130,6 +130,7 @@ function pps_migrate_d6_register_node_migrations() {
 //      'destination_type' => 'article',
 //    ),
     array(
+      // Meeting minutes
       'class_name' => 'PPSMinutesMigration',
       'description' => t('Migration of Minutes'),
       'machine_name' => 'Minutes',
@@ -146,6 +147,7 @@ function pps_migrate_d6_register_node_migrations() {
       ),
     ),
     array(
+      // Message in a Bottle
       'class_name' => 'PPSNewsletterMigration',
       'description' => t('Migration of messages in a bottle'),
       'machine_name' => 'Newsletter',
@@ -159,6 +161,23 @@ function pps_migrate_d6_register_node_migrations() {
       ),
       'parents' => array(
         1061, 1058, 419,
+      ),
+    ),
+    array(
+      // Political positions
+      'class_name' => 'PPSNodehierarchyMigration',
+      'description' => t('Migration of political positions'),
+      'machine_name' => 'Positions',
+      'source_type' => 'page',
+      'destination_type' => 'position',
+      'domain_mappings' => array(
+        'piratenpartei_ch',
+        'partipirate_ch',
+        'partitopirata_ch',
+        'pirateparty_ch',
+      ),
+      'parents' => array(
+        390,
       ),
     ),
     // Panel (panel)

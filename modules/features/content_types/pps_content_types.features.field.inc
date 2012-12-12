@@ -847,8 +847,8 @@ function pps_content_types_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-newsletter-body'.
-  $fields['node-newsletter-body'] = array(
+  // Exported field: 'node-position-body'.
+  $fields['node-position-body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -877,7 +877,7 @@ function pps_content_types_field_default_fields() {
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
-      'bundle' => 'newsletter',
+      'bundle' => 'position',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -915,13 +915,13 @@ function pps_content_types_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
 
-  // Exported field: 'node-newsletter-field_attachments'.
-  $fields['node-newsletter-field_attachments'] = array(
+  // Exported field: 'node-position-field_attachments'.
+  $fields['node-position-field_attachments'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
@@ -952,7 +952,7 @@ function pps_content_types_field_default_fields() {
       'type' => 'file',
     ),
     'field_instance' => array(
-      'bundle' => 'newsletter',
+      'bundle' => 'position',
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -988,94 +988,7 @@ function pps_content_types_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '3',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-newsletter-field_month'.
-  $fields['node-newsletter-field_month'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_month',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'date',
-      'settings' => array(
-        'cache_count' => '4',
-        'cache_enabled' => 0,
-        'granularity' => array(
-          'day' => 0,
-          'hour' => 0,
-          'minute' => 0,
-          'month' => 'month',
-          'second' => 0,
-          'year' => 'year',
-        ),
-        'repeat' => '0',
-        'timezone_db' => '',
-        'todate' => '',
-        'tz_handling' => 'none',
-      ),
-      'translatable' => '0',
-      'type' => 'datestamp',
-    ),
-    'field_instance' => array(
-      'bundle' => 'newsletter',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'date',
-          'settings' => array(
-            'format_type' => 'long',
-            'fromto' => 'both',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-            'show_repeat_rule' => 'show',
-          ),
-          'type' => 'date_default',
-          'weight' => 2,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_month',
-      'label' => 'Issue date',
-      'required' => 1,
-      'settings' => array(
-        'default_value' => 'now',
-        'default_value2' => 'same',
-        'default_value_code' => '',
-        'default_value_code2' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'date',
-        'settings' => array(
-          'display_all_day' => 0,
-          'increment' => 15,
-          'input_format' => 'm/d/Y - H:i:s',
-          'input_format_custom' => '',
-          'label_position' => 'above',
-          'repeat_collapsed' => 0,
-          'text_parts' => array(),
-          'year_range' => '-3:+3',
-        ),
-        'type' => 'date_text',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -1396,7 +1309,6 @@ function pps_content_types_field_default_fields() {
   t('Description');
   t('Event type');
   t('Images');
-  t('Issue date');
   t('Media Company');
   t('Published at');
 
