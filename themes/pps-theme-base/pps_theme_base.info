@@ -15,6 +15,7 @@
   ; See each stylesheet for extensive documentation and help.
   stylesheets[screen][] = css/global.base.css
   stylesheets[screen][] = css/megamenu-skinn-pps.css
+  stylesheets[all][] = css/pps-icon/style.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
