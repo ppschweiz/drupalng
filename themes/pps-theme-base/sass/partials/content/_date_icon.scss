@@ -1,0 +1,51 @@
+@import "../base";
+
+time.icon {
+  width: 3em;
+  display: inline-block;
+
+  span {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    @include box-sizing(border-box);
+    float: left;
+  }
+
+  span.month {
+    background: #f9b200;
+
+    background: #f08a00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f08a00 0%, #febf01 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f08a00), color-stop(100%,#febf01)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f08a00 0%,#febf01 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f08a00 0%,#febf01 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f08a00 0%,#febf01 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f08a00 0%,#febf01 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f08a00', endColorstr='#febf01',GradientType=0 ); /* IE6-9 */
+
+    text-shadow: 0em 0em 0.4em #bbb;
+    filter: dropshadow(color=#b0b0b0, offx=1, offy=1);
+
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    line-height: 1.5em;
+    width: 3.75em;
+  }
+
+  span.day {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    width: 2em;
+    border-right: thin solid #febf01;
+    border-left: thin solid #febf01;
+  }
+
+  span.year {
+    line-height: 1.4em;
+    font-size: 0.6em;
+    width: 5em;
+    border: thin solid #febf01;
+    border-top: none;
+  }
+}

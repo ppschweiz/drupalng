@@ -1,0 +1,86 @@
+/* =============================================================================
+ *   Node Styling
+ * ========================================================================== */
+
+.node {
+  padding-left: 3.5em;
+  position: relative;
+
+  time.icon {
+    float: left;
+    position: absolute;
+    left: 0;
+  }
+  margin-bottom: 20px;
+
+  &.node-promoted {}
+
+  &.node-sticky {}
+
+  &.node-by-viewer {}
+
+  &.node-teaser {
+    padding-left: 3.5em;
+    position: relative;
+    time.icon {
+      top: 0.4em;
+    }
+    border-bottom: 0.1em solid #efefef;
+  }
+
+  &.node-full {}
+
+  &.odd {}
+
+  &.even {}
+
+  .node-title {
+    font-size: 1.8em;
+    margin: 0;
+    line-height: 1.3em;
+  }
+
+  .user-picture {}
+
+  .submitted {
+
+    .username {}
+
+    time {}
+  }
+
+  .node-content {}
+
+  ul.links {
+    li {}
+    li a {}
+
+    li.node-read-more a {}
+    li.comment-add a {}
+    li.comment-comments a {}
+    li.comment-new-comments a {}
+    li.blog-sernames-blog a {}
+    li.print-html a {}
+    li.print-email a {}
+    li.print-pdf a {}
+  }
+}
+
+
+.preview .node {}
+
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+.node-page {}
+
+.node-article {}
+
+.node-book {}
+
+.node-forum {}
+
+.node-poll {}
