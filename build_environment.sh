@@ -58,8 +58,8 @@ cat <<EOF
 
 ============== Set default theme ==============
 EOF
-drush en pps_default -y
-drush vset theme_default pps_default
+drush en pps_theme_base -y
+drush vset theme_default pps_theme_base
 
 cat <<EOF
 

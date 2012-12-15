@@ -59,7 +59,7 @@ function pps_content_types_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -78,7 +78,7 @@ function pps_content_types_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -130,7 +130,7 @@ function pps_content_types_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -152,7 +152,82 @@ function pps_content_types_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '2',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-article-field_tags'.
+  $fields['node-article-field_tags'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '4',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_tags',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tags',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'article',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '2',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_tags',
+      'label' => 'Tags',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '1',
       ),
     ),
   );
@@ -663,7 +738,7 @@ function pps_content_types_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -682,7 +757,7 @@ function pps_content_types_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -734,7 +809,7 @@ function pps_content_types_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -755,7 +830,7 @@ function pps_content_types_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -814,7 +889,7 @@ function pps_content_types_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -843,6 +918,81 @@ function pps_content_types_field_default_fields() {
         ),
         'type' => 'date_text',
         'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-minutes-field_tags'.
+  $fields['node-minutes-field_tags'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '4',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_tags',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tags',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'minutes',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '3',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_tags',
+      'label' => 'Tags',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '2',
       ),
     ),
   );
@@ -887,7 +1037,7 @@ function pps_content_types_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -896,7 +1046,7 @@ function pps_content_types_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -915,7 +1065,7 @@ function pps_content_types_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -961,13 +1111,13 @@ function pps_content_types_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -988,7 +1138,82 @@ function pps_content_types_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '2',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-position-field_tags'.
+  $fields['node-position-field_tags'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '4',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_tags',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tags',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'position',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '2',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_tags',
+      'label' => 'Tags',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '1',
       ),
     ),
   );
@@ -1042,7 +1267,7 @@ function pps_content_types_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -1061,7 +1286,7 @@ function pps_content_types_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -1113,7 +1338,7 @@ function pps_content_types_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '5',
         ),
       ),
       'entity_type' => 'node',
@@ -1135,7 +1360,7 @@ function pps_content_types_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -1194,7 +1419,7 @@ function pps_content_types_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -1278,7 +1503,7 @@ function pps_content_types_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -1297,6 +1522,81 @@ function pps_content_types_field_default_fields() {
         ),
         'type' => 'taxonomy_autocomplete',
         'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-press_review-field_tags'.
+  $fields['node-press_review-field_tags'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '4',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_tags',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tags',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'press_review',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_tags',
+      'label' => 'Tags',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '3',
       ),
     ),
   );
@@ -1384,6 +1684,7 @@ function pps_content_types_field_default_fields() {
   t('Images');
   t('Media Company');
   t('Published at');
+  t('Tags');
 
   return $fields;
 }

@@ -15,7 +15,7 @@ function pps_content_types_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '-9',
     ),
     'media_companies' => array(
       'name' => 'Media Companies',
@@ -23,7 +23,15 @@ function pps_content_types_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '-8',
+    ),
+    'tags' => array(
+      'name' => 'Tags',
+      'machine_name' => 'tags',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '-10',
     ),
   );
 }
