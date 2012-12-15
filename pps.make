@@ -125,6 +125,10 @@ projects[strongarm][version] = 2.0
 projects[strongarm][type] = "module"
 projects[strongarm][subdir] = "contrib"
 
+projects[taxonomy_csv][version] = 5.10
+projects[taxonomy_csv][type] = "module"
+projects[taxonomy_csv][subdir] = "contrib"
+
 projects[taxonomy_menu][version] = 1.4
 projects[taxonomy_menu][type] = "module"
 projects[taxonomy_menu][subdir] = "contrib"

@@ -37,6 +37,8 @@ if [ ! -d "www" ]; then
   ./build_codebase.sh
 fi
 
+DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 cd www/sites/default
 
 cat <<EOF
@@ -112,6 +114,10 @@ drush cc all
 drush en redirect -y
 drush en pathauto -y
 drush en pps_content_types -y
+drush cc all
+
+drush en taxonomy_csv -y
+drush vocimp ${DIR}/structure.csv tree --vocabulary_id=structure --keep_order --update_or_ignore --vocabulary_target=existing
 drush cc all
 
 cat <<EOF

@@ -50,6 +50,7 @@ features[node][] = press_review
 features[node][] = team
 features[taxonomy][] = event_types
 features[taxonomy][] = media_companies
+features[taxonomy][] = structure
 features[taxonomy][] = tags
 features[variable][] = comment_anonymous_event
 features[variable][] = comment_anonymous_gallery
