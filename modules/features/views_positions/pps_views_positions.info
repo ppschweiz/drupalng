@@ -1,6 +1,7 @@
 name = Views for Political positions
 core = 7.x
 package = Pirate Party Switzerland
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = views
 features[ctools][] = views:views_default:3.0

@@ -65,7 +65,7 @@ function pps_views_positions_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'positions';
+  $handler->display->display_options['path'] = 'positions/papers';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

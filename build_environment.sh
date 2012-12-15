@@ -112,7 +112,6 @@ drush cc all
 drush en redirect -y
 drush en pathauto -y
 drush en pps_content_types -y
-drush en pps_views_positions -y
 drush cc all
 
 cat <<EOF
@@ -127,5 +126,13 @@ fi
 drush vset migrate_disabled_handlers 'a:1:{i:0;s:23:"MigrateTextFieldHandler";}'
 drush cc all
 drush mi --all
+
+cat <<EOF
+
+============= Enable page features =============
+EOF
+
+drush en pps_pages -y
+drush cc all
 
 cd -

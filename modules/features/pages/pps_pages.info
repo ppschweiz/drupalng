@@ -1,0 +1,13 @@
+name = Pages
+core = 7.x
+package = Pirate Party Switzerland
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:1
+features[page_manager_pages][] = currents
+features[page_manager_pages][] = interactive
+features[page_manager_pages][] = pirates
+features[page_manager_pages][] = positions
+features[page_manager_pages][] = press
