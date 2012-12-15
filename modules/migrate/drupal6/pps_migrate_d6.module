@@ -1,5 +1,6 @@
 <?php
 
+define('PPS_MIGRATE_D6_AUTOTAGGING', FALSE);
 define('PPS_MIGRATE_D6_TAGTHENET_URL', 'http://tagthe.net/api/');
 
 /**
@@ -319,30 +320,6 @@ function pps_migrate_d6_migrate_api() {
 }
 
 function pps_migrate_d6_fetch_tags($text) {
-  $url = PPS_MIGRATE_D6_TAGTHENET_URL;
-  $data = 'text='. urlencode(preg_replace('/[^[:alnum:] ]/is', '', $text));
-  $data .= '&count=5';
-  $options = array(
-    'data' => $data,
-    'headers' => array(
-      'Content-Type' => 'application/x-www-form-urlencoded',
-    ),
-    'method' => 'POST',
-  );
-  $response = drupal_http_request($url, $options);
-  if ($response->code != 200) {
-    watchdog(__FUNCTION__, 'Received response code @code from Tagthe.net', array('@code' => $response->code), WATCHDOG_ERROR);
-    print_r(array(
-      'url' => $url,
-      'options' => $options,
-      'response' => $response,
-    ));
-    return array();
-  }
-  $xml = $response->data;
-  $dom = DOMDocument::loadXML($xml);
-  $xp = new DOMXPath($dom);
-  $dims = $xp->evaluate("/memes/meme/dim");
   $terms = array(
     'all' => array(),
     'topic' => array(),
@@ -350,15 +327,41 @@ function pps_migrate_d6_fetch_tags($text) {
     'location' => array(),
     'language' => array(),
   );
-  for ($i = 0; $i < $dims->length; $i++) {
-    $dim = $dims->item($i);
-    $type = $dim->getAttribute("type");
-    $items = $xp->evaluate("item", $dim);
-    for ($j = 0; $j < $items->length; $j++) {
-      $item = $items->item($j);
-      $terms[$type][] = $item->nodeValue;
-      if ($type != 'language') {
-        $terms['all'][] = $item->nodeValue;
+  if (PPS_MIGRATE_D6_AUTOTAGGING) {
+    $url = PPS_MIGRATE_D6_TAGTHENET_URL;
+    $data = 'text='. urlencode(preg_replace('/[^[:alnum:] ]/is', '', $text));
+    $data .= '&count=5';
+    $options = array(
+      'data' => $data,
+      'headers' => array(
+        'Content-Type' => 'application/x-www-form-urlencoded',
+      ),
+      'method' => 'POST',
+    );
+    $response = drupal_http_request($url, $options);
+    if ($response->code != 200) {
+      watchdog(__FUNCTION__, 'Received response code @code from Tagthe.net', array('@code' => $response->code), WATCHDOG_ERROR);
+      print_r(array(
+        'url' => $url,
+        'options' => $options,
+        'response' => $response,
+      ));
+      return array();
+    }
+    $xml = $response->data;
+    $dom = DOMDocument::loadXML($xml);
+    $xp = new DOMXPath($dom);
+    $dims = $xp->evaluate("/memes/meme/dim");
+    for ($i = 0; $i < $dims->length; $i++) {
+      $dim = $dims->item($i);
+      $type = $dim->getAttribute("type");
+      $items = $xp->evaluate("item", $dim);
+      for ($j = 0; $j < $items->length; $j++) {
+        $item = $items->item($j);
+        $terms[$type][] = $item->nodeValue;
+        if ($type != 'language') {
+          $terms['all'][] = $item->nodeValue;
+        }
       }
     }
   }
