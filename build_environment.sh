@@ -112,6 +112,7 @@ drush cc all
 drush en redirect -y
 drush en pathauto -y
 drush en pps_content_types -y
+drush en pps_views_positions -y
 drush cc all
 
 cat <<EOF
