@@ -1,11 +1,64 @@
 <?php
 
 class PPSNodeMigration extends DrupalNode6Migration {
+
+  protected $autotagging_fields = array();
+
   public function __construct (array $arguments) {
+    $this->sourceFields['tag_all'] = t('Concatenation of all tags except language');
+    $this->sourceFields['tag_topic'] = t('tag topic');
+    $this->sourceFields['tag_person'] = t('Tag person');
+    $this->sourceFields['tag_location'] = t('Tag location');
+    $this->sourceFields['tag_language'] = t('Tag language');
+
     parent::__construct ($arguments);
 
     $this->removeFieldMapping('path');
     $this->addUnmigratedDestinations(array('path',));
+    $tagging_fields = array(
+      'tag_all',
+      'tag_topic',
+      'tag_person',
+      'tag_location',
+      'tag_language',
+    );
+    if (!empty($arguments['tag mappings'])) {
+      $this->autotagging_fields = array('title', 'body');
+      foreach ($arguments['tag mappings'] as $destination_field => $source_field) {
+        $this->addFieldMapping($destination_field, $source_field);
+        $this->addUnmigratedDestinations(array($destination_field . ':source_type'));
+        $this->addFieldMapping($destination_field . ':create_term')
+          ->defaultValue(TRUE);
+        $this->addFieldMapping($destination_field . ':ignore_case')
+          ->defaultValue(FALSE);
+        unset($tagging_fields[$destination_field]);
+      }
+    }
+    $this->addUnmigratedSources($tagging_fields);
+
+  }
+
+  public function prepareRow ($row) {
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+    if (!empty($this->autotagging_fields)) {
+      $text = array();
+      foreach ($this->autotagging_fields as $field) {
+        if (isset($row->$field)){
+          $text[] = $row->$field;
+        }
+      }
+      $text = implode(' ', $text);
+      if (!empty($text)){
+        $all_tags = pps_migrate_d6_fetch_tags($text);
+        foreach ( $all_tags as $key => $tags) {
+          $attribute = 'tag_' . $key;
+          array_filter($tags, 'drupal_ucfirst');
+          $row->$attribute = $tags;
+        }
+      }
+    }
   }
 
   /**

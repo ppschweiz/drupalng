@@ -1,5 +1,7 @@
 <?php
 
+define('PPS_MIGRATE_D6_TAGTHENET_URL', 'http://tagthe.net/api/');
+
 /**
  * Implements hook_flush_caches().
  */
@@ -84,6 +86,9 @@ function pps_migrate_d6_register_node_migrations() {
       'machine_name' => 'Communique',
       'source_type' => 'communique',
       'destination_type' => 'article',
+      'tag mappings' => array(
+        'field_tags' => 'tag_all',
+      ),
     ),
     // Event (event)
     array(
@@ -136,6 +141,9 @@ function pps_migrate_d6_register_node_migrations() {
       'parents' => array(
         1187, 1284, 318, 636, 637, 638, 1099
       ),
+      'tag mappings' => array(
+        'field_tags' => 'tag_all',
+      ),
     ),
     array(
       // Message in a Bottle
@@ -157,6 +165,9 @@ function pps_migrate_d6_register_node_migrations() {
       'destination_type' => 'position',
       'parents' => array(
         390,
+      ),
+      'tag mappings' => array(
+        'field_tags' => 'tag_all',
       ),
     ),
     array(
@@ -182,6 +193,9 @@ function pps_migrate_d6_register_node_migrations() {
       'machine_name' => 'Politblog',
       'source_type' => 'politblog',
       'destination_type' => 'article',
+      'tag mappings' => array(
+        'field_tags' => 'tag_all',
+      ),
     ),
     // Pressespiegel (press)
     array(
@@ -191,6 +205,9 @@ function pps_migrate_d6_register_node_migrations() {
       'source_type' => 'press',
       'destination_type' => 'press_review',
       'dependencies' => array('MediaCompanies'),
+      'tag mappings' => array(
+        'field_tags' => 'tag_all',
+      ),
     ),
     // Product (product)
       /**
@@ -299,4 +316,51 @@ function pps_migrate_d6_migrate_api() {
     ),
   );
   return $api;
+}
+
+function pps_migrate_d6_fetch_tags($text) {
+  $url = PPS_MIGRATE_D6_TAGTHENET_URL;
+  $data = 'text='. urlencode(preg_replace('/[^[:alnum:] ]/is', '', $text));
+  $data .= '&count=5';
+  $options = array(
+    'data' => $data,
+    'headers' => array(
+      'Content-Type' => 'application/x-www-form-urlencoded',
+    ),
+    'method' => 'POST',
+  );
+  $response = drupal_http_request($url, $options);
+  if ($response->code != 200) {
+    watchdog(__FUNCTION__, 'Received response code @code from Tagthe.net', array('@code' => $response->code), WATCHDOG_ERROR);
+    print_r(array(
+      'url' => $url,
+      'options' => $options,
+      'response' => $response,
+    ));
+    return array();
+  }
+  $xml = $response->data;
+  $dom = DOMDocument::loadXML($xml);
+  $xp = new DOMXPath($dom);
+  $dims = $xp->evaluate("/memes/meme/dim");
+  $terms = array(
+    'all' => array(),
+    'topic' => array(),
+    'person' => array(),
+    'location' => array(),
+    'language' => array(),
+  );
+  for ($i = 0; $i < $dims->length; $i++) {
+    $dim = $dims->item($i);
+    $type = $dim->getAttribute("type");
+    $items = $xp->evaluate("item", $dim);
+    for ($j = 0; $j < $items->length; $j++) {
+      $item = $items->item($j);
+      $terms[$type][] = $item->nodeValue;
+      if ($type != 'language') {
+        $terms['all'][] = $item->nodeValue;
+      }
+    }
+  }
+  return $terms;
 }
