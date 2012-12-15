@@ -517,7 +517,7 @@ function pps_content_types_strongarm() {
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '3',
             'visible' => TRUE,
           ),
           'teaser' => array(

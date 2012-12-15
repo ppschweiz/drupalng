@@ -1258,7 +1258,7 @@ function pps_content_types_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -1332,7 +1332,7 @@ function pps_content_types_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1403,17 +1403,9 @@ function pps_content_types_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'date',
-          'settings' => array(
-            'format_type' => 'long',
-            'fromto' => 'both',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-            'show_repeat_rule' => 'show',
-          ),
-          'type' => 'date_default',
-          'weight' => '1',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',

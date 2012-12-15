@@ -68,7 +68,10 @@ function pps_theme_base_process_page(&$vars) {
  */
 function pps_theme_base_preprocess_node(&$vars) {
   // Build the date_icon variable used in node templates
-  if (variable_get('node_submitted_' . $vars['node']->type, TRUE)) {
+  $show_submitted = variable_get('node_submitted_' . $vars['node']->type, TRUE);
+  $is_press_review = isset($vars['type']) ? $vars['type'] == 'press_review': FALSE;
+  $show_date_icon = $show_submitted || $is_press_review;
+  if ($show_date_icon) {
     $date_template =<<<EOF
 <time datetime="!datetime" pubdate="pubdate" title='!title' class="icon">
   <span class='month'>!month</span>
@@ -76,13 +79,23 @@ function pps_theme_base_preprocess_node(&$vars) {
   <span class='year'>!year</span>
 </time>
 EOF;
+    $date_time = $vars['datetime'];
+    $date = $vars['date'];
+    $created = $vars['created'];
+    if ($is_press_review) {
+      $field_date = field_get_items('node', $vars['node'], 'field_date');
+      $field_date = $field_date[0];
+      $date_time = format_date($vars['created'], 'custom', 'Y-m-d\TH:i:sO'); // PHP 'c' format is not proper ISO8601!
+      $date = format_date($field_date['value']);
+      $created = $field_date['value'];
+    }
 
     $date_args = array(
-      '!datetime' => $vars['datetime'],
-      '!title' => $vars['date'],
-      '!year' => format_date($vars['created'], 'custom', 'Y'),
-      '!month' => format_date($vars['created'], 'custom', 'M'),
-      '!day' => format_date($vars['created'], 'custom', 'd'),
+      '!datetime' => $date_time,
+      '!title' => $date,
+      '!year' => format_date($created, 'custom', 'Y'),
+      '!month' => format_date($created, 'custom', 'M'),
+      '!day' => format_date($created, 'custom', 'd'),
     );
     $vars['date_icon'] = format_string($date_template, $date_args);
     $vars['classes_array'][] = 'with-date-icon';
