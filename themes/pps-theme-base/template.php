@@ -85,9 +85,11 @@ EOF;
       '!day' => format_date($vars['created'], 'custom', 'd'),
     );
     $vars['date_icon'] = format_string($date_template, $date_args);
+    $vars['classes_array'][] = 'with-date-icon';
   }
   else {
     $vars['date_icon'] = '';
+    $vars['classes_array'][] = 'without-date-icon';
   }
 }
 /* -- Delete this line if you want to use these functions

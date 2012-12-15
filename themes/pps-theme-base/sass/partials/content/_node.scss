@@ -1,10 +1,14 @@
+@import "../color";
 /* =============================================================================
  *   Node Styling
  * ========================================================================== */
 
 .node {
-  padding-left: 3.5em;
   position: relative;
+
+  &.with-date-icon {
+    padding-left: 3.5em;
+  }
 
   time.icon {
     float: left;
@@ -20,8 +24,6 @@
   &.node-by-viewer {}
 
   &.node-teaser {
-    padding-left: 3.5em;
-    position: relative;
     time.icon {
       top: 0.4em;
     }
@@ -64,6 +66,26 @@
     li.print-email a {}
     li.print-pdf a {}
   }
+
+  .field-name-field-tags {
+    float: right;
+
+    .field-items {
+      @include delimited-list;
+    }
+
+    &:before {
+      font-family: 'pps-icon';
+      font-style: normal;
+      speak: none;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      color: $color-link-normal;
+      content: "\e023";
+    }
+  }
+
 }
 
 

@@ -82,9 +82,11 @@ a:hover {
  *   Node Styling
  * ========================================================================== */
 .node {
-  padding-left: 3.5em;
   position: relative;
   margin-bottom: 20px;
+}
+.node.with-date-icon {
+  padding-left: 3.5em;
 }
 .node time.icon {
   float: left;
@@ -92,8 +94,6 @@ a:hover {
   left: 0;
 }
 .node.node-teaser {
-  padding-left: 3.5em;
-  position: relative;
   border-bottom: 0.1em solid #efefef;
 }
 .node.node-teaser time.icon {
@@ -103,6 +103,36 @@ a:hover {
   font-size: 1.8em;
   margin: 0;
   line-height: 1.3em;
+}
+.node .field-name-field-tags {
+  float: right;
+}
+.node .field-name-field-tags .field-items {
+  list-style-type: none;
+}
+.node .field-name-field-tags .field-items, .node .field-name-field-tags .field-items li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+.node .field-name-field-tags .field-items li:after {
+  content: ", ";
+}
+.node .field-name-field-tags .field-items li:last-child:after {
+  content: "";
+}
+.node .field-name-field-tags .field-items li.last:after {
+  content: "";
+}
+.node .field-name-field-tags:before {
+  font-family: 'pps-icon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  color: #8f8f8f;
+  content: "\e023";
 }
 
 /*
