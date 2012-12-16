@@ -28,7 +28,7 @@ function pps_content_types_taxonomy_default_vocabularies() {
     'structure' => array(
       'name' => 'Site Structure',
       'machine_name' => 'structure',
-      'description' => 'Vocabulary created automatically by Taxonomy csv import/export module',
+      'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
