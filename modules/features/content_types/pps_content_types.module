@@ -5,3 +5,26 @@
  */
 
 include_once 'pps_content_types.features.inc';
+
+/**
+ * Implements hook_form_node_type_form_alter().
+ */
+function pps_content_types_form_node_type_form_alter(&$form, &$form_state) {
+  $form['display']['node_date_icon_show_always'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Allways show date information.'),
+    '#default_value' => variable_get('node_date_icon_show_always_' . $form['#node_type']->type, FALSE),
+    '#description' => t('Display the date icon even if the above option is not checked.'),
+  );
+  $form['display']['node_date_icon_use_field'] = array(
+    '#type' => 'select',
+    '#title' => t('Use alternative date field for date icon.'),
+    // @todo: Grab field information.
+    '#options' => array(
+      NULL => t('None'),
+      'field_date' => t('Date'),
+    ),
+    '#default_value' => variable_get('node_date_icon_use_field_' . $form['#node_type']->type, FALSE),
+    '#description' => t('Select an alternative field to be used when rendering the date icon.'),
+  );
+}

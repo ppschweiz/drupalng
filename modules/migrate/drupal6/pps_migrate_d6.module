@@ -86,7 +86,7 @@ function pps_migrate_d6_register_node_migrations() {
       'description' => t('Migration of Communique'),
       'machine_name' => 'Communique',
       'source_type' => 'communique',
-      'destination_type' => 'article',
+      'destination_type' => 'communique',
       'tag mappings' => array(
         'field_tags' => 'tag_all',
       ),

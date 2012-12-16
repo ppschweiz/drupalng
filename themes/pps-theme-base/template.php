@@ -68,9 +68,10 @@ function pps_theme_base_process_page(&$vars) {
  */
 function pps_theme_base_preprocess_node(&$vars) {
   // Build the date_icon variable used in node templates
-  $show_submitted = variable_get('node_submitted_' . $vars['node']->type, TRUE);
-  $is_press_review = isset($vars['type']) ? $vars['type'] == 'press_review': FALSE;
-  $show_date_icon = $show_submitted || $is_press_review;
+  $node_type = $vars['node']->type;
+  $show_submitted = variable_get('node_submitted_' . $node_type , TRUE);
+  $always_show_date_icon = variable_get('node_date_icon_show_always_' . $node_type , FALSE);
+  $show_date_icon = $show_submitted || $always_show_date_icon;
   if ($show_date_icon) {
     $date_template =<<<EOF
 <time datetime="!datetime" pubdate="pubdate" title='!title' class="icon">
@@ -82,8 +83,9 @@ EOF;
     $date_time = $vars['datetime'];
     $date = $vars['date'];
     $created = $vars['created'];
-    if ($is_press_review) {
-      $field_date = field_get_items('node', $vars['node'], 'field_date');
+    $field_name = variable_get('node_date_icon_use_field_' . $node_type , FALSE);
+    if ($field_name) {
+      $field_date = field_get_items('node', $vars['node'], $field_name);
       $field_date = $field_date[0];
       $date_time = format_date($vars['created'], 'custom', 'Y-m-d\TH:i:sO'); // PHP 'c' format is not proper ISO8601!
       $date = format_date($field_date['value']);
