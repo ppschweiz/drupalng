@@ -110,6 +110,8 @@ function pps_pages_default_page_manager_pages() {
         'contains' => 'region',
         'children' => array(
           0 => 'left',
+          1 => 'middle',
+          2 => 'right',
         ),
         'parent' => 'main',
         'class' => '',
@@ -117,7 +119,7 @@ function pps_pages_default_page_manager_pages() {
       'left' => array(
         'type' => 'region',
         'title' => 'Left',
-        'width' => 100,
+        'width' => '33.104261733657594',
         'width_type' => '%',
         'parent' => '1',
         'class' => '',
@@ -126,8 +128,8 @@ function pps_pages_default_page_manager_pages() {
         'type' => 'row',
         'contains' => 'region',
         'children' => array(
-          0 => 'main_',
-          1 => 'events',
+          0 => 'stiky_',
+          1 => 'main_',
         ),
         'parent' => 'main',
         'class' => 'Main',
@@ -135,7 +137,7 @@ function pps_pages_default_page_manager_pages() {
       'main_' => array(
         'type' => 'region',
         'title' => 'Main',
-        'width' => '66.07599894344709',
+        'width' => '59.97349509522639',
         'width_type' => '%',
         'parent' => '2',
         'class' => '',
@@ -147,10 +149,26 @@ function pps_pages_default_page_manager_pages() {
         'parent' => 'main',
         'class' => 'Sticky',
       ),
-      'events' => array(
+      'middle' => array(
         'type' => 'region',
-        'title' => 'Events',
-        'width' => '33.92400105655291',
+        'title' => 'Middle',
+        'width' => '33.01286327103218',
+        'width_type' => '%',
+        'parent' => '1',
+        'class' => '',
+      ),
+      'right' => array(
+        'type' => 'region',
+        'title' => 'Right',
+        'width' => '33.882874995310225',
+        'width_type' => '%',
+        'parent' => '1',
+        'class' => '',
+      ),
+      'stiky_' => array(
+        'type' => 'region',
+        'title' => 'Stiky',
+        'width' => '40.02650490477362',
         'width_type' => '%',
         'parent' => '2',
         'class' => '',
@@ -160,7 +178,7 @@ function pps_pages_default_page_manager_pages() {
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => array(
-        'corner_location' => 'panel',
+        'corner_location' => 'pane',
       ),
       'one_main' => NULL,
       'three_33_top' => NULL,
@@ -175,6 +193,7 @@ function pps_pages_default_page_manager_pages() {
       'right' => NULL,
       'main_' => NULL,
       'events' => NULL,
+      'stiky_' => NULL,
     ),
     'style' => 'rounded_corners',
   );
@@ -186,12 +205,11 @@ function pps_pages_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
-    $pane->subtype = 'communiques-latest';
+    $pane->subtype = 'articles-highlighted';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'more_link' => 0,
-      'items_per_page' => '1',
       'override_title' => 1,
       'override_title_text' => '',
     );
@@ -207,127 +225,19 @@ function pps_pages_default_page_manager_pages() {
     $display->panels['center'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'newsletters-latest';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 0,
-      'items_per_page' => '1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'events';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Upcoming Anlässe',
-      'body' => '* Nulla vitae elit libero, a pharetra augue.
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-* Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-* Cras mattis consectetur purus sit amet fermentum.
-* Maecenas faucibus mollis interdum.
-
-Kategorien: Piratenversammlung, Internationaler Piratenevent, Piratenaktion',
-      'format' => 'textile',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['events'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'events';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Upcoming Stammtisch',
-      'body' => '* Etiam porta sem malesuada magna mollis euismod.
-* Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-* Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-* Sed posuere consectetur est at lobortis.
-* Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-      'format' => 'textile',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['events'][1] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'events';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Upcoming Meetings',
-      'body' => '* Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-* Nullam id dolor id nibh ultricies vehicula ut id elit.
-* Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-* Maecenas sed diam eget risus varius blandit sit amet non magna.
-* Donec id elit non mi porta gravida at eget metus.
-
-Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
-      'format' => 'textile',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['events'][2] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
-    $pane->subtype = 'articles-sticky';
+    $pane->subtype = 'events-upcoming';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'more_link' => 1,
-      'items_per_page' => '2',
+      'items_per_page' => '5',
+      'arguments' => array(
+        'field_event_type_tid' => '37+38+39',
+      ),
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Nächsten Anlässe',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -337,10 +247,10 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][0] = 'new-6';
+    $display->content['new-2'] = $pane;
+    $display->panels['left'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-3';
     $pane->panel = 'main_';
     $pane->type = 'views_panes';
     $pane->subtype = 'articles-latest';
@@ -360,10 +270,62 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['main_'][0] = 'new-7';
+    $display->content['new-3'] = $pane;
+    $display->panels['main_'][0] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-4';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events-upcoming';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 1,
+      'items_per_page' => '5',
+      'arguments' => array(
+        'field_event_type_tid' => '40',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Nächste Stammtische',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events-upcoming';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 1,
+      'items_per_page' => '5',
+      'arguments' => array(
+        'field_event_type_tid' => '34+36+41',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Nächste Sitzungen',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
     $pane->panel = 'stiky';
     $pane->type = 'block';
     $pane->subtype = 'user-login';
@@ -381,10 +343,10 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['stiky'][0] = 'new-8';
+    $display->content['new-6'] = $pane;
+    $display->panels['stiky'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-7';
     $pane->panel = 'stiky';
     $pane->type = 'block';
     $pane->subtype = 'system-user-menu';
@@ -402,8 +364,31 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['stiky'][1] = 'new-9';
+    $display->content['new-7'] = $pane;
+    $display->panels['stiky'][1] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'stiky_';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'articles-sticky';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 1,
+      'items_per_page' => '2',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['stiky_'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -472,7 +457,7 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-9';
     $pane->panel = 'one_main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -500,8 +485,8 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['one_main'][0] = 'new-10';
+    $display->content['new-9'] = $pane;
+    $display->panels['one_main'][0] = 'new-9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -578,7 +563,7 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-10';
     $pane->panel = 'three_33_bottom';
     $pane->type = 'views_panes';
     $pane->subtype = 'articles-latest';
@@ -593,10 +578,10 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['three_33_bottom'][0] = 'new-11';
+    $display->content['new-10'] = $pane;
+    $display->panels['three_33_bottom'][0] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-11';
     $pane->panel = 'three_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'communiques-latest';
@@ -616,27 +601,23 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['three_33_first'][0] = 'new-12';
+    $display->content['new-11'] = $pane;
+    $display->panels['three_33_first'][0] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-12';
     $pane->panel = 'three_33_first';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events-upcoming';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Upcoming Anlässe',
-      'body' => '* Nulla vitae elit libero, a pharetra augue.
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-* Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-* Cras mattis consectetur purus sit amet fermentum.
-* Maecenas faucibus mollis interdum.
-
-Kategorien: Piratenversammlung, Internationaler Piratenevent, Piratenaktion',
-      'format' => 'textile',
-      'substitute' => TRUE,
+      'more_link' => 1,
+      'items_per_page' => '5',
+      'arguments' => array(
+        'field_event_type_tid' => '37+38+39',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Nächste Anlässe',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -646,10 +627,10 @@ Kategorien: Piratenversammlung, Internationaler Piratenevent, Piratenaktion',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['three_33_first'][1] = 'new-13';
+    $display->content['new-12'] = $pane;
+    $display->panels['three_33_first'][1] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-13';
     $pane->panel = 'three_33_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'newsletters-latest';
@@ -669,25 +650,23 @@ Kategorien: Piratenversammlung, Internationaler Piratenevent, Piratenaktion',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['three_33_second'][0] = 'new-14';
+    $display->content['new-13'] = $pane;
+    $display->panels['three_33_second'][0] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-14';
     $pane->panel = 'three_33_second';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events-upcoming';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Upcoming Stammtisch',
-      'body' => '* Etiam porta sem malesuada magna mollis euismod.
-* Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-* Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-* Sed posuere consectetur est at lobortis.
-* Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-      'format' => 'textile',
-      'substitute' => TRUE,
+      'more_link' => 1,
+      'items_per_page' => '5',
+      'arguments' => array(
+        'field_event_type_tid' => '40',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Nächste Stammtische',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -697,10 +676,10 @@ Kategorien: Piratenversammlung, Internationaler Piratenevent, Piratenaktion',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['three_33_second'][1] = 'new-15';
+    $display->content['new-14'] = $pane;
+    $display->panels['three_33_second'][1] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-15';
     $pane->panel = 'three_33_third';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -721,27 +700,23 @@ Kategorien: Piratenversammlung, Internationaler Piratenevent, Piratenaktion',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['three_33_third'][0] = 'new-16';
+    $display->content['new-15'] = $pane;
+    $display->panels['three_33_third'][0] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-16';
     $pane->panel = 'three_33_third';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'events-upcoming';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Upcoming Meetings',
-      'body' => '* Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-* Nullam id dolor id nibh ultricies vehicula ut id elit.
-* Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-* Maecenas sed diam eget risus varius blandit sit amet non magna.
-* Donec id elit non mi porta gravida at eget metus.
-
-Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
-      'format' => 'textile',
-      'substitute' => TRUE,
+      'more_link' => 1,
+      'items_per_page' => '5',
+      'arguments' => array(
+        'field_event_type_tid' => '34+36+41',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Nächste Meetings',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -751,8 +726,8 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['three_33_third'][1] = 'new-17';
+    $display->content['new-16'] = $pane;
+    $display->panels['three_33_third'][1] = 'new-16';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -821,7 +796,7 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-17';
     $pane->panel = 'two_33_66_top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -849,8 +824,8 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['two_33_66_top'][0] = 'new-18';
+    $display->content['new-17'] = $pane;
+    $display->panels['two_33_66_top'][0] = 'new-17';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -926,8 +901,57 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-18';
+    $pane->panel = 'two_33_66_first';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Parolen',
+      'body' => '* Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+* Aenean lacinia bibendum nulla sed consectetur.
+* Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+* Donec ullamcorper nulla non metus auctor fringilla.
+* Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
+      'format' => 'textile',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-18'] = $pane;
+    $display->panels['two_33_66_first'][0] = 'new-18';
+    $pane = new stdClass();
     $pane->pid = 'new-19';
-    $pane->panel = 'two_33_66_bottom';
+    $pane->panel = 'two_33_66_second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'positions-teasers';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-19'] = $pane;
+    $display->panels['two_33_66_second'][0] = 'new-19';
+    $pane = new stdClass();
+    $pane->pid = 'new-20';
+    $pane->panel = 'two_33_66_top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -961,57 +985,8 @@ h2. Inhalt
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['two_33_66_bottom'][0] = 'new-19';
-    $pane = new stdClass();
-    $pane->pid = 'new-20';
-    $pane->panel = 'two_33_66_first';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Parolen',
-      'body' => '* Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-* Aenean lacinia bibendum nulla sed consectetur.
-* Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-* Donec ullamcorper nulla non metus auctor fringilla.
-* Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
-      'format' => 'textile',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
     $display->content['new-20'] = $pane;
-    $display->panels['two_33_66_first'][0] = 'new-20';
-    $pane = new stdClass();
-    $pane->pid = 'new-21';
-    $pane->panel = 'two_33_66_second';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'positions-teasers';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['two_33_66_second'][0] = 'new-21';
+    $display->panels['two_33_66_top'][0] = 'new-20';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1087,7 +1062,7 @@ h2. Inhalt
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-21';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'communiques-latest';
@@ -1107,10 +1082,10 @@ h2. Inhalt
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-22';
+    $display->content['new-21'] = $pane;
+    $display->panels['two_66_33_first'][0] = 'new-21';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-22';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'press_reviews-panel_pane_1';
@@ -1130,21 +1105,20 @@ h2. Inhalt
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['two_66_33_first'][1] = 'new-23';
+    $display->content['new-22'] = $pane;
+    $display->panels['two_66_33_first'][1] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-24';
+    $pane->pid = 'new-23';
     $pane->panel = 'two_66_33_second';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'galleries-panel';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Bildergallerien',
-      'body' => 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
-      'format' => 'textile',
-      'substitute' => TRUE,
+      'more_link' => 1,
+      'items_per_page' => '5',
+      'override_title' => 1,
+      'override_title_text' => 'Gallerien',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1154,10 +1128,10 @@ h2. Inhalt
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-24';
+    $display->content['new-23'] = $pane;
+    $display->panels['two_66_33_second'][0] = 'new-23';
     $pane = new stdClass();
-    $pane->pid = 'new-25';
+    $pane->pid = 'new-24';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1178,8 +1152,8 @@ h2. Inhalt
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-25'] = $pane;
-    $display->panels['two_66_33_second'][1] = 'new-25';
+    $display->content['new-24'] = $pane;
+    $display->panels['two_66_33_second'][1] = 'new-24';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

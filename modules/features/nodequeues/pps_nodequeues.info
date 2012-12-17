@@ -1,0 +1,15 @@
+name = Queues
+core = 7.x
+package = Pirate Party Switzerland
+php = 5.2.4
+dependencies[] = fe_nodequeue
+dependencies[] = nodequeue
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[fe_nodequeue][] = highlighted
+features[features_api][] = api:1
+features[variable][] = nodequeue_autocomplete_limit
+features[variable][] = nodequeue_links
+features[variable][] = nodequeue_tab_name
+features[variable][] = nodequeue_use_tab
+features[variable][] = nodequeue_view_per_queue

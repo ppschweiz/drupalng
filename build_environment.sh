@@ -124,6 +124,8 @@ cat <<EOF
 ============= Enable page features =============
 EOF
 
+drush en pps_nodequeues -y
+drush fr pps_nodequeues -y
 drush en pps_pages -y
 drush cc all
 
@@ -149,7 +151,7 @@ drush en diff -y
 drush en devel -y
 drush en menu -y
 drush en views_ui -y
-drush en fields_ui -y
+drush en field_ui -y
 drush cc all
 
 cd -

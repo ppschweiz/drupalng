@@ -42,6 +42,9 @@ projects[date][version] = 2.6
 projects[date][type] = "module"
 projects[date][subdir] = "contrib"
 
+; date_repeat_instance
+; date_repeat_presets
+
 projects[domain][version] = 3.5
 projects[domain][type] = "module"
 projects[domain][subdir] = "contrib"
@@ -57,6 +60,15 @@ projects[entityreference][subdir] = "contrib"
 projects[features][version] = 1.0
 projects[features][type] = "module"
 projects[features][subdir] = "contrib"
+
+; projects[features_extra][version] = 1.x-dev
+; projects[features_extra][type] = "module"
+; projects[features_extra][subdir] = "contrib"
+
+projects[features_extra][download][type] = git
+projects[features_extra][download][url] = http://git.drupal.org/project/features_extra.git
+projects[features_extra][download][branch] = 7.x-1.x
+projects[features_extra][patch][1868128-3][url] = http://drupal.org/files/features_extra_fe_nodequeue_checking_on_clone_call-1868128-3.patch
 
 projects[features_extra][version] = 1.0-alpha1
 projects[features_extra][type] = "module"
@@ -105,6 +117,12 @@ projects[migrate_d2d][version] = 2.0
 projects[migrate_d2d][type] = "module"
 projects[migrate_d2d][subdir] = "contrib"
 
+projects[nodequeue][version] = 2.0-beta1
+projects[nodequeue][type] = "module"
+projects[nodequeue][subdir] = "contrib"
+
+; nodequeue_scheduler
+
 projects[panels][version] = 3.3
 projects[panels][type] = "module"
 projects[panels][subdir] = "contrib"
@@ -125,7 +143,7 @@ projects[strongarm][version] = 2.0
 projects[strongarm][type] = "module"
 projects[strongarm][subdir] = "contrib"
 
-projects[taxonomy_csv][version] = 5.10
+projects[taxonomy_csv][version] = 5.x-dev
 projects[taxonomy_csv][type] = "module"
 projects[taxonomy_csv][subdir] = "contrib"
 
@@ -174,6 +192,8 @@ projects[workbench_access][subdir] = "contrib"
 projects[workbench_moderation][version] = 1.2
 projects[workbench_moderation][type] = "module"
 projects[workbench_moderation][subdir] = "contrib"
+
+; workbench_nodequeue
 
 ; Themes
 ; --------
