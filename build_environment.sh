@@ -54,7 +54,6 @@ cat <<EOF
 EOF
 
 drush en admin_menu_toolbar -y
-drush en diff -y
 
 cat <<EOF
 
@@ -139,6 +138,18 @@ cat <<EOF
 EOF
 
 drush en pps_pages -y
+drush cc all
+
+cat <<EOF
+
+=========== Enable development stuff ==========
+EOF
+
+drush en diff -y
+drush en devel -y
+drush en menu -y
+drush en views_ui -y
+drush en fields_ui -y
 drush cc all
 
 cd -

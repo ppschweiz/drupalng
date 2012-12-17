@@ -251,7 +251,7 @@ function pps_migrate_d6_register_comment_migrations() {
       'machine_name' => 'CommuniqueComments',
       'description' => t('Import Communique comments'),
       'source_type' => 'communique',
-      'destination_type' => 'article',
+      'destination_type' => 'communique',
       'node_migration' => 'Communique',
     ),
 //    array(
