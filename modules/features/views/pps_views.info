@@ -1,6 +1,7 @@
 name = Views
 core = 7.x
 package = Pirate Party Switzerland
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = views
 dependencies[] = views_content
@@ -9,4 +10,5 @@ features[features_api][] = api:1
 features[views_view][] = articles
 features[views_view][] = communiques
 features[views_view][] = newsletters
+features[views_view][] = positions
 features[views_view][] = press_reviews

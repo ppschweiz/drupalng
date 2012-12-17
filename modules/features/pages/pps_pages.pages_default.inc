@@ -16,7 +16,10 @@ function pps_pages_default_page_manager_pages() {
   $page->admin_title = 'Frontpage';
   $page->admin_description = '';
   $page->path = 'front';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'none',
     'title' => 'Latest',
@@ -805,7 +808,7 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'one';
+  $display->layout = 'two_33_66';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -819,7 +822,7 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-18';
-    $pane->panel = 'one_main';
+    $pane->panel = 'two_33_66_top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -847,7 +850,7 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-18'] = $pane;
-    $display->panels['one_main'][0] = 'new-18';
+    $display->panels['two_33_66_top'][0] = 'new-18';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -903,13 +906,20 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'one';
+  $display->layout = 'two_33_66';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
-      'default' => NULL,
+      'default' => array(
+        'corner_location' => 'pane',
+      ),
       'one_main' => NULL,
+      'two_33_66_top' => NULL,
+      'two_33_66_first' => NULL,
+      'two_33_66_second' => NULL,
+      'two_33_66_bottom' => NULL,
     ),
+    'style' => 'rounded_corners',
   );
   $display->cache = array();
   $display->title = 'Positions';
@@ -917,20 +927,29 @@ Kategorien: Vorstandssitzung, AG Sitzung, Organisation',
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-19';
-    $pane->panel = 'one_main';
+    $pane->panel = 'two_33_66_bottom';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => '',
-      'body' => 'Zwei spalten
-* Teaser der neusten Parole
-* Teaser des neusten Positionspapiere
+      'title' => 'Parteiprogramm der Piratenpartei Schweiz',
+      'body' => 'h2. Präambel
 
-Darunter
-* Präambel des Parteiprogramms plus Inhaltsverzeichnis',
+Im Zuge der digitalen Revolution, die auf alle Lebensbereiche ausgreift, sind die Würde und die Freiheit des Menschen allen Lippenbekenntnissen zum Trotz in bisher ungeahnter Art und Weise gefährdet. Diese Gefährdung schreitet zudem in einem solchen Tempo voran, dass die gesellschaftliche Meinungsbildung und die Gesetzgeber ebenso wie der Einzelne selbst überfordert sind. Gleichzeitig nimmt die Möglichkeit, diesen Prozess demokratisch auszugestalten, rapide ab. Die Globalisierung des Wissens und der Kultur durch Digitalisierung und Vernetzung stellt die bisherigen rechtlichen, wirtschaftlichen und sozialen Rahmenbedingungen ausnahmslos auf den Prüfstand. Nicht zuletzt die falschen Antworten auf diese Herausforderung leisten einer entstehenden totalen und totalitären, globalen Überwachungsgesellschaft Vorschub. Die Angst vor internationalem Terrorismus lässt Sicherheit vor Freiheit als wichtigstes Gut erscheinen – und viele fälschlicherweise in der Verteidigung der Freiheit verstummen. Informationelle Selbstbestimmung, freier Zugang zu Wissen und Kultur und die Wahrung der Privatsphäre sind die Grundpfeiler der zukünftigen Informationsgesellschaft. Nur auf ihrer Basis kann eine demokratische, sozial gerechte, freiheitlich selbstbestimmte, globale Ordnung entstehen. Die Piratenpartei versteht sich daher als Teil einer weltweiten Bewegung, die diese Ordnung zum Vorteil aller mitgestalten will. Um ihre politische Arbeit möglichst zielgerichtet und effizient führen zu können, beschränkt sich die Piratenpartei auf einige wenige, für die Informationsgesellschaft wichtige Themen. Gleichzeitig ist sie der Meinung, dass sie mit ihren Kernanliegen das gesamte traditionelle politische Spektrum gleichermassen anspricht. Eine Positionierung in diesem Spektrum wäre demzufolge ihrer politischen Arbeit nach Wahrung der Privatsphäre und Freiheit für Wissen und Kultur mehr als nur hinderlich.
+
+h2. Inhalt
+
+# Privatsphäre und Datenschutz
+# Transparenz des Staatswesens
+# Zensur
+# Infrastrukturmonopole und Patente
+# Digitale Nachhaltigkeit
+# Befreiung unserer Kultur (Urheberrecht)
+# Mediale Gewalt und Jugendschutz
+# Laizismus
+# Schluss',
       'format' => 'textile',
       'substitute' => TRUE,
     );
@@ -943,7 +962,56 @@ Darunter
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-19'] = $pane;
-    $display->panels['one_main'][0] = 'new-19';
+    $display->panels['two_33_66_bottom'][0] = 'new-19';
+    $pane = new stdClass();
+    $pane->pid = 'new-20';
+    $pane->panel = 'two_33_66_first';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Parolen',
+      'body' => '* Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+* Aenean lacinia bibendum nulla sed consectetur.
+* Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+* Donec ullamcorper nulla non metus auctor fringilla.
+* Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
+      'format' => 'textile',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-20'] = $pane;
+    $display->panels['two_33_66_first'][0] = 'new-20';
+    $pane = new stdClass();
+    $pane->pid = 'new-21';
+    $pane->panel = 'two_33_66_second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'positions-teasers';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-21'] = $pane;
+    $display->panels['two_33_66_second'][0] = 'new-21';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1019,7 +1087,7 @@ Darunter
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-20';
+    $pane->pid = 'new-22';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'communiques-latest';
@@ -1039,10 +1107,10 @@ Darunter
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-20';
+    $display->content['new-22'] = $pane;
+    $display->panels['two_66_33_first'][0] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-23';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'press_reviews-panel_pane_1';
@@ -1062,10 +1130,10 @@ Darunter
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['two_66_33_first'][1] = 'new-21';
+    $display->content['new-23'] = $pane;
+    $display->panels['two_66_33_first'][1] = 'new-23';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-24';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1086,10 +1154,10 @@ Darunter
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-22';
+    $display->content['new-24'] = $pane;
+    $display->panels['two_66_33_second'][0] = 'new-24';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-25';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1110,8 +1178,8 @@ Darunter
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['two_66_33_second'][1] = 'new-23';
+    $display->content['new-25'] = $pane;
+    $display->panels['two_66_33_second'][1] = 'new-25';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

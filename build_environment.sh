@@ -121,6 +121,14 @@ drush cc all
 
 cat <<EOF
 
+============= Enable page features =============
+EOF
+
+drush en pps_pages -y
+drush cc all
+
+cat <<EOF
+
 ================ Migrate content ===============
 EOF
 
@@ -131,14 +139,6 @@ fi
 drush vset migrate_disabled_handlers 'a:1:{i:0;s:23:"MigrateTextFieldHandler";}'
 drush cc all
 drush mi --all
-
-cat <<EOF
-
-============= Enable page features =============
-EOF
-
-drush en pps_pages -y
-drush cc all
 
 cat <<EOF
 
