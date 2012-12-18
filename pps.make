@@ -5,6 +5,20 @@ api = 2
 core = 7.x
 projects[drupal][version] = 7.17
 
+; Map Modules
+; -----------
+; Modules that may help for displaying maps of sections and regular
+; tables
+;
+; simple-pin-map
+; openlayers, countries_borders, openlayers_taxonomy
+; svg_embed
+; jsmap
+; jq_maphilight
+; leaflet_geojson
+
+
+
 ; Production Modules
 ; ------------------
 
@@ -12,11 +26,15 @@ projects[admin_menu][version] = 3.0-rc3
 projects[admin_menu][type] = "module"
 projects[admin_menu][subdir] = "contrib"
 
+; apply_for_role
+; bounce
+
 projects[bueditor][version] = 1.5
 projects[bueditor][type] = "module"
 projects[bueditor][subdir] = "contrib"
 
 ; bueditor_plus
+; calendar
 
 projects[cas][version] = 1.2
 projects[cas][type] = "module"
@@ -26,6 +44,8 @@ projects[cas_attributes][version] = 1.0-rc1
 projects[cas_attributes][type] = "module"
 projects[cas_attributes][subdir] = "contrib"
 
+; cas_roles
+
 projects[colorbox][version] = 2.0
 projects[colorbox][type] = "module"
 projects[colorbox][subdir] = "contrib"
@@ -33,6 +53,8 @@ projects[colorbox][subdir] = "contrib"
 projects[ctools][version] = 1.2
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
+
+; coffee
 
 projects[context][version] = 3.0-beta5
 projects[context][type] = "module"
@@ -48,6 +70,9 @@ projects[date][subdir] = "contrib"
 projects[domain][version] = 3.5
 projects[domain][type] = "module"
 projects[domain][subdir] = "contrib"
+
+; domain_admin
+; domain_roles
 
 projects[entity][version] = 1.0-rc3
 projects[entity][type] = "module"
@@ -96,6 +121,8 @@ projects[imce][subdir] = "contrib"
 ; imce_rename
 ; imce_tools
 ; imce_watermark
+
+; language_multidomain
 
 projects[l10n_update][version] = 1.0-beta3
 projects[l10n_update][type] = "module"
@@ -156,6 +183,8 @@ projects[taxonomy_menu][subdir] = "contrib"
 projects[textile][version] = 2.0-rc11
 projects[textile][type] = "module"
 projects[textile][subdir] = "contrib"
+
+; timelinemap for displaying party statistics.
 
 projects[token][version] = 1.4
 projects[token][type] = "module"
