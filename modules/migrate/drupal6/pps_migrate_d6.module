@@ -329,7 +329,9 @@ function pps_migrate_d6_fetch_tags($text) {
   );
   if (PPS_MIGRATE_D6_AUTOTAGGING) {
     $url = PPS_MIGRATE_D6_TAGTHENET_URL;
-    $data = 'text='. urlencode(preg_replace('/[^[:alnum:] ]/is', '', $text));
+    $text = check_markup($text, 'migrate_plain', NULL, FALSE);
+    $text = htmlspecialchars_decode($text);
+    $data = 'text='. urlencode($text);
     $data .= '&count=5';
     $options = array(
       'data' => $data,
@@ -340,12 +342,7 @@ function pps_migrate_d6_fetch_tags($text) {
     );
     $response = drupal_http_request($url, $options);
     if ($response->code != 200) {
-      watchdog(__FUNCTION__, 'Received response code @code from Tagthe.net', array('@code' => $response->code), WATCHDOG_ERROR);
-      print_r(array(
-        'url' => $url,
-        'options' => $options,
-        'response' => $response,
-      ));
+      watchdog(__FUNCTION__, 'Received response code @code from Tagthe.net. @data', array('@code' => $response->code, '@data' => json_encode($response)), WATCHDOG_ERROR);
       return array();
     }
     $xml = $response->data;
