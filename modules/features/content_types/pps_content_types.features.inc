@@ -32,7 +32,7 @@ function pps_content_types_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
     'event' => array(
@@ -65,6 +65,14 @@ function pps_content_types_node_info() {
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Titel'),
+      'help' => '',
+    ),
+    'page' => array(
+      'name' => t('Page'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
       'help' => '',
     ),
     'position' => array(

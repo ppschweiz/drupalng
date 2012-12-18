@@ -125,13 +125,6 @@ function pps_migrate_d6_register_node_migrations() {
        * Obsolete, wont't be migrated. Only five records by the way.
        */
     // Page (page)
-//    array(
-//      'class_name' => 'PPSAttachmentNodeMigration',
-//      'description' => t('Migration of Page'),
-//      'machine_name' => 'Page',
-//      'source_type' => 'page',
-//      'destination_type' => 'article',
-//    ),
     array(
       // Meeting minutes
       'class_name' => 'PPSMinutesMigration',
@@ -182,6 +175,14 @@ function pps_migrate_d6_register_node_migrations() {
         675, // Working groups
         1230, // Elected teams
       ),
+    ),
+    array(
+      'class_name' => 'PPSPageMigration',
+      'description' => t('Migration of Page'),
+      'machine_name' => 'Page',
+      'source_type' => 'page',
+      'destination_type' => 'page',
+      'dependencies' => array('MediaCompanies'),
     ),
     // Panel (panel)
       /**

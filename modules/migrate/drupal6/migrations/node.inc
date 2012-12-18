@@ -381,3 +381,28 @@ class PPSGalleryMigration extends PPSNodeMigration {
     }
   }
 }
+
+class PPSPageMigration extends PPSAttachmentNodeMigration {
+  protected function query() {
+    $query = parent::query();
+    $select =<<<SQL
+(select sourceid1 from migrate_map_minutes minutes)
+union
+(select sourceid1 from migrate_map_newsletter newsletter)
+union
+(select sourceid1 from migrate_map_positions positions)
+union
+(select sourceid1 from migrate_map_teams teams)
+SQL;
+    $imported = db_query($select)->fetchCol();
+    $excluded = array(
+      106, 108, 111, 114, 116, 118, 128, 129, 176, 177, 308, 310, 311,
+      664, 665, 719, 914, 986, 1166, 1167, 1168, 1169, 1172, 1174, 1175,
+      1176, 1194, 1195, 1209, 1210, 1211, 1212, 1232,
+    );
+    $query->condition('n.nid', $imported, 'NOT IN');
+    $query->condition('n.nid', $excluded, 'NOT IN');
+    return $query;
+  }
+
+}
