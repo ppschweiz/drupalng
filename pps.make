@@ -18,6 +18,12 @@ projects[drupal][version] = 7.17
 ; leaflet_geojson
 
 
+; Newsletter Modules
+; ------------------
+; newsletter
+; simplenews && simplenews_content_selection
+; http://drupal.stackexchange.com/questions/18871/which-newsletter-module-will-fit-my-requirements
+
 
 ; Production Modules
 ; ------------------
@@ -54,6 +60,10 @@ projects[ctools][version] = 1.2
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
 
+projects[domain_ctools][version] = 1.3
+projects[domain_ctools][type] = "module"
+projects[domain_ctools][subdir] = "contrib"
+
 ; coffee
 
 projects[context][version] = 3.0-beta5
@@ -72,7 +82,15 @@ projects[domain][type] = "module"
 projects[domain][subdir] = "contrib"
 
 ; domain_admin
+; domain_blocks
+; domain_fields
 ; domain_roles
+; domain_taxonomy
+; domain_types
+; domain_views
+; domain_variable
+
+; smartqueue_domain
 
 projects[entity][version] = 1.0-rc3
 projects[entity][type] = "module"
@@ -110,6 +128,10 @@ projects[flag_weights][subdir] = "contrib"
 projects[i18n][version] = 1.7
 projects[i18n][type] = "module"
 projects[i18n][subdir] = "contrib"
+
+; i18_page_views
+; i18nviews
+; l10n_client
 
 projects[imce][version] = 1.6
 projects[imce][type] = "module"
@@ -173,6 +195,8 @@ projects[strongarm][subdir] = "contrib"
 projects[taxonomy_csv][version] = 5.x-dev
 projects[taxonomy_csv][type] = "module"
 projects[taxonomy_csv][subdir] = "contrib"
+
+; taxonomy_manager
 
 projects[taxonomy_menu][version] = 1.4
 projects[taxonomy_menu][type] = "module"

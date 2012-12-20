@@ -10,10 +10,10 @@
 function pps_formatting_filter_default_formats() {
   $formats = array();
 
-  // Exported format: Migrate.
+  // Exported format: Migrate HTML.
   $formats['migrate_html'] = array(
-    'format' => 'migrate',
-    'name' => 'Migrate',
+    'format' => 'migrate_html',
+    'name' => 'Migrate HTML',
     'cache' => '1',
     'status' => '1',
     'weight' => '0',
@@ -105,7 +105,7 @@ style',
             'Filter.YouTube' => '1',
             'Null_HTML.Allowed' => '1',
             'Null_HTML.AllowedAttributes' => '1',
-            'HTML.AllowedComments' => '',
+            'HTML.AllowedComments' => '<!--break-->',
             'Null_HTML.AllowedCommentsRegexp' => '1',
             'Null_HTML.AllowedElements' => '1',
             'Null_HTML.AllowedModules' => '1',

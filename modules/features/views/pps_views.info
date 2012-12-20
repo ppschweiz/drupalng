@@ -15,3 +15,4 @@ features[views_view][] = galleries
 features[views_view][] = newsletters
 features[views_view][] = positions
 features[views_view][] = press_reviews
+features[views_view][] = teams
