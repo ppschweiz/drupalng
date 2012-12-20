@@ -1,0 +1,10 @@
+name = PPS Panel Styles & Layouts
+description = Adds a bunch of styles and layouts to panels to seamlessly integrate to the  theme.
+core = 7.x
+package = Pirate Party Switzerland
+php = 5.2.4
+version = 7.x-1.x-dev
+project = pps_panels
+dependencies[] = ctools
+dependencies[] = panels
+dependencies[] = page_manager
