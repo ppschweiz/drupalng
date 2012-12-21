@@ -3,7 +3,7 @@
 
 api = 2
 core = 7.x
-projects[drupal][version] = 7.17
+projects[drupal][version] = 7.18
 
 ; Map Modules
 ; -----------
@@ -260,6 +260,10 @@ projects[adaptivetheme][type] = "theme"
 libraries[CAS][download][type] = "git"
 libraries[CAS][download][url] = "https://github.com/Jasig/phpCAS.git"
 libraries[CAS][download][tag] = "1.3.1"
+
+libraries[htmlpurifier][download][type] = "file"
+libraries[htmlpurifier][download][url] = "http://htmlpurifier.org/releases/htmlpurifier-4.4.0.tar.gz"
+libraries[htmlpurifier][download][filename] = "htmlpurifier"
 
 libraries[jquery.cycle][download][type] = "file"
 libraries[jquery.cycle][download][url] = "https://github.com/downloads/malsup/cycle/jquery.cycle.all.latest.min.js"

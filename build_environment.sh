@@ -61,6 +61,7 @@ cat <<EOF
 EOF
 drush en pps_theme_base -y
 drush vset theme_default pps_theme_base
+drush ev "db_update('block')->fields(array('status' => 0))->condition('theme', 'pps_theme_base')->condition('delta', array('help','main'), 'NOT IN')->execute();"
 
 cat <<EOF
 
@@ -88,6 +89,7 @@ cat <<EOF >> settings.php
 include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
 
 EOF
+chmod -w ../../sites/default ../../sites/default/settings.php
 
 drush en pps_domain -y
 drush cc nodeaccess
@@ -153,5 +155,11 @@ drush en menu -y
 drush en views_ui -y
 drush en field_ui -y
 drush cc all
+drush en nodequeue_generate -y
+drush nqga
+drush en contextual -y
+
+# Cache clear deletes the menu icons so we need to do a feature revert.
+drush fr pps_pages -y
 
 cd -
