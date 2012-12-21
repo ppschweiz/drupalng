@@ -1,0 +1,72 @@
+@import "../base";
+
+.primary-menu-wrapper {
+  @include background-image(linear-gradient(
+    top,
+    $color-gradient-orange-dark,
+    $color-gradient-orange-center  75%,
+    $color-gradient-orange-light
+  ));
+
+  .primary-menu {
+    @include inline-block-list;
+    li {
+      position: relative;
+      margin: 0;
+      padding: 0 $dim-menu-spacing*1.5 0 $dim-menu-spacing;
+      border-right: 0.1em solid rgba(219, 50, 0, 0.2);
+      @include box-shadow(0.1em 0 0 rgba(255, 255, 255, 0.2));
+      a {
+        margin-left: $dim-menu-icon-width;
+        display: inline-block;
+        @include link-colors(white, rgb(134, 51, 3), rgb(134, 51, 3), white, rgb(134, 51, 3));
+        font: 16px/#{$dim-menu-icon-height} 'TitilliumText25L400wt', Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &[class^="menu-icon-"]:before,
+        &[class*=" menu-icon-"]:before {
+          margin-left: $dim-menu-spacing*0.5;
+          content: '';
+          height: $dim-menu-icon-height;
+          width: $dim-menu-icon-width;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: url('images/menu-icons.png');
+        }
+
+        &.menu-icon-botle:before {
+          background-position: $dim-menu-icon-width*2 0;
+        }
+
+        &.menu-icon-compass:before {
+          background-position: $dim-menu-icon-width*4 0;
+        }
+
+        &.menu-icon-hat:before {
+          background-position: $dim-menu-icon-width 0;
+        }
+
+        &.menu-icon-telescope:before {
+          background-position: 0 0;
+        }
+
+        &.menu-icon-wheel:before {
+          background-position: $dim-menu-icon-width*3 0;
+        }
+
+        &.home-link {
+          display: inline-block;
+          width: $dim-home-icon;
+          margin-left: 0;
+          @include replace-text('home.png');
+
+          &:hover {
+            @include replace-text('home_hover.png');
+          }
+        }
+      }
+    }
+  }
+}

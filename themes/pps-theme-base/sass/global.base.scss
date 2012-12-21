@@ -1,21 +1,5 @@
 @import "partials/typography";
+@import "partials/layout/all";
 @import "partials/content/all";
 @import "partials/panels_blocks/all";
 @import "partials/modules/all";
-
-.front {
-  .two-brick > .panel-row > .region, .two-50 > .region {
-    &.region-two-brick-left-above {
-      width: 66.666665%;
-    }
-    &.region-two-brick-right-above {
-      width: 33.333333%;
-    }
-    &.region-two-brick-left-below {
-      width: 40%;
-    }
-    &.region-two-brick-right-below {
-      width: 60%;
-    }
-  }
-}
