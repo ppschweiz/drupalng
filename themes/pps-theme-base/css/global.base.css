@@ -162,7 +162,7 @@ body {
   left: 0;
   background: url("images/menu-icons.png");
 }
-.primary-menu-wrapper .primary-menu li a.menu-icon-botle:before {
+.primary-menu-wrapper .primary-menu li a.menu-icon-bottle:before {
   background-position: 120px 0;
 }
 .primary-menu-wrapper .primary-menu li a.menu-icon-compass:before {
@@ -174,7 +174,7 @@ body {
 .primary-menu-wrapper .primary-menu li a.menu-icon-telescope:before {
   background-position: 0 0;
 }
-.primary-menu-wrapper .primary-menu li a.menu-icon-wheel:before {
+.primary-menu-wrapper .primary-menu li a.menu-icon-helm:before {
   background-position: 180px 0;
 }
 .primary-menu-wrapper .primary-menu li a.home-link {
