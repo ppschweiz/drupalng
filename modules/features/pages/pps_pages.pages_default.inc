@@ -503,7 +503,7 @@ function pps_pages_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'two_66_33';
+  $display->layout = 'two_brick';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -522,9 +522,21 @@ function pps_pages_default_page_manager_pages() {
         'style' => 'colored',
       ),
       'two_66_33_bottom' => NULL,
+      'two_brick_top' => NULL,
+      'two_brick_left_above' => NULL,
+      'two_brick_right_above' => array(
+        'style' => 'colored',
+      ),
+      'two_brick_middle' => NULL,
+      'two_brick_left_below' => NULL,
+      'two_brick_right_below' => NULL,
+      'two_brick_bottom' => NULL,
     ),
     'style' => 'default',
     'two_66_33_second' => array(
+      'style' => 'default',
+    ),
+    'two_brick_right_above' => array(
       'style' => 'default',
     ),
   );
@@ -534,28 +546,7 @@ function pps_pages_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'two_66_33_bottom';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'upcoming';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['two_66_33_bottom'][0] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'two_66_33_first';
+    $pane->panel = 'two_brick_left_above';
     $pane->type = 'views_panes';
     $pane->subtype = 'articles-latest';
     $pane->shown = TRUE;
@@ -574,11 +565,32 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['two_brick_left_above'][0] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'two_brick_middle';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'upcoming';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-9';
+    $display->panels['two_brick_middle'][0] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'two_66_33_second';
+    $pane->panel = 'two_brick_right_above';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -605,10 +617,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-10';
+    $display->panels['two_brick_right_above'][0] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
-    $pane->panel = 'two_66_33_top';
+    $pane->panel = 'two_brick_top';
     $pane->type = 'panels_mini';
     $pane->subtype = 'latest';
     $pane->shown = TRUE;
@@ -626,7 +638,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-11'] = $pane;
-    $display->panels['two_66_33_top'][0] = 'new-11';
+    $display->panels['two_brick_top'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -896,12 +908,20 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
         'style' => 'neutral',
       ),
       'one_main' => NULL,
-      'two_33_66_top' => NULL,
-      'two_33_66_first' => NULL,
+      'two_33_66_first' => array(
+        'style' => 'colored',
+      ),
       'two_33_66_second' => NULL,
       'two_33_66_bottom' => NULL,
+      'two_33_66_top' => NULL,
     ),
     'style' => 'default',
+    'two_33_66_top' => array(
+      'style' => '-1',
+    ),
+    'two_33_66_first' => array(
+      'style' => 'default',
+    ),
   );
   $display->cache = array();
   $display->title = 'Positions';
@@ -937,6 +957,58 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $display->panels['two_33_66_first'][0] = 'new-17';
     $pane = new stdClass();
     $pane->pid = 'new-18';
+    $pane->panel = 'two_33_66_first';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Aktuelle Urabstimmung',
+      'body' => 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.',
+      'format' => 'textile',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-18'] = $pane;
+    $display->panels['two_33_66_first'][1] = 'new-18';
+    $pane = new stdClass();
+    $pane->pid = 'new-19';
+    $pane->panel = 'two_33_66_first';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Vergangene Urabstimmungen',
+      'body' => '# Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+# Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+# Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+# Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+# Donec id elit non mi porta gravida at eget metus.',
+      'format' => 'textile',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-19'] = $pane;
+    $display->panels['two_33_66_first'][2] = 'new-19';
+    $pane = new stdClass();
+    $pane->pid = 'new-20';
     $pane->panel = 'two_33_66_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'positions-teasers';
@@ -954,24 +1026,34 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['two_33_66_second'][0] = 'new-18';
+    $display->content['new-20'] = $pane;
+    $display->panels['two_33_66_second'][0] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-21';
     $pane->panel = 'two_33_66_top';
-    $pane->type = 'node';
-    $pane->subtype = 'node';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'nid' => '1855',
-      'links' => 1,
-      'leave_node_title' => 0,
-      'identifier' => '',
-      'build_mode' => 'teaser',
-      'link_node_title' => 0,
-      'override_title' => 1,
-      'override_title_text' => 'Parteiprogramm',
+      'admin_title' => '',
+      'title' => 'Parteiprogramm',
+      'body' => 'Im Zuge der digitalen Revolution, die auf alle Lebensbereiche ausgreift, sind die Würde und die Freiheit des Menschen allen Lippenbekenntnissen zum Trotz in bisher ungeahnter Art und Weise gefährdet. Diese Gefährdung schreitet zudem in einem solchen Tempo voran, dass die gesellschaftliche Meinungsbildung und die Gesetzgeber ebenso wie der Einzelne selbst überfordert sind. Gleichzeitig nimmt die Möglichkeit, diesen Prozess demokratisch auszugestalten, rapide ab. Die Globalisierung des Wissens und der Kultur durch Digitalisierung und Vernetzung stellt die bisherigen rechtlichen, wirtschaftlichen und sozialen Rahmenbedingungen ausnahmslos auf den Prüfstand. Nicht zuletzt die falschen Antworten auf diese Herausforderung leisten einer entstehenden totalen und totalitären, globalen Überwachungsgesellschaft Vorschub. Die Angst vor internationalem Terrorismus lässt Sicherheit vor Freiheit als wichtigstes Gut erscheinen – und viele fälschlicherweise in der Verteidigung der Freiheit verstummen. Informationelle Selbstbestimmung, freier Zugang zu Wissen und Kultur und die Wahrung der Privatsphäre sind die Grundpfeiler der zukünftigen Informationsgesellschaft. Nur auf ihrer Basis kann eine demokratische, sozial gerechte, freiheitlich selbstbestimmte, globale Ordnung entstehen. Die Piratenpartei versteht sich daher als Teil einer weltweiten Bewegung, die diese Ordnung zum Vorteil aller mitgestalten will. Um ihre politische Arbeit möglichst zielgerichtet und effizient führen zu können, beschränkt sich die Piratenpartei auf einige wenige, für die Informationsgesellschaft wichtige Themen. Gleichzeitig ist sie der Meinung, dass sie mit ihren Kernanliegen das gesamte traditionelle politische Spektrum gleichermassen anspricht. Eine Positionierung in diesem Spektrum wäre demzufolge ihrer politischen Arbeit nach Wahrung der Privatsphäre und Freiheit für Wissen und Kultur mehr als nur hinderlich.
+
+h2. Inhalt
+
+# "Privatsphäre und Datenschutz":#
+# "Transparenz des Staatswesens":#
+# "Zensur":#
+# "Infrastrukturmonopole und Patente":#
+# "Digitale Nachhaltigkeit":#
+# "Befreiung unserer Kultur (Urheberrecht)":#
+# "Mediale Gewalt und Jugendschutz":#
+# "Laizismus":#
+# "Schluss":#
+',
+      'format' => 'textile',
+      'substitute' => TRUE,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -981,8 +1063,8 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['two_33_66_top'][0] = 'new-19';
+    $display->content['new-21'] = $pane;
+    $display->panels['two_33_66_top'][0] = 'new-21';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1063,7 +1145,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-20';
+    $pane->pid = 'new-22';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'communiques-latest';
@@ -1083,10 +1165,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-20';
+    $display->content['new-22'] = $pane;
+    $display->panels['two_66_33_first'][0] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-23';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'press_reviews-panel_pane_1';
@@ -1106,10 +1188,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['two_66_33_first'][1] = 'new-21';
+    $display->content['new-23'] = $pane;
+    $display->panels['two_66_33_first'][1] = 'new-23';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-24';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'galleries-panel';
@@ -1129,10 +1211,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-22';
+    $display->content['new-24'] = $pane;
+    $display->panels['two_66_33_second'][0] = 'new-24';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-25';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1155,8 +1237,8 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['two_66_33_second'][1] = 'new-23';
+    $display->content['new-25'] = $pane;
+    $display->panels['two_66_33_second'][1] = 'new-25';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
