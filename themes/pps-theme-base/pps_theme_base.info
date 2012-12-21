@@ -14,7 +14,6 @@
 
   ; See each stylesheet for extensive documentation and help.
   stylesheets[screen][] = css/global.base.css
-  stylesheets[screen][] = css/megamenu-skinn-pps.css
   stylesheets[all][] = css/titillium/stylesheet.css
   stylesheets[all][] = css/pps-icon/style.css
 

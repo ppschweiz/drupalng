@@ -1,0 +1,10 @@
+.page-latest {
+  .two-brick > .panel-row > .region, .two-50 > .region {
+    &.region-two-brick-left-above {
+      width: 66.666665%;
+    }
+    &.region-two-brick-right-above {
+      width: 33.333333%;
+    }
+  }
+}

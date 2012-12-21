@@ -40,6 +40,16 @@ $dim-menu-icon-width: 60px;
 $dim-menu-icon-height: 55px;
 $dim-menu-spacing: 0.6em;
 
+//
+// Gutters
+//
+// Set a variable for the gutters. Adaptivetheme allows you to easly modify the
+// global gutter width for precise control over the design. Panel pages need
+// special gutter wrangling when a Panel is inside #content wrapper, so to ease
+// setting this we use a variable.
+//
+$gutter-width: 1em;
+
 // ---------------------------------------------------------------------
 // Blocks and Panels
 // ---------------------------------------------------------------------

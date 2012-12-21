@@ -28,26 +28,6 @@ $legacy-support-for-ie7: true;
 // Partials to be shared with all .scss files.
 //
 
-@import 'compass/support';                     // Add Compass' IE and vendor prefix support variables.
-@import 'compass/utilities/general/clearfix';  // Better than Drupal's clearfix.
-@import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
-@import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
-@import "compass/layout";
 @import "compass";
-
-
 @import "variables";
-
-@mixin element-invisible {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-@mixin element-focusable-invisible {
-  &:active, &:hover {
-    @include element-invisible;
-    position: static !important;
-    clip: auto;
-  }
-}
+@import "mixins";

@@ -1,18 +1,19 @@
-/*
- *   Important Information about this CSS File
- *
- * - Do not delete or rename this file, if you do not use it leave it blank (delete
- *   everything) and the file will be skipped when you enable Production Mode in
- *   the Global theme settings.
- *
- * - Read the _README file in this directory, it contains useful help and other information.
- */
-.columns {
-  position: relative;
+.front .two-brick > .panel-row > .region.region-two-brick-left-above, .front .two-50 > .region.region-two-brick-left-above {
+  width: 66.666665%;
+}
+.front .two-brick > .panel-row > .region.region-two-brick-right-above, .front .two-50 > .region.region-two-brick-right-above {
+  width: 33.333333%;
+}
+.front .two-brick > .panel-row > .region.region-two-brick-left-below, .front .two-50 > .region.region-two-brick-left-below {
+  width: 40%;
+}
+.front .two-brick > .panel-row > .region.region-two-brick-right-below, .front .two-50 > .region.region-two-brick-right-below {
+  width: 60%;
 }
 
-.sidebar .region-inner {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+.page-latest .two-brick > .panel-row > .region.region-two-brick-left-above, .page-latest .two-50 > .region.region-two-brick-left-above {
+  width: 66.666665%;
+}
+.page-latest .two-brick > .panel-row > .region.region-two-brick-right-above, .page-latest .two-50 > .region.region-two-brick-right-above {
+  width: 33.333333%;
 }
