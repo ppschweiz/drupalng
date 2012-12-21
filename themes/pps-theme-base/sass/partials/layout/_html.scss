@@ -1,0 +1,13 @@
+@import "../base";
+
+body {
+  background-color: $color-page-background;
+}
+
+#content-column {
+  background-color: $color-content-background;
+}
+
+#main-content-header {
+  @include element-invisible;
+}

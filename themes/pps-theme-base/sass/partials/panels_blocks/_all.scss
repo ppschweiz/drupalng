@@ -51,6 +51,8 @@
   margin-bottom: -9000em;
 
   &.region-style-pps-neutral {
+    background-color: $color-block-background-neutral;
+
     .pane-title,
     .block-title {
       @include block-title-neutral;

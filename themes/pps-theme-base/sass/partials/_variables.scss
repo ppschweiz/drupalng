@@ -20,6 +20,13 @@ $color-gradient-orange-dark: rgb(240,138,0);
 $color-link-normal: rgb(143, 143, 143);
 $color-link-highlight: rgb(196, 143, 87);
 
+// Page
+
+$color-page-background: rgb(238, 181, 12);
+
+// Content
+$color-content-background: #fff;
+
 // ---------------------------------------------------------------------
 // Dimensions
 // ---------------------------------------------------------------------
@@ -31,7 +38,7 @@ $dim-padding: 0.4em;
 $dim-home-icon: 23px;
 $dim-menu-icon-width: 60px;
 $dim-menu-icon-height: 55px;
-$dim-menu-spacing: 1em;
+$dim-menu-spacing: 0.6em;
 
 // ---------------------------------------------------------------------
 // Blocks and Panels
@@ -45,6 +52,7 @@ $color-block-title-gradient-neutral-light: #f5f6f4;
 $color-block-title-gradient-neutral-dark: #e6e6e6;
 $color-block-title-gradient-colored-light: #faf5ea;
 $color-block-title-gradient-colored-dark: #f5ecd6;
+$color-block-background-neutral: transparent;
 $color-block-background-colored: #fbf8f2;
 
 // Dimensions

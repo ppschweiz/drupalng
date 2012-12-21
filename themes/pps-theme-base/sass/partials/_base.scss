@@ -38,7 +38,16 @@ $legacy-support-for-ie7: true;
 
 @import "variables";
 
-//
-// Import custom partial - mixins and variables defined for your theme
-//
-@import 'partials/custom';
+@mixin element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin element-focusable-invisible {
+  &:active, &:hover {
+    @include element-invisible;
+    position: static !important;
+    clip: auto;
+  }
+}
