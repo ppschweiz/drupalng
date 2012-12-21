@@ -3,15 +3,44 @@
 class PPSNodeMigration extends DrupalNode6Migration {
 
   protected $autotagging_fields = array();
+  protected $access_mapping = array();
 
   public function __construct (array $arguments) {
+    $map_access = !empty($arguments['access mappings']);
+    $map_structural = !empty($arguments['structural']);
+
     $this->sourceFields['tag_all'] = t('Concatenation of all tags except language');
     $this->sourceFields['tag_topic'] = t('tag topic');
     $this->sourceFields['tag_person'] = t('Tag person');
     $this->sourceFields['tag_location'] = t('Tag location');
     $this->sourceFields['tag_language'] = t('Tag language');
+    if ($map_access) {
+      $this->sourceFields['field_workbench_access'] = t('Workbench Access');
+      $this->access_mapping = $arguments['access mappings'];
+    }
 
     parent::__construct ($arguments);
+
+    if ($map_access && !$map_structural) {
+      $this->addSimpleMappings(array('field_workbench_access'));
+    }
+    else if ($map_access && $map_structural) {
+      $this->addFieldMapping('field_workbench_access', 'field_workbench_access')
+        ->defaultValue($arguments['structural']);
+    }
+    else if ($map_structural) {
+      $this->addUnmigratedSources(array('field_workbench_access'));
+      $this->addFieldMapping('field_workbench_access')
+        ->defaultValue($arguments['structural']);
+    }
+
+    if ($map_structural || $map_access) {
+      $this->addUnmigratedDestinations(array('field_workbench_access:source_type'));
+      $this->addFieldMapping('field_workbench_access:create_term')
+        ->defaultValue(FALSE);
+      $this->addFieldMapping('field_workbench_access:ignore_case')
+        ->defaultValue(TRUE);
+    }
 
     $this->removeFieldMapping('path');
     $this->addUnmigratedDestinations(array('path',));
@@ -58,6 +87,10 @@ class PPSNodeMigration extends DrupalNode6Migration {
           $row->$attribute = $tags;
         }
       }
+    }
+
+    if (isset($this->access_mapping['nid']) && array_key_exists($row->nid, $this->access_mapping['nid'])) {
+      $row->field_workbench_access = $this->access_mapping['nid'][$row->nid];
     }
   }
 
@@ -177,7 +210,23 @@ class PPSNodehierarchyMigration extends PPSAttachmentNodeMigration {
     $query = parent::query();
     $query->rightJoin('nodehierarchy', 'nh', 'n.nid = nh.nid');
     $query->condition('nh.parent', $this->parents, 'IN');
+    $query->fields('nh', array('parent'));
     return $query;
+  }
+  public function prepareRow ($row) {
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+    if (isset($row->field_workbench_access)) {
+      return;
+    }
+
+    $parent_exists = !empty($row->parent);
+    $mapping_exists = !empty($this->access_mapping['parent']);
+
+    if ( $parent_exists && $mapping_exists && array_key_exists($row->parent, $this->access_mapping['parent'])) {
+      $row->field_workbench_access = $this->access_mapping['parent'][$row->parent];
+    }
   }
 }
 
@@ -383,25 +432,33 @@ class PPSGalleryMigration extends PPSNodeMigration {
 }
 
 class PPSPageMigration extends PPSAttachmentNodeMigration {
+  protected $exclusions = array();
+
+  public function __construct(array $arguments) {
+    parent::__construct($arguments);
+    if (!empty($arguments['excluded nids'])) {
+      $this->exclusions['nids'] = $arguments['excluded nids'];
+    }
+    if (!empty($arguments['dependencies'])) {
+      $dependencies = $arguments['dependencies'];
+      $dependencies = array_filter($dependencies, 'drupal_strtolower');
+      $this->exclusions['migrations'] = $dependencies;
+    }
+  }
+
   protected function query() {
     $query = parent::query();
-    $select =<<<SQL
-(select sourceid1 from migrate_map_minutes minutes)
-union
-(select sourceid1 from migrate_map_newsletter newsletter)
-union
-(select sourceid1 from migrate_map_positions positions)
-union
-(select sourceid1 from migrate_map_teams teams)
-SQL;
-    $imported = db_query($select)->fetchCol();
-    $excluded = array(
-      106, 108, 111, 114, 116, 118, 128, 129, 176, 177, 308, 310, 311,
-      664, 665, 719, 914, 986, 1166, 1167, 1168, 1169, 1172, 1174, 1175,
-      1176, 1194, 1195, 1209, 1210, 1211, 1212, 1232,
-    );
-    $query->condition('n.nid', $imported, 'NOT IN');
-    $query->condition('n.nid', $excluded, 'NOT IN');
+    if (!empty($this->exclusions['migrations'])) {
+      $selects = array();
+      foreach ($this->exclusions['migrations'] as $migration) {
+        $selects[] = "(select sourceid1 from migrate_map_$migration)";
+      }
+      $imported = db_query(implode('union'), $selects)->fetchCol();
+      $query->condition('n.nid', $imported, 'NOT IN');
+    }
+    if (!empty($this->exclusions['nids'])) {
+      $query->condition('n.nid', $this->exclusions['nids'], 'NOT IN');
+    }
     return $query;
   }
 
