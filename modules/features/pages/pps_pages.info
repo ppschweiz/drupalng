@@ -16,4 +16,5 @@ features[page_manager_pages][] = latest
 features[page_manager_pages][] = pirates
 features[page_manager_pages][] = positions
 features[page_manager_pages][] = press
+features[panels_mini][] = latest
 features[panels_mini][] = upcoming

@@ -21,10 +21,10 @@ function pps_pages_default_page_manager_pages() {
     'settings' => NULL,
   );
   $page->menu = array(
-    'type' => 'none',
-    'title' => 'Latest',
+    'type' => 'normal',
+    'title' => 'Home',
     'name' => 'main-menu',
-    'weight' => '-49',
+    'weight' => '-50',
     'parent' => array(
       'type' => 'none',
       'title' => '',
@@ -291,7 +291,7 @@ function pps_pages_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => 'Foo',
     );
     $pane->cache = array();
@@ -503,7 +503,7 @@ function pps_pages_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'three_3x33';
+  $display->layout = 'two_66_33';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -516,8 +516,17 @@ function pps_pages_default_page_manager_pages() {
       'three_33_second' => NULL,
       'three_33_third' => NULL,
       'three_33_bottom' => NULL,
+      'two_66_33_top' => NULL,
+      'two_66_33_first' => NULL,
+      'two_66_33_second' => array(
+        'style' => 'colored',
+      ),
+      'two_66_33_bottom' => NULL,
     ),
     'style' => 'default',
+    'two_66_33_second' => array(
+      'style' => 'default',
+    ),
   );
   $display->cache = array();
   $display->title = 'Latest';
@@ -525,7 +534,7 @@ function pps_pages_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'three_33_bottom';
+    $pane->panel = 'two_66_33_bottom';
     $pane->type = 'panels_mini';
     $pane->subtype = 'upcoming';
     $pane->shown = TRUE;
@@ -543,10 +552,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-8'] = $pane;
-    $display->panels['three_33_bottom'][0] = 'new-8';
+    $display->panels['two_66_33_bottom'][0] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
-    $pane->panel = 'three_33_bottom';
+    $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'articles-latest';
     $pane->shown = TRUE;
@@ -563,67 +572,27 @@ function pps_pages_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['three_33_bottom'][1] = 'new-9';
+    $display->panels['two_66_33_first'][0] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'three_33_first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'communiques-latest';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 1,
-      'items_per_page' => '1',
-      'override_title' => 1,
-      'override_title_text' => 'Neustes Communiqé',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['three_33_first'][0] = 'new-10';
-    $pane = new stdClass();
-    $pane->pid = 'new-11';
-    $pane->panel = 'three_33_second';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'newsletters-latest';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 1,
-      'items_per_page' => '1',
-      'override_title' => 1,
-      'override_title_text' => 'Neuste Flaschenpost',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['three_33_second'][0] = 'new-11';
-    $pane = new stdClass();
-    $pane->pid = 'new-12';
-    $pane->panel = 'three_33_third';
+    $pane->panel = 'two_66_33_second';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Neuste Urabstimmung',
-      'body' => 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.',
+      'title' => 'Twitter wall',
+      'body' => 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.',
       'format' => 'textile',
       'substitute' => TRUE,
     );
@@ -635,8 +604,29 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['three_33_third'][0] = 'new-12';
+    $display->content['new-10'] = $pane;
+    $display->panels['two_66_33_second'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'two_66_33_top';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'latest';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['two_66_33_top'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -707,7 +697,7 @@ function pps_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-12';
     $pane->panel = 'one_main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -735,10 +725,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['one_main'][0] = 'new-13';
+    $display->content['new-12'] = $pane;
+    $display->panels['one_main'][0] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-13';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'teams-panel';
@@ -761,10 +751,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['one_main'][1] = 'new-14';
+    $display->content['new-13'] = $pane;
+    $display->panels['one_main'][1] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-14';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'teams-panel';
@@ -787,10 +777,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['one_main'][2] = 'new-15';
+    $display->content['new-14'] = $pane;
+    $display->panels['one_main'][2] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-15';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'teams-panel';
@@ -813,10 +803,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['one_main'][3] = 'new-16';
+    $display->content['new-15'] = $pane;
+    $display->panels['one_main'][3] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-16';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'teams-panel';
@@ -839,8 +829,8 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['one_main'][4] = 'new-17';
+    $display->content['new-16'] = $pane;
+    $display->panels['one_main'][4] = 'new-16';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -918,7 +908,7 @@ function pps_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-17';
     $pane->panel = 'two_33_66_first';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -943,10 +933,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['two_33_66_first'][0] = 'new-18';
+    $display->content['new-17'] = $pane;
+    $display->panels['two_33_66_first'][0] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-18';
     $pane->panel = 'two_33_66_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'positions-teasers';
@@ -964,10 +954,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['two_33_66_second'][0] = 'new-19';
+    $display->content['new-18'] = $pane;
+    $display->panels['two_33_66_second'][0] = 'new-18';
     $pane = new stdClass();
-    $pane->pid = 'new-20';
+    $pane->pid = 'new-19';
     $pane->panel = 'two_33_66_top';
     $pane->type = 'node';
     $pane->subtype = 'node';
@@ -991,8 +981,8 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['two_33_66_top'][0] = 'new-20';
+    $display->content['new-19'] = $pane;
+    $display->panels['two_33_66_top'][0] = 'new-19';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1073,7 +1063,7 @@ function pps_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-20';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'communiques-latest';
@@ -1093,10 +1083,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-21';
+    $display->content['new-20'] = $pane;
+    $display->panels['two_66_33_first'][0] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-21';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'press_reviews-panel_pane_1';
@@ -1116,10 +1106,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['two_66_33_first'][1] = 'new-22';
+    $display->content['new-21'] = $pane;
+    $display->panels['two_66_33_first'][1] = 'new-21';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-22';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'galleries-panel';
@@ -1139,10 +1129,10 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-23';
+    $display->content['new-22'] = $pane;
+    $display->panels['two_66_33_second'][0] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-24';
+    $pane->pid = 'new-23';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1165,8 +1155,8 @@ function pps_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['two_66_33_second'][1] = 'new-24';
+    $display->content['new-23'] = $pane;
+    $display->panels['two_66_33_second'][1] = 'new-23';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

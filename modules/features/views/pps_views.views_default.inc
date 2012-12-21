@@ -861,6 +861,7 @@ function pps_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Positions';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -905,6 +906,7 @@ function pps_views_views_default_views() {
   $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
   $translatables['positions'] = array(
     t('Master'),
+    t('Positions'),
     t('more'),
     t('Anwenden'),
     t('Zurücksetzen'),
