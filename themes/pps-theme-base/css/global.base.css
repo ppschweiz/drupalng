@@ -248,6 +248,84 @@ body {
   background-position: 50% 50%;
 }
 
+#crumbs {
+  zoom: 1;
+  line-height: 40px;
+  height: 40px;
+  background-color: #FFF;
+  background-image: linear-gradient(tobottom, #ffffff, #eeeeee);
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
+#crumbs:before, #crumbs:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+#crumbs:after {
+  clear: both;
+}
+#crumbs .crumb {
+  color: #999;
+}
+#crumbs .crumb:hover {
+  text-decoration: none !important;
+}
+#crumbs > .crumb {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  float: left;
+  padding: 0 40px 0 20px;
+}
+#crumbs > .crumb:after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: -1px;
+  height: 40px;
+  width: 40px;
+  border-right: 3px rgba(0, 0, 0, 0.1) solid;
+  border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#crumbs > .crumb:before {
+  content: '';
+  position: absolute;
+  right: 11px;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  border-right: 1px rgba(0, 0, 0, 0.2) solid;
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#crumbs > .crumb:hover:after {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+#crumbs > .crumb:hover:before {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+#crumbs :last-child {
+  color: #333333;
+}
+#crumbs a {
+  margin-top: 1px;
+  color: #999;
+}
+#crumbs a:before, #crumbs a:after {
+  display: none;
+}
+
 /* =============================================================================
  *   Node Styling
  * ========================================================================== */
