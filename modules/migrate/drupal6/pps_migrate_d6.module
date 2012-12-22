@@ -99,6 +99,8 @@ function pps_migrate_d6_register_node_migrations() {
       'source_type' => 'event',
       'destination_type' => 'event',
     ),
+    // Pages to be ported
+    // 792, 798, 799, // Grillevent
     // Gallery (gallery)
     array(
       'class_name' => 'PPSGalleryMigration',
@@ -215,6 +217,8 @@ function pps_migrate_d6_register_node_migrations() {
       'parents' => array(
         1043,
       ),
+      // Pages to be ported
+      // 1258, // le financement de l’avortement
     ),
     array(
       'class_name' => 'PPSPageMigration',
@@ -230,9 +234,31 @@ function pps_migrate_d6_register_node_migrations() {
         'Teams',
       ),
       'excluded nids' => array(
+        // Person portraits
         106, 108, 111, 114, 116, 118, 128, 129, 176, 177, 308, 310, 311,
-        664, 665, 719, 914, 986, 1043, 1166, 1167, 1168, 1169, 1172,
-        1174, 1175, 1176, 1194, 1195, 1209, 1210, 1211, 1212, 1232,
+        664, 665, 719, 914, 986, 1166, 1167, 1168, 1169, 1172, 1174,
+        1175, 1176, 1194, 1195, 1209, 1210, 1211, 1212, 1232,
+
+        // Parent pages
+        318, 424, 636, 637, 638, 1099, 1187, 1284, // Meeting minutes
+        418, 933, 1057, // Dokumente
+        1061, 1058, 419, // Message in a bottle
+        390, // Positions
+        675, 1062, 1063, // Working groups
+        1230, // Elected teams
+        1043, // Ballot votes
+
+        // Empty pages or obsolete
+        188, 290, // Bilder
+        187, // Werbemittel
+        40, 41, // Presse
+        31, 148, // Mitmachen, diskutieren und informieren!
+        322, // Piraten International
+        296, 297, 300, // Piratenevents
+        748, 783, // Social Media
+        757, 771, // Notare Pi-Vote, Pi-Vote
+        1084, 1082, 1083, 1085, 1086, 1087, // Working groups
+        1088, 1089, 1090, 1091, 1092, 1093, // Working groups
       ),
     ),
     // Panel (panel)

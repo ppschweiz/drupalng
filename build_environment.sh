@@ -144,7 +144,9 @@ if [ -n $PANDOC ]; then
 fi
 drush vset migrate_disabled_handlers 'a:1:{i:0;s:23:"MigrateTextFieldHandler";}'
 drush cc all
-drush mi --all
+drush mi User,EventTypes,Files,Gallery,MediaCompanies,Minutes,Newsletter,Politblog,PolitblogComments,Positions,Press,Teams,Ballot,Communique,CommuniqueComments,Event
+drush cc all
+drush mi Page
 
 cat <<EOF
 
