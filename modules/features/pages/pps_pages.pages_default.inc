@@ -21,16 +21,7 @@ function pps_pages_default_page_manager_pages() {
     'settings' => NULL,
   );
   $page->menu = array(
-    'type' => 'normal',
-    'title' => 'Home',
-    'name' => 'main-menu',
-    'weight' => '-50',
-    'parent' => array(
-      'type' => 'none',
-      'title' => '',
-      'name' => 'navigation',
-      'weight' => '0',
-    ),
+    'type' => 'none',
   );
   $page->arguments = array();
   $page->conf = array(

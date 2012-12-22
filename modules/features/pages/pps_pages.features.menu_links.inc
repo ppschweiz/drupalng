@@ -10,26 +10,6 @@
 function pps_pages_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu:front
-  $menu_links['main-menu:front'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'front',
-    'router_path' => 'front',
-    'link_title' => 'Home',
-    'options' => array(
-      'attributes' => array(
-        'class' => array(
-          0 => 'home-link',
-        ),
-      ),
-    ),
-    'module' => 'system',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
-  );
   // Exported menu link: main-menu:interactive
   $menu_links['main-menu:interactive'] = array(
     'menu_name' => 'main-menu',
@@ -132,7 +112,6 @@ function pps_pages_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Home');
   t('Interactive');
   t('Latest');
   t('Positions');
