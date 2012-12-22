@@ -435,26 +435,31 @@ class PPSPageMigration extends PPSAttachmentNodeMigration {
   protected $exclusions = array();
 
   public function __construct(array $arguments) {
-    parent::__construct($arguments);
     if (!empty($arguments['excluded nids'])) {
       $this->exclusions['nids'] = $arguments['excluded nids'];
     }
     if (!empty($arguments['dependencies'])) {
       $dependencies = $arguments['dependencies'];
-      $dependencies = array_filter($dependencies, 'drupal_strtolower');
       $this->exclusions['migrations'] = $dependencies;
     }
+    parent::__construct($arguments);
   }
 
   protected function query() {
     $query = parent::query();
-    if (!empty($this->exclusions['migrations'])) {
+    $tables = db_query("show tables like 'migrate_map_%'")->fetchCol();
+    if (!empty($this->exclusions['migrations']) && !empty($tables)) {
       $selects = array();
       foreach ($this->exclusions['migrations'] as $migration) {
-        $selects[] = "(select sourceid1 from migrate_map_$migration)";
+        $table = 'migrate_map_' . drupal_strtolower($migration);
+        if (in_array($table, $tables)) {
+          $selects[] = "(select sourceid1 from $table)";
+        }
       }
-      $imported = db_query(implode('union'), $selects)->fetchCol();
-      $query->condition('n.nid', $imported, 'NOT IN');
+      if (!empty($selects)) {
+        $imported = db_query(implode('union', $selects))->fetchCol();
+        $query->condition('n.nid', $imported, 'NOT IN');
+      }
     }
     if (!empty($this->exclusions['nids'])) {
       $query->condition('n.nid', $this->exclusions['nids'], 'NOT IN');
