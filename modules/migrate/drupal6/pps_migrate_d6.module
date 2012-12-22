@@ -206,12 +206,24 @@ function pps_migrate_d6_register_node_migrations() {
       ),
     ),
     array(
+      // Ballot votes
+      'class_name' => 'PPSNodehierarchyMigration',
+      'description' => t('Migration of ballot votes'),
+      'machine_name' => 'Ballot',
+      'source_type' => 'page',
+      'destination_type' => 'ballot',
+      'parents' => array(
+        1043,
+      ),
+    ),
+    array(
       'class_name' => 'PPSPageMigration',
       'description' => t('Migration of Page'),
       'machine_name' => 'Page',
       'source_type' => 'page',
       'destination_type' => 'panel',
       'dependencies' => array(
+        'Ballot',
         'Minutes',
         'Newsletter',
         'Positions',
@@ -219,8 +231,8 @@ function pps_migrate_d6_register_node_migrations() {
       ),
       'excluded nids' => array(
         106, 108, 111, 114, 116, 118, 128, 129, 176, 177, 308, 310, 311,
-        664, 665, 719, 914, 986, 1166, 1167, 1168, 1169, 1172, 1174,
-        1175, 1176, 1194, 1195, 1209, 1210, 1211, 1212, 1232,
+        664, 665, 719, 914, 986, 1043, 1166, 1167, 1168, 1169, 1172,
+        1174, 1175, 1176, 1194, 1195, 1209, 1210, 1211, 1212, 1232,
       ),
     ),
     // Panel (panel)

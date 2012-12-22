@@ -13,6 +13,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_ballot';
+  $strongarm->value = 0;
+  $export['comment_anonymous_ballot'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_communique';
   $strongarm->value = 0;
   $export['comment_anonymous_communique'] = $strongarm;
@@ -76,9 +83,23 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_ballot';
+  $strongarm->value = '0';
+  $export['comment_ballot'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_communique';
   $strongarm->value = '2';
   $export['comment_communique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_ballot';
+  $strongarm->value = 1;
+  $export['comment_default_mode_ballot'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -142,6 +163,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'comment_default_mode_team';
   $strongarm->value = 1;
   $export['comment_default_mode_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_ballot';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_ballot'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -212,6 +240,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'comment_event';
   $strongarm->value = '2';
   $export['comment_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_ballot';
+  $strongarm->value = 1;
+  $export['comment_form_location_ballot'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -321,6 +356,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_ballot';
+  $strongarm->value = '1';
+  $export['comment_preview_ballot'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_communique';
   $strongarm->value = '1';
   $export['comment_preview_communique'] = $strongarm;
@@ -380,6 +422,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'comment_preview_team';
   $strongarm->value = '1';
   $export['comment_preview_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_ballot';
+  $strongarm->value = 1;
+  $export['comment_subject_field_ballot'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -917,6 +966,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_ballot';
+  $strongarm->value = '0';
+  $export['language_content_type_ballot'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_communique';
   $strongarm->value = '0';
   $export['language_content_type_communique'] = $strongarm;
@@ -980,6 +1036,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_ballot';
+  $strongarm->value = array();
+  $export['menu_options_ballot'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_newsletter';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -994,6 +1057,13 @@ function pps_content_types_strongarm() {
     0 => 'main-menu',
   );
   $export['menu_options_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_ballot';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_ballot'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1046,6 +1116,15 @@ function pps_content_types_strongarm() {
     1 => 'promote',
   );
   $export['node_options_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_ballot';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_ballot'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1140,6 +1219,13 @@ function pps_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_ballot';
+  $strongarm->value = '1';
+  $export['node_preview_ballot'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_communique';
   $strongarm->value = '1';
   $export['node_preview_communique'] = $strongarm;
@@ -1206,6 +1292,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'node_submitted_article';
   $strongarm->value = 1;
   $export['node_submitted_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_ballot';
+  $strongarm->value = 0;
+  $export['node_submitted_ballot'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

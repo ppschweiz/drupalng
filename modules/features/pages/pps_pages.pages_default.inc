@@ -982,20 +982,15 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane = new stdClass();
     $pane->pid = 'new-19';
     $pane->panel = 'two_33_66_first';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ballot-panel';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Vergangene Urabstimmungen',
-      'body' => '# Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-# Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-# Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-# Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-# Donec id elit non mi porta gravida at eget metus.',
-      'format' => 'textile',
-      'substitute' => TRUE,
+      'more_link' => 1,
+      'items_per_page' => '5',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
