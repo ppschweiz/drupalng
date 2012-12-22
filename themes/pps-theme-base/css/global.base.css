@@ -89,16 +89,28 @@ body {
   background: url("images/header_background.jpg") repeat-x scroll center top #eeb50c;
 }
 
+#branding {
+  margin-bottom: 2em;
+}
+
 #logo {
   float: left;
 }
 
 #name-and-slogan {
-  float: right;
+  float: left;
+  margin-left: 1em;
 }
 
 #name-and-slogan h1 {
-  display: none;
+  border: 0;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 #page-title {
@@ -110,6 +122,10 @@ body {
   width: 1px;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+#content-column {
+  background-color: white;
 }
 
 #columns {

@@ -12,20 +12,29 @@ body {
   background: url("images/header_background.jpg") repeat-x scroll center top  $color-page-background;
 }
 
+#branding {
+  margin-bottom: 2em;
+}
+
 #logo {
   float: left;
 }
 
 #name-and-slogan {
-  float: right;
+  float: left;
+  margin-left: 1em;
 }
 
 #name-and-slogan h1 {
-  display: none;
+  @include element-invisible;
 }
 
 #page-title {
   @include element-invisible;
+}
+
+#content-column {
+  background-color: $color-content-background;
 }
 
 #columns {
