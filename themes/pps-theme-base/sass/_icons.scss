@@ -1,0 +1,204 @@
+@mixin icon($char) {
+  &:before {
+    font-family: 'pps-icon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: $char;
+  }
+} 
+
+@mixin icon-comment {
+  @include icon("\e000");
+}
+@mixin icon-users {
+  @include icon("\e001");
+}
+@mixin icon-user {
+  @include icon("\e002");
+}
+@mixin icon-feed {
+  @include icon("\e003");
+}
+@mixin icon-plus {
+  @include icon("\e004");
+}
+@mixin icon-cross {
+  @include icon("\e005");
+}
+@mixin icon-arrow-right {
+  @include icon("\e006");
+}
+@mixin icon-arrow-left {
+  @include icon("\e007");
+}
+@mixin icon-pencil {
+  @include icon("\e008");
+}
+@mixin icon-search {
+  @include icon("\e009");
+}
+@mixin icon-grid {
+  @include icon("\e00a");
+}
+@mixin icon-list {
+  @include icon("\e00b");
+}
+@mixin icon-star {
+  @include icon("\e00c");
+}
+@mixin icon-heart {
+  @include icon("\e00d");
+}
+@mixin icon-map-marker {
+  @include icon("\e00e");
+}
+@mixin icon-home {
+  @include icon("\e00f");
+}
+@mixin icon-phone {
+  @include icon("\e010");
+}
+@mixin icon-camera {
+  @include icon("\e011");
+}
+@mixin icon-arrow-left-2 {
+  @include icon("\e012");
+}
+@mixin icon-arrow-right-2 {
+  @include icon("\e013");
+}
+@mixin icon-arrow-up {
+  @include icon("\e014");
+}
+@mixin icon-arrow-down {
+  @include icon("\e015");
+}
+@mixin icon-cog {
+  @include icon("\e016");
+}
+@mixin icon-wrench {
+  @include icon("\e017");
+}
+@mixin icon-bars {
+  @include icon("\e018");
+}
+@mixin icon-chart {
+  @include icon("\e019");
+}
+@mixin icon-stats {
+  @include icon("\e01a");
+}
+@mixin icon-eye {
+  @include icon("\e01b");
+}
+@mixin icon-zoom-out {
+  @include icon("\e01c");
+}
+@mixin icon-zoom-in {
+  @include icon("\e01d");
+}
+@mixin icon-export {
+  @include icon("\e01e");
+}
+@mixin icon-mail {
+  @include icon("\e01f");
+}
+@mixin icon-delete {
+  @include icon("\e020");
+}
+@mixin icon-thumbs-up {
+  @include icon("\e021");
+}
+@mixin icon-thumbs-down {
+  @include icon("\e022");
+}
+@mixin icon-tag {
+  @include icon("\e023");
+}
+@mixin icon-warning {
+  @include icon("\e024");
+}
+@mixin icon-unlocked {
+  @include icon("\e025");
+}
+@mixin icon-locked {
+  @include icon("\e026");
+}
+@mixin icon-cancel {
+  @include icon("\e027");
+}
+@mixin icon-compass {
+  @include icon("\e028");
+}
+@mixin icon-pin {
+  @include icon("\e029");
+}
+@mixin icon-globe {
+  @include icon("\e02a");
+}
+@mixin icon-flag {
+  @include icon("\e02b");
+}
+@mixin icon-info {
+  @include icon("\e02c");
+}
+@mixin icon-question {
+  @include icon("\e02d");
+}
+@mixin icon-chat {
+  @include icon("\e02e");
+}
+@mixin icon-trashcan {
+  @include icon("\e02f");
+}
+@mixin icon-expand {
+  @include icon("\e030");
+}
+@mixin icon-electricity {
+  @include icon("\e031");
+}
+@mixin icon-directions {
+  @include icon("\e032");
+}
+@mixin icon-pencil-2 {
+  @include icon("\e033");
+}
+@mixin icon-minus {
+  @include icon("\e034");
+}
+@mixin icon-equals {
+  @include icon("\e035");
+}
+@mixin icon-list-2 {
+  @include icon("\e036");
+}
+@mixin icon-clock {
+  @include icon("\e037");
+}
+@mixin icon-calendar {
+  @include icon("\e038");
+}
+@mixin icon-sun {
+  @include icon("\e039");
+}
+@mixin icon-download {
+  @include icon("\e03a");
+}
+@mixin icon-puzzle {
+  @include icon("\e03b");
+}
+@mixin icon-bookmark {
+  @include icon("\e03c");
+}
+@mixin icon-anchor {
+  @include icon("\e03d");
+}
+@mixin icon-checkmark {
+  @include icon("\e03e");
+}
+@mixin icon-pirate-flag {
+  @include icon("\e03f");
+}
