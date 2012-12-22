@@ -1,7 +1,7 @@
 @import "../base";
 
 body {
-  background-color: $color-page-background;
+  background: url("images/header_background.jpg") repeat-x scroll center top  $color-page-background;
 }
 
 #content-column {
