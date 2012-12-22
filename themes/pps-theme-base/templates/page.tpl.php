@@ -128,22 +128,21 @@
 
   </header>
 
-  <!-- Navigation elements -->
-  <?php print render($page['menu_bar']); ?>
-  <?php if ($primary_navigation): print $primary_navigation; endif; ?>
-  <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
-
-  <!-- Breadcrumbs -->
-  <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-
-  <!-- Messages and Help -->
-  <?php print $messages; ?>
-  <?php print render($page['help']); ?>
-
-  <!-- region: Secondary Content -->
-  <?php print render($page['secondary_content']); ?>
-
   <div id="columns" class="columns clearfix">
+      <!-- Navigation elements -->
+    <?php print render($page['menu_bar']); ?>
+    <?php if ($primary_navigation): print $primary_navigation; endif; ?>
+    <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
+
+      <!-- Breadcrumbs -->
+    <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+
+      <!-- Messages and Help -->
+    <?php print $messages; ?>
+    <?php print render($page['help']); ?>
+
+      <!-- region: Secondary Content -->
+    <?php print render($page['secondary_content']); ?>
     <div id="content-column" class="content-column" role="main">
       <div class="content-inner">
 
