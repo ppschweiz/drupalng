@@ -159,6 +159,7 @@ body {
 
 #branding {
   margin: 2em 0;
+  position: relative;
 }
 
 #logo {
@@ -170,7 +171,7 @@ body {
   margin-left: 3em;
 }
 
-#name-and-slogan h1 {
+#page-title {
   border: 0;
   height: 1px;
   overflow: hidden;
@@ -181,15 +182,10 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-#page-title {
-  border: 0;
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
+#site-slogan {
+  position: absolute;
+  bottom: 0.5em;
+  margin: 0;
 }
 
 #content-column {
