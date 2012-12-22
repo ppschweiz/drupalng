@@ -25,13 +25,17 @@ body {
   margin-left: 3em;
 }
 
+#site-name {
+  @include element-invisible;
+}
+
 #page-title {
   @include element-invisible;
 }
 
 #site-slogan {
   position: absolute;
-  bottom: 0.5em;
+  bottom: 0.4em;
   margin: 0;
 }
 
