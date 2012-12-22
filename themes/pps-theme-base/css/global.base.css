@@ -136,9 +136,9 @@ body {
   margin-left: 60px;
   display: inline-block;
   color: white;
-  font: 16px/55px "TitilliumText25L400wt", Arial, sans-serif;
+  font: 16px/55px "TitilliumText25L800wt", Arial, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em;
 }
 .primary-menu-wrapper .primary-menu li a:visited {
   color: white;

@@ -131,7 +131,10 @@ projects[i18n][subdir] = "contrib"
 
 ; i18_page_views
 ; i18nviews
-; l10n_client
+
+projects[l10n_client][version] = 1.1
+projects[l10n_client][type] = "module"
+projects[l10n_client][subdir] = "contrib"
 
 projects[imce][version] = 1.6
 projects[imce][type] = "module"
@@ -188,6 +191,10 @@ projects[resp_img][version] = 1.3
 projects[resp_img][type] = "module"
 projects[resp_img][subdir] = "contrib"
 
+projects[smartqueue_domain][version] = 1.0
+projects[smartqueue_domain][type] = "module"
+projects[smartqueue_domain][subdir] = "contrib"
+
 projects[strongarm][version] = 2.0
 projects[strongarm][type] = "module"
 projects[strongarm][subdir] = "contrib"
@@ -201,8 +208,6 @@ projects[taxonomy_csv][subdir] = "contrib"
 projects[taxonomy_menu][version] = 1.4
 projects[taxonomy_menu][type] = "module"
 projects[taxonomy_menu][subdir] = "contrib"
-
-; textbook
 
 projects[textile][version] = 2.0-rc11
 projects[textile][type] = "module"
