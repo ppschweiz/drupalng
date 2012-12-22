@@ -322,8 +322,22 @@ body {
   margin-top: 1px;
   color: #999;
 }
-#crumbs a:before, #crumbs a:after {
-  display: none;
+#crumbs .crumb-first a {
+  font-size: 1.4em;
+  width: 1em;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+#crumbs .crumb-first a:before {
+  font-family: 'pps-icon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e00f";
 }
 
 /* =============================================================================

@@ -1,3 +1,5 @@
+@import "../base";
+
 // http://www.stylifyyourblog.com/2012/08/5-css3-breadcrumb-designs.html
 
 #crumbs {
@@ -77,10 +79,17 @@
   a {
     margin-top: 1px;
     color: #999;
+  }
 
-    &:before,
-    &:after {
-      display: none
+  .crumb-first {
+    a {
+      @include icon-home;
+      font-size: 1.4em;
+      width: 1em;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
     }
   }
 }
