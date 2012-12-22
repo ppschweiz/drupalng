@@ -4,6 +4,7 @@ package = Pirate Party Switzerland
 php = 5.2.4
 dependencies[] = fe_nodequeue
 dependencies[] = nodequeue
+dependencies[] = smartqueue_domain
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[fe_nodequeue][] = highlighted
