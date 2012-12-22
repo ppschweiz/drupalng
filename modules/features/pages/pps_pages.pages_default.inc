@@ -226,7 +226,7 @@ function pps_pages_default_page_manager_pages() {
     $pane->configuration = array(
       'more_link' => 0,
       'override_title' => 1,
-      'override_title_text' => 'Brennpunkt',
+      'override_title_text' => 'Hotspot',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -249,7 +249,7 @@ function pps_pages_default_page_manager_pages() {
       'more_link' => 1,
       'items_per_page' => '2',
       'override_title' => 1,
-      'override_title_text' => 'Im Fokus',
+      'override_title_text' => 'In Focus',
     );
     $pane->cache = array();
     $pane->style = array(

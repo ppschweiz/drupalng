@@ -62,6 +62,8 @@ EOF
 drush en pps_theme_base -y
 drush vset theme_default pps_theme_base
 drush ev "db_update('block')->fields(array('status' => 0))->condition('theme', 'pps_theme_base')->condition('delta', array('help','main'), 'NOT IN')->execute();"
+drush dis bartik -y
+drush ev "db_update('block')->fields(array('status' => 0))->condition('theme', 'pps_theme_base')->condition('delta', array('help','main'), 'NOT IN')->execute();"
 
 cat <<EOF
 

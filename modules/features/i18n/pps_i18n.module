@@ -5,3 +5,16 @@
  */
 
 include_once 'pps_i18n.features.inc';
+
+/**
+ * Implements hook_panels_pane_content_alter().
+ *
+ * Make pane titles translatable.
+ */
+function pps_i18n_panels_pane_content_alter($content, $pane, $args, $context) {
+  if ($content->title) {
+    $content->title = t($content->title);
+  }
+  return $content;
+}
+
