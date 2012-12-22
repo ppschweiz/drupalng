@@ -207,10 +207,10 @@
     <?php $sidebar_first = render($page['sidebar_first']); print $sidebar_first; ?>
     <?php $sidebar_second = render($page['sidebar_second']); print $sidebar_second; ?>
 
-  </div><!-- /end #columns -->
+    <!-- region: Tertiary Content -->
+    <?php print render($page['tertiary_content']); ?>
 
-  <!-- region: Tertiary Content -->
-  <?php print render($page['tertiary_content']); ?>
+  </div><!-- /end #columns -->
 </div>
 
 <!-- region: Footer -->
