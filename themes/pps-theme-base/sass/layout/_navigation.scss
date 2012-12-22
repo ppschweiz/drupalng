@@ -20,7 +20,7 @@
         margin-left: $dim-menu-icon-width;
         display: inline-block;
         @include link-colors(white, rgb(134, 51, 3), rgb(134, 51, 3), white, rgb(134, 51, 3));
-        font: 16px/#{$dim-menu-icon-height} 'TitilliumText25L800wt', Arial, sans-serif;
+        font: #{$dim-menu-icon-height/3.4375}/#{$dim-menu-icon-height} $font-family-navigation-main;
         text-transform: uppercase;
         letter-spacing: 0.1em;
 

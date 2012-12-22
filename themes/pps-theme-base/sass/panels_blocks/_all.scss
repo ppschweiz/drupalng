@@ -1,3 +1,5 @@
+@import "../base";
+
 @mixin block-title-neutral {
   @include block-title(
       $color-block-title-gradient-neutral-dark,
@@ -22,7 +24,7 @@
   border-left: thin solid $border;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font: 1em/1em 'TitilliumText25L600wt', Arial, sans-serif;
+  font: 1em/1em $font-family-titillium-medium, Arial, sans-serif;
 }
 
 

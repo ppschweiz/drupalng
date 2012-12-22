@@ -12,7 +12,7 @@ body {
 }
 
 #branding {
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 #logo {
@@ -39,6 +39,18 @@ body {
 #columns {
   margin-bottom: 2em;
   @include single-box-shadow($color-gradient-orange-border);
+}
+
+.region-leaderboard {
+  margin: 0 -9000px;
+  padding: 0 9000px;
+  background-color: rgb(76, 70, 66);
+  border-bottom: 1px solid rgb(71, 64, 60);
+  color: rgb(204, 204, 204);
+
+  .block-content {
+    padding: $dim-padding;
+  }
 }
 
 .region-tertiary-content {
