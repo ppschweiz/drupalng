@@ -78,12 +78,27 @@ a:hover {
   text-decoration: none;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  position: relative;
   background: url("images/header_background.jpg") repeat-x scroll center top #eeb50c;
 }
 
-#content-column {
-  background-color: white;
+#logo {
+  float: left;
+}
+
+#name-and-slogan {
+  float: right;
+}
+
+#name-and-slogan h1 {
+  display: none;
 }
 
 #page-title {
@@ -95,6 +110,26 @@ body {
   width: 1px;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+#columns {
+  -webkit-box-shadow: 0px 0px 5px #e87900;
+  -moz-box-shadow: 0px 0px 5px #e87900;
+  box-shadow: 0px 0px 5px #e87900;
+}
+
+.region-tertiary-content {
+  clear: both;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f08a00), color-stop(75%, #f9b200), color-stop(100%, #fdc300));
+  background-image: -webkit-linear-gradient(top, #f08a00, #f9b200 75%, #fdc300);
+  background-image: -moz-linear-gradient(top, #f08a00, #f9b200 75%, #fdc300);
+  background-image: -o-linear-gradient(top, #f08a00, #f9b200 75%, #fdc300);
+  background-image: linear-gradient(top, #f08a00, #f9b200 75%, #fdc300);
+  border-top: 0.1em solid #e87900;
+}
+
+#footer {
+  background: url("images/footer_background.jpg") repeat-x scroll center bottom transparent;
 }
 
 .primary-menu-wrapper {

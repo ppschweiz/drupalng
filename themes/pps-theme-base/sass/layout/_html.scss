@@ -1,13 +1,48 @@
 @import "../base";
+@import "compass/css3/box-shadow";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  position: relative;
   background: url("images/header_background.jpg") repeat-x scroll center top  $color-page-background;
 }
 
-#content-column {
-  background-color: $color-content-background;
+#logo {
+  float: left;
+}
+
+#name-and-slogan {
+  float: right;
+}
+
+#name-and-slogan h1 {
+  display: none;
 }
 
 #page-title {
   @include element-invisible;
+}
+
+#columns {
+  @include single-box-shadow($color-gradient-orange-border);
+}
+
+.region-tertiary-content {
+  clear: both;
+  @include background-image(linear-gradient(
+    top,
+    $color-gradient-orange-dark,
+    $color-gradient-orange-center  75%,
+    $color-gradient-orange-light
+  ));
+  border-top: 0.1em solid $color-gradient-orange-border;
+}
+
+#footer {
+  background: url("images/footer_background.jpg") repeat-x scroll center bottom transparent;
 }
