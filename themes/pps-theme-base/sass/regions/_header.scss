@@ -5,6 +5,10 @@
 
 #logo {
   float: left;
+
+  img {
+    vertical-align: bottom;
+  }
 }
 
 #name-and-slogan {
@@ -22,6 +26,7 @@
 
 #site-slogan {
   position: absolute;
-  bottom: 0.4em;
+  bottom: 2px;
   margin: 0;
+  font-size: 18px; // Needs to be in px to match the logo text.
 }

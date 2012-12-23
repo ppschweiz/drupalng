@@ -1,6 +1,6 @@
 @import "base";
 
-@include global-reset;
+@import "reset";
 
 @import "fonts/all";
 @import "typography";
@@ -18,8 +18,8 @@ body {
   @include single-box-shadow($color-gradient-orange-border);
 }
 
+@import "misc/all";
 @import "regions/all";
 @import "content/all";
-@import "panels_blocks/all";
+@import "site_elements/all";
 @import "modules/all";
-@import "misc/all";

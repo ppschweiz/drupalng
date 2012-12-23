@@ -1,4 +1,5 @@
 @import "../base";
+
 /* =============================================================================
  *   Node Styling
  * ========================================================================== */
@@ -69,20 +70,14 @@
 
   .field-name-field-tags {
     float: right;
+    @include icon-tag;
+
+    &:before {
+      color: $color-link-normal;
+    }
 
     .field-items {
       @include delimited-list;
-    }
-
-    &:before {
-      font-family: 'pps-icon';
-      font-style: normal;
-      speak: none;
-      font-weight: normal;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      color: $color-link-normal;
-      content: "\e023";
     }
   }
 

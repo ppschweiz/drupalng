@@ -27,11 +27,10 @@
   font-size: 1em;
   line-height: 1em;
   font-weight: bold;
-}
-
-
-.block-content {
-  padding: $dim-block-content;
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
 }
 
 .pane-panels-mini > .block-inner > .block-content {
