@@ -202,3 +202,23 @@
 @mixin icon-pirate-flag {
   @include icon("\e03f");
 }
+
+@mixin icon-cc-by {
+  @include icon("\e041");
+}
+
+@mixin icon-cc-sa {
+  @include icon("\e043");
+}
+
+@mixin icon-cc-nd {
+  @include icon("\e045");
+}
+
+@mixin icon-cc-nc-eu {
+  @include icon("\e042");
+}
+
+@mixin icon-cc {
+  @include icon("\e040");
+}

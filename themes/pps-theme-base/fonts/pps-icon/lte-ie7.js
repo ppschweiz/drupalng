@@ -69,7 +69,12 @@ window.onload = function() {
 			'icon-bookmark' : '&#xe03c;',
 			'icon-anchor' : '&#xe03d;',
 			'icon-checkmark' : '&#xe03e;',
-			'icon-pirate-flag' : '&#xe03f;'
+			'icon-pirate-flag' : '&#xe03f;',
+			'icon-cc-by' : '&#xe041;',
+			'icon-cc-sa' : '&#xe043;',
+			'icon-cc-nd' : '&#xe045;',
+			'icon-cc-nc-eu' : '&#xe042;',
+			'icon-cc' : '&#xe040;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

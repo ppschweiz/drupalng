@@ -1388,3 +1388,53 @@ html body.admin-menu {
   -webkit-font-smoothing: antialiased;
   content: "\e03f";
 }
+
+.icon-cc:before {
+  font-family: 'pps-icon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e040";
+}
+
+.icon-cc-by:before {
+  font-family: 'pps-icon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e041";
+}
+
+.icon-cc-sa:before {
+  font-family: 'pps-icon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e043";
+}
+
+.icon-cc-nd:before {
+  font-family: 'pps-icon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e045";
+}
+
+.icon-cc-nc-eu:before {
+  font-family: 'pps-icon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e042";
+}
