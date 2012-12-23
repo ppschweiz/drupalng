@@ -1,0 +1,145 @@
+// http://stackoverflow.com/questions/6047247/sass-dictionary-types
+
+/**
+module Sass::Script::Functions
+  def find hash, key
+    hash.to_a.find do |pair|
+      pair.to_a[0] == key
+    end.to_a
+  end
+
+  # Treat a list like a hash
+  def lookup(hash, key)
+require 'pp'
+item = hash.to_a.find do |pair|
+      pp pair
+      pair.to_a[0] == key
+    end
+    if not item.nil?
+      if item.to_a.size > 0
+item.to_a[1]
+else
+        Sass::Script::String.new ""
+end
+
+    else
+      Sass::Script::String.new ""
+end
+  end
+
+  declare :lookup, :args => [:list, :string]
+
+def insert(hash, key, value)
+a = hash.to_a.reject do |pair|
+      pair.to_a[0] == key
+    end
+    a+= [Sass::Script::List.new([key, value], :space)]
+Sass::Script::List.new a, :space
+  end
+  declare :insert, :args => [:list, :key, :value]
+
+def keys(hash)
+keys = hash.to_a.map {|p| p.to_a[0]}
+Sass::Script::List.new keys, :space
+  end
+  declare :keys, :args => [:list]
+
+def values(hash)
+values = hash.to_a.map {|p| p.to_a[1]}
+Sass::Script::List.new values, :space
+  end
+  declare :values, :args => [:list]
+end
+*/
+
+$chars: ();
+$chars: insert($chars, comment, "\e000");
+$chars: insert($chars, users, "\e001");
+$chars: insert($chars, user, "\e002");
+$chars: insert($chars, feed, "\e003");
+$chars: insert($chars, plus, "\e004");
+$chars: insert($chars, cross, "\e005");
+$chars: insert($chars, arrow-right, "\e006");
+$chars: insert($chars, arrow-left, "\e007");
+$chars: insert($chars, pencil, "\e008");
+$chars: insert($chars, search, "\e009");
+$chars: insert($chars, grid, "\e00a");
+$chars: insert($chars, list, "\e00b");
+$chars: insert($chars, star, "\e00c");
+$chars: insert($chars, heart, "\e00d");
+$chars: insert($chars, map-marker, "\e00e");
+$chars: insert($chars, home, "\e00f");
+$chars: insert($chars, phone, "\e010");
+$chars: insert($chars, camera, "\e011");
+$chars: insert($chars, arrow-left-2, "\e012");
+$chars: insert($chars, arrow-right-2, "\e013");
+$chars: insert($chars, arrow-up, "\e014");
+$chars: insert($chars, arrow-down, "\e015");
+$chars: insert($chars, cog, "\e016");
+$chars: insert($chars, wrench, "\e017");
+$chars: insert($chars, bars, "\e018");
+$chars: insert($chars, chart, "\e019");
+$chars: insert($chars, stats, "\e01a");
+$chars: insert($chars, eye, "\e01b");
+$chars: insert($chars, zoom-out, "\e01c");
+$chars: insert($chars, zoom-in, "\e01d");
+$chars: insert($chars, export, "\e01e");
+$chars: insert($chars, mail, "\e01f");
+$chars: insert($chars, delete, "\e020");
+$chars: insert($chars, thumbs-up, "\e021");
+$chars: insert($chars, thumbs-down, "\e022");
+$chars: insert($chars, tag, "\e023");
+$chars: insert($chars, warning, "\e024");
+$chars: insert($chars, unlocked, "\e025");
+$chars: insert($chars, locked, "\e026");
+$chars: insert($chars, cancel, "\e027");
+$chars: insert($chars, compass, "\e028");
+$chars: insert($chars, pin, "\e029");
+$chars: insert($chars, globe, "\e02a");
+$chars: insert($chars, flag, "\e02b");
+$chars: insert($chars, info, "\e02c");
+$chars: insert($chars, question, "\e02d");
+$chars: insert($chars, chat, "\e02e");
+$chars: insert($chars, trashcan, "\e02f");
+$chars: insert($chars, expand, "\e030");
+$chars: insert($chars, electricity, "\e031");
+$chars: insert($chars, directions, "\e032");
+$chars: insert($chars, pencil-2, "\e033");
+$chars: insert($chars, minus, "\e034");
+$chars: insert($chars, equals, "\e035");
+$chars: insert($chars, list-2, "\e036");
+$chars: insert($chars, clock, "\e037");
+$chars: insert($chars, calendar, "\e038");
+$chars: insert($chars, sun, "\e039");
+$chars: insert($chars, download, "\e03a");
+$chars: insert($chars, puzzle, "\e03b");
+$chars: insert($chars, bookmark, "\e03c");
+$chars: insert($chars, anchor, "\e03d");
+$chars: insert($chars, checkmark, "\e03e");
+$chars: insert($chars, pirate-flag, "\e03f");
+
+@mixin icon($char) {
+  &:before {
+    font-family: 'pps-icon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: $char;
+  }
+}
+
+@mixin named-icon($name) {
+  @include icon(lookup($chars, $name));
+}
+
+@each $name in keys($chars) {
+  .icon-#{$name} {
+    @include named-icon($name);
+  }
+}
+
+[data-icon]:before {
+  @include icon(attr(data-icon));
+}

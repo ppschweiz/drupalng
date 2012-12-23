@@ -1,0 +1,27 @@
+#branding {
+  margin: 2em 0;
+  position: relative;
+}
+
+#logo {
+  float: left;
+}
+
+#name-and-slogan {
+  float: left;
+  margin-left: 3em;
+}
+
+#site-name {
+  @include element-invisible;
+}
+
+#page-title {
+  @include element-invisible;
+}
+
+#site-slogan {
+  position: absolute;
+  bottom: 0.4em;
+  margin: 0;
+}

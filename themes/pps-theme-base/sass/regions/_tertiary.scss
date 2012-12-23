@@ -1,0 +1,10 @@
+.region-tertiary-content {
+  clear: both;
+  @include background-image(linear-gradient(
+    top,
+    $color-gradient-orange-dark,
+    $color-gradient-orange-center  75%,
+    $color-gradient-orange-light
+  ));
+  border-top: 0.1em solid $color-gradient-orange-border;
+}
