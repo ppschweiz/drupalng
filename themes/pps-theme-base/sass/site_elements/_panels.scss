@@ -33,8 +33,14 @@
   padding-right: $gutter-width;
 }
 
-.pane-panels-mini > .block-inner > .block-content {
-  padding: 0;
+.pane-panels-mini {
+  > .block-inner > .block-content {
+    padding: 0;
+  }
+
+  &.block {
+    margin: 0;
+  }
 }
 
 .panel-display,

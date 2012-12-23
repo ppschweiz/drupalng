@@ -2202,6 +2202,9 @@ ul.menu li {
 .pane-panels-mini > .block-inner > .block-content {
   padding: 0;
 }
+.pane-panels-mini.block {
+  margin: 0;
+}
 
 .panel-display,
 .panel-row {
