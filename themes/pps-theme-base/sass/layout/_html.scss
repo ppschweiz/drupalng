@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  background: url("images/header_background.jpg") repeat-x scroll center top  $color-page-background;
+  background: image-url("backgrounds/header.jpg") repeat-x scroll center top  $color-page-background;
 }
 
 #branding {
@@ -72,5 +72,5 @@ body {
 }
 
 #footer {
-  background: url("images/footer_background.jpg") repeat-x scroll center bottom transparent;
+  background: image-url("backgrounds/footer.jpg") repeat-x scroll center bottom transparent;
 }

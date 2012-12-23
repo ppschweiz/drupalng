@@ -31,16 +31,7 @@ $color-content-background: #fff;
 // Fonts
 // ---------------------------------------------------------------------
 
-$font-family-titillium-bold: 'TitilliumText25L800wt';
-$font-family-titillium-medium: 'TitilliumText25L600wt';
-$font-family-titillium-regular: 'TitilliumText25L400wt';
-$font-family-titillium-light: 'TitilliumText25L250wt';
-$font-family-titillium-thin: 'TitilliumText25L1wt';
-$font-family-titillium-xbold: 'TitilliumText25L999wt';
-
-$font-family-default: $font-family-titillium-regular, Arial, sans-serif;
-$font-family-headings: $font-family-titillium-medium, Arial, sans-serif;
-$font-family-navigation-main: $font-family-titillium-bold, Arial, sans-serif;
+$font-family-default: 'Titillium', Arial, sans-serif;
 
 // ---------------------------------------------------------------------
 // Dimensions

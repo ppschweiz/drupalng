@@ -20,9 +20,11 @@
         margin-left: $dim-menu-icon-width;
         display: inline-block;
         @include link-colors(white, rgb(134, 51, 3), rgb(134, 51, 3), white, rgb(134, 51, 3));
-        font: #{$dim-menu-icon-height/3.4375}/#{$dim-menu-icon-height} $font-family-navigation-main;
+        font-size: $dim-menu-icon-height/3.4375;
+        line-height: $dim-menu-icon-height;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 1px;
 
         &[class^="menu-icon-"]:before,
         &[class*=" menu-icon-"]:before {
@@ -33,7 +35,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          background: url('images/menu-icons.png');
+          background: image-url('icons/menu.png');
         }
 
         &.menu-icon-bottle:before {
@@ -60,10 +62,10 @@
           display: inline-block;
           width: $dim-home-icon;
           margin-left: 0;
-          @include replace-text('home.png');
+          @include replace-text('icons/home.png');
 
           &:hover {
-            @include replace-text('home_hover.png');
+            @include replace-text('icons/home_hover.png');
           }
         }
       }

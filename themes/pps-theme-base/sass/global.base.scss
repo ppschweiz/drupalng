@@ -1,7 +1,268 @@
 @import "base";
 @include global-reset;
+@import "fonts/all";
 @import "typography";
 @import "layout/all_global";
 @import "content/all";
 @import "panels_blocks/all";
 @import "modules/all";
+
+[data-icon]:before {
+  @include icon(attr(data-icon));
+}
+
+.icon-comment {
+  @include icon-comment;
+}
+
+.icon-users {
+  @include icon-users;
+}
+
+.icon-user {
+  @include icon-user;
+}
+
+.icon-feed {
+  @include icon-feed;
+}
+
+.icon-plus {
+  @include icon-plus;
+}
+
+.icon-cross {
+  @include icon-cross;
+}
+
+.icon-arrow-right {
+  @include icon-arrow-right;
+}
+
+.icon-arrow-left {
+  @include icon-arrow-left;
+}
+
+.icon-pencil {
+  @include icon-pencil;
+}
+
+.icon-search {
+  @include icon-search;
+}
+
+.icon-grid {
+  @include icon-grid;
+}
+
+.icon-list {
+  @include icon-list;
+}
+
+.icon-star {
+  @include icon-star;
+}
+
+.icon-heart {
+  @include icon-heart;
+}
+
+.icon-map-marker {
+  @include icon-map-marker;
+}
+
+.icon-home {
+  @include icon-home;
+}
+
+.icon-phone {
+  @include icon-phone;
+}
+
+.icon-camera {
+  @include icon-camera;
+}
+
+.icon-arrow-left-2 {
+  @include icon-arrow-left-2;
+}
+
+.icon-arrow-right-2 {
+  @include icon-arrow-right-2;
+}
+
+.icon-arrow-up {
+  @include icon-arrow-up;
+}
+
+.icon-arrow-down {
+  @include icon-arrow-down;
+}
+
+.icon-cog {
+  @include icon-cog;
+}
+
+.icon-wrench {
+  @include icon-wrench;
+}
+
+.icon-bars {
+  @include icon-bars;
+}
+
+.icon-chart {
+  @include icon-chart;
+}
+
+.icon-stats {
+  @include icon-stats;
+}
+
+.icon-eye {
+  @include icon-eye;
+}
+
+.icon-zoom-out {
+  @include icon-zoom-out;
+}
+
+.icon-zoom-in {
+  @include icon-zoom-in;
+}
+
+.icon-export {
+  @include icon-export;
+}
+
+.icon-mail {
+  @include icon-mail;
+}
+
+.icon-delete {
+  @include icon-delete;
+}
+
+.icon-thumbs-up {
+  @include icon-thumbs-up;
+}
+
+.icon-thumbs-down {
+  @include icon-thumbs-down;
+}
+
+.icon-tag {
+  @include icon-tag;
+}
+
+.icon-warning {
+  @include icon-warning;
+}
+
+.icon-unlocked {
+  @include icon-unlocked;
+}
+
+.icon-locked {
+  @include icon-locked;
+}
+
+.icon-cancel {
+  @include icon-cancel;
+}
+
+.icon-compass {
+  @include icon-compass;
+}
+
+.icon-pin {
+  @include icon-pin;
+}
+
+.icon-globe {
+  @include icon-globe;
+}
+
+.icon-flag {
+  @include icon-flag;
+}
+
+.icon-info {
+  @include icon-info;
+}
+
+.icon-question {
+  @include icon-question;
+}
+
+.icon-chat {
+  @include icon-chat;
+}
+
+.icon-trashcan {
+  @include icon-trashcan;
+}
+
+.icon-expand {
+  @include icon-expand;
+}
+
+.icon-electricity {
+  @include icon-electricity;
+}
+
+.icon-directions {
+  @include icon-directions;
+}
+
+.icon-pencil-2 {
+  @include icon-pencil-2;
+}
+
+.icon-minus {
+  @include icon-minus;
+}
+
+.icon-equals {
+  @include icon-equals;
+}
+
+.icon-list-2 {
+  @include icon-list-2;
+}
+
+.icon-clock {
+  @include icon-clock;
+}
+
+.icon-calendar {
+  @include icon-calendar;
+}
+
+.icon-sun {
+  @include icon-sun;
+}
+
+.icon-download {
+  @include icon-download;
+}
+
+.icon-puzzle {
+  @include icon-puzzle;
+}
+
+.icon-bookmark {
+  @include icon-bookmark;
+}
+
+.icon-anchor {
+  @include icon-anchor;
+}
+
+.icon-checkmark {
+  @include icon-checkmark;
+}
+
+.icon-pirate-flag {
+  @include icon-pirate-flag;
+}

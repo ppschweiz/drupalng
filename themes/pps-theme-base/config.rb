@@ -2,7 +2,8 @@
 # Compass will overwrite the CSS files in the css_dir when set to watch.
 css_dir = "css"
 sass_dir = "sass"
-images_dir = "css/images"
+images_dir = "images"
+fonts_dir = "fonts"
 
 #output_style = :expanded or :nested or :compact or :compressed
 output_style = (environment == :production) ? :compressed : :expanded
