@@ -211,6 +211,8 @@
     <?php print render($page['tertiary_content']); ?>
 
   </div><!-- /end #columns -->
+
+  <div id="footer_placement"></div>
 </div>
 
 <!-- region: Footer -->
