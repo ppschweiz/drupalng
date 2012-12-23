@@ -1,38 +1,5 @@
 @import "../base";
 
-@mixin block-title-neutral {
-  @include block-title(
-      $color-block-title-gradient-neutral-dark,
-      $color-block-title-gradient-neutral-light,
-      $color-block-title-border-neutral
-  );
-}
-
-@mixin block-title-colored {
-  @include block-title(
-      $color-block-title-gradient-colored-dark,
-      $color-block-title-gradient-colored-light,
-      $color-block-title-border-colored
-  );
-}
-
-@mixin block-title($dark, $light, $border) {
-  color: $color-block-title-font;
-  background: $dark;
-  @include background-image(linear-gradient(left, $dark, $light));
-  border-bottom: thin solid $border;
-  border-left: thin solid $border;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1em;
-  line-height: 1em;
-  font-weight: bold;
-  margin-left: -$gutter-width;
-  margin-right: -$gutter-width;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
-}
-
 .pane-panels-mini {
   > .block-inner > .block-content {
     padding: 0;
