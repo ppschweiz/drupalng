@@ -89,12 +89,12 @@
  */
 ?>
 
-<!-- region: Leaderboard -->
-<?php print render($page['leaderboard']); ?>
-
 <div id="page" class="container <?php print $classes; ?>">
 
-  <header<?php print $header_attributes; ?>>
+    <!-- region: Leaderboard -->
+    <?php print render($page['leaderboard']); ?>
+
+    <header<?php print $header_attributes; ?>>
 
     <?php if ($site_logo || $site_name || $site_slogan): ?>
       <!-- start: Branding -->

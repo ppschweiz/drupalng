@@ -1655,7 +1655,12 @@ ul.links li {
   font-size: 18px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .region-leaderboard {
+  margin: 0 -9999px;
   background-color: #4c4642;
   border-bottom: 1px solid #47403c;
   color: #cccccc;
