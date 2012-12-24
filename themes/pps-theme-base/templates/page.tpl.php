@@ -88,10 +88,11 @@
  * @see adaptivetheme_process_page()
  */
 ?>
-<div id="page" class="container <?php print $classes; ?>">
 
-  <!-- region: Leaderboard -->
-  <?php print render($page['leaderboard']); ?>
+<!-- region: Leaderboard -->
+<?php print render($page['leaderboard']); ?>
+
+<div id="page" class="container <?php print $classes; ?>">
 
   <header<?php print $header_attributes; ?>>
 

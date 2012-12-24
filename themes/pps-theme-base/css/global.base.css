@@ -1656,8 +1656,6 @@ ul.links li {
 }
 
 .region-leaderboard {
-  margin: 0 -9000px;
-  padding: 0 9000px;
   background-color: #4c4642;
   border-bottom: 1px solid #47403c;
   color: #cccccc;

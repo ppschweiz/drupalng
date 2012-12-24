@@ -126,14 +126,18 @@ function pps_theme_base_process_comment(&$vars) {
 /**
  * Override or insert variables into the region templates.
  */
-function pps_theme_base_preprocess_region(&$vars) {
-  // Add container class to footer
-  if ($vars['region'] == 'footer') {
-    $vars['classes_array'][] = 'container';
-  }
-}
 /* -- Delete this line if you want to use these functions
+function pps_theme_base_preprocess_region(&$vars) {
+}
+// */
 function pps_theme_base_process_region(&$vars) {
+  $regions = array(
+    'footer',
+    'leaderboard',
+  );
+  if (in_array($vars['region'], $regions)) {
+    $vars['inner_prefix'] = '<div class="region-inner container clearfix">';
+  }
 }
 // */
 
