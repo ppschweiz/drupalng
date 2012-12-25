@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * pps_lang.features.inc
+ * pps_i18n.features.inc
  */
 
 /**

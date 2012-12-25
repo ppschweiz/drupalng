@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * pps_lang.strongarm.inc
+ * pps_i18n.strongarm.inc
  */
 
 /**
@@ -67,7 +67,21 @@ function pps_i18n_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_negotiation_language';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    'pps_i18n_domain' => array(
+      'callbacks' => array(
+        'language' => 'pps_i18n_language_negotiation_language',
+        'switcher' => 'pps_i18n_language_negotiation_switcher',
+        'url_rewrite' => 'pps_i18n_language_negotiation_url_rewrite',
+      ),
+      'file' => 'sites/all/modules/custom/features/i18n/pps_i18n.provider.inc',
+    ),
+    'language-default' => array(
+      'callbacks' => array(
+        'language' => 'language_from_default',
+      ),
+    ),
+  );
   $export['language_negotiation_language'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -122,11 +136,12 @@ function pps_i18n_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'locale_language_providers_weight_language';
   $strongarm->value = array(
-    'locale-url' => '-8',
-    'locale-session' => '-6',
-    'locale-user' => '-4',
-    'locale-browser' => '-2',
-    'language-default' => '10',
+    'pps_i18n_domain' => '-10',
+    'locale-url' => '-9',
+    'locale-session' => '-8',
+    'locale-user' => '-7',
+    'locale-browser' => '-6',
+    'language-default' => '-5',
   );
   $export['locale_language_providers_weight_language'] = $strongarm;
 

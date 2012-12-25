@@ -66,7 +66,7 @@ projects[domain_ctools][subdir] = "contrib"
 
 ; coffee
 
-projects[context][version] = 3.0-beta5
+projects[context][version] = 3.0-beta6
 projects[context][type] = "module"
 projects[context][subdir] = "contrib"
 
@@ -77,7 +77,7 @@ projects[date][subdir] = "contrib"
 ; date_repeat_instance
 ; date_repeat_presets
 
-projects[domain][version] = 3.5
+projects[domain][version] = 3.6
 projects[domain][type] = "module"
 projects[domain][subdir] = "contrib"
 
@@ -86,7 +86,11 @@ projects[domain][subdir] = "contrib"
 ; domain_fields
 ; domain_roles
 ; domain_taxonomy
-; domain_types
+
+projects[domain_types][version] = 1.1
+projects[domain_types][type] = "module"
+projects[domain_types][subdir] = "contrib"
+
 ; domain_views
 ; domain_variable
 

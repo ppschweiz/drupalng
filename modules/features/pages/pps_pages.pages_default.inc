@@ -265,7 +265,6 @@ function pps_pages_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'style' => 'naked',
       'settings' => NULL,
     );
     $pane->css = array();

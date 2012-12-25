@@ -6,3 +6,17 @@
 
 
 include_once 'pps_domain.features.inc';
+
+/**
+ * Implements hook_domain_types()
+ */
+function pps_domain_domain_types() {
+  return array(
+    // Override domain type "default".
+    'default' => array('name' => t('National')),
+
+    // Add new domain types.
+    'section' => array('name' => t('Section')),
+    'campaign' => array('name' => t('Campaign')),
+  );
+}

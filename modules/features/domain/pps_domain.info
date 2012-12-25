@@ -9,6 +9,7 @@ dependencies[] = domain
 dependencies[] = domain_alias
 dependencies[] = domain_conf
 dependencies[] = domain_theme
+dependencies[] = domain_types
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[domain][] = partipirate_ch

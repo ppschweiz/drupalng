@@ -145,7 +145,7 @@ function pps_domain_domain_conf_default_variables() {
   $domain_variables['piratenpartei_ch'] = array(
     'site_name' => 'Piratenpartei Schweiz»',
     'site_mail' => 'admin@example.com',
-    'site_slogan' => '',
+    'site_slogan' => 'Nullam quis risus eget urna mollis ornare vel eu leo.',
     'site_frontpage' => 'front',
     'anonymous' => 'Anonymous',
     'admin_theme' => 'seven',
@@ -156,7 +156,7 @@ function pps_domain_domain_conf_default_variables() {
     'maintenance_mode_message' => 'Piraten Partei Schweiz is currently under maintenance. We should be back shortly. Thank you for your patience.',
     'language_default' => 'de',
     'menu_main_links_source' => 'main-menu',
-    'menu_secondary_links_source' => 'domain-conf-ignore',
+    'menu_secondary_links_source' => '0',
     'menu_options_article' => array(
       'main-menu' => 'main-menu',
       'devel' => 0,
@@ -237,6 +237,22 @@ function pps_domain_domain_conf_default_variables() {
       'user-menu' => 0,
     ),
     'menu_parent_team' => 'main-menu:0',
+    'menu_options_ballot' => array(
+      'devel' => 0,
+      'main-menu' => 0,
+      'management' => 0,
+      'navigation' => 0,
+      'user-menu' => 0,
+    ),
+    'menu_parent_ballot' => 'main-menu:0',
+    'menu_options_panel' => array(
+      'main-menu' => 'main-menu',
+      'devel' => 0,
+      'management' => 0,
+      'navigation' => 0,
+      'user-menu' => 0,
+    ),
+    'menu_parent_panel' => 'main-menu:0',
   );
   $domain_variables['pirateparty_ch'] = array(
     'site_name' => 'Pirate Party Switzerland',
