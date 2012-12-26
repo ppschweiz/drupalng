@@ -105,6 +105,10 @@ projects[entity][version] = 1.0-rc3
 projects[entity][type] = "module"
 projects[entity][subdir] = "contrib"
 
+projects[entity_translation][version] = 1.0-beta2
+projects[entity_translation][type] = "module"
+projects[entity_translation][subdir] = "contrib"
+
 projects[entityreference][version] = 1.0
 projects[entityreference][type] = "module"
 projects[entityreference][subdir] = "contrib"
@@ -221,6 +225,10 @@ projects[textile][type] = "module"
 projects[textile][subdir] = "contrib"
 
 ; timelinemap for displaying party statistics.
+
+projects[title][version] = title
+projects[title][type] = "module"
+projects[title][subdir] = "contrib"
 
 projects[token][version] = 1.4
 projects[token][type] = "module"

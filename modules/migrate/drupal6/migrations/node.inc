@@ -23,6 +23,9 @@ class PPSNodeMigration extends DrupalNode6Migration {
 
     parent::__construct ($arguments);
 
+    $this->addFieldMapping('tnid', 'tnid', FALSE)
+      ->sourceMigration($arguments['machine_name']);
+
     if ($map_access && !$map_structural) {
       $this->addSimpleMappings(array('field_workbench_access'));
     }
