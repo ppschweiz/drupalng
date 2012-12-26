@@ -19,27 +19,3 @@ function pps_i18n_panels_pane_content_alter($content, $pane, $args, $context) {
   }
   return $content;
 }
-
-  /**
-   * Implements hook_language_negotiation_info().
-   */
-function pps_i18n_language_negotiation_info() {
-  $providers = array();
-
-  $providers[PPS_I18N_LANGUAGE_NEGOTIATION_DOMAIN] = array(
-    'types' => array(LANGUAGE_TYPE_CONTENT, LANGUAGE_TYPE_INTERFACE, LANGUAGE_TYPE_URL),
-    'callbacks' => array(
-      'language' => 'pps_i18n_language_negotiation_language',
-      'switcher' => 'pps_i18n_language_negotiation_switcher',
-      'url_rewrite' => 'pps_i18n_language_negotiation_url_rewrite',
-    ),
-
-    'file' =>  drupal_get_path('module', 'pps_i18n') . '/pps_i18n.provider.inc',
-    'weight' => -11,
-    'name' => t('Domain'),
-    'description' => t('Determine the language by domain.'),
-//    'config' => 'admin/config/regional/language/configure/url',
-  );
-  return $providers;
-}
-

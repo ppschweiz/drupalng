@@ -91,6 +91,16 @@ cat <<EOF >> settings.php
 include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
 
 EOF
+
+cat <<EOF >> settings.php
+
+/**
+ * Enable Domain Alias based language negotiation.
+ */
+include DRUPAL_ROOT . '/sites/all/modules/custom/features/i18n/settings.inc';
+
+EOF
+
 chmod -w ../../sites/default ../../sites/default/settings.php
 
 drush en pps_domain -y
