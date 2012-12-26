@@ -141,6 +141,8 @@ EOF
 drush en pps_nodequeues -y
 drush fr pps_nodequeues -y
 drush en pps_pages -y
+drush en pps_block -y
+drush fr pps_block -y
 drush cc all
 
 cat <<EOF

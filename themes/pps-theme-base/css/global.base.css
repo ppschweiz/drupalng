@@ -1665,9 +1665,106 @@ body {
   border-bottom: 1px solid #47403c;
   color: #cccccc;
 }
-.region-leaderboard .block-inner {
+.region-leaderboard .block {
+  margin: 0;
+}
+.region-leaderboard .block .block-title {
+  border: 0;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.region-leaderboard .block .block-inner {
   margin: 0;
   padding: 0.4em;
+}
+.region-leaderboard .menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.region-leaderboard .menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.region-leaderboard .menu li:first-child, .region-leaderboard .menu li.first {
+  padding-left: 0;
+}
+.region-leaderboard .menu li:last-child {
+  padding-right: 0;
+}
+.region-leaderboard .menu li.last {
+  padding-right: 0;
+}
+.region-leaderboard .item-list {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.region-leaderboard .item-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.region-leaderboard .item-list li:first-child, .region-leaderboard .item-list li.first {
+  padding-left: 0;
+}
+.region-leaderboard .item-list li:last-child {
+  padding-right: 0;
+}
+.region-leaderboard .item-list li.last {
+  padding-right: 0;
+}
+.region-leaderboard .block-menu-interlinks {
+  float: left;
+}
+.region-leaderboard .block-language {
+  float: right;
+}
+.region-leaderboard .block-language .language-switcher-locale-url {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.region-leaderboard .block-language .language-switcher-locale-url li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.region-leaderboard .block-language .language-switcher-locale-url li:first-child, .region-leaderboard .block-language .language-switcher-locale-url li.first {
+  padding-left: 0;
+}
+.region-leaderboard .block-language .language-switcher-locale-url li:last-child {
+  padding-right: 0;
+}
+.region-leaderboard .block-language .language-switcher-locale-url li.last {
+  padding-right: 0;
 }
 
 .primary-menu-wrapper {

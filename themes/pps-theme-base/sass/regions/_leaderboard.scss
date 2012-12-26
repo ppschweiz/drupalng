@@ -8,8 +8,35 @@ body {
   border-bottom: 1px solid rgb(71, 64, 60);
   color: rgb(204, 204, 204);
 
-  .block-inner {
+  .block {
     margin: 0;
-    padding: $dim-padding;
+
+    .block-title {
+      @include element-invisible;
+    }
+
+    .block-inner {
+      margin: 0;
+      padding: $dim-padding;
+    }
+  }
+
+  .menu {
+    @include horizontal-list;
+  }
+
+  .item-list {
+    @include horizontal-list;
+  }
+
+  .block-menu-interlinks {
+    float: left;
+  }
+
+  .block-language {
+    float: right;
+    .language-switcher-locale-url {
+      @include horizontal-list;
+    }
   }
 }

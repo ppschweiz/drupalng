@@ -1,0 +1,16 @@
+name = Blocks
+core = 7.x
+package = Pirate Party Switzerland
+dependencies[] = fe_block
+dependencies[] = features
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = system
+features[fe_block_settings][] = locale-language
+features[fe_block_settings][] = menu-menu-interlinks
+features[fe_block_settings][] = system-powered-by
+features[features_api][] = api:1
+features[menu_custom][] = menu-interlinks
+features[menu_links][] = menu-interlinks:http://chat.piratenpartei.ch/?channels=pps
+features[menu_links][] = menu-interlinks:http://forum.piratenpartei.ch
+features[menu_links][] = menu-interlinks:https://projects.piratenpartei.ch/
