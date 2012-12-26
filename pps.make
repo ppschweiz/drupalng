@@ -84,6 +84,11 @@ projects[domain][subdir] = "contrib"
 ; domain_admin
 ; domain_blocks
 ; domain_fields
+
+projects[domain_locale][version] = 1.0-alpha4
+projects[domain_locale][type] = "module"
+projects[domain_locale][subdir] = "contrib"
+
 ; domain_roles
 ; domain_taxonomy
 
@@ -150,8 +155,6 @@ projects[imce][subdir] = "contrib"
 ; imce_rename
 ; imce_tools
 ; imce_watermark
-
-; language_multidomain
 
 projects[l10n_update][version] = 1.0-beta3
 projects[l10n_update][type] = "module"

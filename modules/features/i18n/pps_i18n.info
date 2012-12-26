@@ -5,7 +5,6 @@ package = Pirate Party Switzerland
 php = 5.2.4
 version = 7.x-1.x-dev
 project = pps_i18n
-dependencies[] = domain_conf
 dependencies[] = features
 dependencies[] = i18n
 dependencies[] = i18n_string

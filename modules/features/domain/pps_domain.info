@@ -8,6 +8,7 @@ dependencies[] = color
 dependencies[] = domain
 dependencies[] = domain_alias
 dependencies[] = domain_conf
+dependencies[] = domain_locale
 dependencies[] = domain_theme
 dependencies[] = domain_types
 dependencies[] = strongarm

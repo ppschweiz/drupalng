@@ -68,13 +68,13 @@ function pps_i18n_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'language_negotiation_language';
   $strongarm->value = array(
-    'pps_i18n_domain' => array(
+    'locale-url' => array(
       'callbacks' => array(
-        'language' => 'pps_i18n_language_negotiation_language',
-        'switcher' => 'pps_i18n_language_negotiation_switcher',
-        'url_rewrite' => 'pps_i18n_language_negotiation_url_rewrite',
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
       ),
-      'file' => 'sites/all/modules/custom/features/i18n/pps_i18n.provider.inc',
+      'file' => 'includes/locale.inc',
     ),
     'language-default' => array(
       'callbacks' => array(
@@ -136,7 +136,6 @@ function pps_i18n_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'locale_language_providers_weight_language';
   $strongarm->value = array(
-    'pps_i18n_domain' => '-10',
     'locale-url' => '-9',
     'locale-session' => '-8',
     'locale-user' => '-7',
