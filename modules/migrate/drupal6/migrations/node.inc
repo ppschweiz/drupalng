@@ -9,13 +9,15 @@ class PPSNodeMigration extends DrupalNode6Migration {
     $map_access = !empty($arguments['access mappings']);
     $map_structural = !empty($arguments['structural']);
 
+    if ($map_access || $map_structural) {
+      $this->sourceFields['field_workbench_access'] = t('Workbench Access');
+    }
     $this->sourceFields['tag_all'] = t('Concatenation of all tags except language');
     $this->sourceFields['tag_topic'] = t('tag topic');
     $this->sourceFields['tag_person'] = t('Tag person');
     $this->sourceFields['tag_location'] = t('Tag location');
     $this->sourceFields['tag_language'] = t('Tag language');
     if ($map_access) {
-      $this->sourceFields['field_workbench_access'] = t('Workbench Access');
       $this->access_mapping = $arguments['access mappings'];
     }
 
@@ -42,8 +44,20 @@ class PPSNodeMigration extends DrupalNode6Migration {
         ->defaultValue(TRUE);
     }
 
+    $this->addFieldMapping('domains')->defaultValue(array(
+      'piratenpartei_ch',
+    ));
+    $this->addFieldMapping('domain_site')->defaultValue(FALSE);
+
     $this->removeFieldMapping('path');
-    $this->addUnmigratedDestinations(array('path',));
+    $this->removeFieldMapping('pathauto');
+    $this->addUnmigratedSources(array(
+      'path',
+      'nid',
+    ));
+
+    $this->addUnmigratedDestinations(array('path'));
+
     $tagging_fields = array(
       'tag_all',
       'tag_topic',
@@ -64,7 +78,12 @@ class PPSNodeMigration extends DrupalNode6Migration {
       }
     }
     $this->addUnmigratedSources($tagging_fields);
+  }
 
+  protected function promote($promote) {
+    $this->removeFieldMapping('promote');
+    $this->addFieldMapping('promote')->defaultValue($promote);
+    $this->addUnmigratedSources(array('promote'));
   }
 
   public function prepareRow ($row) {
@@ -125,16 +144,12 @@ class PPSNodeMigration extends DrupalNode6Migration {
  * Common mappings for the node migrations.
  *
  * @todo Get the attachment description.
- * @todo Probably we nee to deal with attachments in different way.
+ * @todo Probably we need to deal with attachments in different way.
  */
 class PPSAttachmentNodeMigration extends PPSNodeMigration {
 
-  private $domainMappings = array();
-
   public function __construct (array $arguments) {
     $this->sourceFields['attachment_fids'] = t('File attachments');
-    $this->sourceFields['domain_site'] = t('Sent to all affiliates');
-    $this->sourceFields['domains'] = t('Domains');
 
     parent::__construct ($arguments);
 
@@ -142,49 +157,23 @@ class PPSAttachmentNodeMigration extends PPSNodeMigration {
       ->sourceMigration('Files');
     $this->addFieldMapping('field_attachments:file_class')
       ->defaultValue('MigrateFileFid');
-    $this->addFieldMapping('domain_site')->defaultValue(FALSE);
-    $this->addFieldMapping('domains', 'domains');
 
     $this->addUnmigratedDestinations(array(
       'field_attachments:language',
       'field_attachments:description',
       'field_attachments:display',
     ));
-
-    if (!empty($arguments['domain_mappings'])) {
-      $this->domainMappings = $arguments['domain_mappings'];
-    }
   }
 
-  protected function query () {
-    $query = parent::query ();
-    $query->addField('na_site', 'grant_view', 'domain_site');
-    $query->addField('na_id', 'gid', 'domains');
-    $query->leftJoin('node_access', 'na_site', "na_site.nid = n.nid and na_site.realm = 'domain_site'");
-    $query->leftJoin('node_access', 'na_id', "na_id.nid = n.nid and na_id.realm = 'domain_id'");
-    $query->groupBy('n.nid');
-    return $query;
-  }
-
-
-  public function prepareRow ($row) {
-    if (parent::prepareRow($row) === FALSE) {
-      return FALSE;
-    }
-    $row->attachment_fids = Database::getConnection('default', $this->sourceConnection)
-      ->select('upload', 'u')
-      ->fields('u', array('fid'))
-      ->condition('nid', $row->nid)
-      ->condition('vid', $row->vid)
-      ->orderBy('weight')
-      ->execute()
-      ->fetchCol();
-
-    $domain_id = $row->domains;
-    $row->domains = array();
-    if (array_key_exists($domain_id, $this->domainMappings)) {
-      $row->domains[] = $this->domainMappings[$domain_id];
-    }
+  protected function noAttachment() {
+    $this->removeFieldMapping('field_attachments');
+    $this->removeFieldMapping('field_attachments:file_class');
+    $this->removeFieldMapping('field_attachments:language');
+    $this->removeFieldMapping('field_attachments:description');
+    $this->removeFieldMapping('field_attachments:display');
+    $this->addUnmigratedSources(array(
+      'attachment_fids',
+    ));
   }
 }
 
@@ -204,6 +193,8 @@ class PPSNodehierarchyMigration extends PPSAttachmentNodeMigration {
       }
     }
     parent::__construct($arguments);
+
+    $this->addUnmigratedSources(array('parent'));
   }
 
   protected function query() {
@@ -213,6 +204,7 @@ class PPSNodehierarchyMigration extends PPSAttachmentNodeMigration {
     $query->fields('nh', array('parent'));
     return $query;
   }
+
   public function prepareRow ($row) {
     if (parent::prepareRow($row) === FALSE) {
       return FALSE;
@@ -234,23 +226,10 @@ class PPSTeamMigration extends PPSNodehierarchyMigration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
 
-    $this->removeFieldMapping('promote', 'promote');
-    $this->addFieldMapping('promote')->defaultValue(FALSE);
-    $this->removeFieldMapping('domains');
-    $this->addFieldMapping('domains')->defaultValue(array(
-      'piratenpartei_ch',
-      'partipirate_ch',
-      'partitopirata_ch',
-      'pirateparty_ch',
-    ));
+    $this->noAttachment();
+    $this->promote(FALSE);
 
-    $this->addUnmigratedSources(array(
-      'domain_site',
-      'domains',
-      'promote',
-    ));
   }
-
 }
 
 /**
@@ -268,7 +247,6 @@ class PPSMinutesMigration extends PPSNodehierarchyMigration {
     $this->addSimpleMappings(array('field_date'));
 
     $this->addUnmigratedSources(array(
-      'domain_site',
       'promote',
     ));
   }
@@ -303,7 +281,6 @@ class PPSNewsletterMigration extends PPSNodehierarchyMigration {
     $this->addSimpleMappings(array('field_month'));
 
     $this->addUnmigratedSources(array(
-      'domain_site',
       'promote',
     ));
   }
@@ -359,7 +336,6 @@ class PPSEventMigration extends PPSAttachmentNodeMigration {
     $this->addFieldMapping('field_time', 'field_event');
 
     $this->addUnmigratedSources(array(
-      'domain_site',
       'field_event:value2',
       'field_event:rrule',
     ));
@@ -397,9 +373,6 @@ class PPSGalleryMigration extends PPSNodeMigration {
 
     $this->addFieldMapping('field_images:alt', 'image_alts');
     $this->addFieldMapping('field_images:title', 'image_titles');
-
-    $this->addFieldMapping('domain_site')->defaultValue(TRUE);
-    $this->addFieldMapping('domains')->defaultValue(array('piratenpartei_ch'));
 
     $this->addUnmigratedDestinations(array(
       'field_images:language',

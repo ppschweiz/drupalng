@@ -382,12 +382,6 @@ function pps_migrate_common_arguments(){
         '5' => 'migrate_plain',
 //        '6' => 'none',
       ),
-      'domain_mappings' => array(
-        0 => 'piratenpartei_ch',
-        2 => 'partipirate_ch',
-        3 => 'pirateparty_ch',
-        4 => 'partitopirata_ch',
-      ),
     );
   }
   return $arguments;
