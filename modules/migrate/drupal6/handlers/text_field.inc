@@ -47,15 +47,20 @@ class PPSMigrateTextFieldHandler extends MigrateTextFieldHandler {
   private function convert($text, $format) {
     switch ($format) {
       case 'textile':
+        // Converting double line break to paragraphs.
         $text = preg_replace( '|<br[^>]+>\n?<br[^>]+>|', '</p><p>', $text);
+        // Clean up the text with html purifier.
         $text = check_markup($text, 'migrate_html', NULL, FALSE);
+        // Convert to textile
         $text = pps_migrate_d6_to_textile($text);
+        // Convert footnotes to textile.
         $text = pps_migrate_d6_footnotes_filter($text);
         break;
       default:
         $text = check_markup($text, 'migrate_plain', NULL, FALSE);
     }
-    $text = htmlspecialchars_decode($text);
+    // Remove html entity encodings for this can lead to double encoding.
+    $text = html_entity_decode($text, ENT_QUOTES, 'UTF-8');
     return $text;
   }
 

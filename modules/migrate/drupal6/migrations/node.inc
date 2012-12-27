@@ -23,6 +23,14 @@ class PPSNodeMigration extends DrupalNode6Migration {
 
     parent::__construct ($arguments);
 
+    // The body field needs to have the same language as the node or the
+    // text will not show up in the edit form.
+    $this->removeFieldMapping('body:language');
+    $this->addFieldMapping('body:language', 'language');
+
+    // Keep existing translation sets.
+    // @todo: Get rid of the stub records that are created when the
+    // tnid is zero.
     $this->addFieldMapping('tnid', 'tnid', FALSE)
       ->sourceMigration($arguments['machine_name']);
 
