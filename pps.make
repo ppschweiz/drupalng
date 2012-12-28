@@ -33,6 +33,7 @@ projects[admin_menu][type] = "module"
 projects[admin_menu][subdir] = "contrib"
 
 ; apply_for_role
+; auto_entitylabel
 ; bounce
 
 projects[bueditor][version] = 1.5
