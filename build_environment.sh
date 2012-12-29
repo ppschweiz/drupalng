@@ -144,6 +144,7 @@ drush en pps_pages -y
 drush en pps_block -y
 drush fr pps_block -y
 drush cc all
+drush en pps_permissions -y
 
 cat <<EOF
 
