@@ -10,7 +10,7 @@ class PPSNodeMigration extends DrupalNode6Migration {
     $map_structural = !empty($arguments['structural']);
 
     if ($map_access || $map_structural) {
-      $this->sourceFields['field_workbench_access'] = t('Workbench Access');
+      $this->sourceFields['workbench_access'] = t('Workbench Access');
     }
     $this->sourceFields['tag_all'] = t('Concatenation of all tags except language');
     $this->sourceFields['tag_topic'] = t('tag topic');
@@ -35,24 +35,20 @@ class PPSNodeMigration extends DrupalNode6Migration {
       ->sourceMigration($arguments['machine_name']);
 
     if ($map_access && !$map_structural) {
-      $this->addSimpleMappings(array('field_workbench_access'));
+      $this->addSimpleMappings(array('workbench_access'));
     }
     else if ($map_access && $map_structural) {
-      $this->addFieldMapping('field_workbench_access', 'field_workbench_access')
+      $this->addFieldMapping('workbench_access', 'workbench_access')
         ->defaultValue($arguments['structural']);
     }
     else if ($map_structural) {
-      $this->addUnmigratedSources(array('field_workbench_access'));
-      $this->addFieldMapping('field_workbench_access')
+      $this->addUnmigratedSources(array('workbench_access'));
+      $this->addFieldMapping('workbench_access')
         ->defaultValue($arguments['structural']);
     }
 
     if ($map_structural || $map_access) {
-      $this->addUnmigratedDestinations(array('field_workbench_access:source_type'));
-      $this->addFieldMapping('field_workbench_access:create_term')
-        ->defaultValue(FALSE);
-      $this->addFieldMapping('field_workbench_access:ignore_case')
-        ->defaultValue(TRUE);
+      $this->addUnmigratedDestinations(array('workbench_access:source_type'));
     }
 
     $this->addFieldMapping('domains')->defaultValue(array(
@@ -120,8 +116,21 @@ class PPSNodeMigration extends DrupalNode6Migration {
     }
 
     if (isset($this->access_mapping['nid']) && array_key_exists($row->nid, $this->access_mapping['nid'])) {
-      $row->field_workbench_access = $this->access_mapping['nid'][$row->nid];
+      $row->workbench_access = $this->access_mapping['nid'][$row->nid];
     }
+  }
+
+  /**
+   * Deal with workbench access
+   */
+  function prepare($node, stdClass $row) {
+    $access_scheme = variable_get('workbench_access', 'taxonomy');
+    $node->workbench_access_scheme['access_scheme'] = $access_scheme;
+    $term = taxonomy_get_term_by_name($node->workbench_access, 'structure');
+    $term = reset($term);
+    $node->workbench_access = array(
+      $term->tid => $term->tid,
+    );
   }
 
   /**
@@ -220,7 +229,7 @@ class PPSNodehierarchyMigration extends PPSAttachmentNodeMigration {
     if (parent::prepareRow($row) === FALSE) {
       return FALSE;
     }
-    if (isset($row->field_workbench_access)) {
+    if (isset($row->workbench_access)) {
       return;
     }
 
@@ -228,7 +237,7 @@ class PPSNodehierarchyMigration extends PPSAttachmentNodeMigration {
     $mapping_exists = !empty($this->access_mapping['parent']);
 
     if ( $parent_exists && $mapping_exists && array_key_exists($row->parent, $this->access_mapping['parent'])) {
-      $row->field_workbench_access = $this->access_mapping['parent'][$row->parent];
+      $row->workbench_access = $this->access_mapping['parent'][$row->parent];
     }
   }
 }

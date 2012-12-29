@@ -639,9 +639,6 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'entity_translation_entity_types';
   $strongarm->value = array(
     'node' => 'node',
-    'comment' => 0,
-    'taxonomy_term' => 0,
-    'user' => 0,
   );
   $export['entity_translation_entity_types'] = $strongarm;
 
@@ -916,16 +913,25 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '5',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '6',
+          'weight' => '7',
+        ),
+        'domain_path' => array(
+          'weight' => '9',
+        ),
+        'language' => array(
+          'weight' => '3',
+        ),
+        'workbench_access' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(
@@ -935,7 +941,7 @@ function pps_content_types_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
@@ -945,7 +951,7 @@ function pps_content_types_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '5',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
@@ -977,15 +983,31 @@ function pps_content_types_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'domain' => array(
+          'weight' => '1',
+        ),
+        'domain_path' => array(
+          'weight' => '5',
+        ),
+        'path' => array(
+          'weight' => '6',
+        ),
+        'redirect' => array(
+          'weight' => '4',
+        ),
+        'language' => array(
+          'weight' => '2',
+        ),
+      ),
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
         ),
@@ -1029,7 +1051,7 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '5',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
@@ -1040,11 +1062,17 @@ function pps_content_types_strongarm() {
         'redirect' => array(
           'weight' => '7',
         ),
+        'domain_path' => array(
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '2',
+        ),
       ),
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -1058,7 +1086,7 @@ function pps_content_types_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),
@@ -1092,26 +1120,35 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '5',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '8',
+        ),
+        'domain_path' => array(
+          'weight' => '10',
+        ),
+        'workbench_access' => array(
+          'weight' => '2',
+        ),
+        'language' => array(
+          'weight' => '3',
         ),
       ),
       'display' => array(
         'domain' => array(
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '1',
+            'weight' => '4',
             'visible' => TRUE,
           ),
         ),
@@ -1155,16 +1192,25 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '4',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '6',
+        ),
+        'domain_path' => array(
+          'weight' => '8',
+        ),
+        'workbench_access' => array(
+          'weight' => '2',
+        ),
+        'language' => array(
+          'weight' => '3',
         ),
       ),
       'display' => array(
@@ -1174,7 +1220,7 @@ function pps_content_types_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '2',
             'visible' => TRUE,
           ),
         ),
@@ -1218,22 +1264,31 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '6',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '8',
+        ),
+        'domain_path' => array(
+          'weight' => '10',
+        ),
+        'language' => array(
+          'weight' => '3',
+        ),
+        'workbench_access' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '5',
+            'weight' => '3',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -1243,11 +1298,11 @@ function pps_content_types_strongarm() {
         ),
         'language' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
@@ -1281,16 +1336,22 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '3',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'redirect' => array(
-          'weight' => '4',
+          'weight' => '5',
+        ),
+        'domain_path' => array(
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(
@@ -1300,7 +1361,7 @@ function pps_content_types_strongarm() {
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '1',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -1342,7 +1403,29 @@ function pps_content_types_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'domain' => array(
+          'weight' => '2',
+        ),
+        'domain_path' => array(
+          'weight' => '6',
+        ),
+        'language' => array(
+          'weight' => '1',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '8',
+        ),
+        'redirect' => array(
+          'weight' => '7',
+        ),
+        'workbench_access' => array(
+          'weight' => '3',
+        ),
+      ),
       'display' => array(
         'domain' => array(
           'default' => array(
@@ -1350,7 +1433,7 @@ function pps_content_types_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
@@ -1360,7 +1443,7 @@ function pps_content_types_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),
@@ -1394,22 +1477,28 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '4',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '6',
+        ),
+        'domain_path' => array(
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '1',
+            'weight' => '3',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -1457,25 +1546,28 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '6',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'language' => array(
-          'weight' => '5',
+          'weight' => '2',
+        ),
+        'domain_path' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -1523,26 +1615,35 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '3',
+          'weight' => '1',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'redirect' => array(
-          'weight' => '4',
+          'weight' => '5',
+        ),
+        'domain_path' => array(
+          'weight' => '7',
+        ),
+        'workbench_access' => array(
+          'weight' => '2',
+        ),
+        'language' => array(
+          'weight' => '3',
         ),
       ),
       'display' => array(
         'domain' => array(
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -2395,6 +2496,125 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'node_submitted_team';
   $strongarm->value = 0;
   $export['node_submitted_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access';
+  $strongarm->value = 'taxonomy';
+  $export['workbench_access'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_allow_multiple';
+  $strongarm->value = 0;
+  $export['workbench_access_allow_multiple'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_auto_assign';
+  $strongarm->value = 1;
+  $export['workbench_access_auto_assign'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_label';
+  $strongarm->value = 'Section';
+  $export['workbench_access_label'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_menu';
+  $strongarm->value = array(
+    'devel' => 0,
+    'main-menu' => 0,
+    'menu-interlinks' => 0,
+    'management' => 0,
+    'navigation' => 0,
+    'user-menu' => 0,
+  );
+  $export['workbench_access_menu'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_article';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_ballot';
+  $strongarm->value = 0;
+  $export['workbench_access_node_type_ballot'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_communique';
+  $strongarm->value = 0;
+  $export['workbench_access_node_type_communique'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_event';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_gallery';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_gallery'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_minutes';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_minutes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_newsletter';
+  $strongarm->value = 0;
+  $export['workbench_access_node_type_newsletter'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_panel';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_panel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_position';
+  $strongarm->value = 0;
+  $export['workbench_access_node_type_position'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_press_review';
+  $strongarm->value = 0;
+  $export['workbench_access_node_type_press_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_node_type_team';
+  $strongarm->value = 1;
+  $export['workbench_access_node_type_team'] = $strongarm;
 
   return $export;
 }
