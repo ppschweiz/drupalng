@@ -5,3 +5,14 @@
  */
 
 include_once 'pps_views.features.inc';
+
+/**
+ * Implements hook_views_data_alter()
+ *
+ * Add a filter handler for the workbench access section.
+ */
+function pps_views_views_data_alter(&$data) {
+  $data['workbench_access']['section']['filter'] = array(
+    'handler' => 'pps_views_workbench_access_handler_filter_section',
+  );
+}

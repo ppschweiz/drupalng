@@ -733,18 +733,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->pid = 'new-13';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'teams-panel';
+    $pane->subtype = 'teams-board';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 0,
-      'items_per_page' => '0',
-      'arguments' => array(
-        'parent' => 'Vorstand',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Vorstand',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -759,18 +751,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->pid = 'new-14';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'teams-panel';
+    $pane->subtype = 'teams-committees';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 0,
-      'items_per_page' => '0',
-      'arguments' => array(
-        'parent' => 'Gremien',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Gremien',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -785,18 +769,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->pid = 'new-15';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'teams-panel';
+    $pane->subtype = 'teams-teams';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 0,
-      'items_per_page' => '0',
-      'arguments' => array(
-        'parent' => 'Arbeitsgruppen',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Arbeitsgruppen',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -811,18 +787,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
     $pane->pid = 'new-16';
     $pane->panel = 'one_main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'teams-panel';
+    $pane->subtype = 'teams-sections';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'more_link' => 0,
-      'items_per_page' => '0',
-      'arguments' => array(
-        'parent' => 'Sektionen',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Sektionen',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

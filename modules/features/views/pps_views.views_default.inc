@@ -1157,6 +1157,7 @@ function pps_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Board';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1201,18 +1202,212 @@ function pps_views_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'team' => 'team',
   );
+  /* Filter criterion: Workbench Access: Section */
+  $handler->display->display_options['filters']['section']['id'] = 'section';
+  $handler->display->display_options['filters']['section']['table'] = 'workbench_access';
+  $handler->display->display_options['filters']['section']['field'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['operator_id'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['label'] = 'Section';
+  $handler->display->display_options['filters']['section']['expose']['operator'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['identifier'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['section']['access_id'] = array(
+    6 => '6',
+  );
+  $handler->display->display_options['filters']['section']['size'] = '10';
 
-  /* Display: Panel Inhalt */
-  $handler = $view->new_display('panel_pane', 'Panel Inhalt', 'panel');
+  /* Display: Board */
+  $handler = $view->new_display('panel_pane', 'Board', 'board');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
   $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
   $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 'more_link';
+  $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'parent' => array(
+      'type' => 'user',
+      'context' => 'entity:node.comment-count',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Children of',
+    ),
+  );
+
+  /* Display: Committees */
+  $handler = $view->new_display('panel_pane', 'Committees', 'committees');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Committees';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Inhalt: Veröffentlicht */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Inhalt: Typ */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'team' => 'team',
+  );
+  /* Filter criterion: Workbench Access: Section */
+  $handler->display->display_options['filters']['section']['id'] = 'section';
+  $handler->display->display_options['filters']['section']['table'] = 'workbench_access';
+  $handler->display->display_options['filters']['section']['field'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['operator_id'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['label'] = 'Section';
+  $handler->display->display_options['filters']['section']['expose']['operator'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['identifier'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['section']['access_id'] = array(
+    9 => '9',
+  );
+  $handler->display->display_options['filters']['section']['size'] = '10';
+  $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'parent' => array(
+      'type' => 'user',
+      'context' => 'entity:node.comment-count',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Children of',
+    ),
+  );
+
+  /* Display: Teams */
+  $handler = $view->new_display('panel_pane', 'Teams', 'teams');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Task forces';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Inhalt: Veröffentlicht */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Inhalt: Typ */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'team' => 'team',
+  );
+  /* Filter criterion: Workbench Access: Section */
+  $handler->display->display_options['filters']['section']['id'] = 'section';
+  $handler->display->display_options['filters']['section']['table'] = 'workbench_access';
+  $handler->display->display_options['filters']['section']['field'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['operator_id'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['label'] = 'Section';
+  $handler->display->display_options['filters']['section']['expose']['operator'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['identifier'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['section']['access_id'] = array(
+    12 => '12',
+  );
+  $handler->display->display_options['filters']['section']['size'] = '10';
+  $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'parent' => array(
+      'type' => 'user',
+      'context' => 'entity:node.comment-count',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Children of',
+    ),
+  );
+
+  /* Display: Sections */
+  $handler = $view->new_display('panel_pane', 'Sections', 'sections');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Sections';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Inhalt: Veröffentlicht */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Inhalt: Typ */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'team' => 'team',
+  );
+  /* Filter criterion: Workbench Access: Section */
+  $handler->display->display_options['filters']['section']['id'] = 'section';
+  $handler->display->display_options['filters']['section']['table'] = 'workbench_access';
+  $handler->display->display_options['filters']['section']['field'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['operator_id'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['label'] = 'Section';
+  $handler->display->display_options['filters']['section']['expose']['operator'] = 'section_op';
+  $handler->display->display_options['filters']['section']['expose']['identifier'] = 'section';
+  $handler->display->display_options['filters']['section']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['section']['access_id'] = array(
+    24 => '24',
+  );
+  $handler->display->display_options['filters']['section']['size'] = '10';
+  $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
@@ -1227,6 +1422,7 @@ function pps_views_views_default_views() {
   );
   $translatables['teams'] = array(
     t('Master'),
+    t('Board'),
     t('more'),
     t('Anwenden'),
     t('Zurücksetzen'),
@@ -1234,8 +1430,12 @@ function pps_views_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('No team in this category.'),
-    t('Panel Inhalt'),
+    t('Section'),
     t('Panel-Ansichten'),
+    t('Committees'),
+    t('Teams'),
+    t('Task forces'),
+    t('Sections'),
   );
   $export['teams'] = $view;
 
