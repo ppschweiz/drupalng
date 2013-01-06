@@ -3,3 +3,28 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_node_access().
+ *
+ * When a node is not assigned to an editorial section we deny update
+ * access for other users than the nodes author.
+ *
+ * @todo Add a permission to overrule this.
+ */
+function pps_permissions_node_access($node, $op, $account) {
+  $entity_type = 'node';
+  $field_name = 'field_access';
+  if ($op == 'update') {
+    $info = entity_get_info('node');
+    list(,,$bundle_name) = entity_extract_ids($entity_type, $node);
+    $instance = field_info_instance($entity_type, $field_name, $bundle_name);
+    $field_access = field_get_items('node', $node, 'field_access');
+    $is_author = $node->uid == $account->uid;
+
+    if ($instance && !$field_access && !$is_author) {
+      return NODE_ACCESS_DENY;
+    }
+  }
+  return NODE_ACCESS_IGNORE;
+}
