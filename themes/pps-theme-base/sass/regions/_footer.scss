@@ -2,6 +2,11 @@
 @import "compass/layout/sticky-footer";
 @include sticky-footer(image-height($img-footer-background), "#page", "#footer_placement", "#footer");
 
+/* fix for sticky-footer glitch in firefox on linux */
+body {
+	height: auto;
+}
+
 #footer {
   background: image-url($img-footer-background) repeat-x scroll center bottom transparent;
 }
