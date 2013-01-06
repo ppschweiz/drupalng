@@ -37,6 +37,13 @@ function pps_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No articles found.';
+  $handler->display->display_options['empty']['area']['format'] = 'textile';
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -200,6 +207,7 @@ function pps_views_views_default_views() {
     t('Sortieren nach'),
     t('Asc'),
     t('Desc'),
+    t('No articles found.'),
     t('Latest Articles'),
     t('Panel-Ansichten'),
     t('Articles page'),
@@ -492,6 +500,13 @@ function pps_views_views_default_views() {
     'field_time' => 'field_time',
     'field_time_1' => 'field_time_1',
   );
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No upcoming events.';
+  $handler->display->display_options['empty']['area']['format'] = 'textile';
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
@@ -664,24 +679,6 @@ function pps_views_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Inhalt: Kategorie (field_workbench_access) */
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['id'] = 'field_workbench_access_tid';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['table'] = 'field_data_field_workbench_access';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['field'] = 'field_workbench_access_tid';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['exception']['title'] = 'Alle';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['validate_options']['vocabularies'] = array(
-    'structure' => 'structure',
-  );
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['validate']['fail'] = 'empty';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Inhalt: Veröffentlicht */
@@ -723,22 +720,6 @@ function pps_views_views_default_views() {
   $handler = $view->new_display('page', 'Page by structure', 'page_structure');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Inhalt: Kategorie (field_workbench_access) */
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['id'] = 'field_workbench_access_tid';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['table'] = 'field_data_field_workbench_access';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['field'] = 'field_workbench_access_tid';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['exception']['title'] = 'Alle';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['title'] = 'Events of %1';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['field_workbench_access_tid']['break_phrase'] = TRUE;
   $handler->display->display_options['path'] = 'teams/%/events';
   $translatables['events'] = array(
     t('Master'),
@@ -756,13 +737,13 @@ function pps_views_views_default_views() {
     t('‹ vorherige Seite'),
     t('nächste Seite ›'),
     t('letzte Seite »'),
+    t('No upcoming events.'),
     t('Alle'),
     t('Page by type'),
     t('Upcoming by type'),
     t('Panel-Ansichten'),
     t('Upcoming by Structure'),
     t('Page by structure'),
-    t('Events of %1'),
   );
   $export['events'] = $view;
 
@@ -1188,11 +1169,13 @@ function pps_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Inhalt: Kategorie (field_workbench_access) */
-  $handler->display->display_options['relationships']['field_workbench_access_tid']['id'] = 'field_workbench_access_tid';
-  $handler->display->display_options['relationships']['field_workbench_access_tid']['table'] = 'field_data_field_workbench_access';
-  $handler->display->display_options['relationships']['field_workbench_access_tid']['field'] = 'field_workbench_access_tid';
-  $handler->display->display_options['relationships']['field_workbench_access_tid']['required'] = TRUE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No team in this category.';
+  $handler->display->display_options['empty']['area']['format'] = 'textile';
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
@@ -1204,23 +1187,6 @@ function pps_views_views_default_views() {
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Contextual filter: Taxonomie-Begriff: Übergeordneter Begriff */
-  $handler->display->display_options['arguments']['parent']['id'] = 'parent';
-  $handler->display->display_options['arguments']['parent']['table'] = 'taxonomy_term_hierarchy';
-  $handler->display->display_options['arguments']['parent']['field'] = 'parent';
-  $handler->display->display_options['arguments']['parent']['relationship'] = 'field_workbench_access_tid';
-  $handler->display->display_options['arguments']['parent']['exception']['title'] = 'Alle';
-  $handler->display->display_options['arguments']['parent']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['parent']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['parent']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['parent']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['parent']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['parent']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['parent']['validate_options']['vocabularies'] = array(
-    'structure' => 'structure',
-  );
-  $handler->display->display_options['arguments']['parent']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['parent']['validate']['fail'] = 'empty';
   /* Filter criterion: Inhalt: Veröffentlicht */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -1267,8 +1233,7 @@ function pps_views_views_default_views() {
     t('Sortieren nach'),
     t('Asc'),
     t('Desc'),
-    t('term from field_workbench_access'),
-    t('Alle'),
+    t('No team in this category.'),
     t('Panel Inhalt'),
     t('Panel-Ansichten'),
   );
