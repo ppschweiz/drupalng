@@ -203,6 +203,8 @@ projects[resp_img][version] = 1.3
 projects[resp_img][type] = "module"
 projects[resp_img][subdir] = "contrib"
 
+; schemaorg
+
 projects[smartqueue_domain][version] = 1.0
 projects[smartqueue_domain][type] = "module"
 projects[smartqueue_domain][subdir] = "contrib"
