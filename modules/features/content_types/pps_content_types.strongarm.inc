@@ -1405,13 +1405,13 @@ function pps_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'domain' => array(
-          'weight' => '2',
+          'weight' => '1',
         ),
         'domain_path' => array(
           'weight' => '6',
         ),
         'language' => array(
-          'weight' => '1',
+          'weight' => '3',
         ),
         'title' => array(
           'weight' => '0',
@@ -2517,6 +2517,13 @@ function pps_content_types_strongarm() {
   $strongarm->name = 'workbench_access_auto_assign';
   $strongarm->value = 1;
   $export['workbench_access_auto_assign'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_custom_form';
+  $strongarm->value = 0;
+  $export['workbench_access_custom_form'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
