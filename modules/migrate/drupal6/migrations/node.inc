@@ -93,9 +93,28 @@ class PPSNodeMigration extends DrupalNode6Migration {
     $this->addUnmigratedSources(array('promote'));
   }
 
+  /**
+   * Overrides Migration::query()
+   *
+   * We need to fetch the translations before the source node in order
+   * to persist translation sets correctly.
+   */
+  protected function query() {
+   $query = parent::query();
+    $order = &$query->getOrderBy();
+    $order = array(
+      'created' => 'DESC'
+    );
+    return $query;
+  }
+
   public function prepareRow ($row) {
     if (parent::prepareRow($row) === FALSE) {
       return FALSE;
+    }
+    // Prevent unnecessary stubs.
+    if ($row->tnid == 0) {
+      $row->tnid = NULL;
     }
     if (!empty($this->autotagging_fields)) {
       $text = array();
