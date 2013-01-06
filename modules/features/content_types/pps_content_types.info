@@ -331,3 +331,4 @@ features[variable][] = workbench_access_node_type_panel
 features[variable][] = workbench_access_node_type_position
 features[variable][] = workbench_access_node_type_press_review
 features[variable][] = workbench_access_node_type_team
+features[variable][] = workbench_access_taxonomy

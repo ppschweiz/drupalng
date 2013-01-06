@@ -2616,5 +2616,17 @@ function pps_content_types_strongarm() {
   $strongarm->value = 1;
   $export['workbench_access_node_type_team'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_taxonomy';
+  $strongarm->value = array(
+    'structure' => 'structure',
+    'tags' => 0,
+    'event_types' => 0,
+    'media_companies' => 0,
+  );
+  $export['workbench_access_taxonomy'] = $strongarm;
+
   return $export;
 }
