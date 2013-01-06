@@ -13,14 +13,18 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: access administration menu.
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'admin_menu',
   );
 
   // Exported permission: access administration pages.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'system',
   );
 
@@ -58,7 +62,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: access contextual links.
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'contextual',
   );
 
@@ -86,7 +92,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: access user profiles.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'user',
   );
 
@@ -403,7 +411,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: create article content.
   $permissions['create article content'] = array(
     'name' => 'create article content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -445,7 +455,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: create event content.
   $permissions['create event content'] = array(
     'name' => 'create event content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -459,7 +471,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: create gallery content.
   $permissions['create gallery content'] = array(
     'name' => 'create gallery content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -480,7 +494,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: create minutes content.
   $permissions['create minutes content'] = array(
     'name' => 'create minutes content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -508,7 +524,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: create panel content.
   $permissions['create panel content'] = array(
     'name' => 'create panel content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -522,7 +540,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: create panel-nodes.
   $permissions['create panel-nodes'] = array(
     'name' => 'create panel-nodes',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'panels_node',
   );
 
@@ -543,7 +563,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: create press_review content.
   $permissions['create press_review content'] = array(
     'name' => 'create press_review content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -578,7 +600,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete any article content.
   $permissions['delete any article content'] = array(
     'name' => 'delete any article content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -599,21 +623,27 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete any event content.
   $permissions['delete any event content'] = array(
     'name' => 'delete any event content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any gallery content.
   $permissions['delete any gallery content'] = array(
     'name' => 'delete any gallery content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any minutes content.
   $permissions['delete any minutes content'] = array(
     'name' => 'delete any minutes content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -627,14 +657,18 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete any panel content.
   $permissions['delete any panel content'] = array(
     'name' => 'delete any panel content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any panel-nodes.
   $permissions['delete any panel-nodes'] = array(
     'name' => 'delete any panel-nodes',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'panels_node',
   );
 
@@ -648,7 +682,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete any press_review content.
   $permissions['delete any press_review content'] = array(
     'name' => 'delete any press_review content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -718,7 +754,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete own article content.
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -739,21 +777,27 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete own event content.
   $permissions['delete own event content'] = array(
     'name' => 'delete own event content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own gallery content.
   $permissions['delete own gallery content'] = array(
     'name' => 'delete own gallery content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own minutes content.
   $permissions['delete own minutes content'] = array(
     'name' => 'delete own minutes content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -767,14 +811,18 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete own panel content.
   $permissions['delete own panel content'] = array(
     'name' => 'delete own panel content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own panel-nodes.
   $permissions['delete own panel-nodes'] = array(
     'name' => 'delete own panel-nodes',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'panels_node',
   );
 
@@ -788,7 +836,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: delete own press_review content.
   $permissions['delete own press_review content'] = array(
     'name' => 'delete own press_review content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -872,7 +922,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit any article content.
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -893,21 +945,27 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit any event content.
   $permissions['edit any event content'] = array(
     'name' => 'edit any event content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any gallery content.
   $permissions['edit any gallery content'] = array(
     'name' => 'edit any gallery content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any minutes content.
   $permissions['edit any minutes content'] = array(
     'name' => 'edit any minutes content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -921,14 +979,18 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit any panel content.
   $permissions['edit any panel content'] = array(
     'name' => 'edit any panel content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any panel-nodes.
   $permissions['edit any panel-nodes'] = array(
     'name' => 'edit any panel-nodes',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'panels_node',
   );
 
@@ -942,14 +1004,18 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit any press_review content.
   $permissions['edit any press_review content'] = array(
     'name' => 'edit any press_review content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any team content.
   $permissions['edit any team content'] = array(
     'name' => 'edit any team content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -970,7 +1036,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit own article content.
   $permissions['edit own article content'] = array(
     'name' => 'edit own article content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -998,21 +1066,27 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit own event content.
   $permissions['edit own event content'] = array(
     'name' => 'edit own event content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own gallery content.
   $permissions['edit own gallery content'] = array(
     'name' => 'edit own gallery content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own minutes content.
   $permissions['edit own minutes content'] = array(
     'name' => 'edit own minutes content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -1026,14 +1100,18 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit own panel content.
   $permissions['edit own panel content'] = array(
     'name' => 'edit own panel content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own panel-nodes.
   $permissions['edit own panel-nodes'] = array(
     'name' => 'edit own panel-nodes',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'panels_node',
   );
 
@@ -1047,7 +1125,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: edit own press_review content.
   $permissions['edit own press_review content'] = array(
     'name' => 'edit own press_review content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -1201,14 +1281,18 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: translate any entity.
   $permissions['translate any entity'] = array(
     'name' => 'translate any entity',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'entity_translation',
   );
 
   // Exported permission: translate content.
   $permissions['translate content'] = array(
     'name' => 'translate content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'translation',
   );
 
@@ -1222,7 +1306,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: translate node entities.
   $permissions['translate node entities'] = array(
     'name' => 'translate node entities',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'entity_translation',
   );
 
@@ -1369,7 +1455,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: use text format textile.
   $permissions['use text format textile'] = array(
     'name' => 'use text format textile',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'filter',
   );
 
@@ -1383,7 +1471,9 @@ function pps_permissions_user_default_permissions() {
   // Exported permission: view own unpublished content.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
