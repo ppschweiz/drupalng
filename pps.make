@@ -40,7 +40,6 @@ projects[bueditor][version] = 1.5
 projects[bueditor][type] = "module"
 projects[bueditor][subdir] = "contrib"
 
-; bueditor_plus
 ; calendar
 
 projects[cas][version] = 1.2

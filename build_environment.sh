@@ -53,7 +53,7 @@ cat <<EOF
 ============= Enable misc modules =============
 EOF
 
-drush en admin_menu_toolbar -y
+drush en admin_menu -y
 
 cat <<EOF
 
