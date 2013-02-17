@@ -72,6 +72,16 @@ function pps_theme_base_preprocess_node(&$vars) {
   $show_submitted = variable_get('node_submitted_' . $node_type , TRUE);
   $always_show_date_icon = variable_get('node_date_icon_show_always_' . $node_type , FALSE);
   $show_date_icon = $show_submitted || $always_show_date_icon;
+
+  // Prevent the date icon to appear twice if the rendered node is placed
+  // inside a region.
+  if ($node_type == 'panel') {
+    if (!empty($vars['content']['#bundle'])) {
+      $show_date_icon = FALSE;
+      $vars['display_submitted'] = FALSE;
+    }
+  }
+
   if ($show_date_icon) {
     $date_template =<<<EOF
 <time datetime="!datetime" pubdate="pubdate" title='!title' class="icon">
