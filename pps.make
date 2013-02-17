@@ -3,7 +3,7 @@
 
 api = 2
 core = 7.x
-projects[drupal][version] = 7.18
+projects[drupal][version] = 7.19
 
 ; Map Modules
 ; -----------
@@ -28,7 +28,7 @@ projects[drupal][version] = 7.18
 ; Production Modules
 ; ------------------
 
-projects[admin_menu][version] = 3.0-rc3
+projects[admin_menu][version] = 3.0-rc4
 projects[admin_menu][type] = "module"
 projects[admin_menu][subdir] = "contrib"
 
@@ -46,7 +46,7 @@ projects[cas][version] = 1.2
 projects[cas][type] = "module"
 projects[cas][subdir] = "contrib"
 
-projects[cas_attributes][version] = 1.0-rc1
+projects[cas_attributes][version] = 1.0-rc2
 projects[cas_attributes][type] = "module"
 projects[cas_attributes][subdir] = "contrib"
 
@@ -77,7 +77,7 @@ projects[date][subdir] = "contrib"
 ; date_repeat_instance
 ; date_repeat_presets
 
-projects[domain][version] = 3.6
+projects[domain][version] = 3.8
 projects[domain][type] = "module"
 projects[domain][subdir] = "contrib"
 
@@ -88,6 +88,10 @@ projects[domain][subdir] = "contrib"
 projects[domain_locale][version] = 1.0-alpha4
 projects[domain_locale][type] = "module"
 projects[domain_locale][subdir] = "contrib"
+
+projects[domain_path][version] = 1.0-beta3
+projects[domain_path][type] = "module"
+projects[domain_path][subdir] = "contrib"
 
 ; domain_roles
 ; domain_taxonomy
@@ -117,16 +121,7 @@ projects[features][version] = 1.0
 projects[features][type] = "module"
 projects[features][subdir] = "contrib"
 
-; projects[features_extra][version] = 1.x-dev
-; projects[features_extra][type] = "module"
-; projects[features_extra][subdir] = "contrib"
-
-projects[features_extra][download][type] = git
-projects[features_extra][download][url] = http://git.drupal.org/project/features_extra.git
-projects[features_extra][download][branch] = 7.x-1.x
-projects[features_extra][patch][1868128-3][url] = http://drupal.org/files/features_extra_fe_nodequeue_checking_on_clone_call-1868128-3.patch
-
-projects[features_extra][version] = 1.0-alpha1
+projects[features_extra][version] = 1.0-alpha2
 projects[features_extra][type] = "module"
 projects[features_extra][subdir] = "contrib"
 
@@ -138,7 +133,15 @@ projects[flag_weights][version] = 1.0
 projects[flag_weights][type] = "module"
 projects[flag_weights][subdir] = "contrib"
 
-projects[i18n][version] = 1.7
+projects[footnotes][version] = 2.5
+projects[footnotes][type] = "module"
+projects[footnotes][subdir] = "contrib"
+
+projects[htmlpurifier][version] = 1.0
+projects[htmlpurifier][type] = "module"
+projects[htmlpurifier][subdir] = "contrib"
+
+projects[i18n][version] = 1.8
 projects[i18n][type] = "module"
 projects[i18n][subdir] = "contrib"
 
@@ -171,6 +174,10 @@ projects[link][subdir] = "contrib"
 projects[libraries][version] = 2.0
 projects[libraries][type] = "module"
 projects[libraries][subdir] = "contrib"
+
+projects[menu_attributes][version] = 1.0-rc2
+projects[menu_attributes][type] = "module"
+projects[menu_attributes][subdir] = "contrib"
 
 projects[migrate][version] = 2.5
 projects[migrate][type] = "module"
@@ -236,7 +243,11 @@ projects[token][version] = 1.4
 projects[token][type] = "module"
 projects[token][subdir] = "contrib"
 
-projects[variable][version] = 2.1
+projects[transliteration][version] = 3.1
+projects[transliteration][type] = "module"
+projects[transliteration][subdir] = "contrib"
+
+projects[variable][version] = 2.2
 projects[variable][type] = "module"
 projects[variable][subdir] = "contrib"
 
@@ -256,11 +267,11 @@ projects[views_slideshow][version] = 3.0
 projects[views_slideshow][type] = "module"
 projects[views_slideshow][subdir] = "contrib"
 
-projects[workbench][version] = 1.1
+projects[workbench][version] = 1.2
 projects[workbench][type] = "module"
 projects[workbench][subdir] = "contrib"
 
-projects[workbench_access][version] = 1.0
+projects[workbench_access][version] = 1.2
 projects[workbench_access][type] = "module"
 projects[workbench_access][subdir] = "contrib"
 
@@ -281,10 +292,10 @@ projects[adaptivetheme][type] = "theme"
 
 libraries[CAS][download][type] = "git"
 libraries[CAS][download][url] = "https://github.com/Jasig/phpCAS.git"
-libraries[CAS][download][tag] = "1.3.1"
+libraries[CAS][download][tag] = "1.3.2"
 
 libraries[htmlpurifier][download][type] = "file"
-libraries[htmlpurifier][download][url] = "http://htmlpurifier.org/releases/htmlpurifier-4.4.0.tar.gz"
+libraries[htmlpurifier][download][url] = "http://htmlpurifier.org/releases/htmlpurifier-4.4.0-lite.tar.gz"
 libraries[htmlpurifier][download][filename] = "htmlpurifier"
 
 libraries[jquery.cycle][download][type] = "file"
