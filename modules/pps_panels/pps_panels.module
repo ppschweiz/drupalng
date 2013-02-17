@@ -10,8 +10,9 @@ function pps_panels_ctools_plugin_directory($owner, $plugin_type) {
 }
 
 function theme_pps_panels_default_region($vars) {
+  $style = !empty($vars['settings']['style']) ? $vars['settings']['style'] : 'neutral';
   $output = '';
-  $output .= '<div class="region-style-pps region-style-pps-' . $vars['settings']['style'] . '">';
+  $output .= '<div class="region-style-pps region-style-pps-' . $style . '">';
   $output .= implode(PHP_EOL, $vars['panes']);
   $output .= '</div>';
   return $output;
